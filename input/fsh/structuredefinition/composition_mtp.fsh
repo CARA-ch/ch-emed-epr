@@ -14,7 +14,7 @@ Description: "Definition of the composition for the medication treatment plan do
 //* type.coding                       = $sct#419891008 "Record artifact (record artifact)"
 * category.coding.code              = #440545006
 * category.coding.system            = $sct
-* category.coding.display           = "Prescription record (record artifact)"
+//* category.coding.display           = "Prescription record (record artifact)"
 * section[treatmentPlan].extension[sectionId] 0..0 // Not useful anymore
 
 // Restrictions

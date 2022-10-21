@@ -1,7 +1,7 @@
 RuleSet: CompositionRuleSet
 
 * type.coding                       1..1 // TODO Upstream
-* type.coding.display               1..1 // TODO Upstream
+//* type.coding.display               1..1 // TODO Upstream
 * category                          1..1 // TODO Upstream
 
 // Constraints
@@ -10,7 +10,12 @@ RuleSet: CompositionRuleSet
 * relatesTo.code                    = http://hl7.org/fhir/document-relationship-type#replaces "Replaces"
 * section[originalRepresentation].code.coding 1..1
 * identifier.use                    = http://hl7.org/fhir/identifier-use#official "Official"
+* identifier.value                  obeys UrnUuid
 * confidentiality.extension         1..1
+* type                              insert SimpleCodeableConcept
+* type.coding                       insert SimpleCoding
+* category                          insert SimpleCodeableConcept
+* category.coding                   insert SimpleCoding
 * category.coding                   1..1
 * category.coding.code              1..1
 * category.coding.system            1..1
@@ -50,6 +55,8 @@ RuleSet: CompositionRuleSet
 
 // Documentation
 * confidentiality                   ^short = "The confidentiality is fixed to normal for publication in the EPR"
+* identifier.value                  ^short = "The document identifier as an URN-encoded UUID"
+//* identifier.value                  = "urn:uuid:41797728-89fb-4cbb-8d11-c79aace92821" (example)
 
 
 // A RuleSet for Compositions with annotation

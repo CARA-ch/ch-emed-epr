@@ -11,6 +11,7 @@ Description: "Definition of the medication request"
 * intent                            = http://hl7.org/fhir/CodeSystem/medicationrequest-intent#order "Order" // TODO proposal in PADV OK
 * medication[x]                     only Reference(CHEMEDEPRMedication)
 * substitution.allowed[x].coding    from ActSubstanceAdminSubstitutionCode (required)
+* reasonCode                        insert ReasonCode
 
 // Disable unused parts
 * meta                              0..0
@@ -25,7 +26,6 @@ Description: "Definition of the medication request"
 * requester                         0..0
 * performer                         0..0
 * performerType                     0..0
-* reasonCode                        0..0
 * reasonReference                   0..0
 * instantiatesCanonical             0..0
 * instantiatesUri                   0..0

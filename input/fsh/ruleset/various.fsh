@@ -2,6 +2,7 @@ RuleSet: SimpleCoding
 * extension                 0..0
 * version                   0..0
 * userSelected              0..0
+* id                        0..0
 
 RuleSet: SimpleIdentifier
 * assigner                  0..0
@@ -23,5 +24,9 @@ RuleSet: NoMetaExceptProfile
 * security                  0..0
 * tag                       0..0
 
-//RuleSet: OnlyUuid
-//* 
+RuleSet: ReasonCode
+* reasonCode                        insert SimpleCodeableConcept
+* reasonCode.coding                 0..0 // TODO we may want this
+* reasonCode.text                   1..1
+* reasonCode.text                   ^short "Plain text representation of the treatment reason(s)"
+

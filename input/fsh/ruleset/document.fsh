@@ -2,9 +2,11 @@ RuleSet: DocumentRuleSet
 
 // Constraints
 * identifier.use                    = http://hl7.org/fhir/identifier-use#official "Official"
+* identifier.value                  obeys UrnUuid
 * entry[Patient]                    1..1
 * entry[Practitioner].resource      only CHEMEDEPRPractitioner
 * entry[PractitionerRole].resource  only CHEMEDEPRPractitionerRole
+* entry.fullUrl                     obeys UrnUuid
 
 // Disable the unused parts
 * meta                              insert NoMetaExceptProfile
@@ -25,3 +27,4 @@ RuleSet: DocumentRuleSet
 
 // Documentation
 * entry[Patient]                    ^short = "The patient targeted by this medication treatment plan"
+* entry.fullUrl                     ^short = "URN-encoded UUID for resource"

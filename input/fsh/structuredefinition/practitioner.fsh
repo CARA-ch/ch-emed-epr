@@ -21,5 +21,5 @@ Description: "Definition of the practitioner for the eMedication context"
 * modifierExtension                 0..0
 * identifier                        insert SimpleIdentifier
 
-// TODO What is the ZSR?
+// TODO ZSR is mandatory on paper prescription
 // TODO block othe
