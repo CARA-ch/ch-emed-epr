@@ -25,8 +25,8 @@ RuleSet: NoMetaExceptProfile
 * tag                       0..0
 
 RuleSet: ReasonCode
-* reasonCode                        insert SimpleCodeableConcept
-* reasonCode.coding                 0..0 // TODO we may want this
-* reasonCode.text                   1..1
-* reasonCode.text                   ^short "Plain text representation of the treatment reason(s)"
+* insert SimpleCodeableConcept
+* coding                    0..0 // TODO we may want this
+* text                      1..1
+* text                      ^short = "Plain text representation of the treatment reason(s)"
 
