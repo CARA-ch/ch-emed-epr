@@ -29,3 +29,4 @@ Description: "Definition of the practitioner role for the eMedication context"
 * contained                         0..0
 
 // TODO why is CHEMEDEPRPractitioner shown as Practitioner?
+// TODO code: not exactly the CDA participationFunction
