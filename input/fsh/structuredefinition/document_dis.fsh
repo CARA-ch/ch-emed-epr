@@ -1,7 +1,7 @@
 Profile: CHEMEDEPRDocumentMedicationDispense
 Parent: CHEMEDDocumentMedicationDispense
 Id: ch-emed-epr-document-medicationdispense
-Title: "Document DIS"
+Title: "CH EMED EPR Document DIS"
 Description: "Definition of the bundle for the medication dispense document"
 
 * insert DocumentRuleSet

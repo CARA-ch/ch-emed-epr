@@ -1,7 +1,7 @@
 Profile: CHEMEDEPRCompositionMedicationTreatmentPlan
 Parent: CHEMEDCompositionMedicationTreatmentPlan
 Id: ch-emed-epr-composition-medicationtreatmentplan
-Title: "Composition MTP"
+Title: "CH EMED EPR Composition MTP"
 Description: "Definition of the composition for the medication treatment plan document"
 
 * insert CompositionRuleSet
@@ -16,6 +16,7 @@ Description: "Definition of the composition for the medication treatment plan do
 * category.coding.system            = $sct
 //* category.coding.display           = "Prescription record (record artifact)"
 * section[treatmentPlan].extension[sectionId] 0..0 // Not useful anymore
+* subject                           only Reference(CHCorePatientEPR)
 
 // Restrictions
 // TODO prevent other sections (keep only slices)?

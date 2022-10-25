@@ -1,7 +1,7 @@
 Profile: CHEMEDEPRCompositionMedicationPrescription
 Parent: CHEMEDCompositionMedicationPrescription
 Id: ch-emed-epr-composition-medicationprescription
-Title: "Composition PRE"
+Title: "CH EMED EPR Composition PRE"
 Description: "Definition of the composition for the medication prescription document"
 
 * insert CompositionRuleSet

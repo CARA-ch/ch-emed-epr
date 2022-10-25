@@ -1,7 +1,7 @@
 Profile: CHEMEDEPRDocumentMedicationTreatmentPlan
 Parent: CHEMEDDocumentMedicationTreatmentPlan
 Id: ch-emed-epr-document-medicationtreatmentplan
-Title: "Document MTP"
+Title: "CH EMED EPR Document MTP"
 Description: "Definition of the bundle for the medication treatment plan document"
 
 * insert DocumentRuleSet

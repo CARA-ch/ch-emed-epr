@@ -1,7 +1,7 @@
 ValueSet: QuantityUnitCodeCara
 Id: quantity-unit-code-cara
-Title: "Quantity Unit Codes (CARA)"
-Description: "Unit Codes for Quantity Units, as filtered by CARA."
+Title: "CH EMED EPR Quantity Unit Codes"
+Description: "Unit Codes for Quantity Units."
 * $sct#732981002 "Actuation (unit of presentation)"
 * $sct#732978007 "Ampule (unit of presentation)"
 * $sct#732980001 "Applicator (unit of presentation)"

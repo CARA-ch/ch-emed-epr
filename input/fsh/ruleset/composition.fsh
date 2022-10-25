@@ -20,6 +20,9 @@ RuleSet: CompositionRuleSet
 * category.coding.code              1..1
 * category.coding.system            1..1
 * category.coding.display           1..1
+* extension[informationRecipient].valueReference only Reference(CHEMEDEPRPractitioner or CHCorePatientEPR or RelatedPerson or CHCoreOrganizationEPR)
+* author                            only Reference(CHEMEDEPRPractitioner or CHEMEDEPRPractitionerRole or Device or CHCorePatientEPR or RelatedPerson or CHCoreOrganizationEPR)
+* section.author                    only Reference(CHEMEDEPRPractitioner or CHEMEDEPRPractitionerRole or Device or CHCorePatientEPR or RelatedPerson or CHCoreOrganizationEPR)
 
 // Disable unused parts
 * meta                              insert NoMetaExceptProfile

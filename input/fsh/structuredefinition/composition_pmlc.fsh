@@ -1,7 +1,7 @@
 Profile: CHEMEDEPRCompositionMedicationCard
 Parent: CHEMEDCompositionMedicationCard
 Id: ch-emed-epr-composition-medicationcard
-Title: "Composition PMLC"
+Title: "CH EMED EPR Composition PMLC"
 Description: "Definition of the composition for the medication card document"
 
 * insert CompositionRuleSet

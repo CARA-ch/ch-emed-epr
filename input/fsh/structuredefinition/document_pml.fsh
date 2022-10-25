@@ -1,7 +1,7 @@
 Profile: CHEMEDEPRDocumentMedicationList
 Parent: CHEMEDDocumentMedicationList
 Id: ch-emed-epr-document-medicationlist
-Title: "Document PML"
+Title: "CH EMED EPR Document PML"
 Description: "Definition of the bundle for the medication list document"
 
 * insert DocumentRuleSet

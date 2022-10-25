@@ -1,7 +1,7 @@
 Profile: CHEMEDEPRCompositionMedicationList
 Parent: CHEMEDCompositionMedicationList
 Id: ch-emed-epr-composition-medicationlist
-Title: "Composition PML"
+Title: "CH EMED EPR Composition PML"
 Description: "Definition of the composition for the medication list document"
 
 * insert CompositionRuleSet

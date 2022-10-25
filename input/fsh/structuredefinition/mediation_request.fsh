@@ -1,7 +1,7 @@
 Profile: CHEMEDEPRMedicationRequest
 Parent: CHEMEDMedicationRequest
 Id: ch-emed-epr-medicationrequest
-Title: "MedicationRequest"
+Title: "CH EMED EPR MedicationRequest"
 Description: "Definition of the medication request"
 
 // Upstream

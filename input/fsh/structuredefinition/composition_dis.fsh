@@ -1,7 +1,7 @@
 Profile: CHEMEDEPRCompositionMedicationDispense
 Parent: CHEMEDCompositionMedicationDispense
 Id: ch-emed-epr-composition-medicationdispense
-Title: "Composition DIS"
+Title: "CH EMED EPR Composition DIS"
 Description: "Definition of the composition for the medication dispense document"
 
 * insert CompositionRuleSet

@@ -1,7 +1,7 @@
 Profile: CHEMEDEPRDocumentMedicationPrescription
 Parent: CHEMEDDocumentMedicationPrescription
 Id: ch-emed-epr-document-medicationprescription
-Title: "Document PRE"
+Title: "CH EMED EPR Document PRE"
 Description: "Definition of the bundle for the medication prescription document"
 
 * insert DocumentRuleSet

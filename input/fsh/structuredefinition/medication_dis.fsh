@@ -1,7 +1,7 @@
 Profile: CHEMEDEPRMedicationMedicationDispense
 Parent: CHEMEDMedicationMedicationDispense
 Id: ch-emed-epr-medication-medicationdispense
-Title: "Medication (DIS)"
+Title: "CH EMED EPR Medication (DIS)"
 Description: "Definition of the medication for the medication dispense"
 
 // Upstream
@@ -14,6 +14,9 @@ Description: "Definition of the medication for the medication dispense"
 * code.coding[ATC].code 1..1
 * code.coding[ATC].display 1..1*/
 // * amount.denominator 0..0 TODO 
+
+// Restrictions
+* code.coding[GTIN]                 0..1
 
 // Disable the unused parts
 * meta                              0..0

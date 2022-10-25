@@ -1,7 +1,7 @@
 Profile: CHEMEDEPRCompositionPharmaceuticalAdvice
 Parent: CHEMEDCompositionPharmaceuticalAdvice
 Id: ch-emed-epr-composition-pharmaceuticaladvice
-Title: "Composition PADV"
+Title: "CH EMED EPR Composition PADV"
 Description: "Definition of the composition for the pharmaceutical advice document"
 
 * insert CompositionRuleSet

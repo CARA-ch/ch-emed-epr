@@ -1,7 +1,7 @@
 Profile: CHEMEDEPRMedicationDispense
 Parent: CHEMEDMedicationDispense
 Id: ch-emed-epr-medicationdispense
-Title: "MedicationDispense"
+Title: "CH EMED EPR MedicationDispense"
 Description: "Definition of the medication dispense"
 
 // Upstream

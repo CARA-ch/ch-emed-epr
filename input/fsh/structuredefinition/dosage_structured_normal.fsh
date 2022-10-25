@@ -1,7 +1,7 @@
-Profile: CHEMEDPMPDosageStructuredNormal
+Profile: CHEMEDEPRDosageStructuredNormal
 Parent: CHEMEDDosageStructuredNormal
-Id: ch-emed-pmp-dosage-structured-normal
-Title: "CH EMED PMP Dosage Structured Normal Dosing"
+Id: ch-emed-epr-dosage-structured-normal
+Title: "CH EMED EPR Dosage Structured Normal Dosing"
 Description: "Normal dosing (IHE PHARM 1.3.6.1.4.1.19376.1.5.3.1.4.7.1)"
 
 * extension                         0..0

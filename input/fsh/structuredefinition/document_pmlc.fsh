@@ -1,7 +1,7 @@
 Profile: CHEMEDEPRDocumentMedicationCard
 Parent: CHEMEDDocumentMedicationCard
 Id: ch-emed-epr-document-medicationcard
-Title: "Document PMLC"
+Title: "CH EMED EPR Document PMLC"
 Description: "Definition of the bundle for the medication card document"
 
 * insert DocumentRuleSet

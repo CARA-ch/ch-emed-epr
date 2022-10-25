@@ -1,7 +1,7 @@
 Profile: CHEMEDEPRObservation
 Parent: CHEMEDObservation
 Id: ch-emed-epr-observation
-Title: "Observation"
+Title: "CH EMED EPR Observation"
 Description: "Definition of the observation"
 
 // Upstream
