@@ -8,6 +8,7 @@ Description: "Definition of the practitioner role for the eMedication context"
 * code                              0..1
 * code                              from http://fhir.ch/ig/ch-epr-term/ValueSet/HCProfessional.hcProfession (required)
 * practitioner                      only Reference(CHEMEDEPRPractitioner)
+* organization                      only Reference(CHEMEDOrganization)
 
 
 // Disable unused parts
@@ -28,5 +29,4 @@ Description: "Definition of the practitioner role for the eMedication context"
 * healthcareService                 0..0
 * contained                         0..0
 
-// TODO why is CHEMEDEPRPractitioner shown as Practitioner?
 // TODO code: not exactly the CDA participationFunction

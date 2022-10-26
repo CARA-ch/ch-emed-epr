@@ -16,15 +16,8 @@ RuleSet: CompositionRuleSet
 //* type                              insert SimpleCodeableConcept TODO
 //* type.coding                       1..1 TODO
 //* type.coding                       insert SimpleCoding TODO
-* category                          insert SimpleCodeableConcept
-* category                          1..1
-* category.coding                   insert SimpleCoding
-* category.coding                   1..1
-* category.coding.code              1..1
-* category.coding.system            1..1
-* category.coding.display           1..1
-* extension[informationRecipient].valueReference only Reference(CHEMEDEPRPractitioner or CHCorePatientEPR or RelatedPerson or CHCoreOrganizationEPR)
-* section.author                    only Reference(CHEMEDEPRPractitioner or CHEMEDEPRPractitionerRole or Device or CHCorePatientEPR or RelatedPerson or CHCoreOrganizationEPR)
+* extension[informationRecipient].valueReference only Reference(CHEMEDEPRPractitioner or CHCorePatientEPR or RelatedPerson or CHEMEDOrganization)
+* section.author                    only Reference(CHEMEDEPRPractitioner or CHEMEDEPRPractitionerRole or Device or CHCorePatientEPR or RelatedPerson or CHEMEDOrganization)
 // BUG extension[informationRecipient] shows the wrong types
 
 // Disable unused parts

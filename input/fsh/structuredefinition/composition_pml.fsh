@@ -7,9 +7,6 @@ Description: "Definition of the composition for the medication list document"
 * insert CompositionRuleSet
 
 // Upstream
-* category.coding.code              = #422735006
-* category.coding.system            = $sct
-* category.coding.display           = "Summary clinical document (record artifact)"
 * section[list].extension[sectionId] 0..0 // Not useful anymore
 * section[list].code.coding         = $lnc#56445-0 "Medication summary"
 

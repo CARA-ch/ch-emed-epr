@@ -1,9 +1,8 @@
 # TODO
 
-- Amount to dispense in MPT and PRE?
+- Amount to dispense in MTP and PRE?
 - Documents: remove link?
-- Ref(Patient): in Document, Composition, MedicationStatement/Request/Observation?
-- Replace Practition/PractitionerRole with our definitions
+- In PML entries, where to store document ID?
 
 ## Questions
 

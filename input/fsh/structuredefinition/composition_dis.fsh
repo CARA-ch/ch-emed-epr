@@ -8,9 +8,6 @@ Description: "Definition of the composition for the medication dispense document
 * insert CompositionWithAnnotationRuleSet
 
 // Upstream
-* category.coding.code              = #440545006
-* category.coding.system            = $sct
-* category.coding.display           = "Prescription record (record artifact)"
 * section[dispense].extension[sectionId] 0..0 // Not useful anymore
 
 // Restrictions

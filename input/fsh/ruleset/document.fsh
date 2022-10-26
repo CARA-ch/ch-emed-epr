@@ -8,7 +8,7 @@ RuleSet: DocumentRuleSet
 * entry[PractitionerRole].resource  only CHEMEDEPRPractitionerRole
 * entry.fullUrl                     obeys UrnUuid
 * entry[Patient].resource           only CHCorePatientEPR
-* entry[Organization].resource      only CHCoreOrganizationEPR
+* entry[Organization].resource      only CHEMEDOrganization
 
 // Disable the unused parts
 * meta                              insert NoMetaExceptProfile

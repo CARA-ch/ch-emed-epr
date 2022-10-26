@@ -7,9 +7,6 @@ Description: "Definition of the composition for the medication treatment plan do
 * insert CompositionRuleSet
 * insert CompositionWithAnnotationRuleSet
 
-* category.coding.code              = #440545006
-* category.coding.system            = $sct
-* category.coding.display           = "Prescription record (record artifact)"
 * section[treatmentPlan].extension[sectionId] 0..0 // Not useful anymore
 * subject                           only Reference(CHCorePatientEPR)
 // TODO prevent other sections (keep only slices)?
