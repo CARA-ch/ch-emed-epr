@@ -1,28 +1,31 @@
 RuleSet: CompositionRuleSet
 
-* type.coding                       1..1 // TODO Upstream
-//* type.coding.display               1..1 // TODO Upstream
-* category                          1..1 // TODO Upstream
-
-// Constraints
 * confidentiality                   = http://terminology.hl7.org/CodeSystem/v3-Confidentiality#N "normal"
-* confidentiality.extension[confidentialityCode].valueCodeableConcept.coding = $sct#17621005 "Normal (qualifier value)"
+* confidentiality.extension[confidentialityCode].valueCodeableConcept insert SimpleCodeableConcept
+* confidentiality.extension[confidentialityCode].valueCodeableConcept.coding insert SimpleCoding
+* confidentiality.extension[confidentialityCode].valueCodeableConcept.coding.code = #17621005
+* confidentiality.extension[confidentialityCode].valueCodeableConcept.coding.system = $sct
+* confidentiality.extension[confidentialityCode].valueCodeableConcept.coding.display = "Normal (qualifier value)"
+
+//* type.coding.display               1..1
 * relatesTo.code                    = http://hl7.org/fhir/document-relationship-type#replaces "Replaces"
 * section[originalRepresentation].code.coding 1..1
 * identifier.use                    = http://hl7.org/fhir/identifier-use#official "Official"
 * identifier.value                  obeys UrnUuid
 * confidentiality.extension         1..1
-* type                              insert SimpleCodeableConcept
-* type.coding                       insert SimpleCoding
+//* type                              insert SimpleCodeableConcept TODO
+//* type.coding                       1..1 TODO
+//* type.coding                       insert SimpleCoding TODO
 * category                          insert SimpleCodeableConcept
+* category                          1..1
 * category.coding                   insert SimpleCoding
 * category.coding                   1..1
 * category.coding.code              1..1
 * category.coding.system            1..1
 * category.coding.display           1..1
 * extension[informationRecipient].valueReference only Reference(CHEMEDEPRPractitioner or CHCorePatientEPR or RelatedPerson or CHCoreOrganizationEPR)
-* author                            only Reference(CHEMEDEPRPractitioner or CHEMEDEPRPractitionerRole or Device or CHCorePatientEPR or RelatedPerson or CHCoreOrganizationEPR)
 * section.author                    only Reference(CHEMEDEPRPractitioner or CHEMEDEPRPractitionerRole or Device or CHCorePatientEPR or RelatedPerson or CHCoreOrganizationEPR)
+// BUG extension[informationRecipient] shows the wrong types
 
 // Disable unused parts
 * meta                              insert NoMetaExceptProfile
@@ -38,19 +41,9 @@ RuleSet: CompositionRuleSet
 * custodian.id                      0..0
 * custodian.identifier              0..0 // The literal reference is required
 * identifier                        insert SimpleIdentifier
-* type                              insert SimpleCodeableConcept
-* type.coding                       insert SimpleCoding
-* category                          insert SimpleCodeableConcept
-* category.coding                   insert SimpleCoding
-/** category.coding.id                0..0 TODO BUG it makes the snapshot fail
-* category.coding.extension         0..0
-* category.coding.version           0..0
-* category.coding.userSelected      0..0*/
 * subject                           insert SimpleCodeableConcept
 * confidentiality.id                0..0
 
-* confidentiality.extension[confidentialityCode].valueCodeableConcept insert SimpleCodeableConcept
-* confidentiality.extension[confidentialityCode].valueCodeableConcept.coding insert SimpleCoding
 * section.focus                     0..0
 * section.mode                      = http://hl7.org/fhir/list-mode#snapshot "Snapshot List" // Document-based workflow, it's always a snapshot and not a live resource
 * section.orderedBy                 0..0 // It's not ordered

@@ -7,8 +7,9 @@ Description: "Definition of the composition for the medication list document"
 * insert CompositionRuleSet
 
 // Upstream
-* type.coding                       = $sct#721912009 "Medication summary document (record artifact)"
-* category.coding                   = $sct#422735006 "Summary clinical document (record artifact)"
+* category.coding.code              = #422735006
+* category.coding.system            = $sct
+* category.coding.display           = "Summary clinical document (record artifact)"
 * section[list].extension[sectionId] 0..0 // Not useful anymore
 * section[list].code.coding         = $lnc#56445-0 "Medication summary"
 
@@ -18,9 +19,10 @@ Description: "Definition of the composition for the medication list document"
 * section[list].code.coding         1..1
 // TODO section[card].author only Reference()
 * section[list].author              1..1 // TODO
-* section[list].entry[medicationTreatmentPlan]  only Reference(CHEMEDEPRMedicationStatementTreatmentPlan)
-* section[list].entry[medicationPrescription]   only Reference(CHEMEDEPRMedicationRequest)
-* section[list].entry[medicationDispense]       only Reference(CHEMEDEPRMedicationDispense)
-* section[list].entry[pharmaceuticalAdvice]     only Reference(CHEMEDEPRObservation)
+* section[list]
+  * entry[medicationStatement]      only Reference(CHEMEDEPRMedicationStatementList)
+  * entry[medicationRequest]        only Reference(CHEMEDEPRMedicationRequestList)
+  * entry[medicationDispense]       only Reference(CHEMEDEPRMedicationDispenseList)
+  * entry[observation]              only Reference(CHEMEDEPRObservationList)
 
 // Disable unused parts

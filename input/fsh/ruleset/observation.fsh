@@ -1,8 +1,4 @@
-Profile: CHEMEDEPRObservation
-Parent: CHEMEDObservation
-Id: ch-emed-epr-observation
-Title: "CH EMED EPR Observation"
-Description: "Definition of the observation"
+RuleSet: ObservationRuleSet
 
 // Upstream
 
@@ -19,7 +15,6 @@ Description: "Definition of the observation"
 * category                          0..0
 * focus                             0..0
 * encounter                         0..0
-* performer                         0..0
 * value[x]                          0..0
 * dataAbsentReason                  0..0
 * interpretation                    0..0

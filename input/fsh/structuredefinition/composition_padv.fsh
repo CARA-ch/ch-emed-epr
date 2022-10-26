@@ -8,13 +8,15 @@ Description: "Definition of the composition for the pharmaceutical advice docume
 * insert CompositionWithAnnotationRuleSet
 
 // Upstream
-* type.coding                       = $sct#419891008 "Record artifact (record artifact)"
-* category.coding                   = $sct#440545006 "Prescription record (record artifact)"
+* category.coding.code              = #440545006
+* category.coding.system            = $sct
+* category.coding.display           = "Prescription record (record artifact)"
 * section[pharmaceuticalAdvice].extension[sectionId] 0..0 // Not useful anymore
 
 // Restrictions
 // TODO prevent other sections (keep only slices)?
 * section[pharmaceuticalAdvice].code.coding 1..1
 * section[pharmaceuticalAdvice].entry only Reference(CHEMEDEPRObservation)
+* author                            only Reference(CHEMEDEPRPractitionerRole or CHCorePatientEPR or RelatedPerson)
 
 // Disable unused parts

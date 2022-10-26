@@ -8,8 +8,7 @@ RuleSet: MedicationStatementRuleSet
 // * dosage[structuredsplit] only ?
 * reasonCode                        insert ReasonCode
 * subject                           only Reference(CHCorePatientEPR)
-* informationSource                 only Reference(CHCorePatientEPR or CHEMEDEPRPractitioner or CHEMEDEPRPractitionerRole or RelatedPerson) // TODO: Can't add Organization to the list
-//* informationSource               TODO: extension 'http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-time' is not defined
+* informationSource                 only Reference(CHEMEDEPRPractitionerRole)
 
 // Disable the unused parts
 * meta                              insert NoMetaExceptProfile
@@ -27,7 +26,10 @@ RuleSet: MedicationStatementRuleSet
 * subject.id                        0..0
 * subject.extension                 0..0
 * effectiveDateTime                 0..0 // Use the period
+* medicationCodeableConcept         0..0
 
 // Restrictions
 * effective[x]                      1..1
 * effectivePeriod                   1..1
+
+* reasonCode                        ^definition = "Authors should keep it as simple and short as possible (e.g. \"blood clog\", \"hypertension\")."

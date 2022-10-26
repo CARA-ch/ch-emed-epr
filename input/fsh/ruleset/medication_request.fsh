@@ -1,16 +1,10 @@
-Profile: CHEMEDEPRMedicationRequest
-Parent: CHEMEDMedicationRequest
-Id: ch-emed-epr-medicationrequest
-Title: "CH EMED EPR MedicationRequest"
-Description: "Definition of the medication request"
-
-// Upstream
+RuleSet: MedicationRequestRuleSet
 
 // Restrictions
 * extension[treatmentplan]          1..1
 * intent                            = http://hl7.org/fhir/CodeSystem/medicationrequest-intent#order "Order" // TODO proposal in PADV OK
-* medication[x]                     only Reference(CHEMEDEPRMedication)
-* substitution.allowed[x].coding    from ActSubstanceAdminSubstitutionCode (required)
+* medicationReference               only Reference(CHEMEDEPRMedication)
+* substitution.allowedCodeableConcept from ActSubstanceAdminSubstitutionCode (required)
 * reasonCode                        insert ReasonCode
 
 // Disable unused parts
@@ -24,7 +18,6 @@ Description: "Definition of the medication request"
 * encounter                         0..0
 * supportingInformation             0..0
 * requester                         0..0
-* performer                         0..0
 * performerType                     0..0
 * reasonReference                   0..0
 * instantiatesCanonical             0..0

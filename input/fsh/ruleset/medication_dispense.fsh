@@ -1,8 +1,4 @@
-Profile: CHEMEDEPRMedicationDispense
-Parent: CHEMEDMedicationDispense
-Id: ch-emed-epr-medicationdispense
-Title: "CH EMED EPR MedicationDispense"
-Description: "Definition of the medication dispense"
+RuleSet: MedicationDispenseRuleSet
 
 // Upstream
 // TODO authorizingPrescription and extension[prescription] are doing the same thing

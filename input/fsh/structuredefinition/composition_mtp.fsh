@@ -7,20 +7,14 @@ Description: "Definition of the composition for the medication treatment plan do
 * insert CompositionRuleSet
 * insert CompositionWithAnnotationRuleSet
 
-// Upstream
-/** type.coding.code                  = #419891008
-* type.coding.system                = $sct
-* type.coding.display               = "Record artifact (record artifact)"*/
-//* type.coding                       = $sct#419891008 "Record artifact (record artifact)"
 * category.coding.code              = #440545006
 * category.coding.system            = $sct
-//* category.coding.display           = "Prescription record (record artifact)"
+* category.coding.display           = "Prescription record (record artifact)"
 * section[treatmentPlan].extension[sectionId] 0..0 // Not useful anymore
 * subject                           only Reference(CHCorePatientEPR)
-
-// Restrictions
 // TODO prevent other sections (keep only slices)?
 * section[treatmentPlan].code.coding 1..1
 * section[treatmentPlan].entry      only Reference(CHEMEDEPRMedicationStatementTreatmentPlan)
 * section[treatmentPlan].code       insert SimpleCodeableConcept
 * section[treatmentPlan].code.coding insert SimpleCoding
+* author                            only Reference(CHEMEDEPRPractitionerRole or CHCorePatientEPR or RelatedPerson)
