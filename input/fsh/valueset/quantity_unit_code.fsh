@@ -2,6 +2,10 @@ ValueSet: QuantityUnitCodeCara
 Id: quantity-unit-code-cara
 Title: "CH EMED EPR Quantity Unit Codes"
 Description: "Unit Codes for Quantity Units."
+
+* ^experimental = true
+* ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+
 * $sct#732981002 "Actuation (unit of presentation)"
 * $sct#732978007 "Ampule (unit of presentation)"
 * $sct#732980001 "Applicator (unit of presentation)"

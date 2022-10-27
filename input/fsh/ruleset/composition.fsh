@@ -17,7 +17,7 @@ RuleSet: CompositionRuleSet
 //* type.coding                       1..1 TODO
 //* type.coding                       insert SimpleCoding TODO
 * extension[informationRecipient].valueReference only Reference(CHEMEDEPRPractitioner or CHCorePatientEPR or RelatedPerson or CHEMEDOrganization)
-* section.author                    only Reference(CHEMEDEPRPractitioner or CHEMEDEPRPractitionerRole or Device or CHCorePatientEPR or RelatedPerson or CHEMEDOrganization)
+* section.author                    only Reference(CHEMEDEPRPractitionerRole or CHCorePatientEPR or RelatedPerson)
 // BUG extension[informationRecipient] shows the wrong types
 
 // Disable unused parts
