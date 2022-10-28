@@ -33,3 +33,5 @@ RuleSet: MedicationStatementRuleSet
 * effectivePeriod                   1..1
 
 * reasonCode                        ^definition = "Authors should keep it as simple and short as possible (e.g. \"blood clog\", \"hypertension\")."
+
+// TODO: Disallow medicationCodeableConcept

@@ -4,6 +4,7 @@
 - Documents: remove link?
 - In PML entries, where to store document ID?
 - Fulfillment instructions
+- Remove RelatedPerson for now
 
 ## Questions
 

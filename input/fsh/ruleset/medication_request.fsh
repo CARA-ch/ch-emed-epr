@@ -8,7 +8,7 @@ RuleSet: MedicationRequestRuleSet
 * reasonCode                        insert ReasonCode
 
 // Disable unused parts
-* meta                              0..0
+* meta                              insert NoMetaExceptProfile
 * implicitRules                     0..0
 * statusReason                      0..0 // TODO we may want this
 * category                          0..0
@@ -34,3 +34,4 @@ RuleSet: MedicationRequestRuleSet
 * dispenseRequest.expectedSupplyDuration 0..0
 * dispenseRequest.performer         0..0
 * modifierExtension                 0..0
+* substitution.allowedBoolean 0..0 // TODO remove 
