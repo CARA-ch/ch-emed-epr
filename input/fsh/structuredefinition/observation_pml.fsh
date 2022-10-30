@@ -6,4 +6,4 @@ Description: "Definition of the observation for the medication list document"
 
 * insert ObservationRuleSet
 
-* performer                         only Reference(CHEMEDEPRPractitionerRole)
+* performer only Reference(CHEMEDEPRPractitionerRole)

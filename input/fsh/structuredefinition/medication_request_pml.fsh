@@ -6,4 +6,4 @@ Description: "Definition of the medication request for the medication list docum
 
 * insert MedicationRequestRuleSet
 
-* performer                         only Reference(CHEMEDEPRPractitionerRole)
+* performer only Reference(CHEMEDEPRPractitionerRole)

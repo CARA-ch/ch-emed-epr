@@ -6,4 +6,4 @@ Description: "Definition of the medication request for the medication prescripti
 
 * insert MedicationRequestRuleSet
 
-* performer                         0..0
+* performer 0..0

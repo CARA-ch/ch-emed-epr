@@ -6,4 +6,4 @@ Description: "Definition of the observation for the pharmaceutical advice docume
 
 * insert ObservationRuleSet
 
-* performer                         0..0
+* performer 0..0

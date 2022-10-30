@@ -8,14 +8,14 @@ Description: "Definition of the bundle for the medication list document"
 
 // Constraints
 * entry[Composition]
-  * resource                        only CHEMEDEPRCompositionMedicationList
+ * resource only CHEMEDEPRCompositionMedicationList
 * entry[MedicationStatement]
-  * resource                        only CHEMEDEPRMedicationStatementList
+ * resource only CHEMEDEPRMedicationStatementList
 * entry[MedicationRequest]
-  * resource                        only CHEMEDEPRMedicationRequestList
+ * resource only CHEMEDEPRMedicationRequestList
 * entry[MedicationDispense]
-  * resource                        only CHEMEDEPRMedicationDispenseList
+ * resource only CHEMEDEPRMedicationDispenseList
 * entry[Observation]
-  * resource                        only CHEMEDEPRObservationList
+ * resource only CHEMEDEPRObservationList
 
 // Disable the unused parts

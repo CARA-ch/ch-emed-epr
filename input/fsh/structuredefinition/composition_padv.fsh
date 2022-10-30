@@ -14,6 +14,6 @@ Description: "Definition of the composition for the pharmaceutical advice docume
 // TODO prevent other sections (keep only slices)?
 * section[pharmaceuticalAdvice].code.coding 1..1
 * section[pharmaceuticalAdvice].entry only Reference(CHEMEDEPRObservation)
-* author                            only Reference(CHEMEDEPRPractitionerRole or CHCorePatientEPR)
+* author only Reference(CHEMEDEPRPractitionerRole or CHCorePatientEPR)
 
 // Disable unused parts

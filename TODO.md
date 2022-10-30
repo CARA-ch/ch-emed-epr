@@ -5,6 +5,7 @@
 - In PML entries, where to store document ID?
 - Fulfillment instructions
 - Remove RelatedPerson for now
+- Full datetimes where it's important
 
 ## Questions
 

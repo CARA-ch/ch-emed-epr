@@ -7,7 +7,7 @@ Description: "Definition of the bundle for the medication prescription document"
 * insert DocumentRuleSet
 
 // Constraints
-* entry[Composition].resource       only CHEMEDEPRCompositionMedicationPrescription
+* entry[Composition].resource only CHEMEDEPRCompositionMedicationPrescription
 * entry[MedicationRequest].resource only CHEMEDEPRMedicationRequest
 
 // Disable the unused parts
