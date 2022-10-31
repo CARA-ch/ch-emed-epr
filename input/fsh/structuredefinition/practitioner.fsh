@@ -9,7 +9,7 @@ Description: "Definition of the practitioner for the eMedication context"
 * address 1..1
 
 // Disable unused parts
-* meta insert NoMetaExceptProfile
+* meta insert meta-ruleset
 * implicitRules 0..0
 * active 0..0
 * birthDate 0..0
@@ -19,7 +19,7 @@ Description: "Definition of the practitioner for the eMedication context"
 * contained 0..0
 * extension 0..0
 * modifierExtension 0..0
-* identifier insert SimpleIdentifier
+* identifier insert identifier-ruleset
 
 // TODO ZSR is mandatory on paper prescription
 // TODO block othe

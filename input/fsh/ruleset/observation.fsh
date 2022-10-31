@@ -1,11 +1,11 @@
-RuleSet: ObservationRuleSet
+RuleSet: observation-ruleset
 
 // Upstream
 
 // Restrictions
 // TODO Ref MTP or PRE or DIS
 // TODO medicationStatementChanged ?
-
+* issued 1..1
 
 // Disable unused parts
 * meta 0..0
@@ -26,3 +26,6 @@ RuleSet: ObservationRuleSet
 * hasMember 0..0
 * derivedFrom 0..0
 * component 0..0
+
+// Documentation
+* note.text ^short = "The annotation text content (as raw text, no markdown allowed)."

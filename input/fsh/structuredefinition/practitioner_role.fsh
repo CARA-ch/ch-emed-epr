@@ -12,7 +12,7 @@ Description: "Definition of the practitioner role for the eMedication context"
 
 
 // Disable unused parts
-* meta insert NoMetaExceptProfile
+* meta insert meta-ruleset
 * implicitRules 0..0
 * active 0..0
 * period 0..0

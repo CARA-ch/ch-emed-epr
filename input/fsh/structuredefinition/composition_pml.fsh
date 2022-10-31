@@ -4,7 +4,7 @@ Id: ch-emed-epr-composition-medicationlist
 Title: "CH EMED EPR Composition PML"
 Description: "Definition of the composition for the medication list document"
 
-* insert CompositionRuleSet
+* insert composition-ruleset
 
 // Upstream
 * section[list].extension[sectionId] 0..0 // Not useful anymore

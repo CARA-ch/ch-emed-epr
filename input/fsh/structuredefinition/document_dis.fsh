@@ -4,7 +4,7 @@ Id: ch-emed-epr-document-medicationdispense
 Title: "CH EMED EPR Document DIS"
 Description: "Definition of the bundle for the medication dispense document"
 
-* insert DocumentRuleSet
+* insert document-ruleset
 
 // Restrictions
 * entry[Composition].resource only CHEMEDEPRCompositionMedicationDispense

@@ -4,7 +4,7 @@ Id: ch-emed-epr-document-pharmaceuticaladvice
 Title: "CH EMED EPR Document PADV"
 Description: "Definition of the bundle for the pharmaceutical advice document"
 
-* insert DocumentRuleSet
+* insert document-ruleset
 
 // Constraints
 * entry[Composition].resource only CHEMEDEPRCompositionPharmaceuticalAdvice

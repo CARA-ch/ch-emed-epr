@@ -4,8 +4,9 @@ Id: ch-emed-epr-composition-medicationprescription
 Title: "CH EMED EPR Composition PRE"
 Description: "Definition of the composition for the medication prescription document"
 
-* insert CompositionRuleSet
-* insert CompositionWithAnnotationRuleSet
+* insert composition-ruleset
+* insert composition-with-annotation-ruleset
+* insert composition-with-original-representation-ruleset
 
 // Upstream
 * section[prescription].extension[sectionId] 0..0 // Not useful anymore

@@ -4,7 +4,7 @@ Id: ch-emed-epr-document-medicationcard
 Title: "CH EMED EPR Document PMLC"
 Description: "Definition of the bundle for the medication card document"
 
-* insert DocumentRuleSet
+* insert document-ruleset
 
 // Constraints
 * entry[Composition].resource only CHEMEDEPRCompositionMedicationCard

@@ -1,4 +1,4 @@
-RuleSet: MedicationRuleSet
+RuleSet: medication-ruleset
 
 // Upstream
 * code.coding contains ATC 0..1 MS
@@ -23,13 +23,13 @@ RuleSet: MedicationRuleSet
 
 
 // Disable the unused parts
-* meta insert NoMetaExceptProfile
+* meta insert meta-ruleset
 * implicitRules 0..0
 * code.id 0..0
-* code.coding[GTIN] insert SimpleCoding
-* code.coding[ATC] insert SimpleCoding
-* form insert SimpleCodeableConcept
-* form.coding insert SimpleCoding
+* code.coding[GTIN] insert coding-ruleset
+* code.coding[ATC] insert coding-ruleset
+* form insert codeableconcept-ruleset
+* form.coding insert coding-ruleset
 * batch.id 0..0
 * batch.extension 0..0
 * batch.modifierExtension 0..0

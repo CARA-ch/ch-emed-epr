@@ -4,8 +4,9 @@ Id: ch-emed-epr-composition-medicationdispense
 Title: "CH EMED EPR Composition DIS"
 Description: "Definition of the composition for the medication dispense document"
 
-* insert CompositionRuleSet
-* insert CompositionWithAnnotationRuleSet
+* insert composition-ruleset
+* insert composition-with-annotation-ruleset
+* insert composition-with-original-representation-ruleset
 
 // Upstream
 * section[dispense].extension[sectionId] 0..0 // Not useful anymore

@@ -4,7 +4,7 @@ Id: ch-emed-epr-document-medicationlist
 Title: "CH EMED EPR Document PML"
 Description: "Definition of the bundle for the medication list document"
 
-* insert DocumentRuleSet
+* insert document-ruleset
 
 // Constraints
 * entry[Composition]

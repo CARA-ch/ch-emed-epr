@@ -4,6 +4,6 @@ Id: ch-emed-epr-observation-list
 Title: "CH EMED EPR Observation (PML)"
 Description: "Definition of the observation for the medication list document"
 
-* insert ObservationRuleSet
+* insert observation-ruleset
 
 * performer only Reference(CHEMEDEPRPractitionerRole)

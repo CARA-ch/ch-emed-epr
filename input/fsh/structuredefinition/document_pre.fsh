@@ -4,7 +4,7 @@ Id: ch-emed-epr-document-medicationprescription
 Title: "CH EMED EPR Document PRE"
 Description: "Definition of the bundle for the medication prescription document"
 
-* insert DocumentRuleSet
+* insert document-ruleset
 
 // Constraints
 * entry[Composition].resource only CHEMEDEPRCompositionMedicationPrescription

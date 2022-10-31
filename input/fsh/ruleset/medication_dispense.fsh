@@ -1,4 +1,4 @@
-RuleSet: MedicationDispenseRuleSet
+RuleSet: medication-dispense-ruleset
 
 // Upstream
 // TODO authorizingPrescription and extension[prescription] are doing the same thing

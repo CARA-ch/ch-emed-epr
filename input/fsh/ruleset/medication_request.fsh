@@ -1,14 +1,14 @@
-RuleSet: MedicationRequestRuleSet
+RuleSet: medication-request-ruleset
 
 // Restrictions
 * extension[treatmentplan] 1..1
 * intent = http://hl7.org/fhir/CodeSystem/medicationrequest-intent#order "Order" // TODO proposal in PADV OK
 * medicationReference only Reference(CHEMEDEPRMedication)
 * substitution.allowedCodeableConcept from ActSubstanceAdminSubstitutionCode (required)
-* reasonCode insert ReasonCode
+* reasonCode insert reason-code-ruleset
 
 // Disable unused parts
-* meta insert NoMetaExceptProfile
+* meta insert meta-ruleset
 * implicitRules 0..0
 * statusReason 0..0 // TODO we may want this
 * category 0..0
