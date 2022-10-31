@@ -17,9 +17,9 @@ Description: "Definition of the composition for the medication list document"
 // TODO section[card].author only Reference()
 * section[list].author 1..1 // TODO
 * section[list]
- * entry[medicationStatement] only Reference(CHEMEDEPRMedicationStatementList)
- * entry[medicationRequest] only Reference(CHEMEDEPRMedicationRequestList)
- * entry[medicationDispense] only Reference(CHEMEDEPRMedicationDispenseList)
- * entry[observation] only Reference(CHEMEDEPRObservationList)
+  * entry[medicationStatement] only Reference(CHEMEDEPRMedicationStatementList)
+  * entry[medicationRequest] only Reference(CHEMEDEPRMedicationRequestList)
+  * entry[medicationDispense] only Reference(CHEMEDEPRMedicationDispenseList)
+  * entry[observation] only Reference(CHEMEDEPRObservationList)
 
 // Disable unused parts
