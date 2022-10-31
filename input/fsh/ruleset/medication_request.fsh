@@ -2,10 +2,12 @@ RuleSet: medication-request-ruleset
 
 // Restrictions
 * extension[treatmentplan] 1..1
-* intent = http://hl7.org/fhir/CodeSystem/medicationrequest-intent#order "Order" // TODO proposal in PADV OK
 * medicationReference only Reference(CHEMEDEPRMedication)
 * substitution.allowedCodeableConcept from ActSubstanceAdminSubstitutionCode (required)
 * reasonCode insert reason-code-ruleset
+
+* intent = http://hl7.org/fhir/CodeSystem/medicationrequest-intent#order "Order" // That's a modifier
+* doNotPerform 0..0 // Thant's a modifier; use PADV CANCEL/SUSPEND/REFUSE instead
 
 // Disable unused parts
 * meta insert meta-ruleset
@@ -13,7 +15,6 @@ RuleSet: medication-request-ruleset
 * statusReason 0..0 // TODO we may want this
 * category 0..0
 * priority 0..0
-* doNotPerform 0..0 // Use PADV CANCEL/SUSPEND/REFUSE instead
 * reported[x] 0..0
 * encounter 0..0
 * supportingInformation 0..0
