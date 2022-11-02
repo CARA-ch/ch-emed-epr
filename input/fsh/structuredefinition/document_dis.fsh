@@ -10,6 +10,4 @@ Description: "Definition of the bundle for the medication dispense document"
 * entry[Composition].resource only CHEMEDEPRCompositionMedicationDispense
 * entry[MedicationDispense].resource only CHEMEDEPRMedicationDispense
 
-// Disable the unused parts
-
 // Documentation

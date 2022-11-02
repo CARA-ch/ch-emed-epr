@@ -5,7 +5,7 @@
 - In PML entries, where to store document ID?
 - Fulfillment instructions
 - Full datetimes where it's important
-- meta.profile: whitelist two URLs
+- Contained resources in PML/PMLC
 
 ## Questions
 

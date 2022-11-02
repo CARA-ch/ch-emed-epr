@@ -1,8 +1,0 @@
-###
-GET http://hapi.fhir.org/baseR4/Patient?gender=female&birthdate=ge1960&birthdate=le1980-12-31&_summary=count
-
-###
-
-GET http://hapi.fhir.org/baseR4/Observation?code=http://loinc.org|3141-9&_sort=-date
-
-###

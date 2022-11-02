@@ -8,7 +8,6 @@ RuleSet: composition-ruleset
 * confidentiality.extension[confidentialityCode].valueCodeableConcept.coding.code = #17621005
 * confidentiality.extension[confidentialityCode].valueCodeableConcept.coding.system = $sct
 * confidentiality.extension[confidentialityCode].valueCodeableConcept.coding.display = "Normal (qualifier value)"
-
 //* type.coding.display 1..1
 * relatesTo.code = http://hl7.org/fhir/document-relationship-type#replaces "Replaces"
 * section[originalRepresentation].code.coding 1..1
@@ -22,8 +21,6 @@ RuleSet: composition-ruleset
 * section.author only Reference(CHEMEDEPRPractitionerRole or CHCorePatientEPR)
 // BUG extension[informationRecipient] shows the wrong types
 * date obeys datetime-only-instant-invariant
-
-// Disable unused parts
 * encounter D
 * attester[legalAuthenticator] D
 * attester D
@@ -36,17 +33,17 @@ RuleSet: composition-ruleset
 * identifier insert identifier-ruleset
 * subject insert codeableconcept-ruleset
 * confidentiality.id D
-
 * section.focus 0..0
 * section.mode = http://hl7.org/fhir/list-mode#snapshot "Snapshot List" // Document-based workflow, it's always a snapshot and not a live resource
-* section.orderedBy 0..0 // It's not ordered
-//* section.entry.id 0..0 // TODO BUG https://github.com/hapifhir/org.hl7.fhir.core/issues/954
+* section.orderedBy D // It's not ordered
+* section.entry.id D
 * section.emptyReason
+* extension[versionNumber] = 1
 
 // Documentation
 * confidentiality ^short = "The confidentiality is fixed to normal for publication in the EPR"
 * identifier.value ^short = "The document identifier as an URN-encoded UUID"
-//* identifier.value = "urn:uuid:41797728-89fb-4cbb-8d11-c79aace92821" (example)
+* extension[versionNumber] ^short = "It shall be the first version of the document"
 
 
 // A RuleSet for Compositions with annotation

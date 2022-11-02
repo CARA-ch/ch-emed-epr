@@ -8,23 +8,21 @@ RuleSet: document-ruleset
 * entry[Patient] 1..1
 * entry[Practitioner].resource only CHEMEDEPRPractitioner
 * entry[PractitionerRole].resource only CHEMEDEPRPractitionerRole
-* entry.fullUrl obeys urn-uuid-invariant
+* entry.fullUrl obeys urn-uuid-invariant // TODO: this only goes in PML/PMLC
 * entry[Patient].resource only CHCorePatientEPR
 * entry[Organization].resource only CHEMEDOrganization
-
-// Disable the unused parts
 * total 0..0
 * entry.search 0..0
 * entry.request 0..0
 * entry.response 0..0
 * entry.link 0..0
-* entry.id 0..0
+* entry.id D
 * entry[Encounter] D
 * entry[Location] D
 * signature D
-* link 0..0
+* link D
 * identifier insert identifier-ruleset
-* id 0..0
+* id D
 * language D // Use Composition.language
 
 // Documentation
