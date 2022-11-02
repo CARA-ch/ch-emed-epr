@@ -1,5 +1,7 @@
 RuleSet: medication-statement-ruleset
 
+* insert domain-resource-ruleset
+
 // * status 0..0 SPEC This should be forbidden
 * medicationReference only Reference(CHEMEDEPRMedication)
 // * effective ??
@@ -11,8 +13,6 @@ RuleSet: medication-statement-ruleset
 * informationSource only Reference(CHEMEDEPRPractitionerRole)
 
 // Disable the unused parts
-* meta insert meta-ruleset
-* implicitRules 0..0
 * basedOn 0..0
 * partOf 0..0
 * statusReason 0..0 // TODO: we may want this
@@ -22,7 +22,6 @@ RuleSet: medication-statement-ruleset
 * derivedFrom 0..0
 * reasonReference 0..0
 * identifier insert identifier-ruleset
-* modifierExtension 0..0
 * subject.id 0..0
 * subject.extension 0..0
 * effectiveDateTime 0..0 // Use the period instead

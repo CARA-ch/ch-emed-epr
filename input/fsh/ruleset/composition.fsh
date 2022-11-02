@@ -1,5 +1,7 @@
 RuleSet: composition-ruleset
 
+* insert domain-resource-ruleset
+
 * confidentiality = http://terminology.hl7.org/CodeSystem/v3-Confidentiality#N "normal"
 * confidentiality.extension[confidentialityCode].valueCodeableConcept insert codeableconcept-ruleset
 * confidentiality.extension[confidentialityCode].valueCodeableConcept.coding insert coding-ruleset
@@ -22,21 +24,18 @@ RuleSet: composition-ruleset
 * date obeys datetime-only-instant-invariant
 
 // Disable unused parts
-* meta insert meta-ruleset
-* implicitRules 0..0
-* encounter 0..0
-* attester[legalAuthenticator] 0..0
-* attester 0..0
-* event 0..0
-* relatesTo 0..0
-* modifierExtension 0..0
-* author.id 0..0
+* encounter D
+* attester[legalAuthenticator] D
+* attester D
+* event D
+* relatesTo D
+* author.id D
 * author.identifier 0..0 // The literal reference is required
-* custodian.id 0..0
+* custodian.id D
 * custodian.identifier 0..0 // The literal reference is required
 * identifier insert identifier-ruleset
 * subject insert codeableconcept-ruleset
-* confidentiality.id 0..0
+* confidentiality.id D
 
 * section.focus 0..0
 * section.mode = http://hl7.org/fhir/list-mode#snapshot "Snapshot List" // Document-based workflow, it's always a snapshot and not a live resource
@@ -55,10 +54,10 @@ RuleSet: composition-with-annotation-ruleset
 
 * section[annotation].extension[sectionId] 0..0 // Not useful anymore
 * section[annotation].code.coding 1..1
-* section[annotation].focus 0..0
-* section[annotation].emptyReason 0..0
-* section[annotation].section 0..0
-* section[annotation].id 0..0
+* section[annotation].focus D
+* section[annotation].emptyReason D
+* section[annotation].section D
+* section[annotation].id D
 * section[annotation] ^short = "Annotation comment concerning this document"
 * section[annotation].code insert codeableconcept-ruleset
 * section[annotation].code.coding insert coding-ruleset
@@ -68,12 +67,12 @@ RuleSet: composition-with-annotation-ruleset
 RuleSet: composition-with-original-representation-ruleset
 
 * section[originalRepresentation].code.coding 1..1
-* section[originalRepresentation].focus 0..0
-* section[originalRepresentation].emptyReason 0..0
-* section[originalRepresentation].section 0..0
-* section[originalRepresentation].id 0..0
+* section[originalRepresentation].focus D
+* section[originalRepresentation].emptyReason D
+* section[originalRepresentation].section D
+* section[originalRepresentation].id D
 * section[originalRepresentation].code insert codeableconcept-ruleset
 * section[originalRepresentation].code.coding insert coding-ruleset
-* section[originalRepresentation].entry.id 0..0
+* section[originalRepresentation].entry.id D
 * section[originalRepresentation].entry.identifier 0..0 // The literal reference is required
-* section[originalRepresentation].extension 0..0
+* section[originalRepresentation].extension D

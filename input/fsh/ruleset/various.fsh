@@ -1,36 +1,47 @@
+RuleSet: resource-ruleset
+* meta insert meta-ruleset
+* implicitRules 0..0 // It's a modifier
+* implicitRules ^short = "All implicit rules SHALL be documented"
+
+
+RuleSet: domain-resource-ruleset
+* insert resource-ruleset
+* modifierExtension 0..0 // It's a modifier
+* modifierExtension ^short = "All modifier extensions SHALL be documented"
+
+
 RuleSet: coding-ruleset
-* extension 0..0
-* version 0..0
-* userSelected 0..0
-* id 0..0
+* extension D
+* version D
+* userSelected D
+* id D
 
 
 RuleSet: identifier-ruleset
-* assigner 0..0
-* period 0..0
-* type 0..0
-* id 0..0
-* extension 0..0
+* assigner D
+* period D
+* type D
+* id D
+* extension D
 
 
 RuleSet: codeableconcept-ruleset
-* id 0..0
-* extension 0..0
+* id D
+* extension D
 
 
 RuleSet: meta-ruleset
-* id 0..0
-* extension 0..0
-* versionId 0..0
-* lastUpdated 0..0
-* source 0..0
-* security 0..0
-* tag 0..0
+* id D
+* extension D
+* versionId D
+* lastUpdated D
+* source D
+* security 0..0 // No security concept
+* tag D
 
 
 RuleSet: reason-code-ruleset
 * insert codeableconcept-ruleset
-* coding 0..0 // TODO we may want this
+* coding D
 * text 1..1
 * text ^short = "Plain text representation of the treatment reason(s)"
-

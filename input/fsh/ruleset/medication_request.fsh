@@ -1,5 +1,7 @@
 RuleSet: medication-request-ruleset
 
+* insert domain-resource-ruleset
+
 // Restrictions
 * extension[treatmentplan] 1..1
 * medicationReference only Reference(CHEMEDEPRMedication)
@@ -7,11 +9,10 @@ RuleSet: medication-request-ruleset
 * reasonCode insert reason-code-ruleset
 
 * intent = http://hl7.org/fhir/CodeSystem/medicationrequest-intent#order "Order" // That's a modifier
-* doNotPerform 0..0 // Thant's a modifier; use PADV CANCEL/SUSPEND/REFUSE instead
+* doNotPerform 0..0 // Thant's a modifier
+* doNotPerform ^short = "Use a PADV CANCEL/SUSPEND/REFUSE instead"
 
 // Disable unused parts
-* meta insert meta-ruleset
-* implicitRules 0..0
 * statusReason 0..0 // TODO we may want this
 * category 0..0
 * priority 0..0
@@ -28,11 +29,11 @@ RuleSet: medication-request-ruleset
 * courseOfTherapyType 0..0
 * insurance 0..0
 * substitution.reason 0..0 // TODO we may want this
-* priorPrescription 0..0 // Use the XDS mechanism
+* priorPrescription D
+* priorPrescription ^short = "Use the XDS mechanis to replace a prescription"
 * detectedIssue 0..0
 * eventHistory 0..0
 * dispenseRequest.initialFill 0..0
 * dispenseRequest.expectedSupplyDuration 0..0
 * dispenseRequest.performer 0..0
-* modifierExtension 0..0
 * substitution.allowedBoolean 0..0 // TODO remove 

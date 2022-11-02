@@ -1,5 +1,7 @@
 RuleSet: observation-ruleset
 
+* insert domain-resource-ruleset
+
 // Upstream
 
 // Restrictions
@@ -8,8 +10,6 @@ RuleSet: observation-ruleset
 * issued 1..1
 
 // Disable unused parts
-* meta 0..0
-* implicitRules 0..0
 * basedOn 0..0
 * partOf 0..0
 * category 0..0

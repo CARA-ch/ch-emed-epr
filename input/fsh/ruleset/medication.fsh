@@ -1,5 +1,7 @@
 RuleSet: medication-ruleset
 
+* insert domain-resource-ruleset
+
 // Upstream
 * code.coding contains ATC 0..1 MS
 * code.coding[GTIN] MS
@@ -16,32 +18,31 @@ RuleSet: medication-ruleset
 * status = http://hl7.org/fhir/CodeSystem/medication-status#active "Active"
 * form.coding 1..1
 * code 1..1
-* code.coding 1..1
+* code ^short = "Codes that identify this medication. If the GTIN is known, please specify it."
+* code.coding 0..*
 * code.coding[GTIN] 0..1
-// * amount.denominator 0..0 TODO 
 * ingredient.itemCodeableConcept.coding 1..1
 
 
 // Disable the unused parts
-* meta insert meta-ruleset
-* implicitRules 0..0
-* code.id 0..0
+* code.id D
 * code.coding[GTIN] insert coding-ruleset
 * code.coding[ATC] insert coding-ruleset
 * form insert codeableconcept-ruleset
 * form.coding insert coding-ruleset
-* batch.id 0..0
-* batch.extension 0..0
-* batch.modifierExtension 0..0
-* extension 0..0
-* modifierExtension 0..0
-* code.extension 0..0
-* form.extension 0..0
-* ingredient.id 0..0
-* ingredient.extension 0..0
-* ingredient.modifierExtension 0..0
-* ingredient.itemCodeableConcept.id 0..0
-* ingredient.itemCodeableConcept.extension 0..0
+* batch.id D
+* batch.extension D
+* batch.modifierExtension 0..0 // It's a modifier
+* batch.modifierExtension ^short = "All modifier extensions SHALL be documented"
+* extension D
+* code.extension D
+* form.extension D
+* ingredient.id D
+* ingredient.extension D
+* ingredient.modifierExtension 0..0 // It's a modifier
+* ingredient.modifierExtension ^short = "All modifier extensions SHALL be documented"
+* ingredient.itemCodeableConcept.id D
+* ingredient.itemCodeableConcept.extension D
 //* identifier TODO
 
 // Documentation

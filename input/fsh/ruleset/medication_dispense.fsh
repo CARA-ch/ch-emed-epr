@@ -1,5 +1,7 @@
 RuleSet: medication-dispense-ruleset
 
+* insert domain-resource-ruleset
+
 // Upstream
 // TODO authorizingPrescription and extension[prescription] are doing the same thing
 
@@ -10,8 +12,6 @@ RuleSet: medication-dispense-ruleset
 * whenHandedOver 1..1
 
 // Disable unused parts
-* meta 0..0
-* implicitRules 0..0
 * partOf 0..0
 * statusReason[x] 0..0
 * category 0..0

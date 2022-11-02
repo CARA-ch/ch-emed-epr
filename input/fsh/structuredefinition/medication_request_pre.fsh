@@ -6,4 +6,4 @@ Description: "Definition of the medication request for the medication prescripti
 
 * insert medication-request-ruleset
 
-* performer 0..0
+* performer D

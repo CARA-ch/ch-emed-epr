@@ -4,21 +4,19 @@ Id: ch-emed-epr-practitioner
 Title: "CH EMED EPR Practitioner"
 Description: "Definition of the practitioner for the eMedication context"
 
+* insert domain-resource-ruleset
+
 // Restrictions
 * name 1..1
 * address 1..1
 
-// Disable unused parts
-* meta insert meta-ruleset
-* implicitRules 0..0
-* active 0..0
-* birthDate 0..0
-* photo 0..0
-* qualification 0..0
-* communication 0..0
-* contained 0..0
-* extension 0..0
-* modifierExtension 0..0
+* active D
+* birthDate D
+* photo D
+* qualification D
+* communication D
+* contained D
+* extension D
 * identifier insert identifier-ruleset
 
 // TODO ZSR is mandatory on paper prescription
