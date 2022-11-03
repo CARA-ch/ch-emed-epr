@@ -2,7 +2,6 @@ RuleSet: medication-ruleset
 
 * insert domain-resource-ruleset
 
-// Upstream
 * code.coding contains ATC 0..1 MS
 * code.coding[GTIN] MS
 * code.coding[ATC] only Coding
@@ -13,8 +12,6 @@ RuleSet: medication-ruleset
 * code.coding[ATC].code 1..1
 * code.coding[ATC].display 1..1
 * manufacturer only Reference(CHEMEDOrganization)
-
-// Restrictions
 * status = http://hl7.org/fhir/CodeSystem/medication-status#active "Active"
 * form.coding 1..1
 * code 1..1
@@ -22,9 +19,6 @@ RuleSet: medication-ruleset
 * code.coding 0..*
 * code.coding[GTIN] 0..1
 * ingredient.itemCodeableConcept.coding 1..1
-
-
-// Disable the unused parts
 * code.id D
 * code.coding[GTIN] insert coding-ruleset
 * code.coding[ATC] insert coding-ruleset

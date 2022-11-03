@@ -6,10 +6,8 @@ Description: "Definition of the practitioner for the eMedication context"
 
 * insert domain-resource-ruleset
 
-// Restrictions
 * name 1..1
 * address 1..1
-
 * active D
 * birthDate D
 * photo D

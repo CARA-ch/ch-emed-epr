@@ -6,8 +6,8 @@
 - Fulfillment instructions
 - Full datetimes where it's important
 - Contained resources in PML/PMLC
+- Add relatedPerson
 
 ## Questions
 
-- When are contained resources allowed? E.g. Medication in MedicationStatement, but not resources in composition?
 - id vs identifier? Which usage?
