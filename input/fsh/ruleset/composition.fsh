@@ -38,7 +38,7 @@ RuleSet: composition-ruleset
 * section.orderedBy D // It's not ordered
 * section.entry.id D
 * section.emptyReason
-* extension[versionNumber] = 1
+//* extension[versionNumber] = 1 // TODO
 
 // Documentation
 * confidentiality ^short = "The confidentiality is fixed to normal for publication in the EPR"
