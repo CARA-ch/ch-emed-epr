@@ -4,6 +4,7 @@ RuleSet: medication-statement-ruleset
 
 * medicationReference only Reference(CHEMEDEPRMedication)
 * reasonCode insert reason-code-ruleset
+* reasonCode.coding D
 * subject only Reference(CHCorePatientEPR)
 * informationSource only Reference(CHEMEDEPRPractitionerRole)
 * basedOn D
@@ -17,7 +18,9 @@ RuleSet: medication-statement-ruleset
 * identifier insert identifier-ruleset
 * subject.id D
 * subject.extension D
-* medicationCodeableConcept D
+* medicationCodeableConcept 0..0 // medicationReference is required and medication is 1..1
+* effective[x] 1..1
+* effectivePeriod 1..1
 
 * reasonCode ^definition = "Authors should keep it as simple and short as possible (e.g. 'blood clog', 'hypertension')."
 
