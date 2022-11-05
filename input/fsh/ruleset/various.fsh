@@ -1,13 +1,13 @@
 RuleSet: resource-ruleset
 * meta insert meta-ruleset
 * implicitRules 0..0 // It's a modifier
-* implicitRules ^short = "All implicit rules SHALL be documented"
+* implicitRules ^comment = "...All implicit rules SHALL be documented"
 
 
 RuleSet: domain-resource-ruleset
 * insert resource-ruleset
 * modifierExtension 0..0 // It's a modifier
-* modifierExtension ^short = "All modifier extensions SHALL be documented"
+* modifierExtension ^comment = "...All modifier extensions SHALL be documented"
 
 
 RuleSet: coding-ruleset

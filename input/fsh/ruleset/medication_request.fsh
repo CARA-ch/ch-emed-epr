@@ -32,6 +32,6 @@ RuleSet: medication-request-ruleset
 * dispenseRequest.performer D
 * substitution.allowedBoolean D // TODO remove 
 
-* doNotPerform ^short = "Use a PADV CANCEL/SUSPEND/REFUSE instead"
-* priorPrescription ^short = "Use the XDS mechanis to replace a prescription"
+* doNotPerform ^comment = "Use a PADV CANCEL/SUSPEND/REFUSE instead"
+* priorPrescription ^comment = "Use the XDS mechanis to replace a prescription"
 * extension[treatmentplan] ^short = "A reference to the MedicationStatement that introduced this medication"
