@@ -6,8 +6,5 @@ Description: "Definition of the bundle for the medication card document"
 
 * insert document-ruleset
 
-// Constraints
 * entry[Composition].resource only CHEMEDEPRCompositionMedicationCard
 * entry[MedicationStatement].resource only CHEMEDEPRMedicationStatementCard
-
-// Disable the unused parts

@@ -17,9 +17,7 @@ RuleSet: composition-ruleset
 //* type insert codeableconcept-ruleset TODO
 //* type.coding 1..1 TODO
 //* type.coding insert coding-ruleset TODO
-* extension[informationRecipient].valueReference only Reference(CHEMEDEPRPractitioner or CHCorePatientEPR or CHEMEDOrganization)
-* section.author only Reference(CHEMEDEPRPractitionerRole or CHCorePatientEPR)
-// BUG extension[informationRecipient] shows the wrong types
+* section.author only Reference(CHEMEDEPRPractitioner or CHEMEDEPRPractitionerRole or CHCorePatientEPR or CHEMEDOrganization or RelatedPerson or Device)
 * date obeys datetime-only-instant-invariant
 * encounter D
 * attester[legalAuthenticator] D

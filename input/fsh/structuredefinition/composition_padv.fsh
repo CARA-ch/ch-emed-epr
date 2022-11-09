@@ -8,13 +8,7 @@ Description: "Definition of the composition for the pharmaceutical advice docume
 * insert composition-with-annotation-ruleset
 * insert composition-with-original-representation-ruleset
 
-// Upstream
 * section[pharmaceuticalAdvice].extension[sectionId] 0..0 // Not useful anymore
-
-// Restrictions
-// TODO prevent other sections (keep only slices)?
 * section[pharmaceuticalAdvice].code.coding 1..1
 * section[pharmaceuticalAdvice].entry only Reference(CHEMEDEPRObservation)
 * author only Reference(CHEMEDEPRPractitionerRole or CHCorePatientEPR)
-
-// Disable unused parts

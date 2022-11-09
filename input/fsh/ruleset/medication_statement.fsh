@@ -19,8 +19,8 @@ RuleSet: medication-statement-ruleset
 * subject.id D
 * subject.extension D
 * medicationCodeableConcept 0..0 // medicationReference is required and medication is 1..1
-* effective[x] 1..1
-* effectivePeriod 1..1
+* effective[x] D
+* effectivePeriod D
 
 * reasonCode ^definition = "...Content creators should keep it as simple and short as possible (e.g. 'blood clog', 'hypertension')."
 

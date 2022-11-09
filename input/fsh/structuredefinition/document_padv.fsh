@@ -6,8 +6,6 @@ Description: "Definition of the bundle for the pharmaceutical advice document"
 
 * insert document-ruleset
 
-// Constraints
 * entry[Composition].resource only CHEMEDEPRCompositionPharmaceuticalAdvice
 * entry[Observation].resource only CHEMEDEPRObservation
-
-// Disable the unused parts
+* entry[Observation] 1..
