@@ -15,3 +15,5 @@ Description: "Normal dosing (IHE PHARM 1.3.6.1.4.1.19376.1.5.3.1.4.7.1)"
 * maxDosePerPeriod 0..0
 * maxDosePerAdministration 0..0
 * maxDosePerLifetime 0..0
+
+* route ^description = "...Implementers SHOULD focus on supporting values from the value set 'RouteOfAdministration AMBU'."
