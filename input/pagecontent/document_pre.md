@@ -11,6 +11,12 @@ The **Medication Prescription document** describes the content and format of a P
 
 ## Specifications
 
+### Multiple entries
+
+A prescription document can contain multiple medication requests.
+
+A single document SHALL NOT prescribe multiple times the same treatment (i.e. SHALL NOT target multiple times the same treatment plan entry; the same medication COULD be prescribed multiple times in different treatments).
+
 ### Prescription validity period
 
 The prescription validity period (`MedicationRequest.dispenseRequest.validityPeriod.(start|end)`) indicates the period over which the prescription can be dispensed (NOT the period over which the medication is to be taken by the patient).
