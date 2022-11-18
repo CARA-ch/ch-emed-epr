@@ -11,7 +11,7 @@ RuleSet: medication-ruleset
 * code.coding[ATC].system ^short = "ATC"
 * code.coding[ATC].code 1..1
 * code.coding[ATC].display 1..1
-* manufacturer only Reference(CHEMEDOrganization)
+* manufacturer only Reference(CHEMEDEPROrganization)
 * status = http://hl7.org/fhir/CodeSystem/medication-status#active "Active"
 * form.coding 1..1
 * code 1..1

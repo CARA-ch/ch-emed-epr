@@ -10,7 +10,7 @@ RuleSet: document-ruleset
 * entry[PractitionerRole].resource only CHEMEDEPRPractitionerRole
 * entry.fullUrl obeys urn-uuid-invariant // TODO: this only goes in PML/PMLC
 * entry[Patient].resource only CHCorePatientEPR
-* entry[Organization].resource only CHEMEDOrganization
+* entry[Organization].resource only CHEMEDEPROrganization
 * total 0..0
 * entry.search 0..0
 * entry.request 0..0
