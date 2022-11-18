@@ -23,5 +23,11 @@ Description: "Definition of the practitioner role for the eMedication context"
 * identifier D
 * healthcareService D
 * contained D
+* location ..0
+* location ^comment "Problematic for PML creation"
+* healthcareService ..0
+* healthcareService ^comment "Problematic for PML creation"
+* endpoint ..0
+* endpoint ^comment "Problematic for PML creation"
 
 // TODO code: not exactly the CDA participationFunction
