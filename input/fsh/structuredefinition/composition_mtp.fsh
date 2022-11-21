@@ -9,9 +9,9 @@ Description: "Definition of the composition for the medication treatment plan do
 * insert composition-with-original-representation-ruleset
 
 * section[treatmentPlan].extension[sectionId] 0..0 // Not useful anymore
-* subject only Reference(CHCorePatientEPR)
+* subject only Reference(CHEMEDEPRPatient)
 * section[treatmentPlan].code.coding 1..1
 * section[treatmentPlan].entry only Reference(CHEMEDEPRMedicationStatementTreatmentPlan)
 * section[treatmentPlan].code insert codeableconcept-ruleset
 * section[treatmentPlan].code.coding insert coding-ruleset
-* author only Reference(CHEMEDEPRPractitionerRole or CHCorePatientEPR)
+* author only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient)

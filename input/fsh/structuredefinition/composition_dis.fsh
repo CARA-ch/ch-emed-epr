@@ -15,6 +15,6 @@ Description: "Definition of the composition for the medication dispense document
 // TODO prevent other sections (keep only slices)?
 * section[dispense].code.coding 1..1
 * section[dispense].entry only Reference(CHEMEDEPRMedicationDispense)
-* author only Reference(CHEMEDEPRPractitionerRole or CHCorePatientEPR)
+* author only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient)
 
 // Disable unused parts

@@ -8,7 +8,7 @@ Description: "Definition of the medication statement for the Medication Card doc
 
 * extension[treatmentPlan] 1..1
 * extension[treatmentPlan] ^short = "Reference to the MTP that introduced this medication in the treatment plan"
-//* extension[authorDocument] only Reference(CHEMEDEPRPractitionerRole or CHCorePatientEPR) // TODO fix me
+//* extension[authorDocument] only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient) // TODO fix me
 * informationSource 1..1
 * informationSource ^short = "The last medical author, (see 'Document PMLC' and 'Guidance - Different Authors')"
 * informationSource ^comment = "...It represents the author of the last section (of type _MTP_, _PRE_, or any type of _PADV_ except _COMMENT_ that apply to an _MTP_ or _PRE_) in this treatment."

@@ -15,6 +15,6 @@ Description: "Definition of the composition for the medication prescription docu
 // TODO prevent other sections (keep only slices)?
 * section[prescription].code.coding 1..1
 * section[prescription].entry only Reference(CHEMEDEPRMedicationRequest)
-* author only Reference(CHEMEDEPRPractitionerRole or CHCorePatientEPR)
+* author only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient)
 
 // Disable unused parts

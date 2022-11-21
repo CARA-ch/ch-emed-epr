@@ -5,7 +5,7 @@ RuleSet: medication-statement-ruleset
 * medicationReference only Reference(CHEMEDEPRMedication)
 * reasonCode insert reason-code-ruleset
 * reasonCode.coding D
-* subject only Reference(CHCorePatientEPR)
+* subject only Reference(CHEMEDEPRPatient)
 * informationSource only Reference(CHEMEDEPRPractitionerRole)
 * basedOn D
 * partOf D
