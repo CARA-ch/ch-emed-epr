@@ -17,9 +17,9 @@ Description: "Definition of the practitioner for the eMedication context"
 * extension D
 * identifier insert identifier-ruleset
 * identifier.assigner ..0
-* identifier.assigner ^comment "Problematic for PML creation"
+* identifier.assigner ^comment = "Problematic for PML creation"
 * qualification.issuer ..0
-* qualification.issuer ^comment "Problematic for PML creation"
+* qualification.issuer ^comment = "Problematic for PML creation"
 
 // TODO ZSR is mandatory on paper prescription
 // TODO block othe

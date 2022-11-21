@@ -7,8 +7,8 @@ Description: "Definition of the organization for the eMedication context"
 * insert domain-resource-ruleset
 
 * identifier.assigner ..0
-* identifier.assigner ^comment "Problematic for PML creation"
+* identifier.assigner ^comment = "Problematic for PML creation"
 * partOf ..0
-* partOf ^comment "Problematic for PML creation"
+* partOf ^comment = "Problematic for PML creation"
 * endpoint ..0
-* endpoint ^comment "Problematic for PML creation"
+* endpoint ^comment = "Problematic for PML creation"
