@@ -1,5 +1,5 @@
 Profile: CHEMEDEPRDosage
-Parent: CHEMEDDosageStructuredNormal
+Parent: CHEMEDDosage
 Id: ch-emed-epr-dosage
 Title: "CH EMED EPR Dosage"
 Description: "Definition of the main dosage element"
