@@ -6,5 +6,4 @@ Description: "Definition of the medication"
 
 * insert medication-ruleset
 
-* manufacturer ..0
-* manufacturer ^comment = "Problematic for PML creation"
+* insert problematic-reference(manufacturer)

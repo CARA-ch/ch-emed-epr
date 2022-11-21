@@ -21,18 +21,12 @@ RuleSet: medication-statement-ruleset
 * medicationCodeableConcept ..0 // medicationReference is required and medication is 1..1
 * effective[x] D
 * effectivePeriod D
-* identifier.assigner ..0
-* identifier.assigner ^comment = "Problematic for PML creation"
-* basedOn ..0
-* basedOn ^comment = "Problematic for PML creation"
-* partOf ..0
-* partOf ^comment = "Problematic for PML creation"
-* context ..0
-* context ^comment = "Problematic for PML creation"
-* derivedFrom ..0
-* derivedFrom ^comment = "Problematic for PML creation"
-* reasonReference ..0
-* reasonReference ^comment = "Problematic for PML creation"
+* insert problematic-reference(identifier.assigner)
+* insert problematic-reference(basedOn)
+* insert problematic-reference(partOf)
+* insert problematic-reference(context)
+* insert problematic-reference(derivedFrom)
+* insert problematic-reference(reasonReference)
 
 * reasonCode ^definition = "...Content creators should keep it as simple and short as possible (e.g. 'blood clog', 'hypertension')."
 

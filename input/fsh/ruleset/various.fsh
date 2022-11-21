@@ -45,3 +45,9 @@ RuleSet: reason-code-ruleset
 * coding D
 * text 1..1
 * text ^short = "Plain text representation of the treatment reason(s)"
+
+
+RuleSet: problematic-reference(path)
+* {path} ..0
+* {path} D
+* {path} ^comment = "Problematic for PML creation"

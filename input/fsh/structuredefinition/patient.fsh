@@ -7,13 +7,8 @@ Description: "Definition of the patient for the eMedication context"
 * insert domain-resource-ruleset
 
 * identifier insert identifier-ruleset
-* identifier.assigner ..0
-* identifier.assigner ^comment = "Problematic for PML creation"
-* contact.organization ..0
-* contact.organization ^comment = "Problematic for PML creation"
-* generalPractitioner ..0
-* generalPractitioner ^comment = "Problematic for PML creation"
-* managingOrganization ..0
-* managingOrganization ^comment = "Problematic for PML creation"
-* link.other ..0
-* link.other ^comment = "Problematic for PML creation"
+* insert problematic-reference(identifier.assigner)
+* insert problematic-reference(contact.organization)
+* insert problematic-reference(generalPractitioner)
+* insert problematic-reference(managingOrganization)
+* insert problematic-reference(link)
