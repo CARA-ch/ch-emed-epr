@@ -11,7 +11,7 @@ Description: "Definition of the composition for the medication list document"
 * section[list].code.coding = $lnc#56445-0 "Medication summary"
 
 // Restrictions
-* author only Reference(Device)
+* author only Reference(CHEMEDEPRDevice)
 // TODO prevent other sections (keep only slices)?
 * section[list].code.coding 1..1
 // TODO section[card].author only Reference()

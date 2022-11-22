@@ -17,7 +17,7 @@ RuleSet: composition-ruleset
 //* type insert codeableconcept-ruleset TODO
 //* type.coding 1..1 TODO
 //* type.coding insert coding-ruleset TODO
-* section.author only Reference(CHEMEDEPRPractitioner or CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPROrganization or RelatedPerson or Device)
+* section.author only Reference(CHEMEDEPRPractitioner or CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPROrganization or RelatedPerson or CHEMEDEPRDevice)
 * date obeys datetime-only-instant-invariant
 * encounter D
 * attester[legalAuthenticator] D
