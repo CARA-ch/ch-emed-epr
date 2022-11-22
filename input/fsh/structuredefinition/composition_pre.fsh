@@ -8,13 +8,9 @@ Description: "Definition of the composition for the medication prescription docu
 * insert composition-with-annotation-ruleset
 * insert composition-with-original-representation-ruleset
 
-// Upstream
-* section[prescription].extension[sectionId] 0..0 // Not useful anymore
+//* section[prescription].code.coding.display = "Prescriptions" // TODO upstream
 
-// Restrictions
 // TODO prevent other sections (keep only slices)?
 * section[prescription].code.coding 1..1
 * section[prescription].entry only Reference(CHEMEDEPRMedicationRequest)
 * author only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient)
-
-// Disable unused parts
