@@ -27,6 +27,7 @@ RuleSet: medication-statement-ruleset
 * insert problematic-reference(context)
 * insert problematic-reference(derivedFrom)
 * insert problematic-reference(reasonReference)
+* insert problematic-reference(note.authorReference)
 
 * reasonCode ^definition = "...Content creators should keep it as simple and short as possible (e.g. 'blood clog', 'hypertension')."
 

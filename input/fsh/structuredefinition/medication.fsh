@@ -6,4 +6,5 @@ Description: "Definition of the medication"
 
 * insert medication-ruleset
 
+* insert problematic-reference(identifier.assigner)
 * insert problematic-reference(manufacturer)

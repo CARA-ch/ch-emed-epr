@@ -23,6 +23,7 @@ Description: "Definition of the practitioner role for the eMedication context"
 * identifier D
 * healthcareService D
 * contained D
+* insert problematic-reference(identifier.assigner)
 * insert problematic-reference(location)
 * insert problematic-reference(healthcareService)
 * insert problematic-reference(endpoint)
