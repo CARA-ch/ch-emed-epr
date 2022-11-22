@@ -50,4 +50,4 @@ RuleSet: reason-code-ruleset
 RuleSet: problematic-reference(path)
 * {path} ..0
 * {path} D
-* {path} ^comment = "Problematic for PML creation"
+* {path} ^comment = "Problematic for PML(C) creation"
