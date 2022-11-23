@@ -1,5 +1,5 @@
-Profile: CHEMEDEPRMedicationStatementTreatmentPlan
-Parent: CHEMEDMedicationStatementTreatmentPlan
+Profile: CHEMEDEPRMedicationStatement
+Parent: CHEMEDMedicationStatement
 Id: ch-emed-epr-medicationstatement-treatmentplan
 Title: "CH EMED EPR MedicationStatement (MTP)"
 Description: "Definition of the medication statement for the Medication Treatment Plan document"

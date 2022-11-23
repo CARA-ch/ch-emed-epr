@@ -7,7 +7,7 @@ Description: "Definition of the bundle for the medication treatment plan documen
 * insert document-ruleset
 
 * entry[Composition].resource only CHEMEDEPRCompositionMedicationTreatmentPlan
-* entry[MedicationStatement].resource only CHEMEDEPRMedicationStatementTreatmentPlan
+* entry[MedicationStatement].resource only CHEMEDEPRMedicationStatement
 * entry[MedicationStatement] 1..1
 
 // Documentation

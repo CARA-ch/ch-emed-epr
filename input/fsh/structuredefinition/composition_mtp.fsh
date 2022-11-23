@@ -11,7 +11,7 @@ Description: "Definition of the composition for the medication treatment plan do
 * section[treatmentPlan].extension[sectionId] 0..0 // Not useful anymore
 * subject only Reference(CHEMEDEPRPatient)
 * section[treatmentPlan].code.coding 1..1
-* section[treatmentPlan].entry only Reference(CHEMEDEPRMedicationStatementTreatmentPlan)
+* section[treatmentPlan].entry only Reference(CHEMEDEPRMedicationStatement)
 * section[treatmentPlan].code insert codeableconcept-ruleset
 * section[treatmentPlan].code.coding insert coding-ruleset
 * author only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient)
