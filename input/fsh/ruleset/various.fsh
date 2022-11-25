@@ -48,6 +48,10 @@ RuleSet: reason-code-ruleset
 
 
 RuleSet: problematic-reference(path)
-* {path} ..0
+* {path} ..0 // TODO: don't forbid it?
 * {path} D
 * {path} ^comment = "Unsupported reference. It'll be stripped when generating PML(C) documents."
+
+
+RuleSet: problematic-extension-reference
+* extension ^comment = "Extensions that contain a reference will be stripped when generating PML(C) documents."

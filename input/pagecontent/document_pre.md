@@ -11,6 +11,14 @@ The **Medication Prescription document** describes the content and format of a P
 
 ## Specifications
 
+### States
+
+A prescription may be in different states: submitted, provisional, active, cancelled and refused.
+
+When a prescription is created, it's in the **submitted** state, or in the **provisional** state if the provisional flag is set.
+
+In **refused** and **cancelled** states: the prescription has been ended and is not valid anymore, it SHOULD NOT be dispensed. The difference between refused and cancelled is only about workflow, the consequences are the same.
+
 ### Multiple entries
 
 A prescription document can contain multiple medication requests.
