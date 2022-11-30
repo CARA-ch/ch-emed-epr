@@ -46,5 +46,3 @@ If it targets a **DIS** entry: .
 If it targets an **MTP** entry: .
 
 If it targets a **PRE** entry: .
-
-If it targets a **DIS** entry: .
