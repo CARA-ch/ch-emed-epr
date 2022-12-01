@@ -15,6 +15,6 @@ Description: "Definition of the composition for the medication card document"
 // TODO section[card].author only Reference()
 * section[card].author 1..1 // TODO
 * section[annotation] 1..1
-* section[annotation] ^short "Description of the parameters used to generate this medication card"
+* section[annotation] ^short = "Description of the parameters used to generate this medication card"
 
 * author ^definition = "...Medication cards are automatically created by software, their author is a device."
