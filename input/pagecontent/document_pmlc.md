@@ -13,6 +13,8 @@ It can only be generated from the eMedication service and retrieved, not publish
 
 ## Specifications
 
+This document contains aggregated entries. For more information about aggregation, please read [the dedicated page](aggregation.html).
+
 ### Authors
 
 1. Last intervening author: represents the author of the last entry (of any kind) in the treatment.
