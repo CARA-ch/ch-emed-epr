@@ -16,3 +16,5 @@ Description: "Definition of the composition for the medication list document"
   * entry[medicationRequest] only Reference(CHEMEDEPRMedicationRequestList)
   * entry[medicationDispense] only Reference(CHEMEDEPRMedicationDispenseList)
   * entry[observation] only Reference(CHEMEDEPRObservationList)
+//* section[annotation] 1..1 TODO
+//* section[annotation] ^short "Description of the parameters used to generate this medication list" TODO
