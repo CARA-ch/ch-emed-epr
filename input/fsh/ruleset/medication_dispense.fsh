@@ -22,3 +22,5 @@ RuleSet: medication-dispense-ruleset
 * extension[prescription] D // Use authorizingPrescription?
 * substitution.type D // TODO: it should be optional
 * extension[pharmaceuticalAdvice] D
+* quantity only CHEMEDEPRQuantityWithEmedUnits
+* daysSupply only CHEMEDEPRQuantityWithEmedUnits // TODO timeUnit
