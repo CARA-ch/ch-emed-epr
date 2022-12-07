@@ -3,7 +3,6 @@ RuleSet: observation-ruleset
 * insert domain-resource-ruleset
 * obeys only-one-obs-ref
 * obeys mtp-entry-only-with-ref
-
 // TODO medicationStatementChanged ?
 * issued 1..1
 * basedOn D
@@ -38,8 +37,8 @@ Title: "CH EMED EPR Observation (PADV)"
 Description: "Definition of the observation for the pharmaceutical advice document"
 
 * insert observation-ruleset
-
-* performer D
+* insert overridden(performer)
+* performer only Reference(CHEMEDEPRPractitioner or CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPROrganization or CHEMEDEPRRelatedPerson)
 
 
 // =====================================================================================
@@ -52,8 +51,7 @@ Title: "CH EMED EPR Observation (PML)"
 Description: "Definition of the observation for the medication list document"
 
 * insert observation-ruleset
-
-* performer only Reference(CHEMEDEPRPractitionerRole)
+* performer only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
 
 
 // =====================================================================================
