@@ -31,20 +31,6 @@ RuleSet: observation-ruleset
 // =====================================================================================
 // Observation PADV
 // =====================================================================================
-Profile: CHEMEDEPRObservationList
-Parent: CHEMEDObservationList
-Id: ch-emed-epr-observation-list
-Title: "CH EMED EPR Observation (PML)"
-Description: "Definition of the observation for the medication list document"
-
-* insert observation-ruleset
-
-* performer only Reference(CHEMEDEPRPractitionerRole)
-
-
-// =====================================================================================
-// Observation PML
-// =====================================================================================
 Profile: CHEMEDEPRObservation
 Parent: CHEMEDObservation
 Id: ch-emed-epr-observation
@@ -54,6 +40,20 @@ Description: "Definition of the observation for the pharmaceutical advice docume
 * insert observation-ruleset
 
 * performer D
+
+
+// =====================================================================================
+// Observation PML
+// =====================================================================================
+Profile: CHEMEDEPRObservationList
+Parent: CHEMEDObservationList
+Id: ch-emed-epr-observation-list
+Title: "CH EMED EPR Observation (PML)"
+Description: "Definition of the observation for the medication list document"
+
+* insert observation-ruleset
+
+* performer only Reference(CHEMEDEPRPractitionerRole)
 
 
 // =====================================================================================
