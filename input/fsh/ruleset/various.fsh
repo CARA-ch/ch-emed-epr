@@ -46,7 +46,6 @@ RuleSet: reason-code-ruleset
 
 
 RuleSet: problematic-reference(path)
-* {path} ..0 // TODO: don't forbid it?
 * {path} D
 * {path} ^comment = "Unsupported reference. It'll be stripped when generating PML(C) documents."
 
