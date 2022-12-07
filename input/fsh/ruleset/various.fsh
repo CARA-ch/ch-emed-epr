@@ -57,3 +57,8 @@ RuleSet: problematic-extension-reference
 RuleSet: modifier(path)
 * {path} 0..0
 * {path} ^comment = "...All modifiers SHALL be documented."
+
+
+RuleSet: overridden(path)
+* {path} D
+* {path} ^comment = "...This value may be overridden when generating PML(C) documents."
