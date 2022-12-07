@@ -7,7 +7,7 @@ RuleSet: medication-request-ruleset
 * substitution.allowedCodeableConcept from ActSubstanceAdminSubstitutionCode (required)
 * reasonCode insert reason-code-ruleset
 * intent = http://hl7.org/fhir/CodeSystem/medicationrequest-intent#order "Order" // That's a modifier
-* doNotPerform 0..0 // Thant's a modifier
+* insert modifier(doNotPerform)
 * statusReason D // TODO we may want this
 * category D
 * priority D

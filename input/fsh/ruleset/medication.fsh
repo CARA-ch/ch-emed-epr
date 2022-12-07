@@ -26,15 +26,13 @@ RuleSet: medication-ruleset
 * form.coding insert coding-ruleset
 * batch.id D
 * batch.extension D
-* batch.modifierExtension 0..0 // It's a modifier
-* batch.modifierExtension ^comment = "...All modifier extensions SHALL be documented"
+* insert modifier(batch.modifierExtension)
 * extension D
 * code.extension D
 * form.extension D
 * ingredient.id D
 * ingredient.extension D
-* ingredient.modifierExtension 0..0 // It's a modifier
-* ingredient.modifierExtension ^comment = "...All modifier extensions SHALL be documented"
+* insert modifier(ingredient.modifierExtension)
 * ingredient.itemCodeableConcept.id D
 * ingredient.itemCodeableConcept.extension D
 //* identifier TODO

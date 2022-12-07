@@ -4,12 +4,10 @@ Id: ch-emed-epr-dosage
 Title: "CH EMED EPR Dosage"
 Description: "Definition of the main dosage element"
 
-* modifierExtension ..0 // It's a modifier
-* modifierExtension ^comment = "...All modifier extensions SHALL be documented"
+* insert modifier(modifierExtension)
 * asNeeded[x] 0..1
 * doseAndRate.doseQuantity only CHEMEDEPRQuantityWithEmedUnits
-* timing.modifierExtension ..0 // It's a modifier
-* timing.modifierExtension ^comment = "...All modifier extensions SHALL be documented"
+* insert modifier(timing.modifierExtension)
 * doseAndRate.type D
 * maxDosePerPeriod D
 * maxDosePerAdministration D

@@ -1,13 +1,11 @@
 RuleSet: resource-ruleset
 * meta insert meta-ruleset
-* implicitRules 0..0 // It's a modifier
-* implicitRules ^comment = "...All implicit rules SHALL be documented"
+* insert modifier(implicitRules)
 
 
 RuleSet: domain-resource-ruleset
 * insert resource-ruleset
-* modifierExtension 0..0 // It's a modifier
-* modifierExtension ^comment = "...All modifier extensions SHALL be documented"
+* insert modifier(modifierExtension)
 
 
 RuleSet: coding-ruleset
@@ -55,3 +53,8 @@ RuleSet: problematic-reference(path)
 
 RuleSet: problematic-extension-reference
 * extension ^comment = "Extensions that contain a reference will be stripped when generating PML(C) documents."
+
+
+RuleSet: modifier(path)
+* {path} 0..0
+* {path} ^comment = "...All modifiers SHALL be documented."
