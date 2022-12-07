@@ -14,7 +14,7 @@ RuleSet: medication-request-ruleset
 * reported[x] D
 * encounter D
 * supportingInformation D
-* requester D
+* performer D
 * performerType D
 * reasonReference D
 * instantiatesCanonical D
@@ -47,8 +47,8 @@ Title: "CH EMED EPR MedicationRequest (PRE)"
 Description: "Definition of the medication request for the medication prescription document"
 
 * insert medication-request-ruleset
-
-* performer D
+* insert overridden(performer)
+* performer only Reference(CHEMEDEPRPatient or CHEMEDEPRPractitioner or CHEMEDEPRPractitionerRole or CHEMEDEPRRelatedPerson or CHEMEDEPROrganization)
 // TODO status is only active
 
 
@@ -62,5 +62,4 @@ Title: "CH EMED EPR MedicationRequest (PML)"
 Description: "Definition of the medication request for the medication list document"
 
 * insert medication-request-ruleset
-
-* performer only Reference(CHEMEDEPRPractitionerRole)
+* requester only Reference(CHEMEDEPRPractitionerRole)
