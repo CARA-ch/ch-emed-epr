@@ -1,6 +1,6 @@
-ValueSet: RouteOfAdministrationAmbu
-Id: route-of-administration-ambu
-Title: "RouteOfAdministration AMBU"
+ValueSet: CHEMEDEPRRouteOfAdministration
+Id: ch-emed-epr-route-of-administration
+Title: "CH EMED EPR Route of Administration"
 Description: """Valueset RouteOfAdministration filtered for ambulatory care use.
 
 This value set is a subset of the mandatory value set ([EDQM - RouteOfAdministration](http://fhir.ch/ig/ch-emed/ValueSet-edqm-routeofadministration.html)) that contains only values compatible with ambulatory care.

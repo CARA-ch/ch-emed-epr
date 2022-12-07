@@ -9,7 +9,7 @@ RuleSet: main-dosage-ruleset
 * maxDosePerLifetime D
 * method D
 * site D // TODO We may want that
-* route ^definition = "...Implementers SHOULD focus on supporting values from the value set 'RouteOfAdministration AMBU'."
+* route ^definition = "...Implementers SHOULD focus on supporting values from the value set [CH EMED EPR Route of Administration](ValueSet-ch-emed-epr-route-of-administration.html)."
 * asNeededBoolean ^definition = "...'true' if the medication is 'in reserve'. By default 'true'"
 
 
