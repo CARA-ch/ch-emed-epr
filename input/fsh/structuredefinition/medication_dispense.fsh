@@ -36,6 +36,8 @@ Title: "CH EMED EPR MedicationDispense (DIS)"
 Description: "Definition of the medication dispense for the medication dispense document"
 
 * insert medication-dispense-ruleset
+* insert overridden(performer.actor)
+* performer.actor only Reference(CHEMEDEPRPatient or CHEMEDEPRPractitioner or CHEMEDEPRPractitionerRole or CHEMEDEPRRelatedPerson or CHEMEDEPROrganization)
 
 
 // =====================================================================================
@@ -48,3 +50,4 @@ Title: "CH EMED EPR MedicationDispense (PML)"
 Description: "Definition of the medication dispense for the medication list document"
 
 * insert medication-dispense-ruleset
+* performer.actor only Reference(CHEMEDEPRPractitionerRole)
