@@ -1,8 +1,11 @@
 RuleSet: main-dosage-ruleset
 * insert common-dosage-ruleset
 * asNeeded[x] 0..1
+* maxDosePerPeriod only CHEMEDEPRRatioAmountPerTime
 * maxDosePerPeriod D
+* maxDosePerAdministration only CHEMEDEPRAmountQuantity
 * maxDosePerAdministration D
+* maxDosePerLifetime only CHEMEDEPRAmountQuantity
 * maxDosePerLifetime D
 * method D
 * site D // TODO We may want that
