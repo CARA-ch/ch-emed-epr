@@ -47,8 +47,8 @@ Title: "CH EMED EPR MedicationRequest (PRE)"
 Description: "Definition of the medication request for the medication prescription document"
 
 * insert medication-request-ruleset
-* insert overridden(performer)
-* performer only Reference(CHEMEDEPRPatient or CHEMEDEPRPractitioner or CHEMEDEPRPractitionerRole or CHEMEDEPRRelatedPerson or CHEMEDEPROrganization)
+* insert overridden(requester)
+* requester only Reference(CHEMEDEPRPatient or CHEMEDEPRPractitioner or CHEMEDEPRPractitionerRole or CHEMEDEPRRelatedPerson or CHEMEDEPROrganization)
 // TODO status is only active
 
 
