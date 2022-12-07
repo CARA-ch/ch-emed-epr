@@ -31,6 +31,8 @@ RuleSet: medication-request-ruleset
 * dispenseRequest.expectedSupplyDuration D
 * dispenseRequest.performer D
 * substitution.allowedBoolean D // TODO remove 
+* dosageInstruction[baseEntry] only CHEMEDEPRDosageMedicationRequest
+* dosageInstruction[additionalEntry] only CHEMEDEPRDosageSplitMedicationRequest
 * doNotPerform ^comment = "Use a PADV CANCEL/SUSPEND/REFUSE instead"
 * priorPrescription ^comment = "Use the XDS mechanis to replace a prescription"
 * extension[treatmentplan] ^short = "A reference to the MedicationStatement that introduced this medication"

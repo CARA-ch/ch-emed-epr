@@ -24,6 +24,8 @@ RuleSet: medication-dispense-ruleset
 * extension[pharmaceuticalAdvice] D
 * quantity insert amount-quantity-ruleset
 * daysSupply insert time-quantity-ruleset
+* dosageInstruction[baseEntry] only CHEMEDEPRDosage
+* dosageInstruction[additionalEntry] only CHEMEDEPRDosageSplit
 
 
 // =====================================================================================

@@ -20,6 +20,8 @@ RuleSet: medication-statement-ruleset
 * medicationCodeableConcept ..0 // medicationReference is required and medication is 1..1
 * effective[x] D
 * effectivePeriod D
+* dosage[baseEntry] only CHEMEDEPRDosage
+* dosage[additionalEntry] only CHEMEDEPRDosageSplit
 * insert problematic-reference(identifier.assigner)
 * insert problematic-reference(basedOn)
 * insert problematic-reference(partOf)
