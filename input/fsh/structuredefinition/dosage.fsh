@@ -16,12 +16,16 @@ RuleSet: split-dosage-ruleset
 
 RuleSet: common-dosage-ruleset
 * insert modifier(modifierExtension)
-* doseAndRate.doseQuantity only CHEMEDEPRQuantityWithEmedUnits
 * insert modifier(timing.modifierExtension)
 * doseAndRate.type D
 * extension D
 * timing.code D // TODO We may want that
 * timing.event D
+* doseAndRate.doseQuantity only CHEMEDEPRAmountQuantity
+* doseAndRate.doseRange only CHEMEDEPRAmountRange
+* doseAndRate.rateQuantity 0..0 // Not compatible with our units (it would require a UCUM unit of amount per time)
+* doseAndRate.rateRange 0..0 // Not compatible with our units (it would require a UCUM unit of amount per time)
+* doseAndRate.rateRatio only CHEMEDEPRRatioAmountPerTime
 
 
 // =====================================================================================
