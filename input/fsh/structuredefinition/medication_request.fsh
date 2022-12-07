@@ -31,9 +31,36 @@ RuleSet: medication-request-ruleset
 * dispenseRequest.expectedSupplyDuration D
 * dispenseRequest.performer D
 * substitution.allowedBoolean D // TODO remove 
-
 * doNotPerform ^comment = "Use a PADV CANCEL/SUSPEND/REFUSE instead"
 * priorPrescription ^comment = "Use the XDS mechanis to replace a prescription"
 * extension[treatmentplan] ^short = "A reference to the MedicationStatement that introduced this medication"
-
 // TODO How to code provisional state?
+
+
+// =====================================================================================
+// Medication Request PRE
+// =====================================================================================
+Profile: CHEMEDEPRMedicationRequest
+Parent: CHEMEDMedicationRequest
+Id: ch-emed-epr-medicationrequest
+Title: "CH EMED EPR MedicationRequest (PRE)"
+Description: "Definition of the medication request for the medication prescription document"
+
+* insert medication-request-ruleset
+
+* performer D
+// TODO status is only active
+
+
+// =====================================================================================
+// Medication Request PML
+// =====================================================================================
+Profile: CHEMEDEPRMedicationRequestList
+Parent: CHEMEDMedicationRequestList
+Id: ch-emed-epr-medicationrequest-list
+Title: "CH EMED EPR MedicationRequest (PML)"
+Description: "Definition of the medication request for the medication list document"
+
+* insert medication-request-ruleset
+
+* performer only Reference(CHEMEDEPRPractitionerRole)
