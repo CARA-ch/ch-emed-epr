@@ -8,17 +8,6 @@ RuleSet: quantity-ruleset
 * insert modifier(comparator)
 
 
-RuleSet: time-quantity-ruleset
-* insert quantity-ruleset
-* code from http://hl7.org/fhir/ValueSet/units-of-time (required)
-* system = $ucum
-
-
-RuleSet: amount-quantity-ruleset
-* insert quantity-ruleset
-* code from CHEMEDEPRAmountQuantityUnitCode
-
-
 // =====================================================================================
 // Amount Quantity
 // =====================================================================================
@@ -43,3 +32,4 @@ Description: "A quantity with a time unit"
 
 * insert quantity-ruleset
 * code from http://hl7.org/fhir/ValueSet/units-of-time (required)
+* system = $ucum

@@ -22,8 +22,8 @@ RuleSet: medication-dispense-ruleset
 * extension[prescription] D // Use authorizingPrescription?
 * substitution.type D // TODO: it should be optional
 * extension[pharmaceuticalAdvice] D
-* quantity insert amount-quantity-ruleset
-* daysSupply insert time-quantity-ruleset
+* quantity only CHEMEDEPRAmountQuantity
+* daysSupply only CHEMEDEPRTimeQuantity
 * dosageInstruction[baseEntry] only CHEMEDEPRDosage
 * dosageInstruction[additionalEntry] only CHEMEDEPRDosageSplit
 
