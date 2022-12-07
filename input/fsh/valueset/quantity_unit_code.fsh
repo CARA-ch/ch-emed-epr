@@ -1,7 +1,9 @@
-ValueSet: QuantityUnitCodeCara
-Id: quantity-unit-code-cara
-Title: "CH EMED EPR Quantity Unit Codes"
-Description: "Unit Codes for Quantity Units."
+ValueSet: CHEMEDEPRAmountQuantityUnitCode
+Id: ch-emed-epr-amount-quantity-unit-code
+Title: "CH EMED EPR Amount Quantity Unit Codes"
+Description: """Unit Codes for amount quantity units.
+
+These are all unit codes about amount quantities, excluding time units."""
 
 * ^experimental = true
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
