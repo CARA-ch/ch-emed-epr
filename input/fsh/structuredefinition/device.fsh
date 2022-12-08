@@ -22,3 +22,5 @@ Description: "Definition of the device for the eMedication context"
 * property D
 * safety D
 * owner only Reference(CHEMEDEPROrganization)
+* deviceName MS
+* deviceName 1..*
