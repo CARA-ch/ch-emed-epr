@@ -31,5 +31,5 @@ Title: "CH EMED EPR Time Quantity"
 Description: "A quantity with a time unit"
 
 * insert quantity-ruleset
-* code from http://hl7.org/fhir/ValueSet/units-of-time (required)
+* code from CHEMEDEPRTimeQuantityUnitCode (required)
 * system = $ucum
