@@ -10,7 +10,7 @@ Description: "Definition of the device for the eMedication context"
 * insert problematic-reference(identifier.assigner)
 * insert problematic-reference(definition)
 * insert problematic-reference(patient)
-* insert problematic-reference(owner)
+* insert problematic-reference(owner) // TODO allow
 * insert problematic-reference(location)
 * insert problematic-reference(note.authorReference)
 * insert problematic-reference(parent)
@@ -21,3 +21,4 @@ Description: "Definition of the device for the eMedication context"
 * specialization D
 * property D
 * safety D
+* owner only Reference(CHEMEDEPROrganization)
