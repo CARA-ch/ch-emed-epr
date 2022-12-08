@@ -173,6 +173,7 @@ Description: "Definition of the composition for the medication list document"
 * insert composition-ruleset
 
 * author only Reference(CHEMEDEPRDevice)
+* author 1..1
 // TODO prevent other sections (keep only slices)?
 * section[list].code.coding 1..1
 // TODO section[card].author only Reference()
@@ -202,6 +203,7 @@ Description: "Definition of the composition for the medication card document"
 * section[card].extension[sectionId] 0..0 // Not useful anymore
 * section[card].code.coding = $lnc#56445-0 "Medication summary" // TODO wrong code upstream
 * author only Reference(CHEMEDEPRDevice)
+* author 1..1
 // TODO prevent other sections (keep only slices)?
 // TODO section[card].author only Reference()
 * section[card].author 1..1 // TODO
