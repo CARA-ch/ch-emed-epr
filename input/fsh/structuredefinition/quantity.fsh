@@ -18,6 +18,7 @@ Title: "CH EMED EPR Amount Quantity"
 Description: "A quantity with an amount unit (no time unit)"
 * insert quantity-ruleset
 * code from CHEMEDEPRAmountQuantityUnitCode (required)
+// todo: value also integer and strictly positive?
 
 
 // =====================================================================================
@@ -36,7 +37,7 @@ Description: "A quantity with a time unit (a duration)"
 
 Invariant: time-quantity-strict-positive
 Description: "A time quantity shall have a strictly positive value"
-Expression: "$this >= 1"
+Expression: "$this > 0"
 Severity: #error
 
 Invariant: time-quantity-only-integer
