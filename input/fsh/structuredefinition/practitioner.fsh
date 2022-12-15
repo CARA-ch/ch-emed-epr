@@ -1,7 +1,7 @@
 Profile: CHEMEDEPRPractitioner
 Parent: CHEMEDPractitioner
 Id: ch-emed-epr-practitioner
-Title: "CH EMED EPR Practitioner"
+Title: "Practitioner"
 Description: "Definition of the practitioner for the eMedication context"
 
 * insert domain-resource-ruleset

@@ -1,6 +1,6 @@
 ValueSet: ActSubstanceAdminSubstitutionCode
 Id: substance-admin-substitution-code
-Title: "CH EMED EPR Substance Administration Substitution Codes"
+Title: "Substance Administration Substitution Codes"
 
 * ^experimental = true
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"

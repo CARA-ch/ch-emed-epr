@@ -1,7 +1,7 @@
 Profile: CHEMEDEPRPatient
 Parent: CHCorePatientEPR
 Id: ch-emed-epr-patient
-Title: "CH EMED EPR Patient"
+Title: "Patient"
 Description: "Definition of the patient for the eMedication context"
 
 * insert domain-resource-ruleset

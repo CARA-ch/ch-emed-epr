@@ -2,10 +2,10 @@ The **Pharmaceutical Advice document** is a document in which health professiona
 
 ## Profiles
 
-* [CH EMED EPR Document PADV](StructureDefinition-ch-emed-epr-document-pharmaceuticaladvice.html)
-* [CH EMED EPR Composition PADV](StructureDefinition-ch-emed-epr-composition-pharmaceuticaladvice.html)
-* [CH EMED EPR Observation (PADV)](StructureDefinition-ch-emed-epr-observation.html)
-* [CH EMED EPR Medication](StructureDefinition-ch-emed-epr-medication.html)
+* [Document PADV](StructureDefinition-ch-emed-epr-document-pharmaceuticaladvice.html)
+* [Composition PADV](StructureDefinition-ch-emed-epr-composition-pharmaceuticaladvice.html)
+* [Observation (PADV)](StructureDefinition-ch-emed-epr-observation.html)
+* [Medication](StructureDefinition-ch-emed-epr-medication.html)
 
 ## Example instances
 

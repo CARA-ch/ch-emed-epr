@@ -9,8 +9,8 @@ RuleSet: range-ruleset
 Profile: CHEMEDEPRAmountRange
 Parent: CHEMEDRangeWithEmedUnits
 Id: ch-emed-epr-amount-range
-Title: "CH EMED EPR Amount Range"
-Description: "A range of Amount Quantities"
+Title: "Amount Range"
+Description: "A range of amount quantities"
 
 * insert range-ruleset
 * low only CHEMEDEPRAmountQuantity
@@ -23,8 +23,8 @@ Description: "A range of Amount Quantities"
 Profile: CHEMEDEPRTimeRange
 Parent: CHEMEDRangeWithEmedUnits
 Id: ch-emed-epr-time-range
-Title: "CH EMED EPR Time Range"
-Description: "A range of Time Quantities"
+Title: "Time Range"
+Description: "A range of time quantities"
 
 * insert range-ruleset
 * low only CHEMEDEPRTimeQuantity

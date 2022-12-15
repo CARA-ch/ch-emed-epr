@@ -14,7 +14,7 @@ RuleSet: quantity-ruleset
 Profile: CHEMEDEPRAmountQuantity
 Parent: CHEMEDQuantityWithEmedUnits
 Id: ch-emed-epr-amount-quantity
-Title: "CH EMED EPR Amount Quantity"
+Title: "Amount Quantity"
 Description: "A quantity with an amount unit (no time unit)"
 * insert quantity-ruleset
 * code from CHEMEDEPRAmountQuantityUnitCode (required)
@@ -27,7 +27,7 @@ Description: "A quantity with an amount unit (no time unit)"
 Profile: CHEMEDEPRTimeQuantity
 Parent: CHEMEDQuantityWithEmedUnits
 Id: ch-emed-epr-time-quantity
-Title: "CH EMED EPR Time Quantity"
+Title: "Time Quantity"
 Description: "A quantity with a time unit (a duration)"
 * insert quantity-ruleset
 * code from CHEMEDEPRTimeQuantityUnitCode (required)

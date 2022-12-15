@@ -1,6 +1,6 @@
 ValueSet: CHEMEDEPRAmountQuantityUnitCode
 Id: ch-emed-epr-amount-quantity-unit-code
-Title: "CH EMED EPR Amount Quantity Unit Codes"
+Title: "Amount Quantity Unit Codes"
 Description: """Unit Codes for amount quantity units.
 
 These are all unit codes about amount quantities, excluding time units."""

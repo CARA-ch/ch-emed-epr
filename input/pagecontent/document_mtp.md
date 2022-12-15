@@ -2,10 +2,10 @@ The **Medication Treatment Plan document** describes ONE medication of a patient
 
 ## Profiles
 
-* [CH EMED EPR Document MTP](StructureDefinition-ch-emed-epr-document-medicationtreatmentplan.html)
-* [CH EMED EPR Composition MTP](StructureDefinition-ch-emed-epr-composition-medicationtreatmentplan.html)
-* [CH EMED EPR MedicationStatement (MTP)](StructureDefinition-ch-emed-epr-medicationstatement-treatmentplan.html)
-* [CH EMED EPR Medication](StructureDefinition-ch-emed-epr-medication.html)
+* [Document MTP](StructureDefinition-ch-emed-epr-document-medicationtreatmentplan.html)
+* [Composition MTP](StructureDefinition-ch-emed-epr-composition-medicationtreatmentplan.html)
+* [MedicationStatement (MTP)](StructureDefinition-ch-emed-epr-medicationstatement-treatmentplan.html)
+* [Medication](StructureDefinition-ch-emed-epr-medication.html)
 
 ## Example instances
 

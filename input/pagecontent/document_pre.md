@@ -2,10 +2,10 @@ The **Medication Prescription document** describes the content and format of a P
 
 ## Profiles
 
-* [CH EMED EPR Document PRE](StructureDefinition-ch-emed-epr-document-medicationprescription.html)
-* [CH EMED EPR Composition PRE](StructureDefinition-ch-emed-epr-composition-medicationprescription.html)
-* [CH EMED EPR MedicationRequest (PRE)](StructureDefinition-ch-emed-epr-medicationrequest.html)
-* [CH EMED EPR Medication](StructureDefinition-ch-emed-epr-medication.html)
+* [Document PRE](StructureDefinition-ch-emed-epr-document-medicationprescription.html)
+* [Composition PRE](StructureDefinition-ch-emed-epr-composition-medicationprescription.html)
+* [MedicationRequest (PRE)](StructureDefinition-ch-emed-epr-medicationrequest.html)
+* [Medication](StructureDefinition-ch-emed-epr-medication.html)
 
 ## Example instances
 

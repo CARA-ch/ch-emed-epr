@@ -4,14 +4,14 @@ It can only be generated from the eMedication service and retrieved, not publish
 
 ## Profiles
 
-* [CH EMED EPR Document PML](StructureDefinition-ch-emed-epr-document-medicationlist.html)
-* [CH EMED EPR Composition PML](StructureDefinition-ch-emed-epr-composition-medicationlist.html)
-* [CH EMED EPR MedicationStatement (PML)](StructureDefinition-ch-emed-epr-medicationstatement-list.html)
-* [CH EMED EPR MedicationRequest (PML)](StructureDefinition-ch-emed-epr-medicationrequest-list.html)
-* [CH EMED EPR MedicationDispense (PML)](StructureDefinition-ch-emed-epr-medicationdispense-list.html)
-* [CH EMED EPR Observation (PML)](StructureDefinition-ch-emed-epr-observation-list.html)
-* [CH EMED EPR Medication](StructureDefinition-ch-emed-epr-medication.html)
-* [CH EMED EPR Medication (DIS)](StructureDefinition-ch-emed-epr-medication-medicationdispense.html)
+* [Document PML](StructureDefinition-ch-emed-epr-document-medicationlist.html)
+* [Composition PML](StructureDefinition-ch-emed-epr-composition-medicationlist.html)
+* [MedicationStatement (PML)](StructureDefinition-ch-emed-epr-medicationstatement-list.html)
+* [MedicationRequest (PML)](StructureDefinition-ch-emed-epr-medicationrequest-list.html)
+* [MedicationDispense (PML)](StructureDefinition-ch-emed-epr-medicationdispense-list.html)
+* [Observation (PML)](StructureDefinition-ch-emed-epr-observation-list.html)
+* [Medication](StructureDefinition-ch-emed-epr-medication.html)
+* [Medication (DIS)](StructureDefinition-ch-emed-epr-medication-medicationdispense.html)
 
 ## Example instances
 

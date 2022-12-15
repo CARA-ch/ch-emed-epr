@@ -1,7 +1,7 @@
 Profile: CHEMEDEPROrganization
 Parent: CHEMEDOrganization
 Id: ch-emed-epr-organization
-Title: "CH EMED EPR Organization"
+Title: "Organization"
 Description: "Definition of the organization for the eMedication context"
 
 * insert domain-resource-ruleset

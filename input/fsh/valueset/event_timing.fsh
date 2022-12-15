@@ -1,6 +1,6 @@
 ValueSet: CHEMEDEPREventTiming
 Id: ch-emed-epr-event-timing
-Title: "CH EMED EPR Event Timings"
+Title: "Event Timings"
 Description: "Event Timings for ambulatory use."
 
 * ^experimental = true

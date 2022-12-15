@@ -1,7 +1,7 @@
 Profile: CHEMEDEPRDevice
 Parent: Device
 Id: ch-emed-epr-device
-Title: "CH EMED EPR Device"
+Title: "Device"
 Description: "Definition of the device for the eMedication context"
 
 * insert domain-resource-ruleset

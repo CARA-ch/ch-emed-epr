@@ -7,7 +7,7 @@ RuleSet: main-dosage-ruleset
 * maxDosePerLifetime D
 * method D
 * site D // TODO We may want that
-* route ^definition = "...Implementers SHOULD focus on supporting values from the value set [CH EMED EPR Route of Administration](ValueSet-ch-emed-epr-route-of-administration.html)."
+* route ^definition = "...Implementers SHOULD focus on supporting values from the value set [Route of Administration](ValueSet-ch-emed-epr-route-of-administration.html)."
 * asNeededBoolean ^definition = "...'true' if the medication is 'in reserve'. By default 'true'"
 
 
@@ -23,7 +23,7 @@ RuleSet: common-dosage-ruleset
 * timing.code D // TODO We may want that
 * timing.event D
 * timing.repeat.when obeys only-standard-event-timings
-* timing.repeat.when ^short = "... It shall only contain values from [CH EMED EPR Event Timings](ValueSet-event-timing-cara.html)."
+* timing.repeat.when ^short = "... It shall only contain values from [Event Timings](ValueSet-event-timing-cara.html)."
 * doseAndRate.doseQuantity only CHEMEDEPRAmountQuantity
 * doseAndRate.doseRange only CHEMEDEPRAmountRange
 * doseAndRate.rateQuantity 0..0 // Not compatible with our units (it would require a UCUM unit of amount per time)
@@ -44,7 +44,7 @@ Severity: #error
 Profile: CHEMEDEPRDosage
 Parent: CHEMEDDosage
 Id: ch-emed-epr-dosage
-Title: "CH EMED EPR Dosage (MedicationStatement / MedicationDispense)"
+Title: "Dosage (MedicationStatement / MedicationDispense)"
 Description: "Definition of the main dosage element (used in MedicationStatement / MedicationDispense)"
 
 * insert main-dosage-ruleset
@@ -60,7 +60,7 @@ Description: "Definition of the main dosage element (used in MedicationStatement
 Profile: CHEMEDEPRDosageSplit
 Parent: CHEMEDDosageSplit
 Id: ch-emed-epr-dosage-split
-Title: "CH EMED EPR Dosage Split (MedicationStatement / MedicationDispense)"
+Title: "Dosage Split (MedicationStatement / MedicationDispense)"
 Description: "Definition of the split dosage element (used in MedicationStatement / MedicationDispense)"
 
 * insert split-dosage-ruleset
@@ -72,7 +72,7 @@ Description: "Definition of the split dosage element (used in MedicationStatemen
 Profile: CHEMEDEPRDosageMedicationRequest
 Parent: CHEMEDDosageMedicationRequest
 Id: ch-emed-epr-dosage-medicationrequest
-Title: "CH EMED EPR Dosage (MedicationRequest)"
+Title: "Dosage (MedicationRequest)"
 Description: "Definition of the main dosage element (used in MedicationRequest)"
 
 * insert main-dosage-ruleset
@@ -84,7 +84,7 @@ Description: "Definition of the main dosage element (used in MedicationRequest)"
 Profile: CHEMEDEPRDosageSplitMedicationRequest
 Parent: CHEMEDDosageSplitMedicationRequest
 Id: ch-emed-epr-dosage-split-medicationrequest
-Title: "CH EMED EPR Dosage Split (MedicationRequest)"
+Title: "Dosage Split (MedicationRequest)"
 Description: "Definition of the split dosage element (used in MedicationRequest)"
 
 * insert split-dosage-ruleset

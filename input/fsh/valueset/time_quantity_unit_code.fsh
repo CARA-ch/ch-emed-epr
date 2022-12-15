@@ -1,6 +1,6 @@
 ValueSet: CHEMEDEPRTimeQuantityUnitCode
 Id: ch-emed-epr-time-quantity-unit-code
-Title: "CH EMED EPR Time Quantity Unit Codes"
+Title: "Time Quantity Unit Codes"
 Description: """Unit Codes for time quantity units.
 
 These are all unit codes about time quantities, excluding amount units."""

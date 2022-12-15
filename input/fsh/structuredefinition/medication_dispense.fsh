@@ -34,7 +34,7 @@ RuleSet: medication-dispense-ruleset
 Profile: CHEMEDEPRMedicationDispense
 Parent: CHEMEDMedicationDispense
 Id: ch-emed-epr-medicationdispense
-Title: "CH EMED EPR MedicationDispense (DIS)"
+Title: "MedicationDispense (DIS)"
 Description: "Definition of the medication dispense for the medication dispense document"
 
 * insert medication-dispense-ruleset
@@ -48,7 +48,7 @@ Description: "Definition of the medication dispense for the medication dispense 
 Profile: CHEMEDEPRMedicationDispenseList
 Parent: CHEMEDMedicationDispenseList
 Id: ch-emed-epr-medicationdispense-list
-Title: "CH EMED EPR MedicationDispense (PML)"
+Title: "MedicationDispense (PML)"
 Description: "Definition of the medication dispense for the medication list document"
 
 * insert medication-dispense-ruleset

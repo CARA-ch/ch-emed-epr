@@ -4,10 +4,10 @@ It can only be generated from the eMedication service and retrieved, not publish
 
 ## Profiles
 
-* [CH EMED EPR Document PMLC](StructureDefinition-ch-emed-epr-document-medicationcard.html)
-* [CH EMED EPR Composition PMLC](StructureDefinition-ch-emed-epr-composition-medicationcard.html)
-* [CH EMED EPR MedicationStatement (PMLC)](StructureDefinition-ch-emed-epr-medicationstatement-card.html)
-* [CH EMED EPR Medication](StructureDefinition-ch-emed-epr-medication.html)
+* [Document PMLC](StructureDefinition-ch-emed-epr-document-medicationcard.html)
+* [Composition PMLC](StructureDefinition-ch-emed-epr-composition-medicationcard.html)
+* [MedicationStatement (PMLC)](StructureDefinition-ch-emed-epr-medicationstatement-card.html)
+* [Medication](StructureDefinition-ch-emed-epr-medication.html)
 
 ## Example instances
 

@@ -2,9 +2,9 @@ The **Medication Dispense document** describes the direct dispensation of ONE dr
 
 ## Profiles
 
-* [CH EMED EPR Document DIS](StructureDefinition-ch-emed-epr-document-medicationdispense.html)
-* [CH EMED EPR Composition DIS](StructureDefinition-ch-emed-epr-composition-medicationdispense.html)
-* [CH EMED EPR MedicationDispense (DIS)](StructureDefinition-ch-emed-epr-medicationdispense.html)
-* [CH EMED EPR Medication (DIS)](StructureDefinition-ch-emed-epr-medication-medicationdispense.html)
+* [Document DIS](StructureDefinition-ch-emed-epr-document-medicationdispense.html)
+* [Composition DIS](StructureDefinition-ch-emed-epr-composition-medicationdispense.html)
+* [MedicationDispense (DIS)](StructureDefinition-ch-emed-epr-medicationdispense.html)
+* [Medication (DIS)](StructureDefinition-ch-emed-epr-medication-medicationdispense.html)
 
 ## Example instances
