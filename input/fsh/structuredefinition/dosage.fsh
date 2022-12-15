@@ -42,6 +42,9 @@ Description: "Definition of the main dosage element (used in MedicationStatement
 
 * insert main-dosage-ruleset
 
+// todo: Period: Either the start or end instants shall be specified
+// todo: Period: The time interval lower bound is after the higher bound
+
 
 // =====================================================================================
 // Dosage Split MedicationStatement, MedicationDispense
