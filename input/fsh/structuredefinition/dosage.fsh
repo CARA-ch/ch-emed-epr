@@ -2,9 +2,7 @@ RuleSet: main-dosage-ruleset
 * insert common-dosage-ruleset
 * asNeeded[x] 0..1
 * maxDosePerPeriod only CHEMEDEPRRatioAmountPerTime
-* maxDosePerPeriod D
 * maxDosePerAdministration only CHEMEDEPRAmountQuantity
-* maxDosePerAdministration D
 * maxDosePerLifetime only CHEMEDEPRAmountQuantity
 * maxDosePerLifetime D
 * method D
@@ -24,12 +22,21 @@ RuleSet: common-dosage-ruleset
 * extension D
 * timing.code D // TODO We may want that
 * timing.event D
+* timing.repeat.when obeys only-standard-event-timings
+* timing.repeat.when ^short = "... It shall only contain values from [CH EMED EPR Event Timings](ValueSet-event-timing-cara.html)."
 * doseAndRate.doseQuantity only CHEMEDEPRAmountQuantity
 * doseAndRate.doseRange only CHEMEDEPRAmountRange
 * doseAndRate.rateQuantity 0..0 // Not compatible with our units (it would require a UCUM unit of amount per time)
 * doseAndRate.rateRange 0..0 // Not compatible with our units (it would require a UCUM unit of amount per time)
 * doseAndRate.rateRatio only CHEMEDEPRRatioAmountPerTime
+* route.text 1..1
+* site.text 1..1
 
+
+Invariant: only-standard-event-timings
+Description: "The timing event shall only be 'MORN', 'NOON', 'EVE' or 'NIGHT'."
+Expression: "$this = 'MORN' or $this = 'NOON' or $this = 'EVE' or $this = 'NIGHT'"
+Severity: #error
 
 // =====================================================================================
 // Dosage MedicationStatement, MedicationDispense
@@ -44,6 +51,7 @@ Description: "Definition of the main dosage element (used in MedicationStatement
 
 // todo: Period: Either the start or end instants shall be specified
 // todo: Period: The time interval lower bound is after the higher bound
+// todo: When: A code cannot appear in multiple dosages
 
 
 // =====================================================================================
