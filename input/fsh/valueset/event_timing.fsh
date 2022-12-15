@@ -1,5 +1,5 @@
-ValueSet: EventTimingCara
-Id: event-timing-cara
+ValueSet: CHEMEDEPREventTiming
+Id: ch-emed-epr-event-timing
 Title: "CH EMED EPR Event Timings"
 Description: "Event Timings for ambulatory use."
 
