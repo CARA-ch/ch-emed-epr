@@ -41,7 +41,7 @@ RuleSet: medication-statement-ruleset
 Profile: CHEMEDEPRMedicationStatement
 Parent: CHEMEDMedicationStatement
 Id: ch-emed-epr-medicationstatement-treatmentplan
-Title: "MedicationStatement (MTP)"
+Title: "MTP MedicationStatement"
 Description: "Definition of the medication statement for the Medication Treatment Plan document"
 
 * insert medication-statement-ruleset
@@ -64,7 +64,7 @@ Description: "Definition of the medication statement for the Medication Treatmen
 Profile: CHEMEDEPRMedicationStatementList
 Parent: CHEMEDMedicationStatementList
 Id: ch-emed-epr-medicationstatement-list
-Title: "MedicationStatement (PML)"
+Title: "PML MedicationStatement"
 Description: "Definition of the medication statement for the medication list document"
 
 * insert medication-statement-ruleset
@@ -83,7 +83,7 @@ Description: "Definition of the medication statement for the medication list doc
 Profile: CHEMEDEPRMedicationStatementCard
 Parent: CHEMEDMedicationStatementCard
 Id: ch-emed-epr-medicationstatement-card
-Title: "MedicationStatement (Aggregated)"
+Title: "PMLC MedicationStatement"
 Description: "Definition of the aggregated medication statement for the Medication Card document"
 
 * insert medication-statement-ruleset

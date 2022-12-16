@@ -36,7 +36,7 @@ RuleSet: document-ruleset
 Profile: CHEMEDEPRDocumentMedicationTreatmentPlan
 Parent: CHEMEDDocumentMedicationTreatmentPlan
 Id: ch-emed-epr-document-medicationtreatmentplan
-Title: "Document MTP"
+Title: "MTP Document"
 Description: "Definition of the bundle for the medication treatment plan document"
 
 * insert document-ruleset
@@ -54,7 +54,7 @@ Description: "Definition of the bundle for the medication treatment plan documen
 Profile: CHEMEDEPRDocumentMedicationPrescription
 Parent: CHEMEDDocumentMedicationPrescription
 Id: ch-emed-epr-document-medicationprescription
-Title: "Document PRE"
+Title: "PRE Document"
 Description: "Definition of the bundle for the medication prescription document"
 
 * insert document-ruleset
@@ -69,7 +69,7 @@ Description: "Definition of the bundle for the medication prescription document"
 Profile: CHEMEDEPRDocumentMedicationDispense
 Parent: CHEMEDDocumentMedicationDispense
 Id: ch-emed-epr-document-medicationdispense
-Title: "Document DIS"
+Title: "DIS Document"
 Description: "Definition of the bundle for the medication dispense document"
 
 * insert document-ruleset
@@ -84,7 +84,7 @@ Description: "Definition of the bundle for the medication dispense document"
 Profile: CHEMEDEPRDocumentPharmaceuticalAdvice
 Parent: CHEMEDDocumentPharmaceuticalAdvice
 Id: ch-emed-epr-document-pharmaceuticaladvice
-Title: "Document PADV"
+Title: "PADV Document"
 Description: "Definition of the bundle for the pharmaceutical advice document"
 
 * insert document-ruleset
@@ -100,7 +100,7 @@ Description: "Definition of the bundle for the pharmaceutical advice document"
 Profile: CHEMEDEPRDocumentMedicationList
 Parent: CHEMEDDocumentMedicationList
 Id: ch-emed-epr-document-medicationlist
-Title: "Document PML"
+Title: "PML Document"
 Description: "Definition of the bundle for the medication list document"
 
 * insert document-ruleset
@@ -124,7 +124,7 @@ Description: "Definition of the bundle for the medication list document"
 Profile: CHEMEDEPRDocumentMedicationCard
 Parent: CHEMEDDocumentMedicationCard
 Id: ch-emed-epr-document-medicationcard
-Title: "Document PMLC"
+Title: "PMLC Document"
 Description: "Definition of the bundle for the medication card document"
 
 * insert document-ruleset

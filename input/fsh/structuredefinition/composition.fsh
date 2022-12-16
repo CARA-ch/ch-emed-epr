@@ -83,7 +83,7 @@ RuleSet: composition-with-original-representation-ruleset
 Profile: CHEMEDEPRCompositionMedicationTreatmentPlan
 Parent: CHEMEDCompositionMedicationTreatmentPlan
 Id: ch-emed-epr-composition-medicationtreatmentplan
-Title: "Composition MTP"
+Title: "MTP Composition"
 Description: "Definition of the composition for the medication treatment plan document"
 
 * insert composition-ruleset
@@ -105,7 +105,7 @@ Description: "Definition of the composition for the medication treatment plan do
 Profile: CHEMEDEPRCompositionMedicationPrescription
 Parent: CHEMEDCompositionMedicationPrescription
 Id: ch-emed-epr-composition-medicationprescription
-Title: "Composition PRE"
+Title: "PRE Composition"
 Description: "Definition of the composition for the medication prescription document"
 
 * insert composition-ruleset
@@ -125,7 +125,7 @@ Description: "Definition of the composition for the medication prescription docu
 Profile: CHEMEDEPRCompositionMedicationDispense
 Parent: CHEMEDCompositionMedicationDispense
 Id: ch-emed-epr-composition-medicationdispense
-Title: "Composition DIS"
+Title: "DIS Composition"
 Description: "Definition of the composition for the medication dispense document"
 
 * insert composition-ruleset
@@ -148,7 +148,7 @@ Description: "Definition of the composition for the medication dispense document
 Profile: CHEMEDEPRCompositionPharmaceuticalAdvice
 Parent: CHEMEDCompositionPharmaceuticalAdvice
 Id: ch-emed-epr-composition-pharmaceuticaladvice
-Title: "Composition PADV"
+Title: "PADV Composition"
 Description: "Definition of the composition for the pharmaceutical advice document"
 
 * insert composition-ruleset
@@ -167,7 +167,7 @@ Description: "Definition of the composition for the pharmaceutical advice docume
 Profile: CHEMEDEPRCompositionMedicationList
 Parent: CHEMEDCompositionMedicationList
 Id: ch-emed-epr-composition-medicationlist
-Title: "Composition PML"
+Title: "PML Composition"
 Description: "Definition of the composition for the medication list document"
 
 * insert composition-ruleset
@@ -193,7 +193,7 @@ Description: "Definition of the composition for the medication list document"
 Profile: CHEMEDEPRCompositionMedicationCard
 Parent: CHEMEDCompositionMedicationCard
 Id: ch-emed-epr-composition-medicationcard
-Title: "Composition PMLC"
+Title: "PMLC Composition"
 Description: "Definition of the composition for the medication card document"
 
 * insert composition-ruleset

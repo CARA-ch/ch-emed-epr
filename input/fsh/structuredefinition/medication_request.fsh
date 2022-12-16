@@ -47,7 +47,7 @@ RuleSet: medication-request-ruleset
 Profile: CHEMEDEPRMedicationRequest
 Parent: CHEMEDMedicationRequest
 Id: ch-emed-epr-medicationrequest
-Title: "MedicationRequest (PRE)"
+Title: "PRE MedicationRequest"
 Description: "Definition of the medication request for the medication prescription document"
 
 * insert medication-request-ruleset
@@ -62,7 +62,7 @@ Description: "Definition of the medication request for the medication prescripti
 Profile: CHEMEDEPRMedicationRequestList
 Parent: CHEMEDMedicationRequestList
 Id: ch-emed-epr-medicationrequest-list
-Title: "MedicationRequest (PML)"
+Title: "PML MedicationRequest"
 Description: "Definition of the medication request for the medication list document"
 
 * insert medication-request-ruleset

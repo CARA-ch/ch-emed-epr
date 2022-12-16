@@ -33,7 +33,7 @@ RuleSet: observation-ruleset
 Profile: CHEMEDEPRObservation
 Parent: CHEMEDObservation
 Id: ch-emed-epr-observation
-Title: "Observation (PADV)"
+Title: "PADV Observation"
 Description: "Definition of the observation for the pharmaceutical advice document"
 
 * insert observation-ruleset
@@ -47,7 +47,7 @@ Description: "Definition of the observation for the pharmaceutical advice docume
 Profile: CHEMEDEPRObservationList
 Parent: CHEMEDObservationList
 Id: ch-emed-epr-observation-list
-Title: "Observation (PML)"
+Title: "PML Observation"
 Description: "Definition of the observation for the medication list document"
 
 * insert observation-ruleset
