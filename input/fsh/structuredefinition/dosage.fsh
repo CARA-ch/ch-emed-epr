@@ -52,6 +52,7 @@ Description: "Definition of the main dosage element (used in MedicationStatement
 // todo: Period: Either the start or end instants shall be specified
 // todo: Period: The time interval lower bound is after the higher bound
 // todo: When: A code cannot appear in multiple dosages
+// todo: If no intake is given, the instructions shall be filled
 
 
 // =====================================================================================
