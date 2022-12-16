@@ -1,6 +1,5 @@
 RuleSet: main-dosage-ruleset
 * insert common-dosage-ruleset
-* asNeeded[x] 0..1
 * maxDosePerPeriod only CHEMEDEPRRatioAmountPerTime
 * maxDosePerAdministration only CHEMEDEPRAmountQuantity
 * maxDosePerLifetime only CHEMEDEPRAmountQuantity
@@ -8,7 +7,8 @@ RuleSet: main-dosage-ruleset
 * method D
 * site D // TODO We may want that
 * route ^definition = "...Implementers SHOULD focus on supporting values from the value set [Route of Administration](ValueSet-ch-emed-epr-route-of-administration.html)."
-* asNeededBoolean ^definition = "...'true' if the medication is 'in reserve'. By default 'true'"
+* asNeededBoolean ^definition = "...'true' if the medication is 'in reserve'. By default 'true'."
+// todo: additionalInstruction -> http://hl7.org/fhir/R4/valueset-additional-instruction-codes.html
 
 
 RuleSet: split-dosage-ruleset
