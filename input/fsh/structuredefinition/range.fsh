@@ -1,6 +1,6 @@
 RuleSet: range-ruleset
-* id D
-* extension D
+* insert no-support(id)
+* insert no-support(extension)
 
 
 // =====================================================================================

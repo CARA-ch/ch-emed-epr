@@ -14,13 +14,13 @@ Description: "Definition of the device for the eMedication context"
 * insert problematic-reference(location)
 * insert problematic-reference(note.authorReference)
 * insert problematic-reference(parent)
-* udiCarrier D
-* status D
-* statusReason D
-* type D
-* specialization D
-* property D
-* safety D
+* insert no-support(udiCarrier)
+* insert no-support(status)
+* insert no-support(statusReason)
+* insert no-support(type)
+* insert no-support(specialization)
+* insert no-support(property)
+* insert no-support(safety)
 * owner only Reference(CHEMEDEPROrganization)
 * deviceName MS
 * deviceName 1..*

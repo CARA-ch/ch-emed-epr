@@ -4,22 +4,22 @@ RuleSet: medication-statement-ruleset
 
 * medicationReference only Reference(CHEMEDEPRMedication)
 * reasonCode insert reason-code-ruleset
-* reasonCode.coding D
+* insert no-support(reasonCode.coding)
 * subject only Reference(CHEMEDEPRPatient)
-* basedOn D
-* partOf D
-* statusReason D // TODO: we may want this
-* category D // TODO: we may want this
-* context D
-* dateAsserted D
-* derivedFrom D
-* reasonReference D
+* insert no-support(basedOn)
+* insert no-support(partOf)
+* insert no-support(statusReason) // TODO: we may want this
+* insert no-support(category) // TODO: we may want this
+* insert no-support(context)
+* insert no-support(dateAsserted)
+* insert no-support(derivedFrom)
+* insert no-support(reasonReference)
 * identifier insert identifier-ruleset
-* subject.id D
-* subject.extension D
+* insert no-support(subject.id)
+* insert no-support(subject.extension)
 * medicationCodeableConcept ..0 // medicationReference is required and medication is 1..1
-* effective[x] D
-* effectivePeriod D
+* insert no-support(effective[x])
+* insert no-support(effectivePeriod)
 * dosage[baseEntry] only CHEMEDEPRDosage
 * dosage[additionalEntry] only CHEMEDEPRDosageSplit
 * insert problematic-reference(identifier.assigner)
@@ -49,14 +49,14 @@ Description: "Definition of the medication statement for the Medication Treatmen
 * extension[substitution].valueCodeableConcept from substance-admin-substitution-code (required)
 * extension[substitution].valueCodeableConcept.coding 1..1
 * extension[substitution].valueCodeableConcept insert codeableconcept-ruleset
-* extension[substitution].id D
+* insert no-support(extension[substitution].id)
 * extension[substitution] ^short = "Whether the dispenser can substitute the prescribed medicine/package by another that is deemed equivalent, for medical or logistical reasons. By default, substitution is authorized."
 // TODO status is only active
 // TODO TEST flags
 * insert overridden(informationSource)
 * informationSource only Reference(CHEMEDEPRPatient or CHEMEDEPRPractitioner or CHEMEDEPRPractitionerRole or CHEMEDEPRRelatedPerson or CHEMEDEPROrganization)
 * effectivePeriod N
-* subject D
+* insert no-support(subject)
 
 // =====================================================================================
 // Medication Statement PML
@@ -72,7 +72,7 @@ Description: "Definition of the medication statement for the medication list doc
 * extension[substitution].valueCodeableConcept.coding from substance-admin-substitution-code (required)
 * extension[substitution].valueCodeableConcept.coding 1..1
 * extension[substitution].valueCodeableConcept insert codeableconcept-ruleset
-* extension[substitution].id D
+* insert no-support(extension[substitution].id)
 * extension[substitution] ^short = "Whether the dispenser can substitute the prescribed medicine/package by another that is deemed equivalent, for medical or logistical reasons. By default, substitution is authorized."
 * informationSource only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
 

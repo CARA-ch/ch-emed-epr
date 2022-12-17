@@ -8,13 +8,13 @@ Description: "Definition of the practitioner for the eMedication context"
 
 * name 1..1
 * address 1..1
-* active D
-* birthDate D
-* photo D
-* qualification D
-* communication D
-* contained D
-* extension D
+* insert no-support(active)
+* insert no-support(birthDate)
+* insert no-support(photo)
+* insert no-support(qualification)
+* insert no-support(communication)
+* insert no-support(contained)
+* insert no-support(extension)
 * identifier insert identifier-ruleset
 * insert problematic-reference(identifier.assigner)
 * insert problematic-reference(qualification.issuer)

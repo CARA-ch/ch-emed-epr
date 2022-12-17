@@ -16,14 +16,14 @@ RuleSet: document-ruleset
 * entry.request 0..0
 * entry.response 0..0
 * entry.link 0..0
-* entry.id D
-* entry[Encounter] D
-* entry[Location] D
-* signature D
-* link D
+* insert no-support(entry.id)
+* insert no-support(entry[Encounter])
+* insert no-support(entry[Location])
+* insert no-support(signature)
+* insert no-support(link)
 * identifier insert identifier-ruleset
-* id D
-* language D // Use Composition.language
+* insert no-support(id)
+* insert no-support(language) // Use Composition.language
 
 // Documentation
 * entry[Patient] ^short = "The patient targeted by this medication treatment plan"

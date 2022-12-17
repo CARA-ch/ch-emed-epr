@@ -19,22 +19,22 @@ RuleSet: medication-ruleset
 * code.coding 0..*
 * code.coding[GTIN] 0..1
 * ingredient.itemCodeableConcept.coding 1..1
-* code.id D
+* insert no-support(code.id)
 * code.coding[GTIN] insert coding-ruleset
 * code.coding[ATC] insert coding-ruleset
 * form insert codeableconcept-ruleset
 * form.coding insert coding-ruleset
-* batch.id D
-* batch.extension D
+* insert no-support(batch.id)
+* insert no-support(batch.extension)
 * insert modifier(batch.modifierExtension)
-* extension D
-* code.extension D
-* form.extension D
-* ingredient.id D
-* ingredient.extension D
+* insert no-support(extension)
+* insert no-support(code.extension)
+* insert no-support(form.extension)
+* insert no-support(ingredient.id)
+* insert no-support(ingredient.extension)
 * insert modifier(ingredient.modifierExtension)
-* ingredient.itemCodeableConcept.id D
-* ingredient.itemCodeableConcept.extension D
+* insert no-support(ingredient.itemCodeableConcept.id)
+* insert no-support(ingredient.itemCodeableConcept.extension)
 //* identifier TODO
 
 

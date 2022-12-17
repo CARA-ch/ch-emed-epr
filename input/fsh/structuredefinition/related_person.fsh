@@ -8,5 +8,5 @@ Description: "Definition of the related person for the eMedication context"
 
 * identifier insert identifier-ruleset
 * insert problematic-reference(identifier.assigner)
-* active D
-* period D
+* insert no-support(active)
+* insert no-support(period)

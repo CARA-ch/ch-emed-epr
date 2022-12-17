@@ -3,9 +3,9 @@ RuleSet: main-dosage-ruleset
 * maxDosePerPeriod only CHEMEDEPRRatioAmountPerTime
 * maxDosePerAdministration only CHEMEDEPRAmountQuantity
 * maxDosePerLifetime only CHEMEDEPRAmountQuantity
-* maxDosePerLifetime D
-* method D
-* site D // TODO We may want that
+* insert no-support(maxDosePerLifetime)
+* insert no-support(method)
+* insert no-support(site) // TODO We may want that
 * route ^definition = "...Implementers SHOULD focus on supporting values from the value set [Route of Administration](ValueSet-ch-emed-epr-route-of-administration.html)."
 * asNeededBoolean ^definition = "...'true' if the medication is 'in reserve'. By default 'true'."
 // todo: additionalInstruction -> http://hl7.org/fhir/R4/valueset-additional-instruction-codes.html
@@ -18,10 +18,10 @@ RuleSet: split-dosage-ruleset
 RuleSet: common-dosage-ruleset
 * insert modifier(modifierExtension)
 * insert modifier(timing.modifierExtension)
-* doseAndRate.type D
-* extension D
-* timing.code D // TODO We may want that
-* timing.event D
+* insert no-support(doseAndRate.type)
+* insert no-support(extension)
+* insert no-support(timing.code) // TODO We may want that
+* insert no-support(timing.event)
 * timing.repeat.when obeys only-standard-event-timings
 * timing.repeat.when ^short = "... It shall only contain values from [Event Timings](ValueSet-event-timing-cara.html)."
 * doseAndRate.doseQuantity only CHEMEDEPRAmountQuantity

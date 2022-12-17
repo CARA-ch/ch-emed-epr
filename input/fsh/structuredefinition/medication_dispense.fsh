@@ -4,24 +4,24 @@ RuleSet: medication-dispense-ruleset
 
 * extension[treatmentPlan] 1..1
 * medicationReference only Reference(CHEMEDEPRMedicationMedicationDispense)
-* authorizingPrescription D
+* insert no-support(authorizingPrescription)
 * whenHandedOver 1..1
-* partOf D
-* statusReason[x] D
-* category D
-* context D
-* supportingInformation D
-* location D
-* type D // TODO ?
-* daysSupply D
-* whenPrepared D
-* destination D
-* receiver D // It's the subject
-* substitution.responsibleParty D // It's the performer
-* extension[pharmaceuticalAdvice] D
-* extension[prescription] D // Use authorizingPrescription?
-* substitution.type D // TODO: it should be optional
-* extension[pharmaceuticalAdvice] D
+* insert no-support(partOf)
+* insert no-support(statusReason[x])
+* insert no-support(category)
+* insert no-support(context)
+* insert no-support(supportingInformation)
+* insert no-support(location)
+* insert no-support(type) // TODO ?
+* insert no-support(daysSupply)
+* insert no-support(whenPrepared)
+* insert no-support(destination)
+* insert no-support(receiver) // It's the subject
+* insert no-support(substitution.responsibleParty) // It's the performer
+* insert no-support(extension[pharmaceuticalAdvice])
+* insert no-support(extension[prescription]) // Use authorizingPrescription?
+* insert no-support(substitution.type) // TODO: it should be optional
+* insert no-support(extension[pharmaceuticalAdvice])
 * quantity only CHEMEDEPRAmountQuantity
 * daysSupply only CHEMEDEPRTimeQuantity
 * dosageInstruction[baseEntry] only CHEMEDEPRDosage

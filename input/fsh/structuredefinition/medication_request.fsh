@@ -8,29 +8,29 @@ RuleSet: medication-request-ruleset
 * reasonCode insert reason-code-ruleset
 * intent = http://hl7.org/fhir/CodeSystem/medicationrequest-intent#order "Order" // That's a modifier
 * insert modifier(doNotPerform)
-* statusReason D // TODO we may want this
-* category D
-* priority D
-* reported[x] D
-* encounter D
-* supportingInformation D
-* performer D
-* performerType D
-* reasonReference D
-* instantiatesCanonical D
-* instantiatesUri D
-* basedOn D
-* groupIdentifier D
-* courseOfTherapyType D
-* insurance D
-* substitution.reason D // TODO we may want this
-* priorPrescription D
-* detectedIssue D
-* eventHistory D
-* dispenseRequest.initialFill D
-* dispenseRequest.expectedSupplyDuration D
-* dispenseRequest.performer D
-* substitution.allowedBoolean D // TODO remove 
+* insert no-support(statusReason) // TODO we may want this
+* insert no-support(category)
+* insert no-support(priority)
+* insert no-support(reported[x])
+* insert no-support(encounter)
+* insert no-support(supportingInformation)
+* insert no-support(performer)
+* insert no-support(performerType)
+* insert no-support(reasonReference)
+* insert no-support(instantiatesCanonical)
+* insert no-support(instantiatesUri)
+* insert no-support(basedOn)
+* insert no-support(groupIdentifier)
+* insert no-support(courseOfTherapyType)
+* insert no-support(insurance)
+* insert no-support(substitution.reason) // TODO we may want this
+* insert no-support(priorPrescription)
+* insert no-support(detectedIssue)
+* insert no-support(eventHistory)
+* insert no-support(dispenseRequest.initialFill)
+* insert no-support(dispenseRequest.expectedSupplyDuration)
+* insert no-support(dispenseRequest.performer)
+* insert no-support(substitution.allowedBoolean) // TODO remove 
 * dosageInstruction[baseEntry] only CHEMEDEPRDosageMedicationRequest
 * dosageInstruction[additionalEntry] only CHEMEDEPRDosageSplitMedicationRequest
 * dispenseRequest.initialFill.quantity only CHEMEDEPRAmountQuantity

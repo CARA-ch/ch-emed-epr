@@ -3,8 +3,8 @@ RuleSet: quantity-ruleset
 * unit 1..1
 * system 1..1
 * code 1..1
-* extension D
-* id D
+* insert no-support(extension)
+* insert no-support(id)
 * insert modifier(comparator)
 
 

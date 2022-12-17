@@ -19,22 +19,22 @@ RuleSet: composition-ruleset
 //* type.coding insert coding-ruleset TODO
 * section.author only Reference(CHEMEDEPRPractitioner or CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPROrganization or CHEMEDEPRRelatedPerson or CHEMEDEPRDevice)
 * date obeys datetime-only-instant-invariant
-* encounter D
-* attester[legalAuthenticator] D
-* attester D
-* event D
-* relatesTo D
-* author.id D
+* insert no-support(encounter)
+* insert no-support(attester[legalAuthenticator])
+* insert no-support(attester)
+* insert no-support(event)
+* insert no-support(relatesTo)
+* insert no-support(author.id)
 * author.identifier 0..0 // The literal reference is required
-* custodian.id D
+* insert no-support(custodian.id)
 * custodian.identifier 0..0 // The literal reference is required
 * identifier insert identifier-ruleset
 * subject insert codeableconcept-ruleset
-* confidentiality.id D
+* insert no-support(confidentiality.id)
 * section.focus 0..0
 * section.mode = http://hl7.org/fhir/list-mode#snapshot "Snapshot List" // Document-based workflow, it's always a snapshot and not a live resource
-* section.orderedBy D // It's not ordered
-* section.entry.id D
+* insert no-support(section.orderedBy) // It's not ordered
+* insert no-support(section.entry.id)
 * section.emptyReason
 //* extension[versionNumber] = 1 // TODO
 
@@ -51,10 +51,10 @@ RuleSet: composition-with-annotation-ruleset
 
 * section[annotation].extension[sectionId] 0..0 // Not useful anymore
 * section[annotation].code.coding 1..1
-* section[annotation].focus D
-* section[annotation].emptyReason D
-* section[annotation].section D
-* section[annotation].id D
+* insert no-support(section[annotation].focus)
+* insert no-support(section[annotation].emptyReason)
+* insert no-support(section[annotation].section)
+* insert no-support(section[annotation].id)
 * section[annotation] ^short = "Annotation comment concerning this document"
 * section[annotation].code insert codeableconcept-ruleset
 * section[annotation].code.coding insert coding-ruleset
@@ -66,15 +66,15 @@ RuleSet: composition-with-annotation-ruleset
 RuleSet: composition-with-original-representation-ruleset
 
 * section[originalRepresentation].code.coding 1..1
-* section[originalRepresentation].focus D
-* section[originalRepresentation].emptyReason D
-* section[originalRepresentation].section D
-* section[originalRepresentation].id D
+* insert no-support(section[originalRepresentation].focus)
+* insert no-support(section[originalRepresentation].emptyReason)
+* insert no-support(section[originalRepresentation].section)
+* insert no-support(section[originalRepresentation].id)
 * section[originalRepresentation].code insert codeableconcept-ruleset
 * section[originalRepresentation].code.coding insert coding-ruleset
-* section[originalRepresentation].entry.id D
+* insert no-support(section[originalRepresentation].entry.id)
 * section[originalRepresentation].entry.identifier 0..0 // The literal reference is required
-* section[originalRepresentation].extension D
+* insert no-support(section[originalRepresentation].extension)
 
 
 // =====================================================================================

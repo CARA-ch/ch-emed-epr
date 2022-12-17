@@ -10,19 +10,19 @@ Description: "Definition of the practitioner role for the eMedication context"
 * code from http://fhir.ch/ig/ch-epr-term/ValueSet/HCProfessional.hcProfession (required)
 * practitioner only Reference(CHEMEDEPRPractitioner)
 * organization only Reference(CHEMEDEPROrganization)
-* active D
-* period D
-* location D
-* telecom D
-* availableTime D
-* notAvailable D
-* availabilityExceptions D
-* endpoint D
-* specialty D // TODO: we may want this
-* extension D
-* identifier D
-* healthcareService D
-* contained D
+* insert no-support(active)
+* insert no-support(period)
+* insert no-support(location)
+* insert no-support(telecom)
+* insert no-support(availableTime)
+* insert no-support(notAvailable)
+* insert no-support(availabilityExceptions)
+* insert no-support(endpoint)
+* insert no-support(specialty) // TODO: we may want this
+* insert no-support(extension)
+* insert no-support(identifier)
+* insert no-support(healthcareService)
+* insert no-support(contained)
 * insert problematic-reference(identifier.assigner)
 * insert problematic-reference(location)
 * insert problematic-reference(healthcareService)
