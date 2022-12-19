@@ -66,9 +66,8 @@ RuleSet: overridden(path)
 
 RuleSet: no-support(path)
 * {path} D
-* {path} ^short = "This element should not set or read"
+* {path} ^short = "DNU."
 * {path} ^definition = """Implementers should not set or read this element. 
 This element is only kept as optional to allow submission of documents that would contain a value, 
 since those documents are still readable by others.
 The meaning of this element is undefined in this profile."""
-// todo: use it!
