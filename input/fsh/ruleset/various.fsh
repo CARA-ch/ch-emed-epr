@@ -66,7 +66,7 @@ RuleSet: overridden(path)
 
 RuleSet: no-support(path)
 * {path} D
-* {path} ^short = "DNU."
+* {path} ^short = "✕"
 * {path} ^definition = """Implementers should not set or read this element. 
 This element is only kept as optional to allow submission of documents that would contain a value, 
 since those documents are still readable by others.
