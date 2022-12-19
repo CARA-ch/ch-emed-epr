@@ -14,12 +14,14 @@ Base for this modelling was the report from [IPAG eMedikation, 7.6.2017](https:/
 
 ### Tabs
 
-- **Key Elements**: why is it showing some draft elements?
+- **Differential**: it shows differences with the parent artifact. It's only useful to authors of this IG.
+- **Key**: it only contains elements that are included in summaries (a feature not used by this IG) or as **must support**.
+- **Snapshot**: the tab that contains all the elements, it's the most useful one.
 
 ### Flags
 
 - **must support**: the [mustSupport](https://www.hl7.org/fhir/profiling.html#mustsupport) flag follows the IHE use of **R2** as defined in [Appendix Z](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.10-profiling-conventions-for-constraints-on-fhir). It demands that the content creator **must support these elements if they are known**. If the sending application has data for the element, it is required to populate the element with a non-empty value. If the value is not known, the element may be omitted. A receiving application may ignore the information conveyed by the element. A receiving application shall not raise an error solely due to the presence or absence of the element.
-- **draft**: the draft flag is used to indicate that an element has no clear use case or description and is useless in this profile. Implementers SHOULD avoid setting or reading it, as its meaning is undefined.
+- **draft**/**DNU**: the draft flag is used to indicate that an element has no clear use case or description and is useless in this profile. Implementers SHOULD avoid setting or reading it, as elements' meaning is undefined.
 - **trial use**: the element description is being defined and implementers MAY support it. 
 
 ### Binding strengths
