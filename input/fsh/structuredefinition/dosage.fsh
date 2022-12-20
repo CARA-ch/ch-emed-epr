@@ -9,6 +9,23 @@ RuleSet: main-dosage-ruleset
 * route ^definition = "...Implementers SHOULD focus on supporting values from the value set [Route of Administration](ValueSet-ch-emed-epr-route-of-administration.html)."
 * asNeededBoolean ^definition = "...'true' if the medication is 'in reserve'. By default 'true'."
 // todo: additionalInstruction -> http://hl7.org/fhir/R4/valueset-additional-instruction-codes.html
+* insert no-support(timing.repeat.id)
+* insert no-support(timing.repeat.extension)
+* insert no-support(timing.repeat.count)
+* insert no-support(timing.repeat.countMax)
+* insert no-support(timing.repeat.duration)
+* insert no-support(timing.repeat.durationMax)
+* insert no-support(timing.repeat.durationUnit)
+* insert no-support(timing.repeat.frequency)
+* insert no-support(timing.repeat.frequencyMax)
+* insert no-support(timing.repeat.period)
+* insert no-support(timing.repeat.periodMax)
+* insert no-support(timing.repeat.periodUnit)
+* insert no-support(timing.repeat.dayOfWeek)
+* insert no-support(timing.repeat.timeOfDay)
+* insert no-support(timing.repeat.offset)
+* insert no-support(timing.id)
+* insert no-support(timing.extension)
 
 
 RuleSet: split-dosage-ruleset
