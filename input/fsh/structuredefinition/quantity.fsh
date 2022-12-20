@@ -18,7 +18,12 @@ Title: "Amount Quantity"
 Description: "A quantity with an amount unit (no time unit)"
 * insert quantity-ruleset
 * code from CHEMEDEPRAmountQuantityUnitCode (required)
-// todo: value also integer and strictly positive?
+* value obeys amount-quantity-int-or-simple-decimal
+
+Invariant: amount-quantity-int-or-simple-decimal
+Description: "An amount quantity shall be either an integer, or a decimal that ends with '.25', '.5', or '.75'"
+Expression: "not($this.contains('.')) or $this.endsWith('.25') or $this.endsWith('.5') or $this.endsWith('.75')"
+Severity: #error
 
 
 // =====================================================================================
