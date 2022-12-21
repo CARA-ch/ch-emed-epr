@@ -39,6 +39,9 @@ RuleSet: medication-request-ruleset
 * priorPrescription ^comment = "Use the XDS mechanis to replace a prescription"
 * extension[treatmentplan] ^short = "A reference to the MedicationStatement that introduced this medication"
 // TODO How to code provisional state?
+* dispenseRequest 1..1
+* dispenseRequest.validityPeriod 1..1
+* dispenseRequest.validityPeriod.start 1..1
 
 
 // =====================================================================================
