@@ -45,4 +45,4 @@ When receiving a new prescription, the following processing occurs:
     1. If *NewPeriod*'s start date is *null* and *PreviousPeriod*'s end date is *null*, both values are set to the new prescription's validity start date.
     2. If *NewPeriod*'s start date is *non-null* and *PreviousPeriod*'s end date is *null*, the latter is updated with the former value.
     3. Other cases are not solved yet :(
-    4. The previous prescription's validity end date is set to the new prescription's validity start date if it was *null* or posterior.
+    4. The previous prescription's validity end date is set to the new prescription's dosage start date if it was *null* or posterior to it.
