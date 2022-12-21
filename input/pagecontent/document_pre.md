@@ -32,3 +32,17 @@ The start time is mandatory and SHOULD reflect the time the prescription was cre
 The end time is optional but SHOULD be set; if it's not set, the prescription will stay as 'ready for validation' until the time is manually set (in a PADV CHANGE) or the prescription is manually cancelled or refused.
 
 The eMedication service doesn't enforce validity period max duration, as set by cantonal laws.
+
+### Aggregation
+
+When receiving a new prescription, the following processing occurs:
+
+1. The prescription's validity start date shall not be anterior to another prescription's validity start date in the same treatment; it's otherwise refused.
+2. If the prescription's dosage start date is *non-null* and anterior to the MTP's dosage start date, the latter is updated with the former value.
+3. If the prescriptions's dosage end date is *non-null* and posterior to the MTP's dosage end date, the latter is updated with the former value.
+4. If the prescription's dosage period (let's call it *NewPeriod*) overlaps with another prescription's dosage period (let's call it *PreviousPeriod*), the following actions occur:
+    1. If *NewPeriod*'s start date is *null* and *PreviousPeriod*'s end date is *non-null*, the former is updated with the latter value.
+    1. If *NewPeriod*'s start date is *null* and *PreviousPeriod*'s end date is *null*, both values are set to the new prescription's validity start date.
+    2. If *NewPeriod*'s start date is *non-null* and *PreviousPeriod*'s end date is *null*, the latter is updated with the former value.
+    3. Other cases are not solved yet :(
+    4. The previous prescription's validity end date is set to the new prescription's validity start date if it was *null* or posterior.

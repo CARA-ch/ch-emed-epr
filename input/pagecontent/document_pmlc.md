@@ -22,4 +22,16 @@ This document contains aggregated entries. For more information about aggregatio
 
 ### Generation rules
 
+Treatments are selected for processing as follows:
+
+1. The MTP status shall be **active**.
+2. The MTP dosage end date shall be *null* or in the future.
+
+Treatments are then processed as follows:
+
+1. If there are one or more **active** prescriptions, whose dosage end date is either *null* or in the future, then an item for each of these prescriptions is inserted in the medication card.
+2. If there's no such prescription, an item is inserted in the medication card.
+
+*An item is a MedicationStatement in the document and a line in the PDF.*
+
 <!-- TODO draft elements that are references to other resources -->
