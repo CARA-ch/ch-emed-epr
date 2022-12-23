@@ -18,8 +18,8 @@ RuleSet: medication-statement-ruleset
 * insert no-support(subject.id)
 * insert no-support(subject.extension)
 * medicationCodeableConcept ..0 // medicationReference is required and medication is 1..1
-* insert no-support(effective[x])
 * insert no-support(effectivePeriod)
+* effectivePeriod 0..0
 * dosage[baseEntry] only CHEMEDEPRDosage
 * dosage[additionalEntry] only CHEMEDEPRDosageSplit
 * insert problematic-reference(identifier.assigner)
@@ -31,7 +31,6 @@ RuleSet: medication-statement-ruleset
 * reasonCode ^definition = "...Content creators should keep it as simple and short as possible (e.g. 'blood clog', 'hypertension')."
 // TODO: Disallow medicationCodeableConcept
 // TODO: note?
-// TODO: Disallow effectivePeriod in favor of dosage period?
 // TODO: effectiveDateTime is the effective time of the entry?
 
 
@@ -55,7 +54,6 @@ Description: "Definition of the medication statement for the Medication Treatmen
 // TODO TEST flags
 * insert overridden(informationSource)
 * informationSource only Reference(CHEMEDEPRPatient or CHEMEDEPRPractitioner or CHEMEDEPRPractitionerRole or CHEMEDEPRRelatedPerson or CHEMEDEPROrganization)
-* effectivePeriod N
 * insert no-support(subject)
 
 // =====================================================================================
