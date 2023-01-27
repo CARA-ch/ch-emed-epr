@@ -176,8 +176,7 @@ Description: "Definition of the composition for the medication list document"
 * author 1..1
 // TODO prevent other sections (keep only slices)?
 * section[list].code.coding 1..1
-// TODO section[card].author only Reference()
-* section[list].author 1..1 // TODO
+* section[list].author 0..0
 * section[list]
   * entry[medicationStatement] only Reference(CHEMEDEPRMedicationStatementList)
   * entry[medicationRequest] only Reference(CHEMEDEPRMedicationRequestList)
@@ -205,8 +204,7 @@ Description: "Definition of the composition for the medication card document"
 * author only Reference(CHEMEDEPRDevice)
 * author 1..1
 // TODO prevent other sections (keep only slices)?
-// TODO section[card].author only Reference()
-* section[card].author 1..1 // TODO
+* section[card].author 0..0
 * section[annotation] 1..1
 * section[annotation] ^short = "Description of the parameters used to generate this medication card"
 * author ^definition = "...Medication cards are automatically created by software, their author is a device."
