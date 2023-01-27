@@ -38,7 +38,7 @@ Description: "Definition of the observation for the pharmaceutical advice docume
 
 * insert observation-ruleset
 * insert overridden(performer)
-* performer only Reference(CHEMEDEPRPractitioner or CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPROrganization or CHEMEDEPRRelatedPerson)
+* performer ^short = "✕ The performer is given in Composition.section.author or Composition.author (see guidance)"
 * insert no-support(note.author[x])
 * note.author[x] ^short = "✕ The note author is ignored, as it cannot be different than the observation author"
 * insert no-support(note.time)

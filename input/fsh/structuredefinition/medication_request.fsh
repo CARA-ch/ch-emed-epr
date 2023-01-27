@@ -55,7 +55,7 @@ Description: "Definition of the medication request for the medication prescripti
 
 * insert medication-request-ruleset
 * insert overridden(requester)
-* requester only Reference(CHEMEDEPRPatient or CHEMEDEPRPractitioner or CHEMEDEPRPractitionerRole or CHEMEDEPRRelatedPerson or CHEMEDEPROrganization)
+* requester ^short = "✕ The requester is given in Composition.section.author or Composition.author (see guidance)"
 // TODO status is only active
 
 

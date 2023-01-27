@@ -7,6 +7,7 @@
 - Full datetimes where it's important
 - Contained resources in PML/PMLC
 - Add relatedPerson
+- Warn about attributes that are set and are not being supported/are overriden in PML(C) generation.
 
 ## Questions
 

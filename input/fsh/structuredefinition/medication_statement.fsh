@@ -53,7 +53,7 @@ Description: "Definition of the medication statement for the Medication Treatmen
 // TODO status is only active
 // TODO TEST flags
 * insert overridden(informationSource)
-* informationSource only Reference(CHEMEDEPRPatient or CHEMEDEPRPractitioner or CHEMEDEPRPractitionerRole or CHEMEDEPRRelatedPerson or CHEMEDEPROrganization)
+* informationSource ^short = "✕ The information source is given in Composition.section.author or Composition.author (see guidance)"
 * insert no-support(subject)
 
 // =====================================================================================

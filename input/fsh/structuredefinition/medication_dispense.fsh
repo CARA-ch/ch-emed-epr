@@ -39,6 +39,7 @@ Description: "Definition of the medication dispense for the medication dispense 
 
 * insert medication-dispense-ruleset
 * insert overridden(performer)
+* performer ^short = "✕ The performer is given in Composition.section.author or Composition.author (see guidance)"
 
 // =====================================================================================
 // Medication Dispense PML
