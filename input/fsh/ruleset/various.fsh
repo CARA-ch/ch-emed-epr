@@ -62,7 +62,9 @@ RuleSet: modifier(path)
 
 RuleSet: overridden(path)
 * {path} D
-* {path} ^comment = "...This value may be overridden when generating PML(C) documents."
+* {path} ^short = "✕"
+* {path} ^comment = "...This value may be overridden when generating PML(C) documents.
+It is recommended not to set this value because its value will change when retrieved in a PML/PMLC document."
 
 RuleSet: no-support(path)
 * {path} D
