@@ -96,7 +96,7 @@ Description: "Definition of the composition for the medication treatment plan do
 * section[treatmentPlan].entry only Reference(CHEMEDEPRMedicationStatement)
 * section[treatmentPlan].code insert codeableconcept-ruleset
 * section[treatmentPlan].code.coding insert coding-ruleset
-* author only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient)
+* author[person] only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient)
 
 
 // =====================================================================================
@@ -116,7 +116,7 @@ Description: "Definition of the composition for the medication prescription docu
 // TODO prevent other sections (keep only slices)?
 * section[prescription].code.coding 1..1
 * section[prescription].entry only Reference(CHEMEDEPRMedicationRequest)
-* author only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient)
+* author[person] only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient)
 
 
 // =====================================================================================
@@ -139,7 +139,7 @@ Description: "Definition of the composition for the medication dispense document
 // TODO prevent other sections (keep only slices)?
 * section[dispense].code.coding 1..1
 * section[dispense].entry only Reference(CHEMEDEPRMedicationDispense)
-* author only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient)
+* author[person] only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient)
 
 
 // =====================================================================================
@@ -158,7 +158,7 @@ Description: "Definition of the composition for the pharmaceutical advice docume
 * section[pharmaceuticalAdvice].extension[sectionId] 0..0 // Not useful anymore
 * section[pharmaceuticalAdvice].code.coding 1..1
 * section[pharmaceuticalAdvice].entry only Reference(CHEMEDEPRObservation)
-* author only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient)
+* author[person] only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient)
 
 
 // =====================================================================================
