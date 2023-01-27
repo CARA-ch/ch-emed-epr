@@ -10,7 +10,6 @@ RuleSet: composition-ruleset
 * confidentiality.extension[confidentialityCode].valueCodeableConcept.coding.display = "Normal (qualifier value)"
 //* type.coding.display 1..1
 * relatesTo.code = http://hl7.org/fhir/document-relationship-type#replaces "Replaces"
-* section[originalRepresentation].code.coding 1..1
 * identifier.use = http://hl7.org/fhir/identifier-use#official "Official"
 * identifier.value obeys urn-uuid-invariant
 * confidentiality.extension 1..1
@@ -49,8 +48,6 @@ RuleSet: composition-ruleset
 // =====================================================================================
 RuleSet: composition-with-annotation-ruleset
 
-* section[annotation].extension[sectionId] 0..0 // Not useful anymore
-* section[annotation].code.coding 1..1
 * insert no-support(section[annotation].focus)
 * insert no-support(section[annotation].emptyReason)
 * insert no-support(section[annotation].section)
@@ -65,7 +62,6 @@ RuleSet: composition-with-annotation-ruleset
 // =====================================================================================
 RuleSet: composition-with-original-representation-ruleset
 
-* section[originalRepresentation].code.coding 1..1
 * insert no-support(section[originalRepresentation].focus)
 * insert no-support(section[originalRepresentation].emptyReason)
 * insert no-support(section[originalRepresentation].section)
@@ -90,9 +86,7 @@ Description: "Definition of the composition for the medication treatment plan do
 * insert composition-with-annotation-ruleset
 * insert composition-with-original-representation-ruleset
 
-* section[treatmentPlan].extension[sectionId] 0..0 // Not useful anymore
 * subject only Reference(CHEMEDEPRPatient)
-* section[treatmentPlan].code.coding 1..1
 * section[treatmentPlan].entry only Reference(CHEMEDEPRMedicationStatement)
 * section[treatmentPlan].code insert codeableconcept-ruleset
 * section[treatmentPlan].code.coding insert coding-ruleset
@@ -112,9 +106,7 @@ Description: "Definition of the composition for the medication prescription docu
 * insert composition-with-annotation-ruleset
 * insert composition-with-original-representation-ruleset
 
-//* section[prescription].code.coding.display = "Prescriptions" // TODO upstream
 // TODO prevent other sections (keep only slices)?
-* section[prescription].code.coding 1..1
 * section[prescription].entry only Reference(CHEMEDEPRMedicationRequest)
 * author[person] only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient)
 
@@ -132,12 +124,8 @@ Description: "Definition of the composition for the medication dispense document
 * insert composition-with-annotation-ruleset
 * insert composition-with-original-representation-ruleset
 
-// Upstream
-* section[dispense].extension[sectionId] 0..0 // Not useful anymore
-
 // Restrictions
 // TODO prevent other sections (keep only slices)?
-* section[dispense].code.coding 1..1
 * section[dispense].entry only Reference(CHEMEDEPRMedicationDispense)
 * author[person] only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient)
 
@@ -155,8 +143,6 @@ Description: "Definition of the composition for the pharmaceutical advice docume
 * insert composition-with-annotation-ruleset
 * insert composition-with-original-representation-ruleset
 
-* section[pharmaceuticalAdvice].extension[sectionId] 0..0 // Not useful anymore
-* section[pharmaceuticalAdvice].code.coding 1..1
 * section[pharmaceuticalAdvice].entry only Reference(CHEMEDEPRObservation)
 * author[person] only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient)
 
@@ -175,7 +161,6 @@ Description: "Definition of the composition for the medication list document"
 * author only Reference(CHEMEDEPRDevice)
 * author 1..1
 // TODO prevent other sections (keep only slices)?
-* section[list].code.coding 1..1
 * section[list].author 0..0
 * section[list].text ^short = "Description of the parameters used to generate this medication list."
 * section[list]
@@ -198,8 +183,6 @@ Description: "Definition of the composition for the medication card document"
 * insert composition-with-annotation-ruleset
 * insert composition-with-original-representation-ruleset
 
-* section[card].extension[sectionId] 0..0 // Not useful anymore
-* section[card].code.coding = $lnc#56445-0 "Medication summary" // TODO wrong code upstream
 * author only Reference(CHEMEDEPRDevice)
 * author 1..1
 // TODO prevent other sections (keep only slices)?
