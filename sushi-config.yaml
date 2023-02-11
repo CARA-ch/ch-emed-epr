@@ -4,7 +4,7 @@
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: ch.cara.epr.emed
-canonical: https://www.cara.ch
+canonical: https://fhir.cara.ch
 name: ch-emed-epr
 title: "CH-EMED-EPR"
 # description: Example Implementation Guide for getting started with SUSHI
