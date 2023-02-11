@@ -17,6 +17,7 @@ RuleSet: coding-ruleset
 
 RuleSet: identifier-ruleset
 * insert no-support(assigner)
+* assigner only Reference(CHEMEDEPROrganization)
 * insert no-support(period)
 * insert no-support(type)
 * insert no-support(id)
