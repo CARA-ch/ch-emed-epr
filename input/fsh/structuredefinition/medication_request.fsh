@@ -3,6 +3,7 @@ RuleSet: medication-request-ruleset
 * insert domain-resource-ruleset
 
 * extension[treatmentplan] 1..1
+* medication[x] only Reference
 * medicationReference only Reference(CHEMEDEPRMedication)
 * substitution.allowedCodeableConcept from ActSubstanceAdminSubstitutionCode (required)
 * reasonCode insert reason-code-ruleset

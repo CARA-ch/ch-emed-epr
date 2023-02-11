@@ -2,7 +2,6 @@ RuleSet: medication-statement-ruleset
 
 * insert domain-resource-ruleset
 
-* medicationReference only Reference(CHEMEDEPRMedication)
 * reasonCode insert reason-code-ruleset
 * insert no-support(reasonCode.coding)
 * subject only Reference(CHEMEDEPRPatient)
@@ -17,7 +16,8 @@ RuleSet: medication-statement-ruleset
 * identifier insert identifier-ruleset
 * insert no-support(subject.id)
 * insert no-support(subject.extension)
-* medicationCodeableConcept ..0 // medicationReference is required and medication is 1..1
+* medication[x] only Reference
+* medicationReference only Reference(CHEMEDEPRMedication)
 * insert no-support(effectivePeriod)
 * effectivePeriod 0..0
 * dosage[baseEntry] only CHEMEDEPRDosage

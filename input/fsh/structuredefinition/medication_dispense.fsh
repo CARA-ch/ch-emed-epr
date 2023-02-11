@@ -3,6 +3,7 @@ RuleSet: medication-dispense-ruleset
 * insert domain-resource-ruleset
 
 * extension[treatmentPlan] 1..1
+* medication[x] only Reference
 * medicationReference only Reference(CHEMEDEPRMedicationMedicationDispense)
 * insert no-support(authorizingPrescription)
 * whenHandedOver 1..1
