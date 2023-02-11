@@ -3,7 +3,11 @@ RuleSet: observation-ruleset
 * insert domain-resource-ruleset
 * obeys only-one-obs-ref
 * obeys mtp-entry-only-with-ref
-// TODO medicationStatementChanged ?
+* obeys pre-entry-only-with-ref
+* obeys mtp-ref-conformant
+* obeys pre-ref-conformant
+* obeys mtp-same-id
+* obeys pre-same-id
 * issued 1..1
 * insert no-support(basedOn)
 * insert no-support(partOf)
@@ -22,8 +26,6 @@ RuleSet: observation-ruleset
 * insert no-support(derivedFrom)
 * insert no-support(component)
 * note.text ^short = "The annotation text content (as raw text, no markdown allowed)."
-// TODO pre-entry-with-ref
-// TODO dis-entry-with-ref
 // TODO check changed entry ID is the same as referenced entry?
 
 
@@ -69,4 +71,29 @@ Severity: #error
 Invariant: mtp-entry-only-with-ref
 Description: "A changed MedicationStatement SHALL only be present with a medication treatment plan reference, in a PADV CHANGE"
 Expression: "(treatmentPlan.exists() and medicationStatementChanged.exists() and code = $sct#CHANGE) or medicationStatementChanged.exists().not()"
+Severity: #error
+
+Invariant: pre-entry-only-with-ref
+Description: "A changed MedicationRequest SHALL only be present with a medication request reference, in a PADV CHANGE"
+Expression: "(prescription.exists() and medicationRequestChanged.exists() and code = $sct#CHANGE) or medicationRequestChanged.exists().not()"
+Severity: #error
+
+Invariant: mtp-ref-conformant
+Description: "A changed MedicationStatement SHALL conform to CHEMEDEPRMedicationStatement"
+Expression: "treatmentPlan.exists() implies medicationStatementChanged.resolves().conformsTo('https://fhir.cara.ch/StructureDefinition/ch-emed-epr-medicationstatement-treatmentplan')"
+Severity: #error
+
+Invariant: pre-ref-conformant
+Description: "A changed MedicationRequest SHALL conform to CHEMEDEPRMedicationRequest"
+Expression: "prescription.exists() implies medicationRequestChanged.resolves().conformsTo('https://fhir.cara.ch/StructureDefinition/ch-emed-epr-medicationrequest')"
+Severity: #error
+
+Invariant: mtp-same-id
+Description: "A changed MedicationStatement SHALL keep the same identifier"
+Expression: "treatmentPlan.exists() implies medicationStatementChanged.resolves().identifier.values = treatmentPlan.extension[id].valueIdentifier"
+Severity: #error
+
+Invariant: pre-same-id
+Description: "A changed MedicationRequest SHALL keep the same identifier"
+Expression: "prescription.exists() implies medicationRequestChanged.resolves().identifier.values = prescription.extension[id].valueIdentifier"
 Severity: #error
