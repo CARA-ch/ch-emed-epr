@@ -30,7 +30,13 @@ RuleSet: medication-statement-ruleset
 * insert problematic-reference(reasonReference)
 * reasonCode ^definition = "...Content creators should keep it as simple and short as possible (e.g. 'blood clog', 'hypertension')."
 // TODO: Disallow medicationCodeableConcept
-// TODO: note?
+* note 0..1
+* insert no-support(note.id)
+* insert no-support(note.extension)
+* insert no-support(note.author[x])
+* insert problematic-reference(note.authorReference)
+* insert no-support(note.time)
+* note ^short = "The annotation text content (as raw text, no markdown allowed)."
 // TODO: effectiveDateTime is the effective time of the entry?
 
 

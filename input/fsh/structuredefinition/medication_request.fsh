@@ -43,6 +43,13 @@ RuleSet: medication-request-ruleset
 * dispenseRequest 1..1
 * dispenseRequest.validityPeriod 1..1
 * dispenseRequest.validityPeriod.start 1..1
+* note 0..1
+* insert no-support(note.id)
+* insert no-support(note.extension)
+* insert no-support(note.author[x])
+* insert problematic-reference(note.authorReference)
+* insert no-support(note.time)
+* note ^short = "The annotation text content (as raw text, no markdown allowed)."
 
 
 // =====================================================================================

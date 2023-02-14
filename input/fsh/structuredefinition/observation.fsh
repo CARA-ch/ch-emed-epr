@@ -25,7 +25,13 @@ RuleSet: observation-ruleset
 * insert no-support(hasMember)
 * insert no-support(derivedFrom)
 * insert no-support(component)
+* insert no-support(note.id)
+* insert no-support(note.extension)
 * note.text ^short = "The annotation text content (as raw text, no markdown allowed)."
+* insert no-support(note.author[x])
+* insert problematic-reference(note.authorReference)
+* note.author[x] ^short = "✕ The note author is ignored, as it cannot be different than the observation author"
+* insert no-support(note.time)
 // TODO check changed entry ID is the same as referenced entry?
 
 
@@ -41,9 +47,6 @@ Description: "Definition of the observation for the pharmaceutical advice docume
 * insert observation-ruleset
 * insert overridden(performer)
 * performer ^short = "✕ The performer is given in Composition.section.author or Composition.author (see guidance)"
-* insert no-support(note.author[x])
-* note.author[x] ^short = "✕ The note author is ignored, as it cannot be different than the observation author"
-* insert no-support(note.time)
 
 
 // =====================================================================================
