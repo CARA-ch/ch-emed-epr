@@ -61,3 +61,4 @@ Description: "Definition of the medication dispense for the medication list docu
 * insert medication-dispense-ruleset
 * performer.actor only Reference(CHEMEDEPRPractitionerRole)
 * extension[parentDocument] 1..1
+* extension[authorDocument].valueReference only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)

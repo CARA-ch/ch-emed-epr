@@ -61,6 +61,7 @@ Description: "Definition of the observation for the medication list document"
 * insert observation-ruleset
 * performer only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
 * extension[parentDocument] 1..1
+* extension[authorDocument].valueReference only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
 
 
 // =====================================================================================

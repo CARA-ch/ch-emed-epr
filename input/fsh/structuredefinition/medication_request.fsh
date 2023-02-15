@@ -79,3 +79,4 @@ Description: "Definition of the medication request for the medication list docum
 * insert medication-request-ruleset
 * requester only Reference(CHEMEDEPRPractitionerRole)
 * extension[parentDocument] 1..1
+* extension[authorDocument].valueReference only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
