@@ -98,7 +98,7 @@ Description: "Definition of the aggregated medication statement for the Medicati
 * extension[treatmentPlan] ^short = "Reference to the MTP that introduced this medication in the treatment plan"
 * informationSource 1..1
 * informationSource ^short = "The last medical author, (see 'Document PMLC' and 'Guidance - Different Authors')"
-* informationSource only Reference(CHEMEDEPRPractitionerRole)
+//* informationSource only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson) // TODO enable this line when fixed upstream
 * informationSource ^comment = "...It represents the author of the last section (of type _MTP_, _PRE_, or any type of _PADV_ except _COMMENT_ that apply to an _MTP_ or _PRE_) in this treatment."
 * extension[authorDocument].valueReference only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
 * extension[authorDocument] ^short = "The last intervening author, only if different that the last medical author (see 'Document PMLC' and 'Guidance - Different Authors')"
