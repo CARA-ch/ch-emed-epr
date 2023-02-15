@@ -8,7 +8,7 @@ RuleSet: observation-ruleset
 * obeys pre-ref-conformant
 * obeys mtp-same-id
 * obeys pre-same-id
-* issued 1..1
+//* issued 1..1 TODO entry time?
 * insert no-support(basedOn)
 * insert no-support(partOf)
 * insert no-support(category)
