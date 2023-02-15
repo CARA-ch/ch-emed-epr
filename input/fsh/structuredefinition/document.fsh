@@ -8,7 +8,6 @@ RuleSet: document-ruleset
 * entry[Patient] 1..1
 * entry[Practitioner].resource only CHEMEDEPRPractitioner
 * entry[PractitionerRole].resource only CHEMEDEPRPractitionerRole
-* entry.fullUrl obeys urn-uuid-invariant // TODO: this only goes in PML/PMLC
 * entry[Patient].resource only CHEMEDEPRPatient
 * entry[Organization].resource only CHEMEDEPROrganization
 * total 0..0
@@ -105,17 +104,12 @@ Description: "Definition of the bundle for the medication list document"
 
 * insert document-ruleset
 
-// Constraints
-* entry[Composition]
-  * resource only CHEMEDEPRCompositionMedicationList
-* entry[MedicationStatement]
-  * resource only CHEMEDEPRMedicationStatementList
-* entry[MedicationRequest]
-  * resource only CHEMEDEPRMedicationRequestList
-* entry[MedicationDispense]
-  * resource only CHEMEDEPRMedicationDispenseList
-* entry[Observation]
-  * resource only CHEMEDEPRObservationList
+* entry.fullUrl obeys urn-uuid-invariant
+* entry[Composition].resource only CHEMEDEPRCompositionMedicationList
+* entry[MedicationStatement].resource only CHEMEDEPRMedicationStatementList
+* entry[MedicationRequest].resource only CHEMEDEPRMedicationRequestList
+* entry[MedicationDispense].resource only CHEMEDEPRMedicationDispenseList
+* entry[Observation].resource only CHEMEDEPRObservationList
 
 
 // =====================================================================================
@@ -129,5 +123,6 @@ Description: "Definition of the bundle for the medication card document"
 
 * insert document-ruleset
 
+* entry.fullUrl obeys urn-uuid-invariant
 * entry[Composition].resource only CHEMEDEPRCompositionMedicationCard
 * entry[MedicationStatement].resource only CHEMEDEPRMedicationStatementCard
