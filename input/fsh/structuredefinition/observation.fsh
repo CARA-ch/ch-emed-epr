@@ -84,20 +84,20 @@ Severity: #error
 
 Invariant: mtp-ref-conformant
 Description: "A changed MedicationStatement SHALL conform to CHEMEDEPRMedicationStatement"
-Expression: "treatmentPlan.exists() implies medicationStatementChanged.resolves().conformsTo('https://fhir.cara.ch/StructureDefinition/ch-emed-epr-medicationstatement-treatmentplan')"
+Expression: "treatmentPlan.exists() implies medicationStatementChanged.resolve().conformsTo('https://fhir.cara.ch/StructureDefinition/ch-emed-epr-medicationstatement-treatmentplan')"
 Severity: #error
 
 Invariant: pre-ref-conformant
 Description: "A changed MedicationRequest SHALL conform to CHEMEDEPRMedicationRequest"
-Expression: "prescription.exists() implies medicationRequestChanged.resolves().conformsTo('https://fhir.cara.ch/StructureDefinition/ch-emed-epr-medicationrequest')"
+Expression: "prescription.exists() implies medicationRequestChanged.resolve().conformsTo('https://fhir.cara.ch/StructureDefinition/ch-emed-epr-medicationrequest')"
 Severity: #error
 
 Invariant: mtp-same-id
 Description: "A changed MedicationStatement SHALL keep the same identifier"
-Expression: "treatmentPlan.exists() implies medicationStatementChanged.resolves().identifier.values = treatmentPlan.extension[id].valueIdentifier"
+Expression: "treatmentPlan.exists() implies medicationStatementChanged.resolve().identifier.values = treatmentPlan.extension[id].valueIdentifier"
 Severity: #error
 
 Invariant: pre-same-id
 Description: "A changed MedicationRequest SHALL keep the same identifier"
-Expression: "prescription.exists() implies medicationRequestChanged.resolves().identifier.values = prescription.extension[id].valueIdentifier"
+Expression: "prescription.exists() implies medicationRequestChanged.resolve().identifier.values = prescription.extension[id].valueIdentifier"
 Severity: #error
