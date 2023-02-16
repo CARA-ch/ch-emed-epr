@@ -11,6 +11,12 @@
             <li><a href="document_pmlc.html">Medication Card document</a></li>
         </ul>
     </li>
+    <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guidance<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+            <li><a href="guidance_datatypes.html">Datatypes</a></li>
+        </ul>
+    </li>
     <li><a href="artifacts.html">Artifacts</a></li>
     <li><a href="workflow.html">Workflow</a></li>
     <li><a href="qa.html">QA</a></li>
