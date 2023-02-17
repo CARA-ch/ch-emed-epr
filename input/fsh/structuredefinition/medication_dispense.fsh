@@ -8,6 +8,7 @@ RuleSet: medication-dispense-ruleset
 * insert no-support(authorizingPrescription)
 * whenHandedOver 1..1
 * insert no-support(partOf)
+* insert problematic-reference(statusReasonReference)
 * insert no-support(statusReason[x])
 * insert no-support(category)
 * insert no-support(context)
