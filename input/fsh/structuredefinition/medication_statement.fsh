@@ -5,6 +5,7 @@ RuleSet: medication-statement-ruleset
 * reasonCode insert reason-code-ruleset
 * insert no-support(reasonCode.coding)
 * subject only Reference(CHEMEDEPRPatient)
+* subject 1..1
 * insert no-support(basedOn)
 * insert no-support(partOf)
 * insert no-support(statusReason) // TODO: we may want this

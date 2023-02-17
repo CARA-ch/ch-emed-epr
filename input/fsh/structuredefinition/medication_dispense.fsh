@@ -34,6 +34,8 @@ RuleSet: medication-dispense-ruleset
 * insert problematic-reference(note.authorReference)
 * insert no-support(note.time)
 * note ^short = "The annotation text content (as raw text, no markdown allowed)."
+* subject only Reference(CHEMEDEPRPatient)
+* subject 1..1
 
 
 // =====================================================================================
