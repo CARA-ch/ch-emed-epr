@@ -48,12 +48,12 @@ RuleSet: reason-code-ruleset
 
 RuleSet: problematic-reference(path)
 * {path} D
-* {path} ^short = "This element is unreliable"
-* {path} ^comment = "Unsupported reference. It'll be stripped when generating PML(C) documents."
+* {path} ^short = "✕ This element is unreliable"
+* {path} ^comment = "✕ Unsupported reference. It'll be stripped when generating PML(C) documents."
 
 
 RuleSet: problematic-extension-reference
-* extension ^comment = "Extensions that contain a reference will be stripped when generating PML(C) documents."
+* extension ^comment = "⚠ Extensions that contain a reference will be stripped when generating PML(C) documents."
 
 
 RuleSet: modifier(path)
@@ -64,7 +64,7 @@ RuleSet: modifier(path)
 RuleSet: overridden(path)
 * {path} D
 * {path} ^short = "✕"
-* {path} ^comment = "...This value may be overridden when generating PML(C) documents.
+* {path} ^comment = "...⚠ This value may be overridden when generating PML(C) documents.
 It is recommended not to set this value because its value will change when retrieved in a PML/PMLC document."
 
 RuleSet: no-support(path)
