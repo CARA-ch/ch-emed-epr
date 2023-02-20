@@ -45,7 +45,7 @@ RuleSet: common-dosage-ruleset
 * insert no-support(timing.code) // TODO We may want that
 * insert no-support(timing.event)
 * timing.repeat.when obeys only-standard-event-timings
-* timing.repeat.when ^short = "... It shall only contain values from [Event Timings](ValueSet-event-timing-cara.html)."
+* timing.repeat.when ^short = "... It shall only contain values from Event Timings"
 * doseAndRate.doseQuantity only CHEMEDEPRAmountQuantity
 * doseAndRate.doseRange only CHEMEDEPRAmountRange
 * doseAndRate.rateQuantity 0..0 // Not compatible with our units (it would require a UCUM unit of amount per time)
