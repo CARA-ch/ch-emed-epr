@@ -26,7 +26,6 @@ RuleSet: composition-ruleset
 * insert no-support(custodian.id)
 * custodian.identifier 0..0 // The literal reference is required
 * identifier insert identifier-ruleset
-* subject insert codeableconcept-ruleset
 * insert no-support(confidentiality.id)
 * section.focus 0..0
 * section.mode = http://hl7.org/fhir/list-mode#snapshot "Snapshot List" // Document-based workflow, it's always a snapshot and not a live resource

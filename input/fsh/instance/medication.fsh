@@ -5,6 +5,7 @@ Usage: #example
 
 * code.text = "TRIATEC Tabl 2.5 mg"
 * code.coding[+] = $gtin#7680538751228 "TRIATEC Tabl 2.5 mg 20 Stk"
+* form.text = "Tablet"
 * form.coding[+] = $edqm#10219000 "Tablet"
 * amount.numerator = $sct#732936001 "Tablet (unit of presentation)"
 * amount.denominator = $ucum#{Package} "Package"
