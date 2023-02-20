@@ -8,8 +8,6 @@ RuleSet: medication-dispense-ruleset
 * insert no-support(authorizingPrescription)
 * whenHandedOver 1..1
 * insert no-support(partOf)
-* insert problematic-reference(statusReasonReference)
-* insert no-support(statusReason[x])
 * insert no-support(category)
 * insert no-support(context)
 * insert no-support(supportingInformation)
@@ -38,6 +36,9 @@ RuleSet: medication-dispense-ruleset
 * note ^short = "The annotation text content (as raw text, no markdown allowed)."
 * subject only Reference(CHEMEDEPRPatient)
 * subject 1..1
+* statusReason[x] 0..0
+* insert no-support(statusReason[x])
+* statusReason[x] ^short = "✕ This is only meaningful when the dispense was not performed"
 
 
 // =====================================================================================
