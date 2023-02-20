@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Test the Sushi project
+name: Test the SUSHI project
 
 # Controls when the workflow will run
 on:
@@ -30,9 +30,9 @@ jobs:
         with:
           node-version: 18
           
-      - name: Install Sushi
+      - name: Install SUSHI
         run: npm install -g fsh-sushi
 
       # Runs Sushi on the project
-      - name: Run Sushi
-        run: shushi .
+      - name: Run SUSHI
+        run: sushi .
