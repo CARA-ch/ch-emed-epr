@@ -48,11 +48,11 @@ RuleSet: common-dosage-ruleset
 * timing.repeat.when ^short = "... It shall only contain values from Event Timings"
 * doseAndRate.doseQuantity only CHEMEDEPRAmountQuantity
 * doseAndRate.doseRange only CHEMEDEPRAmountRange
-* doseAndRate.rateQuantity 0..0 // Not compatible with our units (it would require a UCUM unit of amount per time)
-* doseAndRate.rateRange 0..0 // Not compatible with our units (it would require a UCUM unit of amount per time)
+* doseAndRate.rate[x] only Ratio // Range and quantity not compatible with our units (it would require a UCUM unit of amount per time)
 * doseAndRate.rateRatio only CHEMEDEPRRatioAmountPerTime
 * route.text 1..1
 * site.text 1..1
+* timing.repeat.bounds[x] only Period
 
 
 Invariant: only-standard-event-timings

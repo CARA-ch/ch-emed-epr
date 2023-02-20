@@ -35,6 +35,7 @@ RuleSet: observation-ruleset
 // TODO check changed entry ID is the same as referenced entry?
 * subject only Reference(CHEMEDEPRPatient)
 * subject 1..1
+* effective[x] only dateTime
 
 
 // =====================================================================================

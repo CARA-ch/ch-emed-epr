@@ -24,3 +24,4 @@ Description: "Definition of the device for the eMedication context"
 * owner only Reference(CHEMEDEPROrganization)
 * deviceName MS
 * deviceName 1..*
+* note.author[x] only Reference
