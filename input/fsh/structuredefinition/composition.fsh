@@ -1,7 +1,5 @@
 RuleSet: composition-ruleset
-
 * insert domain-resource-ruleset
-
 * confidentiality = http://terminology.hl7.org/CodeSystem/v3-Confidentiality#N "normal"
 * confidentiality.extension[confidentialityCode].valueCodeableConcept insert codeableconcept-ruleset
 * confidentiality.extension[confidentialityCode].valueCodeableConcept.coding insert coding-ruleset
@@ -36,8 +34,6 @@ RuleSet: composition-ruleset
 * insert no-support(section.entry.id)
 * section.emptyReason
 //* extension[versionNumber] = 1 // TODO
-
-// Documentation
 * confidentiality ^short = "The confidentiality is fixed to the 'normal' level"
 * identifier.value ^short = "The document identifier as an URN-encoded UUID"
 * extension[versionNumber] ^short = "It shall be the first version of the document"
@@ -47,7 +43,6 @@ RuleSet: composition-ruleset
 // A RuleSet for Compositions with annotation
 // =====================================================================================
 RuleSet: composition-with-annotation-ruleset
-
 * insert no-support(section[annotation].focus)
 * insert no-support(section[annotation].emptyReason)
 * insert no-support(section[annotation].section)
@@ -61,7 +56,6 @@ RuleSet: composition-with-annotation-ruleset
 // A RuleSet for Compositions with original representation
 // =====================================================================================
 RuleSet: composition-with-original-representation-ruleset
-
 * insert no-support(section[originalRepresentation].focus)
 * insert no-support(section[originalRepresentation].emptyReason)
 * insert no-support(section[originalRepresentation].section)
@@ -81,11 +75,9 @@ Parent: CHEMEDCompositionMedicationTreatmentPlan
 Id: ch-emed-epr-composition-medicationtreatmentplan
 Title: "MTP Composition"
 Description: "Definition of the composition for the medication treatment plan document"
-
 * insert composition-ruleset
 * insert composition-with-annotation-ruleset
 * insert composition-with-original-representation-ruleset
-
 * subject only Reference(CHEMEDEPRPatient)
 * section[treatmentPlan].entry only Reference(CHEMEDEPRMedicationStatement)
 * section[treatmentPlan].code insert codeableconcept-ruleset
@@ -103,11 +95,9 @@ Parent: CHEMEDCompositionMedicationPrescription
 Id: ch-emed-epr-composition-medicationprescription
 Title: "PRE Composition"
 Description: "Definition of the composition for the medication prescription document"
-
 * insert composition-ruleset
 * insert composition-with-annotation-ruleset
 * insert composition-with-original-representation-ruleset
-
 // TODO prevent other sections (keep only slices)?
 * section[prescription].entry only Reference(CHEMEDEPRMedicationRequest)
 * author only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson or Device) // Only the types authorized in the slices
@@ -123,12 +113,9 @@ Parent: CHEMEDCompositionMedicationDispense
 Id: ch-emed-epr-composition-medicationdispense
 Title: "DIS Composition"
 Description: "Definition of the composition for the medication dispense document"
-
 * insert composition-ruleset
 * insert composition-with-annotation-ruleset
 * insert composition-with-original-representation-ruleset
-
-// Restrictions
 // TODO prevent other sections (keep only slices)?
 * section[dispense].entry only Reference(CHEMEDEPRMedicationDispense)
 * author only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson or Device) // Only the types authorized in the slices
@@ -144,11 +131,9 @@ Parent: CHEMEDCompositionPharmaceuticalAdvice
 Id: ch-emed-epr-composition-pharmaceuticaladvice
 Title: "PADV Composition"
 Description: "Definition of the composition for the pharmaceutical advice document"
-
 * insert composition-ruleset
 * insert composition-with-annotation-ruleset
 * insert composition-with-original-representation-ruleset
-
 * section[pharmaceuticalAdvice].entry only Reference(CHEMEDEPRObservation)
 * author only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson or Device) // Only the types authorized in the slices
 * author[person] only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
@@ -163,9 +148,7 @@ Parent: CHEMEDCompositionMedicationList
 Id: ch-emed-epr-composition-medicationlist
 Title: "PML Composition"
 Description: "Definition of the composition for the medication list document"
-
 * insert composition-ruleset
-
 * author only Reference(CHEMEDEPRDevice)
 * author 1..1
 // TODO prevent other sections (keep only slices)?
@@ -186,11 +169,9 @@ Parent: CHEMEDCompositionMedicationCard
 Id: ch-emed-epr-composition-medicationcard
 Title: "PMLC Composition"
 Description: "Definition of the composition for the medication card document"
-
 * insert composition-ruleset
 * insert composition-with-annotation-ruleset
 * insert composition-with-original-representation-ruleset
-
 * author only Reference(CHEMEDEPRDevice)
 * author 1..1
 // TODO prevent other sections (keep only slices)?
