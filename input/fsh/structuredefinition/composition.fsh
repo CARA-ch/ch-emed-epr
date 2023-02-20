@@ -85,6 +85,7 @@ Description: "Definition of the composition for the medication treatment plan do
 * author only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson or Device) // Only the types authorized in the slices
 * author[person] only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
 * author[device] only Reference(Device)
+* section[treatmentPlan].author only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
 
 
 // =====================================================================================
@@ -103,6 +104,7 @@ Description: "Definition of the composition for the medication prescription docu
 * author only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson or Device) // Only the types authorized in the slices
 * author[person] only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
 * author[device] only Reference(Device)
+* section[prescription].author only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
 
 
 // =====================================================================================
@@ -121,6 +123,7 @@ Description: "Definition of the composition for the medication dispense document
 * author only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson or Device) // Only the types authorized in the slices
 * author[person] only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
 * author[device] only Reference(Device)
+* section[dispense].author only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
 
 
 // =====================================================================================
@@ -138,6 +141,7 @@ Description: "Definition of the composition for the pharmaceutical advice docume
 * author only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson or Device) // Only the types authorized in the slices
 * author[person] only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
 * author[device] only Reference(Device)
+* section[pharmaceuticalAdvice].author only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
 
 
 // =====================================================================================
