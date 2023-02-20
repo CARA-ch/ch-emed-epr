@@ -35,4 +35,4 @@ jobs:
 
       # Runs Sushi on the project
       - name: Run SUSHI
-        run: sushi .
+        run: FORCE_FANCY_CHARACTERS=true sushi .
