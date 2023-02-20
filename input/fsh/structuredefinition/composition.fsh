@@ -6,14 +6,12 @@ RuleSet: composition-ruleset
 * confidentiality.extension[confidentialityCode].valueCodeableConcept.coding.code = #17621005
 * confidentiality.extension[confidentialityCode].valueCodeableConcept.coding.system = $sct
 * confidentiality.extension[confidentialityCode].valueCodeableConcept.coding.display = "Normal (qualifier value)"
-//* type.coding.display 1..1
 * relatesTo.code = http://hl7.org/fhir/document-relationship-type#replaces "Replaces"
 * identifier.use = http://hl7.org/fhir/identifier-use#official "Official"
 * identifier.value obeys urn-uuid-invariant
 * confidentiality.extension 1..1
-//* type insert codeableconcept-ruleset TODO
-//* type.coding 1..1 TODO
-//* type.coding insert coding-ruleset TODO
+* type insert codeableconcept-ruleset
+* type.coding insert coding-ruleset
 * section.author only Reference(CHEMEDEPRPractitioner or CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPROrganization or CHEMEDEPRRelatedPerson or CHEMEDEPRDevice)
 * date obeys datetime-only-instant-invariant
 * insert no-support(encounter)

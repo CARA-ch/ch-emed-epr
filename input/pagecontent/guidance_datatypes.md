@@ -5,7 +5,8 @@ It can contain zero, one or more codings.
 
 Implementers:
 
-- SHALL support the `text` attribute and MAY support the codings, depending on the code systems that are used.
+- SHALL support the `text` attribute if it has a cardinality of 1..1 and MAY support the codings, depending on the code systems that are used.
+- MAY ignore the `text` attribute if it has a cardinality of 0..1.
 - SHOULD use a language understandable by the patient when setting the `text` attribute.
 - SHOULD show the `text` attribute to the user, and MAY add information about the different codings used.
 - SHOULD support the codings when a required value set is defined, and MAY support other codings.

@@ -30,6 +30,11 @@ RuleSet: codeableconcept-ruleset
 * text 1..1
 
 
+RuleSet: codeableconcept-with-text-ruleset
+* insert codeableconcept-ruleset
+* text 1..1
+
+
 RuleSet: meta-ruleset
 * insert no-support(id)
 * insert no-support(extension)

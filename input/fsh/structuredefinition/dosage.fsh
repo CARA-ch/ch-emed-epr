@@ -6,7 +6,6 @@ RuleSet: main-dosage-ruleset
 * insert no-support(maxDosePerLifetime)
 * insert no-support(method)
 * insert no-support(site) // TODO We may want that
-* route ^definition = "...Implementers SHOULD focus on supporting values from the value set [Route of Administration](ValueSet-ch-emed-epr-route-of-administration.html)."
 * asNeeded[x] only boolean
 * asNeededBoolean ^definition = "...'true' if the medication is 'in reserve'. By default 'true'."
 // todo: additionalInstruction -> http://hl7.org/fhir/R4/valueset-additional-instruction-codes.html
@@ -27,6 +26,11 @@ RuleSet: main-dosage-ruleset
 * insert no-support(timing.repeat.offset)
 * insert no-support(timing.id)
 * insert no-support(timing.extension)
+* additionalInstruction insert codeableconcept-with-text-ruleset
+* site insert codeableconcept-with-text-ruleset
+* route insert codeableconcept-with-text-ruleset
+* route ^definition = "...Implementers SHOULD focus on supporting values from the value set [Route of Administration](ValueSet-ch-emed-epr-route-of-administration.html)."
+* method insert codeableconcept-with-text-ruleset
 
 
 RuleSet: split-dosage-ruleset

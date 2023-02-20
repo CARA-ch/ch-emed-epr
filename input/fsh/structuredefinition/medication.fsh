@@ -6,6 +6,7 @@ RuleSet: medication-ruleset
 * status = http://hl7.org/fhir/CodeSystem/medication-status#active "Active"
 * form.coding 1..1
 * code 1..1
+* code insert codeableconcept-with-text-ruleset
 * code ^short = "Codes that identify this medication. If the GTIN is known, please specify it."
 * code.coding 0..*
 * code.coding[GTIN] 0..1
@@ -14,7 +15,7 @@ RuleSet: medication-ruleset
 * insert no-support(code.id)
 * code.coding[GTIN] insert coding-ruleset
 * code.coding[ATC] insert coding-ruleset
-* form insert codeableconcept-ruleset
+* form insert codeableconcept-with-text-ruleset
 * form.coding insert coding-ruleset
 * insert no-support(batch.id)
 * insert no-support(batch.extension)
