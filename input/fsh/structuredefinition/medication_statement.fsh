@@ -20,7 +20,7 @@ RuleSet: medication-statement-ruleset
 * medication[x] only Reference
 * medicationReference only Reference(CHEMEDEPRMedication)
 * insert no-support(effectivePeriod)
-* effectivePeriod 0..0
+* effectivePeriod 0..0 // TODO entry time?
 * dosage[baseEntry] only CHEMEDEPRDosage
 * dosage[additionalEntry] only CHEMEDEPRDosageSplit
 * insert problematic-reference(identifier.assigner)
@@ -30,7 +30,6 @@ RuleSet: medication-statement-ruleset
 * insert problematic-reference(derivedFrom)
 * insert problematic-reference(reasonReference)
 * reasonCode ^definition = "...Content creators should keep it as simple and short as possible (e.g. 'blood clog', 'hypertension')."
-// TODO: Disallow medicationCodeableConcept
 * note 0..1
 * insert no-support(note.id)
 * insert no-support(note.extension)

@@ -20,9 +20,10 @@ RuleSet: medication-dispense-ruleset
 * insert no-support(destination)
 * insert no-support(receiver) // It's the subject
 * insert no-support(substitution.responsibleParty) // It's the performer
+* insert no-support(substitution.reason)
+//* substitution BackboneElement
 * insert no-support(extension[pharmaceuticalAdvice])
 * insert no-support(extension[prescription]) // Use authorizingPrescription?
-* insert no-support(substitution.type) // TODO: it should be optional
 * insert no-support(extension[pharmaceuticalAdvice])
 * quantity only CHEMEDEPRAmountQuantity
 * daysSupply only CHEMEDEPRTimeQuantity
