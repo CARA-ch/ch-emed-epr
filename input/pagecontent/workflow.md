@@ -22,8 +22,29 @@ A PRE entry can be in the following states:
 ## DIS
 
 A dispense (DIS) is an entry that describes an act of dispensing one or more medications to a patient.
-It's usually done by a pharmacist and may occasionnaly be done by another healthcare professional.
+It is usually done by a pharmacist and may occasionally be done by another healthcare professional.
 They can be for a prescribed treatment or at the patient's request (over-the-counter, OTC).
-A dispense entry has no status, it's always considered `active`. Only PADV COMMENTs can apply to it.
+A dispense entry has no status, it's always considered `active`.
+Only PADV COMMENTs can apply to it.
+It is useful to pharmacists to determine if a prescription may still be dispensed.
 
 ## PADV
+
+A pharmaceutical advice (PADV) entry is used to modify the content or the status, or to comment the previous items.
+
+## Restrictions by role
+
+| Role                    | Read access | Write access   | Subject to access rules |
+|-------------------------|-------------|----------------|-------------------------|
+| Patient                 | ✅           | ✅ / restricted | ❌                       |
+| Representative          | ✅           | ✅ / restricted | ✅                       |
+| Healthcare professional | ✅           | ✅              | ✅                       |
+| Assistant               | ✅           | ✅              | ✅ (responsible)         |
+| Technical user          | ❌           | ✅              | ❌                       |
+| Document administrator  | ✅           | ✅              | ❌                       |
+| Policy administrator    | ❌           | ❌              | ❌                       |
+
+Restrictions for patients/representatives include:
+
+- they cannot provide/replace/deprecate/delete a PRE or DIS document, or a PADV CHANGE targeting a PRE entry;
+- they cannot set a PractitionerRole or Organization author in main parts of the documents;

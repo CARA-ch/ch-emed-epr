@@ -13,7 +13,9 @@ It can only be generated from the eMedication service and retrieved, not publish
 
 ## Specifications
 
-This document contains aggregated entries. For more information about aggregation, please read [the dedicated page](aggregation.html).
+This document contains consolidated MedicationStatements, meaning that all changes brought by PADV, PRE or DIS entries
+are applied to it (e.g. dosage or product changes).
+For more information about aggregation, please read [the dedicated page](aggregation.html).
 
 ### Authors
 

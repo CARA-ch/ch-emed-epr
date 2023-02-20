@@ -11,6 +11,12 @@ The **Medication Prescription document** describes the content and format of a P
 
 ## Specifications
 
+
+`dispenseRequest.numberOfRepeatsAllowed`: the repeat number can be used to limit the number of allowed refills of the prescription entry.
+It does not count the initial dispense, only the following ones (refills).
+If absent, refills are not limited; '0' (zero) means only the initial dispense is allowed.
+
+
 ### States
 
 A prescription may be in different states: submitted, provisional, active, cancelled and refused.
