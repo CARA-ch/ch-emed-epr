@@ -33,6 +33,6 @@ jobs:
       - name: Install SUSHI
         run: npm install -g fsh-sushi
 
-      # Runs Sushi on the project
+      # Runs SUSHI on the project
       - name: Run SUSHI
-        run: FORCE_FANCY_CHARACTERS=true sushi .
+        run: FORCE_FANCY_CHARACTERS=true FORCE_COLOR=true sushi .
