@@ -7,6 +7,8 @@ RuleSet: medication-request-ruleset
 * medicationReference only Reference(CHEMEDEPRMedication)
 * substitution.allowedCodeableConcept from ActSubstanceAdminSubstitutionCode (required)
 * reasonCode insert reason-code-ruleset
+* reasonCode ^short = "The treatment reason(s) as text, and optionally coded"
+* reasonCode ^definition = "...Content creators should keep it as simple and short as possible (e.g. 'blood clog', 'hypertension')."
 * intent = http://hl7.org/fhir/CodeSystem/medicationrequest-intent#order "Order" // That's a modifier
 * insert modifier(doNotPerform)
 * insert no-support(statusReason) // TODO we may want this

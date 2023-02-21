@@ -47,7 +47,6 @@ RuleSet: meta-ruleset
 
 RuleSet: reason-code-ruleset
 * insert codeableconcept-ruleset
-* insert no-support(coding)
 * text 1..1
 * text ^short = "Plain text representation of the treatment reason(s)"
 

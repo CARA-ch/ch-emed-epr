@@ -3,7 +3,6 @@ RuleSet: medication-statement-ruleset
 * insert domain-resource-ruleset
 
 * reasonCode insert reason-code-ruleset
-* insert no-support(reasonCode.coding)
 * subject only Reference(CHEMEDEPRPatient)
 * subject 1..1
 * insert no-support(basedOn)
@@ -29,6 +28,8 @@ RuleSet: medication-statement-ruleset
 * insert problematic-reference(context)
 * insert problematic-reference(derivedFrom)
 * insert problematic-reference(reasonReference)
+* reasonCode insert reason-code-ruleset
+* reasonCode ^short = "The treatment reason(s) as text, and optionally coded"
 * reasonCode ^definition = "...Content creators should keep it as simple and short as possible (e.g. 'blood clog', 'hypertension')."
 * note 0..1
 * insert no-support(note.id)
