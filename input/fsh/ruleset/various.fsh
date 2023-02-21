@@ -8,24 +8,24 @@ RuleSet: domain-resource-ruleset
 * insert modifier(modifierExtension)
 
 
+RuleSet: backbone-ruleset
+* insert modifier(modifierExtension)
+
+
 RuleSet: coding-ruleset
 * insert no-support(extension)
 * insert no-support(version)
 * insert no-support(userSelected)
-* insert no-support(id)
-
 
 RuleSet: identifier-ruleset
 * insert no-support(assigner)
 * assigner only Reference(CHEMEDEPROrganization)
 * insert no-support(period)
 * insert no-support(type)
-* insert no-support(id)
 * insert no-support(extension)
 
 
 RuleSet: codeableconcept-ruleset
-* insert no-support(id)
 * insert no-support(extension)
 * text 1..1
 
@@ -36,7 +36,6 @@ RuleSet: codeableconcept-with-text-ruleset
 
 
 RuleSet: meta-ruleset
-* insert no-support(id)
 * insert no-support(extension)
 * insert no-support(versionId)
 * insert no-support(lastUpdated)
@@ -53,7 +52,7 @@ RuleSet: reason-code-ruleset
 
 RuleSet: problematic-reference(path)
 * {path} D
-* {path} ^short = "✕ This element is unreliable"
+* {path} ^short = "✕ This element will be removed in PML(C) documents"
 * {path} ^comment = "✕ Unsupported reference. It'll be stripped when generating PML(C) documents."
 
 
@@ -68,13 +67,14 @@ RuleSet: modifier(path)
 
 RuleSet: overridden(path)
 * {path} D
-* {path} ^short = "✕"
+* {path} ^short = "✕ This element may be overridden in PML(C) documents"
 * {path} ^comment = "...⚠ This value may be overridden when generating PML(C) documents.
 It is recommended not to set this value because its value will change when retrieved in a PML/PMLC document."
 
+
 RuleSet: no-support(path)
 * {path} D
-* {path} ^short = "✕"
+* {path} ^short = "✕ This element is not supported"
 * {path} ^definition = """Implementers should not set or read this element. 
 This element is only kept as optional to allow submission of documents that would contain a value, 
 since those documents are still readable by others.

@@ -1,5 +1,4 @@
 RuleSet: observation-ruleset
-
 * insert domain-resource-ruleset
 * obeys only-one-obs-ref
 * obeys mtp-entry-only-with-ref
@@ -35,7 +34,6 @@ RuleSet: observation-ruleset
 // TODO check changed entry ID is the same as referenced entry?
 * subject only Reference(CHEMEDEPRPatient)
 * subject 1..1
-* effective[x] only dateTime
 
 
 // =====================================================================================
@@ -46,10 +44,10 @@ Parent: CHEMEDObservation
 Id: ch-emed-epr-observation
 Title: "PADV Observation"
 Description: "Definition of the observation for the pharmaceutical advice document"
-
 * insert observation-ruleset
 * insert overridden(performer)
 * performer ^short = "✕ The performer is given in Composition.section.author or Composition.author (see guidance)"
+* insert no-support(effective[x])
 
 
 // =====================================================================================
@@ -60,7 +58,6 @@ Parent: CHEMEDObservationList
 Id: ch-emed-epr-observation-list
 Title: "PML Observation"
 Description: "Definition of the observation for the medication list document"
-
 * insert observation-ruleset
 * performer only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
 * extension[parentDocument] 1..1

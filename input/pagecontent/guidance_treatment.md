@@ -31,7 +31,7 @@ The `text` may be either:
 
 `form`: the galenic form SHOULD be specified.
 
-`batch.lotNumber`: the lot number MAY be specified by dispensers, if a single package has been dispensed.
+`batch.lotNumber`: the lot number MAY be specified by dispensers, if a single lot number (of one or more packages) has been dispensed.
 It MAY be specified in MedicationStatements or MedicationRequests if a specific lot is to be used (e.g. in controlled trials).
 
-`batch.expirationDate`: the expiration date MAY be specified by dispensers, if a single package has been dispensed.
+`batch.expirationDate`: the expiration date MAY be specified by dispensers, if a single expiration date (of one or more packages) has been dispensed.

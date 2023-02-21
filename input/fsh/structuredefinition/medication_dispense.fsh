@@ -1,7 +1,5 @@
 RuleSet: medication-dispense-ruleset
-
 * insert domain-resource-ruleset
-
 * extension[treatmentPlan] 1..1
 * medication[x] only Reference
 * medicationReference only Reference(CHEMEDEPRMedicationMedicationDispense)
@@ -17,7 +15,6 @@ RuleSet: medication-dispense-ruleset
 * insert no-support(whenPrepared)
 * insert no-support(destination)
 * insert no-support(receiver) // It's the subject
-* insert no-support(substitution.responsibleParty) // It's the performer
 * insert no-support(substitution.reason)
 //* substitution BackboneElement
 * insert no-support(extension[pharmaceuticalAdvice])
@@ -27,18 +24,16 @@ RuleSet: medication-dispense-ruleset
 * daysSupply only CHEMEDEPRTimeQuantity
 * dosageInstruction[baseEntry] only CHEMEDEPRDosage
 * dosageInstruction[additionalEntry] only CHEMEDEPRDosageSplit
-* note 0..1
-* insert no-support(note.id)
-* insert no-support(note.extension)
-* insert no-support(note.author[x])
-* insert problematic-reference(note.authorReference)
-* insert no-support(note.time)
-* note ^short = "The annotation text content (as raw text, no markdown allowed)."
+* note.text ^short = "The annotation text content"
 * subject only Reference(CHEMEDEPRPatient)
 * subject 1..1
 * statusReason[x] 0..0
 * insert no-support(statusReason[x])
 * statusReason[x] ^short = "✕ This is only meaningful when the dispense was not performed"
+* substitution insert backbone-ruleset
+* insert no-support(substitution.responsibleParty) // It's the performer
+* insert no-support(detectedIssue)
+* insert no-support(eventHistory)
 
 
 // =====================================================================================
@@ -49,10 +44,10 @@ Parent: CHEMEDMedicationDispense
 Id: ch-emed-epr-medicationdispense
 Title: "DIS MedicationDispense"
 Description: "Definition of the medication dispense for the medication dispense document"
-
 * insert medication-dispense-ruleset
 * insert overridden(performer)
 * performer ^short = "✕ The performer is given in Composition.section.author or Composition.author (see guidance)"
+
 
 // =====================================================================================
 // Medication Dispense PML
@@ -62,7 +57,6 @@ Parent: CHEMEDMedicationDispenseList
 Id: ch-emed-epr-medicationdispense-list
 Title: "PML MedicationDispense"
 Description: "Definition of the medication dispense for the medication list document"
-
 * insert medication-dispense-ruleset
 * performer.actor only Reference(CHEMEDEPRPractitionerRole)
 * extension[parentDocument] 1..1
