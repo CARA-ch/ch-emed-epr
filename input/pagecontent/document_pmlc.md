@@ -2,27 +2,27 @@ The **Medication Card document** describes the current medication of a patient, 
 
 It can only be generated from the eMedication service and retrieved, not published there.
 
-## Profiles
+### Profiles
 
 * [Document PMLC](StructureDefinition-ch-emed-epr-document-medicationcard.html)
 * [Composition PMLC](StructureDefinition-ch-emed-epr-composition-medicationcard.html)
 * [MedicationStatement (PMLC)](StructureDefinition-ch-emed-epr-medicationstatement-card.html)
 * [Medication](StructureDefinition-ch-emed-epr-medication.html)
 
-## Example instances
+### Example instances
 
-## Specifications
+### Specifications
 
 This document contains consolidated MedicationStatements, meaning that all changes brought by PADV, PRE or DIS entries
 are applied to it (e.g. dosage or product changes).
 For more information about aggregation, please read [the dedicated page](aggregation.html).
 
-### Authors
+#### Authors
 
 1. Last intervening author: represents the author of the last entry (of any kind) in the treatment.
 2. Last medical author: represents the author of the last section (of type _MTP_, _PRE_, or any type of _PADV_ except _COMMENT_ that apply to an _MTP_ or _PRE_) in this treatment.
 
-### Generation rules
+#### Generation rules
 
 Treatments are selected for processing as follows:
 

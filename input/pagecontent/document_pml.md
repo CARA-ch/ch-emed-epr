@@ -2,7 +2,7 @@ The **Medication List document** aims to fully comprise the current medication o
 
 It can only be generated from the eMedication service and retrieved, not published there.
 
-## Profiles
+### Profiles
 
 * [Document PML](StructureDefinition-ch-emed-epr-document-medicationlist.html)
 * [Composition PML](StructureDefinition-ch-emed-epr-composition-medicationlist.html)
@@ -13,10 +13,10 @@ It can only be generated from the eMedication service and retrieved, not publish
 * [Medication](StructureDefinition-ch-emed-epr-medication.html)
 * [Medication (DIS)](StructureDefinition-ch-emed-epr-medication-medicationdispense.html)
 
-## Example instances
+### Example instances
 
-## Specifications
+### Specifications
 
-### Generation rules
+#### Generation rules
 
 <!-- TODO draft elements that are references to other resources -->
