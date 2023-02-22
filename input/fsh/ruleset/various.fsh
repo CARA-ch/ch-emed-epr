@@ -27,7 +27,6 @@ RuleSet: identifier-ruleset
 
 RuleSet: codeableconcept-ruleset
 * insert no-support(extension)
-* text 1..1
 
 
 RuleSet: codeableconcept-with-text-ruleset
