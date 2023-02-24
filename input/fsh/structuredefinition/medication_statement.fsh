@@ -2,6 +2,8 @@ RuleSet: medication-statement-ruleset
 * insert domain-resource-ruleset
 * reasonCode insert reason-code-ruleset
 * subject only Reference(CHEMEDEPRPatient)
+* subject ^type.aggregation[+] = #referenced
+* subject ^type.aggregation[+] = #bundled
 * subject 1..1
 * insert no-support(basedOn)
 * insert no-support(partOf)
@@ -16,8 +18,11 @@ RuleSet: medication-statement-ruleset
 * insert no-support(subject.extension)
 * medication[x] only Reference
 * medicationReference only Reference(CHEMEDEPRMedication)
+* medicationReference ^type.aggregation[+] = #contained
 * dosage[baseEntry] only CHEMEDEPRDosage
+* dosage[baseEntry] ^type.aggregation[+] = #contained
 * dosage[additionalEntry] only CHEMEDEPRDosageSplit
+* dosage[additionalEntry] ^type.aggregation[+] = #contained
 * insert problematic-reference(identifier.assigner)
 * insert problematic-reference(basedOn)
 * insert problematic-reference(partOf)

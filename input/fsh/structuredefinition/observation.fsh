@@ -33,6 +33,8 @@ RuleSet: observation-ruleset
 * insert no-support(note.time)
 // TODO check changed entry ID is the same as referenced entry?
 * subject only Reference(CHEMEDEPRPatient)
+* subject ^type.aggregation[+] = #referenced
+* subject ^type.aggregation[+] = #bundled
 * subject 1..1
 
 

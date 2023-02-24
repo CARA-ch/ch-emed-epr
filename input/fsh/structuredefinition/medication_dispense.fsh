@@ -3,6 +3,7 @@ RuleSet: medication-dispense-ruleset
 * extension[treatmentPlan] 1..1
 * medication[x] only Reference
 * medicationReference only Reference(CHEMEDEPRMedicationMedicationDispense)
+* medicationReference ^type.aggregation[+] = #contained
 * insert no-support(authorizingPrescription)
 * whenHandedOver 1..1
 * insert no-support(partOf)
@@ -23,9 +24,13 @@ RuleSet: medication-dispense-ruleset
 * quantity only CHEMEDEPRAmountQuantity
 * daysSupply only CHEMEDEPRTimeQuantity
 * dosageInstruction[baseEntry] only CHEMEDEPRDosage
+* dosageInstruction[baseEntry] ^type.aggregation[+] = #contained
 * dosageInstruction[additionalEntry] only CHEMEDEPRDosageSplit
+* dosageInstruction[additionalEntry] ^type.aggregation[+] = #contained
 * note.text ^short = "The annotation text content"
 * subject only Reference(CHEMEDEPRPatient)
+* subject ^type.aggregation[+] = #referenced
+* subject ^type.aggregation[+] = #bundled
 * subject 1..1
 * statusReason[x] 0..0
 * insert no-support(statusReason[x])

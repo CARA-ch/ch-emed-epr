@@ -3,7 +3,10 @@ RuleSet: medication-request-ruleset
 * extension[treatmentplan] 1..1
 * medication[x] only Reference
 * medicationReference only Reference(CHEMEDEPRMedication)
+* medicationReference ^type.aggregation[+] = #contained
 * subject only Reference(CHEMEDEPRPatient)
+* subject ^type.aggregation[+] = #referenced
+* subject ^type.aggregation[+] = #bundled
 * subject 1..1
 * reasonCode insert reason-code-ruleset
 * reasonCode ^short = "The treatment reason(s) as text, and optionally coded"
@@ -39,7 +42,9 @@ RuleSet: medication-request-ruleset
 // TODO How to code provisional state?
 * note.text ^short = "The annotation text content"
 * dosageInstruction[baseEntry] only CHEMEDEPRDosageMedicationRequest
+* dosageInstruction[baseEntry] ^type.aggregation[+] = #contained
 * dosageInstruction[additionalEntry] only CHEMEDEPRDosageSplitMedicationRequest
+* dosageInstruction[additionalEntry] ^type.aggregation[+] = #contained
 * dispenseRequest 1..1
 * dispenseRequest insert backbone-ruleset
 * dispenseRequest.initialFill insert backbone-ruleset
