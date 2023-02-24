@@ -22,3 +22,21 @@ The `system` SHOULD be a public code system, not a private one (e.g. internal to
 The `display` MAY be used but is not mandatory; it should be one of the display names defined by the value set.
 The `version` is not used, code system versioning is hard.
 
+### date
+
+Please only use [xs:date](https://www.w3.org/TR/xmlschema-2/#date) (i.e. `YYYY-MM-DD`), unless you have a very good reason to be less precise than that.
+
+### dateTime
+
+Please only use [xs:dateTime](https://www.w3.org/TR/xmlschema-2/#dateTime) with timezone (i.e. `YYYY-MM-DDThh:mm:ss+zz:zz` or `YYYY-MM-DDThh:mm:ssZ`),
+unless you have a very good reason to be less precise than that.
+
+In some cases, the recommendation is to only use [xs:date](https://www.w3.org/TR/xmlschema-2/#date) (i.e. `YYYY-MM-DD`)
+for example with dosage period start and stop dates, where the precision usually is to the day.
+
+### Date completion
+
+When encountering an incomplete date, it can be completed as follows:
+
+- if it is the inclusive stop date of a period, then it is completed as the last instant covered by the partial date;
+- in other cases (simple date, inclusive start date, exclusive stop date), it is completed as the first instant covered by the partial date.
