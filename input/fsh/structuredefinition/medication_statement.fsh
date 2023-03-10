@@ -33,6 +33,8 @@ RuleSet: medication-statement-ruleset
 * reasonCode ^short = "The treatment reason(s) as text, and optionally coded"
 * reasonCode ^definition = "...Content creators should keep it as simple and short as possible (e.g. 'blood clog', 'hypertension')."
 * note.text ^short = "The annotation text content"
+* effective[x] ^short = "The effective period of the treatment, if any."
+* effective[x] only Period
 
 
 // =====================================================================================
@@ -55,8 +57,6 @@ Description: "Definition of the medication statement for the Medication Treatmen
 * insert overridden(informationSource)
 * informationSource ^short = "✕ The information source is given in Composition.section.author or Composition.author (see guidance)"
 * insert no-support(subject)
-* insert no-support(effective[x])
-* effective[x] ^short = "✕ Do not use. The effective period is contained in the main dosage"
 
 
 // =====================================================================================
