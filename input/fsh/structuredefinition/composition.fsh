@@ -33,7 +33,6 @@ RuleSet: composition-ruleset
 //* extension[versionNumber] = 1 // TODO
 * confidentiality ^short = "The confidentiality is fixed to the 'normal' level"
 * identifier.value ^short = "The document identifier as an URN-encoded UUID"
-* extension[versionNumber] ^short = "It shall be the first version of the document"
 
 
 // =====================================================================================
