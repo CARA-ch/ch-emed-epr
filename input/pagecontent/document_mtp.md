@@ -15,13 +15,6 @@ It contains information about the medication and dosage instructions, and may co
 
 ### Specifications
 
-#### Treatment period
-
-The treatment may be bounded by start and end dates.
-The treatment will only be displayed in the medication card within this period.
-
-If those dates are provided, all dosage periods shall be within.
-
 #### States
 
 A treatment may be in the following status: `active`, `suspended`, `cancelled` or `refused`.

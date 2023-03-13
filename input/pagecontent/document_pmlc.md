@@ -32,7 +32,7 @@ Treatments are selected for processing as follows:
 Treatments are then processed as follows:
 
 1. If there are one or more **active** prescriptions, whose dosage end date is either *null* or in the future, then an item for each of these prescriptions is inserted in the medication card.
-2. If there's no such prescription, an item is inserted in the medication card.
+2. If there is no such prescription, an item is inserted in the medication card.
 
 *An item is a MedicationStatement in the document and a line in the PDF.*
 
