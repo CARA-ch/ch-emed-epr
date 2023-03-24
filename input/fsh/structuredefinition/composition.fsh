@@ -12,6 +12,11 @@ RuleSet: composition-ruleset
 * confidentiality.extension 1..1
 * type insert codeableconcept-ruleset
 * type.coding insert coding-ruleset
+* section contains vitalSigns 0..1 // Declare the new slice before defining it
+* section[vitalSigns] ^short = "IPS Vital Signs Section"
+* section[vitalSigns].code.coding = $lnc#8716-3
+* section[vitalSigns].entry 1..1
+* section[vitalSigns].entry only Reference(CHEMEDEPRObservationBodyWeight)
 * section.author only Reference(CHEMEDEPRPractitioner or CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPROrganization or CHEMEDEPRRelatedPerson or CHEMEDEPRDevice)
 * date obeys datetime-only-instant-invariant
 * insert no-support(encounter)
@@ -29,6 +34,7 @@ RuleSet: composition-ruleset
 * section.mode = http://hl7.org/fhir/list-mode#snapshot "Snapshot List" // Document-based workflow, it's always a snapshot and not a live resource
 * insert no-support(section.orderedBy) // It's not ordered
 * insert no-support(section.entry.id)
+* insert modifier(section.modifierExtension)
 * section.emptyReason
 //* extension[versionNumber] = 1 // TODO
 * confidentiality ^short = "The confidentiality is fixed to the 'normal' level"
