@@ -1,8 +1,5 @@
 RuleSet: document-ruleset
-
 * insert resource-ruleset
-
-// Constraints
 * identifier.use = http://hl7.org/fhir/identifier-use#official "Official"
 * identifier.value obeys urn-uuid-invariant
 * entry[Patient] 1..1
@@ -10,11 +7,15 @@ RuleSet: document-ruleset
 * entry[PractitionerRole].resource only CHEMEDEPRPractitionerRole
 * entry[Patient].resource only CHEMEDEPRPatient
 * entry[Organization].resource only CHEMEDEPROrganization
+* entry contains ObsBodyWeight 0..1 // Declare the new slice before defining it
+* entry[ObsBodyWeight].resource 1..1
+* entry[ObsBodyWeight].resource only CHEMEDEPRObservationBodyWeight
 * total 0..0
 * entry.search 0..0
 * entry.request 0..0
 * entry.response 0..0
 * entry.link 0..0
+* insert modifier(entry.modifierExtension)
 * insert no-support(entry.id)
 * insert no-support(entry[Encounter])
 * insert no-support(entry[Location])
@@ -23,8 +24,6 @@ RuleSet: document-ruleset
 * identifier insert identifier-ruleset
 * insert no-support(id)
 * insert no-support(language) // Use Composition.language
-
-// Documentation
 * entry[Patient] ^short = "The patient targeted by this medication treatment plan"
 * entry.fullUrl ^short = "URN-encoded UUID for resource"
 
@@ -37,9 +36,7 @@ Parent: CHEMEDDocumentMedicationTreatmentPlan
 Id: ch-emed-epr-document-medicationtreatmentplan
 Title: "MTP Document"
 Description: "Definition of the bundle for the medication treatment plan document"
-
 * insert document-ruleset
-
 * entry[Composition].resource only CHEMEDEPRCompositionMedicationTreatmentPlan
 * entry[MedicationStatement].resource only CHEMEDEPRMedicationStatement
 * entry[MedicationStatement] 1..1
@@ -55,9 +52,7 @@ Parent: CHEMEDDocumentMedicationPrescription
 Id: ch-emed-epr-document-medicationprescription
 Title: "PRE Document"
 Description: "Definition of the bundle for the medication prescription document"
-
 * insert document-ruleset
-
 * entry[Composition].resource only CHEMEDEPRCompositionMedicationPrescription
 * entry[MedicationRequest].resource only CHEMEDEPRMedicationRequest
 
@@ -70,9 +65,7 @@ Parent: CHEMEDDocumentMedicationDispense
 Id: ch-emed-epr-document-medicationdispense
 Title: "DIS Document"
 Description: "Definition of the bundle for the medication dispense document"
-
 * insert document-ruleset
-
 * entry[Composition].resource only CHEMEDEPRCompositionMedicationDispense
 * entry[MedicationDispense].resource only CHEMEDEPRMedicationDispense
 
@@ -85,9 +78,7 @@ Parent: CHEMEDDocumentPharmaceuticalAdvice
 Id: ch-emed-epr-document-pharmaceuticaladvice
 Title: "PADV Document"
 Description: "Definition of the bundle for the pharmaceutical advice document"
-
 * insert document-ruleset
-
 * entry[Composition].resource only CHEMEDEPRCompositionPharmaceuticalAdvice
 * entry[Observation].resource only CHEMEDEPRObservation
 * entry[Observation] 1..
@@ -101,9 +92,7 @@ Parent: CHEMEDDocumentMedicationList
 Id: ch-emed-epr-document-medicationlist
 Title: "PML Document"
 Description: "Definition of the bundle for the medication list document"
-
 * insert document-ruleset
-
 * entry.fullUrl obeys urn-uuid-invariant
 * entry[Composition].resource only CHEMEDEPRCompositionMedicationList
 * entry[MedicationStatement].resource only CHEMEDEPRMedicationStatementList
@@ -120,9 +109,7 @@ Parent: CHEMEDDocumentMedicationCard
 Id: ch-emed-epr-document-medicationcard
 Title: "PMLC Document"
 Description: "Definition of the bundle for the medication card document"
-
 * insert document-ruleset
-
 * entry.fullUrl obeys urn-uuid-invariant
 * entry[Composition].resource only CHEMEDEPRCompositionMedicationCard
 * entry[MedicationStatement].resource only CHEMEDEPRMedicationStatementCard
