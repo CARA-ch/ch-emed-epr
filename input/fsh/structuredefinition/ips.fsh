@@ -5,7 +5,7 @@ Profile: CHEMEDEPRObservationBodyWeight
 Parent: Observation
 Id: ch-emed-epr-observation-body-weight
 Title: "Body Weight Observation"
-Description: "Definition of the observation for the patient body weight"
+Description: "Definition of the observation for the patient body weight, following the FHIR Vital Signs profile (https://www.hl7.org/fhir/R4/bodyweight.html)."
 * insert domain-resource-ruleset
 * code.coding = $lnc#29463-7
 * subject 1..1
