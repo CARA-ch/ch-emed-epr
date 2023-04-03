@@ -102,3 +102,6 @@ Description: "Definition of the aggregated medication statement for the Medicati
 * note.authorReference 1..1
 * note.time 1..1
 // TODO: describe status
+* extension contains http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-prescription named prescription 0..1 // Declare the new extension before defining it
+* extension[prescription] ^short = "Reference to the PRE that introduced this medication in the treatment plan, if any"
+
