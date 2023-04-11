@@ -8,12 +8,12 @@ CDA-CH-EMED defined the eMedication documents for the information exchange in th
 The documents were based on the IHE Pharmacy Technical Framework modelled and specialized in the Building Block Repository CH-PHARM.
 Base for this modelling was the report from [IPAG eMedikation, 7.6.2017](https://www.e-health-suisse.ch/fileadmin/user_upload/Dokumente/2017/D/170607_Bericht_eMedikation_IPAG.pdf) and the work of IPAG/eHealth Suisse.
 
-- [MTP](document_mtp.md) (Medication Treatment Plan): introducing a treatment in the plan.
-- [PRE](document_pre.md) (Prescription): prescribing a medication.
-- [DIS](document_dis.md) (Dispense): dispensing a medication.
-- [PADV](document_padv.md) (Pharmaceutical advice): modifying the state of the treatment.
-- [PML](document_pml.md) (Medication list): listing multiple entries in a single document.
-- [PMLC](document_pmlc.md) (Medication card): listing the on-going treatments in an aggregated form.
+- [MTP](document_mtp.html) (Medication Treatment Plan): introducing a treatment in the plan.
+- [PRE](document_pre.html) (Prescription): prescribing a medication.
+- [DIS](document_dis.html) (Dispense): dispensing a medication.
+- [PADV](document_padv.html) (Pharmaceutical advice): modifying the state of the treatment.
+- [PML](document_pml.html) (Medication list): listing multiple entries in a single document.
+- [PMLC](document_pmlc.html) (Medication card): listing the on-going treatments in an aggregated form.
 
 Guidance pages are available to detail some parts of the profile, they are listed in the top menu.
 
