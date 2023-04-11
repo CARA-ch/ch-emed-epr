@@ -68,9 +68,7 @@ Parent: CHEMEDDosage
 Id: ch-emed-epr-dosage
 Title: "Dosage (MedicationStatement / MedicationDispense)"
 Description: "Definition of the main dosage element (used in MedicationStatement / MedicationDispense)"
-
 * insert main-dosage-ruleset
-
 // todo: Period: Either the start or end instants shall be specified
 // todo: Period: The time interval lower bound is after the higher bound
 // todo: When: A code cannot appear in multiple dosages
@@ -83,9 +81,8 @@ Description: "Definition of the main dosage element (used in MedicationStatement
 Profile: CHEMEDEPRDosageSplit
 Parent: CHEMEDDosageSplit
 Id: ch-emed-epr-dosage-split
-Title: "Dosage Split (MedicationStatement / MedicationDispense)"
-Description: "Definition of the split dosage element (used in MedicationStatement / MedicationDispense)"
-
+Title: "Dosage Split"
+Description: "Definition of the split dosage element"
 * insert split-dosage-ruleset
 
 
@@ -97,17 +94,4 @@ Parent: CHEMEDDosageMedicationRequest
 Id: ch-emed-epr-dosage-medicationrequest
 Title: "Dosage (MedicationRequest)"
 Description: "Definition of the main dosage element (used in MedicationRequest)"
-
 * insert main-dosage-ruleset
-
-
-// =====================================================================================
-// Dosage Split MedicationRequest
-// =====================================================================================
-Profile: CHEMEDEPRDosageSplitMedicationRequest
-Parent: CHEMEDDosageSplitMedicationRequest
-Id: ch-emed-epr-dosage-split-medicationrequest
-Title: "Dosage Split (MedicationRequest)"
-Description: "Definition of the split dosage element (used in MedicationRequest)"
-
-* insert split-dosage-ruleset

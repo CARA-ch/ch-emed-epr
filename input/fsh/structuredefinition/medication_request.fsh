@@ -43,7 +43,7 @@ RuleSet: medication-request-ruleset
 * note.text ^short = "The annotation text content"
 * dosageInstruction[baseEntry] only CHEMEDEPRDosageMedicationRequest
 * dosageInstruction[baseEntry] ^type.aggregation[+] = #contained
-* dosageInstruction[additionalEntry] only CHEMEDEPRDosageSplitMedicationRequest
+* dosageInstruction[additionalEntry] only CHEMEDEPRDosageSplit
 * dosageInstruction[additionalEntry] ^type.aggregation[+] = #contained
 * dispenseRequest 1..1
 * dispenseRequest insert backbone-ruleset
