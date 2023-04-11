@@ -40,6 +40,7 @@ RuleSet: split-dosage-ruleset
 RuleSet: common-dosage-ruleset
 * insert modifier(modifierExtension)
 * insert modifier(timing.modifierExtension)
+* insert no-support(text)
 * insert no-support(doseAndRate.type)
 * insert no-support(extension)
 * insert no-support(timing.code) // TODO We may want that
@@ -59,6 +60,7 @@ Invariant: only-standard-event-timings
 Description: "The timing event shall only be 'MORN', 'NOON', 'EVE' or 'NIGHT'."
 Expression: "$this = 'MORN' or $this = 'NOON' or $this = 'EVE' or $this = 'NIGHT'"
 Severity: #error
+
 
 // =====================================================================================
 // Dosage MedicationStatement, MedicationDispense
