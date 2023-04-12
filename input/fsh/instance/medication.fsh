@@ -1,13 +1,12 @@
-Instance: Triatec
+Instance: MedicationTriatec
 InstanceOf: CHEMEDEPRMedication
-Title: "Medication Triatec"
+Title: "Medication: Triatec"
 Usage: #example
-
 * code.text = "TRIATEC Tabl 2.5 mg"
-* code.coding[+] = $gtin#7680538751228 "TRIATEC Tabl 2.5 mg 20 Stk"
+* code.coding[GTIN] = $gtin#7680538751228 "TRIATEC Tabl 2.5 mg 20 Stk"
 * form.text = "Tablet"
 * form.coding[+] = $edqm#10219000 "Tablet"
-* amount.numerator = $sct#732936001 "Tablet (unit of presentation)"
+/** amount.numerator = $sct#732936001 "Tablet (unit of presentation)"
 * amount.denominator = $ucum#{Package} "Package"
 * ingredient[+].itemCodeableConcept[+].text = "Ramipril"
 * ingredient[=].itemCodeableConcept[=].coding[+] = $sct#386872004 "Ramipril (substance)"
@@ -19,4 +18,4 @@ Usage: #example
 * ingredient[=].strength.denominator.value = 1
 * ingredient[=].strength.denominator.unit = "Tablet"
 * ingredient[=].strength.denominator.system = $sct
-* ingredient[=].strength.denominator.code = #732936001
+* ingredient[=].strength.denominator.code = #732936001*/
