@@ -14,7 +14,9 @@ RuleSet: composition-ruleset
 * type.coding insert coding-ruleset
 * section contains vitalSigns 0..1 // Declare the new slice before defining it
 * section[vitalSigns] ^short = "IPS Vital Signs Section"
-* section[vitalSigns].code.coding = $lnc#8716-3
+* section[vitalSigns].code 1..1
+* section[vitalSigns].code.coding 1.. // The coding is mandatory because it is the pattern of the 'section' slice
+* section[vitalSigns].code = $lnc#8716-3
 * section[vitalSigns].entry 1..1
 * section[vitalSigns].entry only Reference(CHEMEDEPRObservationBodyWeight)
 * section.author only Reference(CHEMEDEPRPractitioner or CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPROrganization or CHEMEDEPRRelatedPerson or CHEMEDEPRDevice)
