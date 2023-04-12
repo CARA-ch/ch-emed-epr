@@ -3,3 +3,9 @@
 # Add warning and/or information messages here after you've confirmed that they aren't really a problem
 # (And include comments like this justifying why)
 # See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
+
+# GTIN codes cannot be validated
+Code System URI 'urn:oid:2.51.1.1' is unknown so the code cannot be validated
+
+# https://jira.hl7.org/browse/FHIR-25429
+Elements included in the differential should declare mustSupport
