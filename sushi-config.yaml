@@ -74,6 +74,7 @@ parameters:
   generate-turtle: false
   excludettl: true
   generate: [genExamples]
+  no-narrative: '*/*'
 
 
 #
