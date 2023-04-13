@@ -85,13 +85,13 @@ Expression: "(prescription.exists() and medicationRequestChanged.exists() and co
 Severity: #error
 
 Invariant: mtp-ref-conformant
-Description: "A changed MedicationStatement SHALL conform to CHEMEDEPRMedicationStatement"
-Expression: "treatmentPlan.exists() implies medicationStatementChanged.resolve().conformsTo('https://fhir.cara.ch/StructureDefinition/ch-emed-epr-medicationstatement-treatmentplan')"
+Description: "A changed MedicationStatement SHALL conform to CHEMEDEPRChangedMedicationStatement"
+Expression: "treatmentPlan.exists() implies medicationStatementChanged.resolve().conformsTo('https://fhir.cara.ch/StructureDefinition/ch-emed-epr-medicationstatement-changed')"
 Severity: #error
 
 Invariant: pre-ref-conformant
-Description: "A changed MedicationRequest SHALL conform to CHEMEDEPRMedicationRequest"
-Expression: "prescription.exists() implies medicationRequestChanged.resolve().conformsTo('https://fhir.cara.ch/StructureDefinition/ch-emed-epr-medicationrequest')"
+Description: "A changed MedicationRequest SHALL conform to CHEMEDEPRChangedMedicationRequest"
+Expression: "prescription.exists() implies medicationRequestChanged.resolve().conformsTo('https://fhir.cara.ch/StructureDefinition/ch-emed-epr-medicationrequest-changed')"
 Severity: #error
 
 Invariant: mtp-same-id

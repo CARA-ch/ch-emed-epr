@@ -59,15 +59,30 @@ RuleSet: medication-request-ruleset
 // =====================================================================================
 // Medication Request PRE
 // =====================================================================================
+RuleSet: medication-request-pre-ruleset
+* insert medication-request-ruleset
+* insert overridden(requester)
+* requester ^short = "✕ The requester is given in Composition.section.author or Composition.author (see guidance)"
+* status = #active
+
+
 Profile: CHEMEDEPRMedicationRequest
 Parent: CHEMEDMedicationRequest
 Id: ch-emed-epr-medicationrequest
 Title: "PRE MedicationRequest"
 Description: "Definition of the medication request for the medication prescription document"
-* insert medication-request-ruleset
-* insert overridden(requester)
-* requester ^short = "✕ The requester is given in Composition.section.author or Composition.author (see guidance)"
-* status = #active
+* insert medication-request-pre-ruleset
+
+
+// =====================================================================================
+// Changed Medication Request in a PADV Observation
+// =====================================================================================
+Profile: CHEMEDEPRChangedMedicationRequest
+Parent: CHEMEDMedicationRequestChanged
+Id: ch-emed-epr-medicationrequest-changed
+Title: "PADV Changed MedicationRequest"
+Description: "Definition of the changed medication request for the pharmaceutical advice document"
+* insert medication-request-pre-ruleset
 
 
 // =====================================================================================

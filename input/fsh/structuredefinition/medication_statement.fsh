@@ -40,11 +40,7 @@ RuleSet: medication-statement-ruleset
 // =====================================================================================
 // Medication Statement MTP
 // =====================================================================================
-Profile: CHEMEDEPRMedicationStatement
-Parent: CHEMEDMedicationStatement
-Id: ch-emed-epr-medicationstatement-treatmentplan
-Title: "MTP MedicationStatement"
-Description: "Definition of the medication statement for the Medication Treatment Plan document"
+RuleSet: medication-statement-mtp-ruleset
 * insert medication-statement-ruleset
 * extension[substitution].value[x] only CodeableConcept
 * extension[substitution].valueCodeableConcept from substance-admin-substitution-code (required)
@@ -57,6 +53,25 @@ Description: "Definition of the medication statement for the Medication Treatmen
 * insert overridden(informationSource)
 * informationSource ^short = "✕ The information source is given in Composition.section.author or Composition.author (see guidance)"
 * insert no-support(subject)
+
+
+Profile: CHEMEDEPRMedicationStatement
+Parent: CHEMEDMedicationStatement
+Id: ch-emed-epr-medicationstatement-treatmentplan
+Title: "MTP MedicationStatement"
+Description: "Definition of the medication statement for the Medication Treatment Plan document"
+* insert medication-statement-mtp-ruleset
+
+
+// =====================================================================================
+// Changed Medication Statement in a PADV Observation
+// =====================================================================================
+Profile: CHEMEDEPRChangedMedicationStatement
+Parent: CHEMEDMedicationStatementChanged
+Id: ch-emed-epr-medicationstatement-changed
+Title: "PADV Changed MedicationStatement"
+Description: "Definition of the changed medication statement for the pharmaceutical advice document"
+* insert medication-statement-mtp-ruleset
 
 
 // =====================================================================================
