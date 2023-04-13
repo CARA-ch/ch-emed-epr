@@ -5,7 +5,7 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: ch.cara.fhir.epr.emed
 canonical: https://fhir.cara.ch
-name: ch-emed-epr
+name: ChEmedEpr
 title: "CH-EMED-EPR"
 description: FHIR Implementation Guide which defines the documents for the exchange of medication information in the context of the Swiss eMedication service
 status: draft # draft | active | retired | unknown
