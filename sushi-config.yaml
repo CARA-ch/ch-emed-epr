@@ -7,7 +7,7 @@ id: ch.cara.fhir.epr.emed
 canonical: https://fhir.cara.ch
 name: ch-emed-epr
 title: "CH-EMED-EPR"
-# description: Example Implementation Guide for getting started with SUSHI
+description: FHIR Implementation Guide which defines the documents for the exchange of medication information in the context of the Swiss eMedication service
 status: draft # draft | active | retired | unknown
 version: 0.1.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
