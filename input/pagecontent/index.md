@@ -21,6 +21,8 @@ Guidance pages are available to detail some parts of the profile, they are liste
 
 #### Tabs
 
+Resources usually show these three different tabs in the main table. You should only review the **Snapshot** one.
+
 - **Differential**: it shows differences with the parent artifact. It is only useful to authors of this IG.
 - **Key**: it only contains elements that are included in summaries (a feature not used by this IG) or as **must support**.
 - **Snapshot**: the tab that contains all the elements, it is the most useful one.
@@ -33,9 +35,9 @@ Guidance pages are available to detail some parts of the profile, they are liste
 
 #### Binding strengths
 
-- **required** binding:
-- **extensible** binding:
-- **example** binding:
+- **required** binding: the use of a code present in the given value set is required.
+- **extensible** binding: the use of a code present in the given value set is recommended; another code can be used if it is missing.
+- **example** binding: the value set is given as example.
 
 ### Download
 
@@ -44,13 +46,21 @@ You can also download:
 - [this entire guide](full-ig.zip)
 - the definition resources in [json](definitions.json.zip), [xml](definitions.xml.zip), [ttl](definitions.ttl.zip), or [csv](csvs.zip) format, or
 - the example resources in [json](examples.json.zip), [xml](examples.xml.zip) or [ttl](examples.ttl.zip) format.
+- the [NPM package](package.tgz) (as R4 or R4b).
 
 The source code for this Implementation Guide can be found on GitHub: [https://github.com/CARA-ch/ch-emed-epr](https://github.com/CARA-ch/ch-emed-epr).
 
-### Cross Version Analysis
 
+### Details
+
+#### Cross-Version Analysis
 {% include cross-version-analysis.xhtml %}
 
-### Dependency Table
-
+#### Dependency Table
 {% include dependency-table.xhtml %}
+
+#### IP statements
+{% include ip-statements.xhtml %}
+
+#### Global profiles
+{% include globals-table.xhtml %}

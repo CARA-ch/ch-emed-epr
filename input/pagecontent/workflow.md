@@ -2,6 +2,14 @@
 
 ### Dispenser workflow
 
+### Medication manager workflow
+
+### Patient workflow
+
+### Hospital admission workflow
+
+### Hospital release workflow
+
 ### Restrictions by role
 
 | Role                    | Read access | Write access   | Subject to access rules |

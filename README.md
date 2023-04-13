@@ -1,11 +1,13 @@
 # IG CH-EMED-EPR
 
-To compile the FSH files:
+FHIR Implementation Guide which defines the documents for the exchange of medication information in the context of the Swiss eMedication service.
+
+To compile the FSH files, use [SUSHI](https://github.com/FHIR/sushi):
 ```bash
 sushi .
 ```
 
-To compile the full profile (it will automatically run SUSHI):
+To compile the full profile (it will automatically run SUSHI), use the [IG Publisher](https://github.com/HL7/fhir-ig-publisher):
 ```bash
 java -jar publisher.jar -ig ig.ini
 ```
@@ -16,6 +18,8 @@ java -jar publisher.jar -ig ig.ini
 | -------- | ---------------------------------------------- |
 | CI Build | https://build.fhir.org/ig/CARA-ch/ch-emed-epr/ |
 | ?        | ?                                              |
+
+The changelog is available in the file `input/pagecontent/changelog.md` and published within the profile.
 
 ## CI Build
 
