@@ -1,6 +1,7 @@
 Instance: PatientDupont
 InstanceOf: CHEMEDEPRPatient
 Title: "Patient: Dupont"
+Description: "A simple example of a patient"
 Usage: #example
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:2dbfe659-07d0-45c7-b8df-4a48372049a3"

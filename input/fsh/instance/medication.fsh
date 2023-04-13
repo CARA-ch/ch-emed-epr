@@ -1,6 +1,7 @@
 Instance: MedicationTriatec
 InstanceOf: CHEMEDEPRMedication
 Title: "Medication: Triatec"
+Description: "The example of the Triatec medication"
 Usage: #example
 * code.text = "TRIATEC Tabl 2.5 mg"
 * code.coding[GTIN] = $gtin#7680538751228 "TRIATEC Tabl 2.5 mg 20 Stk"

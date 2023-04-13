@@ -1,6 +1,7 @@
 Instance: DocumentMtp1
 InstanceOf: CHEMEDEPRDocumentMedicationTreatmentPlan
 Title: "Bundle: MTP 1"
+Description: "The example of a Bundle for a MTP document"
 Usage: #example
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:24c84eef-f9db-4710-8f6c-2d342ad3ac2d"
@@ -23,6 +24,7 @@ Usage: #example
 Instance: CompositionMtp1
 InstanceOf: CHEMEDEPRCompositionMedicationTreatmentPlan
 Title: "Composition: MTP 1"
+Description: "The example of a Composition for a MTP document"
 Usage: #inline
 * language = #fr-CH
 * identifier.system = "urn:ietf:rfc:3986"

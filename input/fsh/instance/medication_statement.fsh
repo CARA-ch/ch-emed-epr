@@ -1,6 +1,7 @@
 Instance: MedicationStatementTriatecMtp
 InstanceOf: CHEMEDEPRMedicationStatement
 Title: "MedicationStatement: Triatec (MTP)"
+Description: "The example of a medication statement in a MTP document"
 Usage: #example
 * contained[0] = MedicationTriatec
 * medicationReference = Reference(MedicationTriatec)
