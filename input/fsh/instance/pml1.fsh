@@ -148,8 +148,8 @@ Usage: #inline
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:41b97645-e263-47c2-8d96-79da451a33f2"
 * status = #active
-* medicationReference = Reference(medication-1)
+* medicationReference.reference = "#medication-1"
 * subject = Reference(urn:uuid:35b7e959-3b7e-416a-ac16-68896d26d5bb)
-* informationSource = Reference(practitioner-role-1)
+* informationSource.reference = "#practitioner-role-1"
 * dosage.id = "#dosage-1"
 * dosage.patientInstruction = "À prendre avec de l'eau"
