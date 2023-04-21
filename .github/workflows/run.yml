@@ -41,6 +41,3 @@ jobs:
 
       - name: Build the Java code with Maven
         run: mvn compile --batch-mode --no-transfer-progress --file pom.xml
-
-      - name: Get the IG
-        run:
