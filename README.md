@@ -1,7 +1,6 @@
 # IG CH-EMED-EPR
 
-![Test the SUSHI project workflow](https://github.com/CARA-ch/ch-emed-epr/actions/workflows/sushi_test.yml/badge.svg)
-![Run the validation workflow](https://github.com/CARA-ch/ch-emed-epr/actions/workflows/run.yml/badge.svg?branch=validation)
+![Validation workflow](https://github.com/CARA-ch/ch-emed-epr/actions/workflows/validation.yml/badge.svg)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/CARA-ch/ch-emed-epr)
 ![GitHub last commit](https://img.shields.io/github/last-commit/CARA-ch/ch-emed-epr)
 
