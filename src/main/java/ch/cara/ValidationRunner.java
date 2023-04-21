@@ -44,7 +44,7 @@ class ValidationRunner {
         this.engine = new MatchboxEngine.MatchboxEngineBuilder().getEngineR4();
         this.engine.getIgLoader().loadIg(this.engine.getIgs(),
                                          this.engine.getBinaries(),
-                                         "../output/package.tgz",
+                                         "./output/package.tgz",
                                          true);
         this.listIgResources();
         this.listOtherResources();
@@ -87,9 +87,9 @@ class ValidationRunner {
     }
 
     private void listIgResources() {
-        this.add2Resources("../output/Bundle-BundlePml1", "ch-emed-epr-document-medicationlist");
-        this.add2Resources("../output/Bundle-BundlePmlc1", "ch-emed-epr-document-medicationcard");
-        this.add2Resources("../output/Device-DevicePmp", "ch-emed-epr-device");
+        this.add2Resources("output/Bundle-BundlePml1", "ch-emed-epr-document-medicationlist");
+        this.add2Resources("output/Bundle-BundlePmlc1", "ch-emed-epr-document-medicationcard");
+        this.add2Resources("output/Device-DevicePmp", "ch-emed-epr-device");
     }
 
     private boolean validateFile(final String filePath,
@@ -103,7 +103,7 @@ class ValidationRunner {
 
             if (outcome.getIssue().stream().anyMatch(issue -> issue.getSeverity() == OperationOutcome.IssueSeverity.ERROR || issue.getSeverity() == OperationOutcome.IssueSeverity.FATAL)) {
                 this.detailOutput.append(String.format("❌ %s<br>\n", filePath));
-                this.detailOutput.append(String.format("    Profile URL: _%s_<br>\n",
+                this.detailOutput.append(String.format("    Profile URL: *%s* <br>\n",
                                                        profileUrl));
                 for (final var issue : outcome.getIssue()) {
                     this.detailOutput.append(String.format("    `%s` %s<br>\n",
