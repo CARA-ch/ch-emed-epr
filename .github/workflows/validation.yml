@@ -1,13 +1,15 @@
-name: Run the validation
+name: 'Run the validation'
 
 on:
   workflow_dispatch: # On manual trigger
   push:
     branches: [ master, validation ]
+  pull_request:
+    branches: [ master ]
 
 jobs:
   build:
-    name: Run the validator on resource samples
+    name: 'Run the validator on resource samples'
     runs-on: ubuntu-latest
     permissions:
       actions: read
@@ -17,31 +19,42 @@ jobs:
       fail-fast: false
 
     steps:
-      - name: Checkout the repository
+      - name: 'Checkout the repository'
         uses: actions/checkout@v3
 
-      - name: Install the JDK 17
-        uses: actions/setup-java@v3
-        with:
-          java-version: '17'
-          distribution: 'temurin'
-          cache: maven
-
-      - name: Install Node 18 and NPM
+      - name: 'Install Node and NPM'
         uses: actions/setup-node@v3
         with:
           node-version: 18
 
-      - name: Compile the IG from sources
+      - name: 'Install Ruby'
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+
+      - name: 'Install Jekyll'
+        run: |
+          gem install jekyll bundler
+          jekyll -v
+
+      - name: 'Compile the IG from sources'
         run: |
           npm install -g fsh-sushi
           chmod +x ./_updatePublisher.sh
           ./_updatePublisher.sh --yes
-          java -jar ./input-cache/publisher.jar -ig ./ig.ini
+          java -jar ./input-cache/publisher.jar -ig ig.ini
 
-      - name: Run the validator
+      - name: 'Clone the validator'
+        run: git clone --branch validation --depth 1 https://github.com/CARA-ch/ch-emed-epr.git
+
+      - name: 'Install the JDK'
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: 'maven'
+
+      - name: 'Run the validator'
         run: |
-          git clone --branch validation --depth 1 https://github.com/CARA-ch/ch-emed-epr.git
-          cd ./ch-emed-epr
-          mvn package --batch-mode --no-transfer-progress --file ./pom.xml
-          java -jar ./target/validation-runner.jar $GITHUB_STEP_SUMMARY
+          mvn package --batch-mode --no-transfer-progress --file ./ch-emed-epr/pom.xml
+          java -jar ./ch-emed-epr/target/validation-runner-jar-with-dependencies.jar $GITHUB_STEP_SUMMARY
