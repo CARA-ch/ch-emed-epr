@@ -37,6 +37,7 @@ jobs:
           git clone https://github.com/CARA-ch/ch-emed-epr.git
           cd ch-emed-epr
           chmod +x _updatePublisher.sh
+          chmod 0777 .
           ./_updatePublisher.sh --yes
           java -jar publisher.jar -ig ig.ini
 
