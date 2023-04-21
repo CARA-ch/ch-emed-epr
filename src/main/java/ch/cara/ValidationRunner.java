@@ -103,20 +103,20 @@ class ValidationRunner {
 
             if (outcome.getIssue().stream().anyMatch(issue -> issue.getSeverity() == OperationOutcome.IssueSeverity.ERROR || issue.getSeverity() == OperationOutcome.IssueSeverity.FATAL)) {
                 this.detailOutput.append(String.format("❌ %s<br>\n", filePath));
-                this.detailOutput.append(String.format("    Profile URL: *%s* <br>\n",
+                this.detailOutput.append(String.format("    Profile URL: *%s*\n",
                                                        profileUrl));
                 for (final var issue : outcome.getIssue()) {
-                    this.detailOutput.append(String.format("    `%s` %s<br>\n",
+                    this.detailOutput.append(String.format("    `%s` %s\n",
                                                            issue.getSeverity().name(),
                                                            issue.getDetails().getText()));
                 }
                 return false;
             } else {
-                this.detailOutput.append(String.format("✅ %s<br>\n", filePath));
+                this.detailOutput.append(String.format("✅ %s\n", filePath));
                 return true;
             }
         } catch (final Exception exception) {
-            this.detailOutput.append(String.format("❌ %s<br>\n", filePath));
+            this.detailOutput.append(String.format("❌ %s\n", filePath));
             this.detailOutput.append("```log\n");
             final var sw = new StringWriter();
             final var pw = new PrintWriter(sw);
