@@ -6,9 +6,6 @@
     <version>0.0.1</version>
     <name>CH-EMED-EPR validation</name>
     <packaging>jar</packaging>
-    <build>
-        <finalName>validation-runner</finalName>
-    </build>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -26,4 +23,25 @@
             <version>3.2.1</version>
         </dependency>
     </dependencies>
+
+    <build>
+        <finalName>validation-runner</finalName>
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.3.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <classpathPrefix>lib/</classpathPrefix>
+                            <mainClass>ch.cara.ValidationRunner</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
