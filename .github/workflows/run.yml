@@ -31,16 +31,14 @@ jobs:
         with:
           node-version: 18
 
-      - name: Compile the IG
+      - name: Compile the IG from sources
         run: |
           npm install -g fsh-sushi
-          git clone https://github.com/CARA-ch/ch-emed-epr.git
-          cd ch-emed-epr
+          git clone --depth 1 https://github.com/CARA-ch/ch-emed-epr.git
+          cd ./ch-emed-epr
           chmod +x _updatePublisher.sh
           ./_updatePublisher.sh --yes
-          ls
-          chmod +x publisher.jar
-          java -jar publisher.jar -ig ig.ini
+          java -jar ./input-cache/publisher.jar -ig ./ig.ini
 
       - name: Build the Java code with Maven
-        run: mvn compile --batch-mode --no-transfer-progress --file pom.xml
+        run: mvn compile --batch-mode --no-transfer-progress --file ./pom.xml
