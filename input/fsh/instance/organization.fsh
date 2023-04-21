@@ -10,3 +10,17 @@ Usage: #example
 * address.city = "Genève"
 * address.postalCode = "1205"
 * address.country = "CH"
+
+
+Instance: OrganizationCara
+InstanceOf: Organization
+Title: "Organization: CARA"
+Usage: #example
+* identifier.system = "urn:oid:2.51.1.3"
+* identifier.value = "7601001407428"
+* name = "Association CARA"
+* address.line = "Route de la Corniche 3a"
+* address.city = "Épalinges"
+* address.state = "Vaud"
+* address.postalCode = "1066"
+* address.country = "CH"
