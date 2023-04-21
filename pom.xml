@@ -5,6 +5,10 @@
     <artifactId>ch-emed-epr-validation</artifactId>
     <version>0.0.1</version>
     <name>CH-EMED-EPR validation</name>
+    <packaging>jar</packaging>
+    <build>
+        <finalName>validation-runner</finalName>
+    </build>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
