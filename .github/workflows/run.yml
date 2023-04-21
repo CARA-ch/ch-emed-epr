@@ -36,6 +36,7 @@ jobs:
           npm install -g fsh-sushi
           git clone https://github.com/CARA-ch/ch-emed-epr.git
           cd ch-emed-epr
+          chmod +x _updatePublisher.sh
           ./_updatePublisher.sh --yes
           java -jar publisher.jar -ig ig.ini
 
