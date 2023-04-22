@@ -1,18 +1,15 @@
 package ch.cara;
 
 import ch.ahdis.matchbox.engine.MatchboxEngine;
-import org.apache.logging.log4j.util.TriConsumer;
 import org.hl7.fhir.r4.model.OperationOutcome;
 import org.hl7.fhir.r5.elementmodel.Manager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
@@ -28,12 +25,18 @@ import java.util.Objects;
 
 class ValidationRunner {
     private static final Logger log = LoggerFactory.getLogger(ValidationRunner.class);
+    private static final String IMG_PASS =
+            "<img src=\"https://svg.test-summary.com/icon/pass.svg?s=12\" alt=\"PASS\" />";
+    private static final String IMG_FAIL =
+            "<img src=\"https://svg.test-summary.com/icon/fail.svg?s=12\" alt=\"PASS\" />";
 
     private final FileOutputStream jobSummaryOutput;
 
     private final FileOutputStream outputStream;
 
-    private final StringBuilder detailOutput;
+    private final StringBuilder listOutput;
+
+    private final StringBuilder failureDetailsOutput;
 
     private final MatchboxEngine engine;
 
@@ -63,7 +66,8 @@ class ValidationRunner {
         this.startTime = Instant.now();
         this.jobSummaryOutput = new FileOutputStream(jobSummaryPath);
         this.outputStream = new FileOutputStream(outputPath);
-        this.detailOutput = new StringBuilder();
+        this.listOutput = new StringBuilder();
+        this.failureDetailsOutput = new StringBuilder();
         this.engine = new MatchboxEngine.MatchboxEngineBuilder().getEngineR4();
         this.engine.getIgLoader().loadIg(this.engine.getIgs(),
                                          this.engine.getBinaries(),
@@ -95,18 +99,20 @@ class ValidationRunner {
         final Duration duration = Duration.between(this.startTime, Instant.now());
 
         // Write to markdown
-        this.summaryWrite("## Validation run summary\n\n");
-        this.summaryWrite("| Test result \uD83D\uDD0E | Passed ✅ | Failed ❌ | Total \uD83D\uDCC4 | Time duration ⏱ |\n");
-        this.summaryWrite("|---|---|---|---|---|\n");
-        this.summaryWrite(String.format("|%s|%d|%d|%d|%dm %ds|\n\n",
-                                        status,
-                                        successes,
-                                        failures,
-                                        successes + failures,
-                                        duration.toMinutesPart(),
-                                        duration.toSecondsPart()));
-        this.summaryWrite("### Details\n\n");
-        this.summaryWrite(this.detailOutput.toString());
+        this.writeJobSummary("## Validation run summary\n\n");
+        this.writeJobSummary("| Test result \uD83D\uDD0E | Passed ✅ | Failed ❌ | Total \uD83D\uDCC4 | Time duration ⏱ |\n");
+        this.writeJobSummary("|---|---|---|---|---|\n");
+        this.writeJobSummary(String.format("|%s|%d|%d|%d|%dm %ds|\n\n",
+                                           status,
+                                           successes,
+                                           failures,
+                                           successes + failures,
+                                           duration.toMinutesPart(),
+                                           duration.toSecondsPart()));
+        this.writeJobSummary("### Resources\n\n");
+        this.writeJobSummary(this.listOutput.toString());
+        this.writeJobSummary("### Failure details\n\n");
+        this.writeJobSummary(this.failureDetailsOutput.toString());
 
         // Write to the JUnit report file
         this.junitTestsuite.setAttribute("tests", String.valueOf(failures + successes));
@@ -121,10 +127,10 @@ class ValidationRunner {
         transformer.transform(new DOMSource(this.junitTestsuite.getOwnerDocument()), result);
 
         // Write to the output parameters
-        this.outputWrite("passed", String.valueOf(successes));
-        this.outputWrite("failed", String.valueOf(failures));
-        this.outputWrite("skipped", "0");
-        this.outputWrite("total", String.valueOf(failures + successes));
+        this.writeParameterOutput("passed", String.valueOf(successes));
+        this.writeParameterOutput("failed", String.valueOf(failures));
+        this.writeParameterOutput("skipped", "0");
+        this.writeParameterOutput("total", String.valueOf(failures + successes));
 
         if (failures > 0) {
             throw new RuntimeException("The validation of " + failures + " resource failed");
@@ -151,32 +157,38 @@ class ValidationRunner {
             }
 
             if (outcome.getIssue().stream().anyMatch(issue -> issue.getSeverity() == OperationOutcome.IssueSeverity.ERROR || issue.getSeverity() == OperationOutcome.IssueSeverity.FATAL)) {
-                this.detailOutput.append(String.format("❌ %s\n", filePath));
-                this.detailOutput.append(String.format("    Profile URL: *%s*\n",
-                                                       profileUrl));
+                this.listOutput.append(String.format("%s %s\n", IMG_FAIL, filePath));
+
+                this.failureDetailsOutput.append(String.format("#### %s\n", filePath));
+                this.failureDetailsOutput.append(String.format("Profile URL: *%s*\n",
+                                                     profileUrl));
                 for (final var issue : outcome.getIssue()) {
-                    this.detailOutput.append(String.format("    `%s` %s\n",
-                                                           issue.getSeverity().name(),
-                                                           issue.getDetails().getText()));
+                    this.failureDetailsOutput.append(String.format("`%s` %s\n",
+                                                         issue.getSeverity().name(),
+                                                         issue.getDetails().getText()));
                     final Element failure = testCase.getOwnerDocument().createElement("failure");
                     failure.setAttribute("message", issue.getDetails().getText());
                     failure.setAttribute("severity", issue.getSeverity().name());
                     failure.appendChild(failure.getOwnerDocument().createTextNode(issue.getDetails().getText()));
                     testCase.appendChild(failure);
                 }
+                this.failureDetailsOutput.append("\n");
                 return false;
             } else {
-                this.detailOutput.append(String.format("✅ %s\n", filePath));
+                this.listOutput.append(String.format("%s %s\n", IMG_PASS, filePath));
                 return true;
             }
         } catch (final Exception exception) {
             final var sw = new StringWriter();
             exception.printStackTrace(new PrintWriter(sw));
 
-            this.detailOutput.append(String.format("❌ %s\n", filePath));
-            this.detailOutput.append("```log\n");
-            this.detailOutput.append(sw);
-            this.detailOutput.append("```\n");
+            this.listOutput.append(String.format("%s %s\n", IMG_FAIL, filePath));
+
+            this.failureDetailsOutput.append(String.format("#### %s\n", filePath));
+            this.failureDetailsOutput.append(String.format("Profile URL: *%s*\n", profileUrl));
+            this.failureDetailsOutput.append("```log\n");
+            this.failureDetailsOutput.append(sw);
+            this.failureDetailsOutput.append("```\n\n");
 
             final Element failure = testCase.getOwnerDocument().createElement("failure");
             failure.setAttribute("message", exception.getMessage());
@@ -197,13 +209,29 @@ class ValidationRunner {
 
     }
 
-    private void summaryWrite(final String content) throws IOException {
+    /**
+     * Appends content to the GitHub Action job summary.
+     *
+     * @param content The markdown content to append.
+     * @throws IOException if the job summary file is not writable.
+     * @see <a href="https://github.blog/2022-05-09-supercharging-github-actions-with-job-summaries/">Supercharging GitHub Actions with Job Summaries</a>
+     * @see <a href="https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#adding-a-job-summary"Adding a job summary></a>
+     */
+    private void writeJobSummary(final String content) throws IOException {
         this.jobSummaryOutput.write(content.getBytes(StandardCharsets.UTF_8));
     }
 
-    private void outputWrite(final String key,
-                             final String value) throws IOException {
-        // https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#setting-an-output-parameter
-        this.outputStream.write(String.format("%s=%s", key, value).getBytes(StandardCharsets.UTF_8));
+    /**
+     * Writes a parameter to the GitHub Action output.
+     *
+     * @param name  The parameter's name.
+     * @param value The parameter's value.
+     * @throws IOException if the output file is not writable.
+     * @see <a href="https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#setting-an-output-parameter">Setting an output parameter</a>
+     * @see <a href="https://github.com/test-summary/action/blob/main/src/index.ts">action/index.ts</a>
+     */
+    private void writeParameterOutput(final String name,
+                                      final String value) throws IOException {
+        this.outputStream.write(String.format("%s=%s\n", name, value).getBytes(StandardCharsets.UTF_8));
     }
 }
