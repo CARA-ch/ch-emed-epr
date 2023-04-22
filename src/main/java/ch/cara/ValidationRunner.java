@@ -168,7 +168,7 @@ class ValidationRunner {
                 this.listOutput.append(String.format("%s %s\n", IMG_FAIL, filePath));
 
                 this.failureDetailsOutput.append(String.format("#### %s\n```\n", filePath));
-                this.failureDetailsOutput.append(String.format("Profile URL: *%s*\n",
+                this.failureDetailsOutput.append(String.format("Profile URL: %s\n",
                                                      profileUrl));
                 for (final var issue : outcome.getIssue()) {
                     this.failureDetailsOutput.append(String.format("%s %s\n",
