@@ -57,4 +57,4 @@ jobs:
       - name: 'Run the validator'
         run: |
           mvn package --batch-mode --no-transfer-progress --file ./ch-emed-epr/pom.xml
-          java -jar ./ch-emed-epr/target/validation-runner-jar-with-dependencies.jar $GITHUB_STEP_SUMMARY
+          java -jar ./ch-emed-epr/target/validation-runner-jar-with-dependencies.jar
