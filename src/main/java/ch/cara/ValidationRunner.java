@@ -63,6 +63,14 @@ class ValidationRunner {
         this.engine = new MatchboxEngine.MatchboxEngineBuilder().getEngineR4();
         this.engine.getIgLoader().loadIg(this.engine.getIgs(),
                                          this.engine.getBinaries(),
+                                         "http://build.fhir.org/ig/hl7ch/ch-core/package.tgz",
+                                         true);
+        this.engine.getIgLoader().loadIg(this.engine.getIgs(),
+                                         this.engine.getBinaries(),
+                                         "http://build.fhir.org/ig/hl7ch/ch-emed/package.tgz",
+                                         true);
+        this.engine.getIgLoader().loadIg(this.engine.getIgs(),
+                                         this.engine.getBinaries(),
                                          "./output/package.tgz",
                                          true);
         final var document = DocumentBuilderFactory.newDefaultInstance().newDocumentBuilder().newDocument();
