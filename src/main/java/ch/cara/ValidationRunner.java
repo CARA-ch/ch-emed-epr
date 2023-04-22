@@ -129,7 +129,18 @@ class ValidationRunner {
     private void listIgResources() {
         this.add2Resources("output/Bundle-BundlePml1", "ch-emed-epr-document-medicationlist");
         this.add2Resources("output/Bundle-BundlePmlc1", "ch-emed-epr-document-medicationcard");
+        this.add2Resources("output/Bundle-DocumentMtp1", "ch-emed-epr-document-medicationtreatmentplan");
         this.add2Resources("output/Device-DevicePmp", "ch-emed-epr-device");
+        this.add2Resources("output/Medication-MedicationNorvasc", "ch-emed-epr-medication");
+        this.add2Resources("output/Medication-MedicationTriatec", "ch-emed-epr-medication");
+        this.add2Resources("output/Medication-MedicationWithATC", "ch-emed-epr-medication");
+        this.add2Resources("output/Medication-MedicationWithTwoIngredients", "ch-emed-epr-medication");
+        this.add2Resources("output/MedicationStatement-MedicationStatementTriatec", "ch-emed-epr-medicationstatement-treatmentplan");
+        this.add2Resources("output/Organization-OrganizationCara", "ch-emed-epr-organization");
+        this.add2Resources("output/Organization-OrganizationHug", "ch-emed-epr-organization");
+        this.add2Resources("output/Patient-PatientDupont", "ch-emed-epr-patient");
+        this.add2Resources("output/Practitioner-PractitionerCox", "ch-emed-epr-practitioner");
+        this.add2Resources("output/PractitionerRole-PractitionerRoleCoxAtHug", "ch-emed-epr-practitionerrole");
     }
 
     private boolean validateFile(final String filePath,
