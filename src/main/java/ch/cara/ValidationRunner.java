@@ -128,7 +128,7 @@ class ValidationRunner {
         this.add2Resources("output/Medication-MedicationTriatec", "ch-emed-epr-medication");
         this.add2Resources("output/Medication-MedicationWithATC", "ch-emed-epr-medication");
         this.add2Resources("output/Medication-MedicationWithTwoIngredients", "ch-emed-epr-medication");
-        this.add2Resources("output/MedicationStatement-MedicationStatementTriatec", "ch-emed-epr-medicationstatement-treatmentplan");
+        this.add2Resources("output/MedicationStatement-MedicationStatementTriatecMtp", "ch-emed-epr-medicationstatement-treatmentplan");
         this.add2Resources("output/Organization-OrganizationCara", "ch-emed-epr-organization");
         this.add2Resources("output/Organization-OrganizationHug", "ch-emed-epr-organization");
         this.add2Resources("output/Patient-PatientDupont", "ch-emed-epr-patient");
