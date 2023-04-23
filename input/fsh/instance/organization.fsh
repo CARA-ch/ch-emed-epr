@@ -13,7 +13,7 @@ Usage: #example
 
 
 Instance: OrganizationCara
-InstanceOf: Organization
+InstanceOf: CHEMEDEPROrganization
 Title: "Organization: CARA"
 Usage: #example
 * identifier.system = "urn:oid:2.51.1.3"

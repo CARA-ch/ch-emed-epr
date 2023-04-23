@@ -1,5 +1,5 @@
 Instance: DevicePmp
-InstanceOf: Device
+InstanceOf: CHEMEDEPRDevice
 Title: "Device: PMP Aggregator"
 Usage: #example
 * deviceName.name = "PMP CARA v0.1"

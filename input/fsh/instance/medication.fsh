@@ -23,7 +23,7 @@ Usage: #example
 
 
 Instance: MedicationWithTwoIngredients
-InstanceOf: Medication
+InstanceOf: CHEMEDEPRMedication
 Usage: #example
 * code = urn:oid:2.51.1.1#7680577710149 "Exforge 10/160mg"
 * code.text = "Exforge 10/160mg"
@@ -42,7 +42,7 @@ Usage: #example
 
 
 Instance: MedicationWithATC
-InstanceOf: Medication
+InstanceOf: CHEMEDEPRMedication
 Usage: #example
 * meta.profile = "http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-medication"
 * code = $atc#N02CC02 "naratriptan"
@@ -58,7 +58,7 @@ Usage: #example
 
 
 Instance: MedicationNorvasc
-InstanceOf: Medication
+InstanceOf: CHEMEDEPRMedication
 Usage: #example
 * code.text = "NORVASC Tabl 10 mg"
 * code = urn:oid:2.51.1.1#7680500440334 "NORVASC Tabl 10 mg"
@@ -70,3 +70,4 @@ Usage: #example
 * form = urn:oid:0.4.0.127.0.16.1.1.2.1#10219000 "Tablet"
 * amount.numerator = 30 $sct#732936001 "Tablet (unit of presentation)"
 * amount.denominator = 1 '{Package}' "Package"
+

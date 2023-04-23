@@ -1,5 +1,5 @@
 Instance: BundlePml1
-InstanceOf: Bundle
+InstanceOf: CHEMEDEPRDocumentMedicationList
 Title: "Bundle: PML #1"
 Usage: #example
 * identifier.system = "urn:ietf:rfc:3986"
@@ -18,7 +18,7 @@ Usage: #example
 * entry[=].resource = Inline-Instance-for-pml1-5
 
 Instance: Inline-Instance-for-pml1-1
-InstanceOf: Composition
+InstanceOf: CHEMEDEPRCompositionMedicationList
 Usage: #inline
 * language = #fr-CH
 * identifier.system = "urn:ietf:rfc:3986"
@@ -41,7 +41,7 @@ Usage: #inline
 * section.entry = Reference(urn:uuid:41b97645-e263-47c2-8d96-79da451a33f2)
 
 Instance: Inline-Instance-for-pml1-2
-InstanceOf: Patient
+InstanceOf: CHEMEDEPRPatient
 Usage: #inline
 * identifier[0].use = #official
 * identifier[=].type = $v2-0203#MR
@@ -90,7 +90,7 @@ Usage: #inline
 * birthDate = "2002-12-21"
 
 Instance: Inline-Instance-for-pml1-3
-InstanceOf: Device
+InstanceOf: CHEMEDEPRDevice
 Usage: #inline
 * deviceName.name = "PMP CARA v0.1"
 * deviceName.type = #model-name
@@ -99,7 +99,7 @@ Usage: #inline
 * owner = Reference(urn:uuid:0b08ced4-feaa-416e-98b9-78d1597e0940)
 
 Instance: Inline-Instance-for-pml1-4
-InstanceOf: Organization
+InstanceOf: CHEMEDEPROrganization
 Usage: #inline
 * identifier.system = "urn:oid:2.51.1.3"
 * identifier.value = "7601001407428"
@@ -111,7 +111,7 @@ Usage: #inline
 * address.country = "CH"
 
 Instance: Inline-Instance-for-pml1-5
-InstanceOf: MedicationStatement
+InstanceOf: CHEMEDEPRMedicationStatementList
 Usage: #inline
 * contained[0].resourceType = "Medication"
 * contained[=].id = "medication-1"
