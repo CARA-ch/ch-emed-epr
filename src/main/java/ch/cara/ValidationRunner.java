@@ -47,6 +47,9 @@ class ValidationRunner {
     private final Element junitTestsuite;
 
     public static void main(String[] args) throws Exception {
+        for (final var entry : System.getenv().entrySet()) {
+            log.info(String.format("env.%s=%s", entry.getKey(), entry.getValue()));
+        }
         final var runner = new ValidationRunner(System.getenv("GITHUB_STEP_SUMMARY"));
         runner.run();
     }
