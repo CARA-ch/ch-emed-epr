@@ -193,7 +193,7 @@ class ValidationRunner {
      * @param content The markdown content to append.
      * @throws IOException if the job summary file is not writable.
      * @see <a href="https://github.blog/2022-05-09-supercharging-github-actions-with-job-summaries/">Supercharging GitHub Actions with Job Summaries</a>
-     * @see <a href="https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#adding-a-job-summary"Adding a job summary></a>
+     * @see <a href="https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#adding-a-job-summary">Adding a job summary</a>
      */
     private void writeJobSummary(final String content) throws IOException {
         this.jobSummaryOutput.write(content.getBytes(StandardCharsets.UTF_8));
