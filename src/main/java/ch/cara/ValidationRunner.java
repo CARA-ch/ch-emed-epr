@@ -42,10 +42,6 @@ class ValidationRunner {
 
     private final Instant startTime;
 
-    // https://howtodoinjava.com/junit5/xml-reports/#3-junit-xml-reports-in-legacy-format
-    // https://www.ibm.com/docs/en/developer-for-zos/14.1?topic=formats-junit-xml-format
-    private final Element junitTestsuite;
-
     public static void main(String[] args) throws Exception {
         for (final var entry : System.getenv().entrySet()) {
             log.info(String.format("env.%s=%s", entry.getKey(), entry.getValue()));
@@ -76,9 +72,7 @@ class ValidationRunner {
                                          this.engine.getBinaries(),
                                          "./output/package.tgz",
                                          true);
-        final var document = DocumentBuilderFactory.newDefaultInstance().newDocumentBuilder().newDocument();
-        this.junitTestsuite = document.createElement("testsuite");
-        document.appendChild(this.junitTestsuite);
+
         this.listIgResources();
         this.listOtherResources();
     }
@@ -120,18 +114,6 @@ class ValidationRunner {
         this.writeJobSummary("### Failure details\n\n");
         this.writeJobSummary(this.failureDetailsOutput.toString());
 
-        // Write to the JUnit report file
-        this.junitTestsuite.setAttribute("tests", String.valueOf(failures + successes));
-        this.junitTestsuite.setAttribute("failures", String.valueOf(failures));
-        this.junitTestsuite.setAttribute("disabled", "0");
-        this.junitTestsuite.setAttribute("errors", "0");
-        this.junitTestsuite.setAttribute("time", String.valueOf(duration.toSeconds()));
-        this.junitTestsuite.setAttribute("name", "AllTest");
-        final TransformerFactory transformerFactory = TransformerFactory.newInstance();
-        final Transformer transformer = transformerFactory.newTransformer();
-        final StreamResult result = new StreamResult(new FileWriter("report.xml"));
-        transformer.transform(new DOMSource(this.junitTestsuite.getOwnerDocument()), result);
-
         if (failures > 0) {
             throw new RuntimeException("The validation of " + failures + " resource failed");
         }
@@ -157,10 +139,6 @@ class ValidationRunner {
     private boolean validateFile(final String filePath,
                                  final String profileUrl) {
         final Manager.FhirFormat format = (filePath.endsWith(".json")) ? Manager.FhirFormat.JSON : Manager.FhirFormat.XML;
-        final Element testCase = this.junitTestsuite.getOwnerDocument().createElement("testcase");
-        testCase.setAttribute("name", filePath);
-        testCase.setAttribute("status", "run");
-        this.junitTestsuite.appendChild(testCase);
         try {
             final OperationOutcome outcome;
             try (final var is = new FileInputStream(filePath)) {
@@ -177,11 +155,6 @@ class ValidationRunner {
                     this.failureDetailsOutput.append(String.format("%s %s\n",
                                                          issue.getSeverity().name(),
                                                          issue.getDetails().getText()));
-                    final Element failure = testCase.getOwnerDocument().createElement("failure");
-                    failure.setAttribute("message", issue.getDetails().getText());
-                    failure.setAttribute("severity", issue.getSeverity().name());
-                    failure.appendChild(failure.getOwnerDocument().createTextNode(issue.getDetails().getText()));
-                    testCase.appendChild(failure);
                 }
                 this.failureDetailsOutput.append("```\n");
                 return false;
@@ -200,11 +173,6 @@ class ValidationRunner {
             this.failureDetailsOutput.append(sw);
             this.failureDetailsOutput.append("```\n\n");
 
-            final Element failure = testCase.getOwnerDocument().createElement("failure");
-            failure.setAttribute("message", exception.getMessage());
-            failure.setAttribute("severity", "FATAL");
-            failure.appendChild(failure.getOwnerDocument().createTextNode(sw.toString()));
-            testCase.appendChild(failure);
             return false;
         }
     }
