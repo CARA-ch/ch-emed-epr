@@ -5,15 +5,7 @@ import org.hl7.fhir.r4.model.OperationOutcome;
 import org.hl7.fhir.r5.elementmodel.Manager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.w3c.dom.Element;
 
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerException;
-import javax.xml.transform.TransformerFactory;
-import javax.xml.transform.dom.DOMSource;
-import javax.xml.transform.stream.StreamResult;
 import java.io.*;
 import java.net.URISyntaxException;
 import java.nio.charset.StandardCharsets;
@@ -30,28 +22,38 @@ class ValidationRunner {
     private static final String IMG_FAIL =
             "<img src=\"https://svg.test-summary.com/icon/fail.svg?s=12\" alt=\"PASS\" />";
 
+    /**
+     * An output stream that writes to the GitHub Action job summary file (Markdown).
+     */
     private final FileOutputStream jobSummaryOutput;
 
+    /**
+     * A string buffer for the list of validated resources. It is markdown content.
+     */
     private final StringBuilder listOutput;
 
+    /**
+     * A string buffer for the detail of test failures. It is markdown content.
+     */
     private final StringBuilder failureDetailsOutput;
 
+    /**
+     * The Matchbox engine that will validate the resources.
+     */
     private final MatchboxEngine engine;
 
+    /**
+     * A map of the resources to validate. The key is the file path, the value is the last part of the profile URL.
+     */
     private final Map<String, String> resources = new HashMap<>(48);
 
+    /**
+     * The validation start time.
+     */
     private final Instant startTime;
 
-    public static void main(String[] args) throws Exception {
-        for (final var entry : System.getenv().entrySet()) {
-            log.info(String.format("env.%s=%s", entry.getKey(), entry.getValue()));
-        }
-        final var runner = new ValidationRunner(System.getenv("GITHUB_STEP_SUMMARY"));
-        runner.run();
-    }
-
     public ValidationRunner(final String jobSummaryPath)
-            throws IOException, URISyntaxException, ParserConfigurationException {
+            throws IOException, URISyntaxException {
         Objects.requireNonNull(jobSummaryPath, "jobSummaryPath shall not be null in ValidationRunner()");
         log.info("Using job summary path: " + jobSummaryPath);
 
@@ -59,6 +61,8 @@ class ValidationRunner {
         this.jobSummaryOutput = new FileOutputStream(jobSummaryPath);
         this.listOutput = new StringBuilder();
         this.failureDetailsOutput = new StringBuilder();
+
+        // Initializes the validation engine with the relevant IGs
         this.engine = new MatchboxEngine.MatchboxEngineBuilder().getEngineR4();
         this.engine.getIgLoader().loadIg(this.engine.getIgs(),
                                          this.engine.getBinaries(),
@@ -77,7 +81,18 @@ class ValidationRunner {
         this.listOtherResources();
     }
 
-    public void run() throws IOException, TransformerException {
+    /**
+     * CLI entry point.
+     *
+     * @param args Arguments. Not used.
+     * @throws Exception
+     */
+    public static void main(String[] args) throws Exception {
+        final var runner = new ValidationRunner(System.getenv("GITHUB_STEP_SUMMARY"));
+        runner.run();
+    }
+
+    public void run() throws IOException {
         int successes = 0;
         int failures = 0;
 
@@ -96,7 +111,8 @@ class ValidationRunner {
         final Duration duration = Duration.between(this.startTime, Instant.now());
 
         // Write to markdown
-        this.writeJobSummary("| Test result \uD83D\uDD0E | Passed ✅ | Failed ❌ | Total \uD83D\uDCC4 | Time duration ⏱ |\n");
+        this.writeJobSummary(
+                "| Test result \uD83D\uDD0E | Passed ✅ | Failed ❌ | Total \uD83D\uDCC4 | Time duration ⏱ |\n");
         this.writeJobSummary("|---|---|---|---|---|\n");
         this.writeJobSummary(String.format("|%s|%d|%d|%d|%dm %ds|\n\n",
                                            status,
@@ -111,14 +127,17 @@ class ValidationRunner {
                                            failures));
         this.writeJobSummary("### Resources\n\n");
         this.writeJobSummary(this.listOutput.toString());
-        this.writeJobSummary("### Failure details\n\n");
-        this.writeJobSummary(this.failureDetailsOutput.toString());
 
         if (failures > 0) {
+            this.writeJobSummary("### Failure details\n\n");
+            this.writeJobSummary(this.failureDetailsOutput.toString());
             throw new RuntimeException("The validation of " + failures + " resource failed");
         }
     }
 
+    /**
+     * Loads the resources of the IG profile.
+     */
     private void listIgResources() {
         this.add2Resources("output/Bundle-BundlePml1", "ch-emed-epr-document-medicationlist");
         this.add2Resources("output/Bundle-BundlePmlc1", "ch-emed-epr-document-medicationcard");
@@ -128,7 +147,8 @@ class ValidationRunner {
         this.add2Resources("output/Medication-MedicationTriatec", "ch-emed-epr-medication");
         this.add2Resources("output/Medication-MedicationWithATC", "ch-emed-epr-medication");
         this.add2Resources("output/Medication-MedicationWithTwoIngredients", "ch-emed-epr-medication");
-        this.add2Resources("output/MedicationStatement-MedicationStatementTriatecMtp", "ch-emed-epr-medicationstatement-treatmentplan");
+        this.add2Resources("output/MedicationStatement-MedicationStatementTriatecMtp",
+                           "ch-emed-epr-medicationstatement-treatmentplan");
         this.add2Resources("output/Organization-OrganizationCara", "ch-emed-epr-organization");
         this.add2Resources("output/Organization-OrganizationHug", "ch-emed-epr-organization");
         this.add2Resources("output/Patient-PatientDupont", "ch-emed-epr-patient");
@@ -150,11 +170,11 @@ class ValidationRunner {
 
                 this.failureDetailsOutput.append(String.format("#### %s\n```\n", filePath));
                 this.failureDetailsOutput.append(String.format("Profile URL: %s\n",
-                                                     profileUrl));
+                                                               profileUrl));
                 for (final var issue : outcome.getIssue()) {
                     this.failureDetailsOutput.append(String.format("%s %s\n",
-                                                         issue.getSeverity().name(),
-                                                         issue.getDetails().getText()));
+                                                                   issue.getSeverity().name(),
+                                                                   issue.getDetails().getText()));
                 }
                 this.failureDetailsOutput.append("```\n");
                 return false;
@@ -183,6 +203,9 @@ class ValidationRunner {
         this.resources.put(resourcePath + ".xml", profileUrl);
     }
 
+    /**
+     * Loads resources that are not part of the IG profile, if any.
+     */
     private void listOtherResources() {
 
     }
@@ -192,8 +215,11 @@ class ValidationRunner {
      *
      * @param content The markdown content to append.
      * @throws IOException if the job summary file is not writable.
-     * @see <a href="https://github.blog/2022-05-09-supercharging-github-actions-with-job-summaries/">Supercharging GitHub Actions with Job Summaries</a>
-     * @see <a href="https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#adding-a-job-summary">Adding a job summary</a>
+     * @see <a href="https://github.blog/2022-05-09-supercharging-github-actions-with-job-summaries/">Supercharging
+     * GitHub Actions with Job Summaries</a>
+     * @see <a
+     * href="https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#adding-a-job-summary">Adding
+     * a job summary</a>
      */
     private void writeJobSummary(final String content) throws IOException {
         this.jobSummaryOutput.write(content.getBytes(StandardCharsets.UTF_8));
