@@ -6,18 +6,18 @@ Usage: #example
 * identifier.value = "urn:uuid:cdce5856-7ef7-4f0c-a456-45531110aeb5"
 * type = #document
 * timestamp = "2023-04-21T08:47:22.320+02:00"
-* entry[0].fullUrl = "urn:uuid:cdce5856-7ef7-4f0c-a456-45531110aeb5"
-* entry[=].resource = Inline-Instance-for-pmlc1-1
-* entry[+].fullUrl = "urn:uuid:574d95b5-6ee1-4726-b399-e16eaf225e60"
-* entry[=].resource = Inline-Instance-for-pmlc1-2
-* entry[+].fullUrl = "urn:uuid:a7082159-24c8-4991-97ae-ffee0c3e3ce8"
-* entry[=].resource = Inline-Instance-for-pmlc1-3
-* entry[+].fullUrl = "urn:uuid:5f1b39a0-7cc3-4885-8263-8e39a6f71b22"
-* entry[=].resource = Inline-Instance-for-pmlc1-4
-* entry[+].fullUrl = "urn:uuid:41b97645-e263-47c2-8d96-79da451a33f2"
-* entry[=].resource = Inline-Instance-for-pmlc1-5
-* entry[+].fullUrl = "urn:uuid:8139d696-e83c-49ea-a94a-651edfaecd7b"
-* entry[=].resource = Inline-Instance-for-pmlc1-6
+* entry[Composition].fullUrl = "urn:uuid:cdce5856-7ef7-4f0c-a456-45531110aeb5"
+* entry[Composition].resource = Inline-Instance-for-pmlc1-1
+* entry[Patient].fullUrl = "urn:uuid:574d95b5-6ee1-4726-b399-e16eaf225e60"
+* entry[Patient].resource = Inline-Instance-for-pmlc1-2
+* entry[Device].fullUrl = "urn:uuid:a7082159-24c8-4991-97ae-ffee0c3e3ce8"
+* entry[Device].resource = Inline-Instance-for-pmlc1-3
+* entry[Organization].fullUrl = "urn:uuid:5f1b39a0-7cc3-4885-8263-8e39a6f71b22"
+* entry[Organization].resource = Inline-Instance-for-pmlc1-4
+* entry[MedicationStatement].fullUrl = "urn:uuid:41b97645-e263-47c2-8d96-79da451a33f2"
+* entry[MedicationStatement].resource = Inline-Instance-for-pmlc1-5
+* entry[Binary].fullUrl = "urn:uuid:8139d696-e83c-49ea-a94a-651edfaecd7b"
+* entry[Binary].resource = Inline-Instance-for-pmlc1-6
 
 Instance: Inline-Instance-for-pmlc1-1
 InstanceOf: CHEMEDEPRCompositionMedicationCard
@@ -32,19 +32,19 @@ Usage: #inline
 * author = Reference(urn:uuid:a7082159-24c8-4991-97ae-ffee0c3e3ce8)
 * title = "Plan de médication"
 * confidentiality = #N
-* confidentiality.extension.url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-confidentialitycode"
-* confidentiality.extension.valueCodeableConcept = $sct#17621005 "Normal (qualifier value)"
+* confidentiality.extension[confidentialityCode].url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-confidentialitycode"
+* confidentiality.extension[confidentialityCode].valueCodeableConcept = $sct#17621005 "Normal (qualifier value)"
 * custodian = Reference(urn:uuid:5f1b39a0-7cc3-4885-8263-8e39a6f71b22)
-* section[0].title = "Medication List"
-* section[=].code = $lnc#10160-0 "History of medication use"
-* section[=].text.status = #generated
-* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Ce plan de médication a été généré automatiquement par le service eMedication CARA le 21 avril 2023 à 08:47:22 CEST. Tous les traitements actifs sont considérés.</div>"
-* section[=].entry = Reference(urn:uuid:41b97645-e263-47c2-8d96-79da451a33f2)
-* section[+].title = "Original representation"
-* section[=].code = $lnc#55108-5 "Clinical presentation"
-* section[=].text.status = #generated
-* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">The original representation as a PDF file</div>"
-* section[=].entry = Reference(urn:uuid:8139d696-e83c-49ea-a94a-651edfaecd7b)
+* section[card].title = "Medication List"
+* section[card].code = $lnc#10160-0 "History of medication use"
+* section[card].text.status = #generated
+* section[card].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Ce plan de médication a été généré automatiquement par le service eMedication CARA le 21 avril 2023 à 08:47:22 CEST. Tous les traitements actifs sont considérés.</div>"
+* section[card].entry = Reference(urn:uuid:41b97645-e263-47c2-8d96-79da451a33f2)
+* section[originalRepresentation].title = "Original representation"
+* section[originalRepresentation].code = $lnc#55108-5 "Clinical presentation"
+* section[originalRepresentation].text.status = #generated
+* section[originalRepresentation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">The original representation as a PDF file</div>"
+* section[originalRepresentation].entry = Reference(urn:uuid:8139d696-e83c-49ea-a94a-651edfaecd7b)
 
 Instance: Inline-Instance-for-pmlc1-2
 InstanceOf: CHEMEDEPRPatient
@@ -157,8 +157,8 @@ Usage: #inline
 * medicationReference.reference = "#medication-1"
 * subject = Reference(urn:uuid:574d95b5-6ee1-4726-b399-e16eaf225e60)
 * informationSource.reference = "#practitioner-role-1"
-* dosage.id = "#dosage-1"
-* dosage.patientInstruction = "À prendre avec de l'eau"
+* dosage[baseEntry].id = "#dosage-1"
+* dosage[baseEntry].patientInstruction = "À prendre avec de l'eau"
 
 Instance: Inline-Instance-for-pmlc1-6
 InstanceOf: Binary
