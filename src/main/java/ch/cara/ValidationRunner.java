@@ -66,6 +66,11 @@ class ValidationRunner {
         this.engine = new MatchboxEngine.MatchboxEngineBuilder().getEngineR4();
         this.engine.getIgLoader().loadIg(this.engine.getIgs(),
                                          this.engine.getBinaries(),
+                                         "http://fhir.ch/ig/ch-epr-term/package.tgz",
+                                         // TODO: change URL for build.fhir.org version
+                                         true);
+        this.engine.getIgLoader().loadIg(this.engine.getIgs(),
+                                         this.engine.getBinaries(),
                                          "http://build.fhir.org/ig/hl7ch/ch-core/package.tgz",
                                          true);
         this.engine.getIgLoader().loadIg(this.engine.getIgs(),
