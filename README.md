@@ -31,3 +31,7 @@ On commit on the master branch, a workflow ensures [SUSHI](https://github.com/FH
 and GitHub triggers the HTTP endpoint of the [FHIR autobuild server](https://github.com/FHIR/auto-ig-builder) with the details of the project.
 The build status is posted in [chat.fhir.org](https://chat.fhir.org/#narrow/stream/179297-committers.2Fnotification/topic/ig-build),
 the [build logs](http://build.fhir.org/ig/CARA-ch/ch-emed-epr/branches/master/build.log) are also available if needed.
+
+## Activity
+
+![Alt](https://repobeats.axiom.co/api/embed/7f614368b6620a9c1c0419fc8664defae0ba315f.svg "Repobeats analytics image")
