@@ -18,7 +18,7 @@ Title: "Amount Quantity"
 Description: "A quantity with an amount unit (no time unit)"
 * insert quantity-ruleset
 * code from CHEMEDEPRAmountQuantityUnitCode (required)
-* value obeys amount-quantity-int-or-simple-decimal
+//* value obeys amount-quantity-int-or-simple-decimal // TODO: fix this FHIRPath
 
 Invariant: amount-quantity-int-or-simple-decimal
 Description: "An amount quantity shall be either an integer, or a decimal that ends with '.25', '.5', or '.75'"
