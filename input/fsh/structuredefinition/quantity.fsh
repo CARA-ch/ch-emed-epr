@@ -18,11 +18,11 @@ Title: "Amount Quantity"
 Description: "A quantity with an amount unit (no time unit)"
 * insert quantity-ruleset
 * code from CHEMEDEPRAmountQuantityUnitCode (required)
-//* value obeys amount-quantity-int-or-simple-decimal // TODO: fix this FHIRPath
+* value obeys amount-quantity-int-or-simple-decimal
 
 Invariant: amount-quantity-int-or-simple-decimal
 Description: "An amount quantity shall be either an integer, or a decimal that ends with '.25', '.5', or '.75'"
-Expression: "$this.contains('.').not() or $this.endsWith('.25') or $this.endsWith('.5') or $this.endsWith('.75')"
+Expression: "$this.toString().contains('.').not() or $this.toString().endsWith('.25') or $this.toString().endsWith('.5') or $this.toString().endsWith('.75')"
 Severity: #error
 
 
