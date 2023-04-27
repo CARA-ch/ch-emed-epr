@@ -3,9 +3,7 @@ RuleSet: composition-ruleset
 * confidentiality = http://terminology.hl7.org/CodeSystem/v3-Confidentiality#N "normal"
 * confidentiality.extension[confidentialityCode].valueCodeableConcept insert codeableconcept-ruleset
 * confidentiality.extension[confidentialityCode].valueCodeableConcept.coding insert coding-ruleset
-* confidentiality.extension[confidentialityCode].valueCodeableConcept.coding.code = #17621005
-* confidentiality.extension[confidentialityCode].valueCodeableConcept.coding.system = $sct
-* confidentiality.extension[confidentialityCode].valueCodeableConcept.coding.display = "Normal (qualifier value)"
+* confidentiality.extension[confidentialityCode].valueCodeableConcept.coding = $sct#17621005
 * relatesTo.code = http://hl7.org/fhir/document-relationship-type#replaces "Replaces"
 * identifier.use = http://hl7.org/fhir/identifier-use#official "Official"
 * identifier.value obeys urn-uuid-invariant
