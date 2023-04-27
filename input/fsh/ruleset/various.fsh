@@ -31,7 +31,7 @@ RuleSet: codeableconcept-ruleset
 
 RuleSet: codeableconcept-with-text-ruleset
 * insert codeableconcept-ruleset
-* text 1..1
+* text 1..1 // TODO #16
 
 
 RuleSet: meta-ruleset
@@ -39,7 +39,7 @@ RuleSet: meta-ruleset
 * insert no-support(versionId)
 * insert no-support(lastUpdated)
 * insert no-support(source)
-* security 0..0 // No security concept
+* insert no-support(security) // No security concept
 * insert no-support(tag)
 
 

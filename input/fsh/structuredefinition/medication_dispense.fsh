@@ -31,8 +31,8 @@ RuleSet: medication-dispense-ruleset
 * subject only Reference(CHEMEDEPRPatient)
 * subject ^type.aggregation[+] = #referenced
 * subject ^type.aggregation[+] = #bundled
-* subject 1..1
-* statusReason[x] 0..0
+//* subject 1..1 // TODO #16
+//* statusReason[x] 0..0 // TODO #16
 * insert no-support(statusReason[x])
 * statusReason[x] ^short = "✕ This is only meaningful when the dispense was not performed"
 * substitution insert backbone-ruleset

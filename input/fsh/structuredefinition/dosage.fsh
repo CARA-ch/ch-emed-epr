@@ -51,8 +51,8 @@ RuleSet: common-dosage-ruleset
 * doseAndRate.doseRange only CHEMEDEPRAmountRange
 * doseAndRate.rate[x] only Ratio // Range and quantity not compatible with our units (it would require a UCUM unit of amount per time)
 * doseAndRate.rateRatio only CHEMEDEPRRatioAmountPerTime
-* route.text 1..1
-* site.text 1..1
+* route.text 1..1 // TODO #16
+* site.text 1..1 // TODO #16
 * timing.repeat.bounds[x] only Period
 
 

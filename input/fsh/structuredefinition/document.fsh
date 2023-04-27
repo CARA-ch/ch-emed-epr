@@ -2,7 +2,7 @@ RuleSet: document-ruleset
 * insert resource-ruleset
 * identifier.use = http://hl7.org/fhir/identifier-use#official "Official"
 * identifier.value obeys urn-uuid-invariant
-* entry[Patient] 1..1
+* entry[Patient] 1..
 * entry[Practitioner].resource only CHEMEDEPRPractitioner
 * entry[PractitionerRole].resource only CHEMEDEPRPractitionerRole
 * entry[Patient].resource only CHEMEDEPRPatient
@@ -39,7 +39,7 @@ Description: "Definition of the bundle for the medication treatment plan documen
 * insert document-ruleset
 * entry[Composition].resource only CHEMEDEPRCompositionMedicationTreatmentPlan
 * entry[MedicationStatement].resource only CHEMEDEPRMedicationStatement
-* entry[MedicationStatement] 1..1
+* entry[MedicationStatement] 1..
 * entry[MedicationStatement] ^short = "Details about the medication introduced in the treatment plan"
 // TODO: entry.fullUrl is weird, 0..1 or 1..1 depending on the entry. https://github.com/hl7ch/ch-core/issues/192
 

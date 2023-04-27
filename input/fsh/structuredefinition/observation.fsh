@@ -31,11 +31,10 @@ RuleSet: observation-ruleset
 * insert problematic-reference(note.authorReference)
 * note.author[x] ^short = "✕ The note author is ignored, as it cannot be different than the observation author"
 * insert no-support(note.time)
-// TODO check changed entry ID is the same as referenced entry?
 * subject only Reference(CHEMEDEPRPatient)
 * subject ^type.aggregation[+] = #referenced
 * subject ^type.aggregation[+] = #bundled
-* subject 1..1
+//* subject 1..1  // TODO #16
 
 
 // =====================================================================================

@@ -4,9 +4,7 @@ RuleSet: medication-statement-ruleset
 * subject only Reference(CHEMEDEPRPatient)
 * subject ^type.aggregation[+] = #referenced
 * subject ^type.aggregation[+] = #bundled
-* subject 1..1
 * insert no-support(basedOn)
-* insert no-support(partOf)
 * insert no-support(statusReason) // TODO: we may want this
 * insert no-support(category) // TODO: we may want this
 * insert no-support(context)
@@ -25,7 +23,6 @@ RuleSet: medication-statement-ruleset
 * dosage[additionalEntry] ^type.aggregation[+] = #contained
 * insert problematic-reference(identifier.assigner)
 * insert problematic-reference(basedOn)
-* insert problematic-reference(partOf)
 * insert problematic-reference(context)
 * insert problematic-reference(derivedFrom)
 * insert problematic-reference(reasonReference)
@@ -44,7 +41,7 @@ RuleSet: medication-statement-mtp-ruleset
 * insert medication-statement-ruleset
 * extension[substitution].value[x] only CodeableConcept
 * extension[substitution].valueCodeableConcept from substance-admin-substitution-code (required)
-* extension[substitution].valueCodeableConcept.coding 1..1
+* extension[substitution].valueCodeableConcept.coding 1..
 * extension[substitution].valueCodeableConcept insert codeableconcept-ruleset
 * insert no-support(extension[substitution].id)
 * extension[substitution] ^short = "Whether the dispenser can substitute the prescribed medicine/package by another that is deemed equivalent, for medical or logistical reasons. By default, substitution is authorized."
@@ -52,7 +49,6 @@ RuleSet: medication-statement-mtp-ruleset
 // TODO TEST flags
 * insert overridden(informationSource)
 * informationSource ^short = "✕ The information source is given in Composition.section.author or Composition.author (see guidance)"
-* insert no-support(subject)
 
 
 Profile: CHEMEDEPRMedicationStatement
@@ -61,6 +57,7 @@ Id: ch-emed-epr-medicationstatement-treatmentplan
 Title: "MTP MedicationStatement"
 Description: "Definition of the medication statement for the Medication Treatment Plan document"
 * insert medication-statement-mtp-ruleset
+* insert no-support(partOf)
 
 
 // =====================================================================================
@@ -84,7 +81,7 @@ Title: "PML MedicationStatement"
 Description: "Definition of the medication statement for the medication list document"
 * insert medication-statement-ruleset
 * extension[substitution].valueCodeableConcept.coding from substance-admin-substitution-code (required)
-* extension[substitution].valueCodeableConcept.coding 1..1
+* extension[substitution].valueCodeableConcept.coding 1..
 * extension[substitution].valueCodeableConcept insert codeableconcept-ruleset
 * extension[authorDocument].valueReference only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
 * insert no-support(extension[substitution].id)

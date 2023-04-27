@@ -27,12 +27,12 @@ RuleSet: composition-ruleset
 * insert no-support(event)
 * insert no-support(relatesTo)
 * insert no-support(author.id)
-* author.identifier 0..0 // The literal reference is required
+//* author.identifier 0..0 // The literal reference is required
 * insert no-support(custodian.id)
-* custodian.identifier 0..0 // The literal reference is required
+//* custodian.identifier 0..0 // The literal reference is required
 * identifier insert identifier-ruleset
 * insert no-support(confidentiality.id)
-* section.focus 0..0
+* insert no-support(section.focus)
 * section.mode = http://hl7.org/fhir/list-mode#snapshot "Snapshot List" // Document-based workflow, it's always a snapshot and not a live resource
 * insert no-support(section.orderedBy) // It's not ordered
 * insert no-support(section.entry.id)
@@ -67,7 +67,7 @@ RuleSet: composition-with-original-representation-ruleset
 * section[originalRepresentation].code insert codeableconcept-ruleset
 * section[originalRepresentation].code.coding insert coding-ruleset
 * insert no-support(section[originalRepresentation].entry.id)
-* section[originalRepresentation].entry.identifier 0..0 // The literal reference is required
+//* section[originalRepresentation].entry.identifier 0..0 // The literal reference is required
 * insert no-support(section[originalRepresentation].extension)
 
 
