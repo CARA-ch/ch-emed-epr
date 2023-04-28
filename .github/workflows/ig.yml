@@ -21,3 +21,6 @@ jobs:
 
       - name: 'Build the IG'
         uses: qligier/fhir-ig-action@main
+        with:
+          ig-publisher: 'latest'
+          sushi: 'latest'
