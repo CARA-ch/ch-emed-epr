@@ -20,4 +20,4 @@ jobs:
         uses: actions/checkout@v3
 
       - name: 'Build the IG'
-        uses: qligier/fhir-ig-action@df6a14eb01febbbe06729399d01d35f5a39d3356
+        uses: qligier/fhir-ig-action@main
