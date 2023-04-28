@@ -17,7 +17,7 @@ jobs:
 
     steps:
       - name: 'Checkout the repository'
-        uses: qligier/fhir-ig-action@3094d8570be5635c7fd12bb5da49c004ee21bf59
+        uses: actions/checkout@v3
 
       - name: 'Build the IG'
-        uses: qligier/fhir-ig-action@3094d8570be5635c7fd12bb5da49c004ee21bf59
+        uses: qligier/fhir-ig-action@3afbc80016c385580e0d7f6265684a0e59eff5c3
