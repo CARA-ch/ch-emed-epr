@@ -21,7 +21,6 @@ jobs:
 
       - name: 'Build the IG'
         uses: qligier/fhir-ig-action@test
-        timeout-minutes: 2
         with:
           ig-publisher: 'latest'
           sushi: 'latest'
