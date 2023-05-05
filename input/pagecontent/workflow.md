@@ -25,7 +25,7 @@ The typical workflow for a dispenser (pharmacist), and the corresponding transac
 - To prescribe new medication.
   - [PRE](document_pre.html) (Prescription) for each medication prescribed by the dispenser.
   - Export [MTP](document_mtp.html) (Medication Treatment Plan) for each new treatment to introduce them into the plan.
-- To dispense the prescribes medication or appropriate generics, possibly changing the dosage form.
+- To dispense the prescribed medication or appropriate generics, possibly changing the dosage form.
   - [DIS](document_dis.html) (Dispense) for each medication actually dispensed.
 - To generate a medication card for the patient.
   - Import [PLMc](document_pmlc.html) to create a document describing the new actual medication of the patient.
