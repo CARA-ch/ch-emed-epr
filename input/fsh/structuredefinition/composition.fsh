@@ -84,9 +84,9 @@ Description: "Definition of the composition for the medication treatment plan do
 * section[treatmentPlan].entry only Reference(CHEMEDEPRMedicationStatement)
 * section[treatmentPlan].code insert codeableconcept-ruleset
 * section[treatmentPlan].code.coding insert coding-ruleset
-* author only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson or Device) // Only the types authorized in the slices
+* author only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson or CHEMEDEPRDevice) // Only the types authorized in the slices
 * author[person] only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
-* author[device] only Reference(Device)
+* author[device] only Reference(CHEMEDEPRDevice)
 * section[treatmentPlan].author only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
 
 
@@ -103,9 +103,9 @@ Description: "Definition of the composition for the medication prescription docu
 * insert composition-with-original-representation-ruleset
 // TODO prevent other sections (keep only slices)?
 * section[prescription].entry only Reference(CHEMEDEPRMedicationRequest)
-* author only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson or Device) // Only the types authorized in the slices
+* author only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson or CHEMEDEPRDevice) // Only the types authorized in the slices
 * author[person] only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
-* author[device] only Reference(Device)
+* author[device] only Reference(CHEMEDEPRDevice)
 * section[prescription].author only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
 
 
@@ -122,9 +122,9 @@ Description: "Definition of the composition for the medication dispense document
 * insert composition-with-original-representation-ruleset
 // TODO prevent other sections (keep only slices)?
 * section[dispense].entry only Reference(CHEMEDEPRMedicationDispense)
-* author only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson or Device) // Only the types authorized in the slices
+* author only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson or CHEMEDEPRDevice) // Only the types authorized in the slices
 * author[person] only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
-* author[device] only Reference(Device)
+* author[device] only Reference(CHEMEDEPRDevice)
 * section[dispense].author only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
 
 
@@ -140,9 +140,9 @@ Description: "Definition of the composition for the pharmaceutical advice docume
 * insert composition-with-annotation-ruleset
 * insert composition-with-original-representation-ruleset
 * section[pharmaceuticalAdvice].entry only Reference(CHEMEDEPRObservation)
-* author only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson or Device) // Only the types authorized in the slices
+* author only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson or CHEMEDEPRDevice) // Only the types authorized in the slices
 * author[person] only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
-* author[device] only Reference(Device)
+* author[device] only Reference(CHEMEDEPRDevice)
 * section[pharmaceuticalAdvice].author only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
 
 
