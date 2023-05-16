@@ -26,7 +26,7 @@ Usage: #inline
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:cdce5856-7ef7-4f0c-a456-45531110aeb5"
 * status = #final
-* type = $sct#721912009 "Medication summary document (record artifact)"
+* type = $sct#736378000 "Medication management plan (record artifact)"
 * subject = Reference(urn:uuid:574d95b5-6ee1-4726-b399-e16eaf225e60)
 * date = "2023-04-21T08:47:22+02:00"
 * author = Reference(urn:uuid:a7082159-24c8-4991-97ae-ffee0c3e3ce8)
