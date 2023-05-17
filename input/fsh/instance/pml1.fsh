@@ -35,7 +35,7 @@ Usage: #inline
 * confidentiality.extension[confidentialityCode].valueCodeableConcept = $sct#17621005 "Normal (qualifier value)"
 * custodian = Reference(urn:uuid:0b08ced4-feaa-416e-98b9-78d1597e0940)
 * section[list].title = "Medication List"
-* section[list].code = $lnc#10160-0 "History of medication use"
+* section[list].code = $lnc#10160-0 "History of Medication use Narrative"
 * section[list].text.status = #generated
 * section[list].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Cette liste de médication a été générée automatiquement par le service eMedication CARA le 21 avril 2023 à 09:21:54 CEST. Les paramètres utilisés pour la génération du document sont : les éléments de type Medication Treatment Plan Item, Prescription Item, Dispense Item et PADV sont inclus ; tous les traitements sont considérés.</div>"
 * section[list].entry = Reference(urn:uuid:41b97645-e263-47c2-8d96-79da451a33f2)

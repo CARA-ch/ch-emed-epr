@@ -36,12 +36,12 @@ Usage: #inline
 * confidentiality.extension[confidentialityCode].valueCodeableConcept = $sct#17621005 "Normal (qualifier value)"
 * custodian = Reference(urn:uuid:5f1b39a0-7cc3-4885-8263-8e39a6f71b22)
 * section[card].title = "Medication List"
-* section[card].code = $lnc#10160-0 "History of medication use"
+* section[card].code = $lnc#10160-0 "History of Medication use Narrative"
 * section[card].text.status = #generated
 * section[card].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Ce plan de médication a été généré automatiquement par le service eMedication CARA le 21 avril 2023 à 08:47:22 CEST. Tous les traitements actifs sont considérés.</div>"
 * section[card].entry = Reference(urn:uuid:41b97645-e263-47c2-8d96-79da451a33f2)
 * section[originalRepresentation].title = "Original representation"
-* section[originalRepresentation].code = $lnc#55108-5 "Clinical presentation"
+* section[originalRepresentation].code = $lnc#55108-5 "Clinical presentation Document"
 * section[originalRepresentation].text.status = #generated
 * section[originalRepresentation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">The original representation as a PDF file</div>"
 * section[originalRepresentation].entry = Reference(urn:uuid:8139d696-e83c-49ea-a94a-651edfaecd7b)
