@@ -1,7 +1,7 @@
 Profile: CHEMEDEPRRelatedPerson
 Parent: RelatedPerson
 Id: ch-emed-epr-related-person
-Title: "RelatedPerson"
+Title: "CH EMED EPR RelatedPerson"
 Description: "Definition of the related person for the eMedication context"
 
 * insert domain-resource-ruleset

@@ -71,7 +71,6 @@ parameters:
   allow-extensible-warnings: true
   generate-version: r4
   bundle-references-resolve: true
-  generate-turtle: false
   excludettl: true
   generate: [genExamples]
   no-narrative: '*/*'

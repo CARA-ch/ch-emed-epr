@@ -21,9 +21,9 @@ Description: "A quantity with an amount unit (no time unit)"
 * value obeys amount-quantity-int-or-simple-decimal
 
 Invariant: amount-quantity-int-or-simple-decimal
-Description: "An amount quantity shall be either an integer, or a decimal that ends with '.25', '.5', or '.75'"
+Description: "An amount quantity should be either an integer, or a decimal that ends with '.25', '.5', or '.75' for non-scientific units (like tablets, pillules, ampules, etc.)"
 Expression: "$this.toString().contains('.').not() or $this.toString().endsWith('.25') or $this.toString().endsWith('.5') or $this.toString().endsWith('.75')"
-Severity: #error
+Severity: #warning
 
 
 // =====================================================================================

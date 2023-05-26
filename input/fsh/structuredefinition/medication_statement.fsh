@@ -18,9 +18,7 @@ RuleSet: medication-statement-ruleset
 * medicationReference only Reference(CHEMEDEPRMedication)
 * medicationReference ^type.aggregation[+] = #contained
 * dosage[baseEntry] only CHEMEDEPRDosage
-* dosage[baseEntry] ^type.aggregation[+] = #contained
 * dosage[additionalEntry] only CHEMEDEPRDosageSplit
-* dosage[additionalEntry] ^type.aggregation[+] = #contained
 * insert problematic-reference(identifier.assigner)
 * insert problematic-reference(basedOn)
 * insert problematic-reference(context)
