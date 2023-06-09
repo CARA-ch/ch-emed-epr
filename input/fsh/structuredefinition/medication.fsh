@@ -33,7 +33,7 @@ RuleSet: medication-ruleset
 Profile: CHEMEDEPRMedication
 Parent: CHEMEDMedication
 Id: ch-emed-epr-medication
-Title: "Medication"
+Title: "CH EMED EPR Medication"
 Description: "Definition of the medication"
 * insert medication-ruleset
 * insert problematic-reference(identifier.assigner)
@@ -46,6 +46,6 @@ Description: "Definition of the medication"
 Profile: CHEMEDEPRMedicationMedicationDispense
 Parent: CHEMEDMedicationMedicationDispense
 Id: ch-emed-epr-medication-medicationdispense
-Title: "Medication (DIS)"
+Title: "CH EMED EPR Medication (DIS)"
 Description: "Definition of the medication for the medication dispense"
 * insert medication-ruleset

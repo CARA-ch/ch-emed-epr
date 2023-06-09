@@ -24,9 +24,7 @@ RuleSet: medication-dispense-ruleset
 * quantity only CHEMEDEPRAmountQuantity
 * daysSupply only CHEMEDEPRTimeQuantity
 * dosageInstruction[baseEntry] only CHEMEDEPRDosage
-* dosageInstruction[baseEntry] ^type.aggregation[+] = #contained
 * dosageInstruction[additionalEntry] only CHEMEDEPRDosageSplit
-* dosageInstruction[additionalEntry] ^type.aggregation[+] = #contained
 * note.text ^short = "The annotation text content"
 * subject only Reference(CHEMEDEPRPatient)
 * subject ^type.aggregation[+] = #referenced
