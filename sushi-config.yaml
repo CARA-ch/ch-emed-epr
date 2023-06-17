@@ -208,7 +208,8 @@ parameters:
 # The instanceOptions property is used to configure certain aspects of how SUSHI processes instances.
 # See the individual option definitions below for more detail.
 #
-# instanceOptions:
+instanceOptions:
+  manualSliceOrdering: true
 #   Determines for which types of Instances SUSHI will automatically set meta.profile
 #   if InstanceOf references a profile:
 #
