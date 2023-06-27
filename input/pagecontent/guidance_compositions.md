@@ -91,4 +91,9 @@ The example below shows the skeletton of the [FHIR's discharge summary document]
 ## Processing documents
 When processing a FHIR document, one should always start by reading the composition and then follow the references instead of listing every entry first.
 
+## Contained resources
+In some cases, resources must be [contained](https://www.hl7.org/fhir/references.html#contained) instead of [referenced](https://www.hl7.org/fhir/references.htm). This happens when a resource has no independant existance, that is it is only meaningful in the context of the containing resource.
+
+In the eMedication context, this is the case for the [medication](StructureDefinition-ch-emed-epr-medication.html) resource, that must always be contained in a [medication statement](StructureDefinition-ch-emed-epr-medicationstatement-treatmentplan.html) resource : medication only exists within the context of a medication statement.
+
 
