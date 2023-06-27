@@ -5,9 +5,9 @@ Those are generic guidances that apply to all documents.
 The patient body weight can be specified by adding a [Body Weight Observation](StructureDefinition-ch-emed-epr-observation-body-weight.html) to the Bundle in the entry "ObsBodyWeight". It must be referenced from the Composition too, in the section "vitalSigns".
 
 ### IDs and identifiers
-Both ids et identifiers are mentionned in this documentation. Although they might seem similar, they differ in the fact that ```id``` is relative to a given FHIR document, while ```identifier``` is absolute for a resource.
+Both ids and identifiers are mentionned in this documentation. Although they might seem similar, they differ in the fact that ```id``` is relative to a given FHIR document, while ```identifier``` is absolute for a resource.
 
-A given ressource (for instance a pratician) might have a different ```id``` in different FHIR document, but it will always have the same identifier (eg. its GLN).
+A given ressource (for instance a pratician) might have a different ```id``` in different FHIR document, but it will always have the same ```identifier``` (eg. its GLN).
 
 For instance, in the following resource :
 ```json
