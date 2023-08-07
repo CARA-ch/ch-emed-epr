@@ -55,7 +55,7 @@ Description: "Definition of the bundle for the medication prescription document"
 * insert document-ruleset
 * entry[Composition].resource only CHEMEDEPRCompositionMedicationPrescription
 * entry[MedicationRequest].resource only CHEMEDEPRMedicationRequest
-* entry[Binary] 1..
+// * entry[Binary] 1..
 
 
 // =====================================================================================
