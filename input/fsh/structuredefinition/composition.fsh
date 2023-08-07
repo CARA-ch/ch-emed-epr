@@ -64,7 +64,7 @@ RuleSet: composition-with-original-representation-ruleset
 * insert no-support(section[originalRepresentation].id)
 * section[originalRepresentation].code insert codeableconcept-ruleset
 * section[originalRepresentation].code.coding insert coding-ruleset
-* section[originalRepresentation].entry ^short = "According to the EPR ordonnance the PDF has to be in PDF/A-1 or PDF/A-2 format. The PDF shall be contained locally in the document."
+// * section[originalRepresentation].entry ^short = "According to the EPR ordonnance the PDF has to be in PDF/A-1 or PDF/A-2 format. The PDF shall be contained locally in the document."
 * insert no-support(section[originalRepresentation].entry.id)
 //* section[originalRepresentation].entry.identifier 0..0 // The literal reference is required
 * insert no-support(section[originalRepresentation].extension)
