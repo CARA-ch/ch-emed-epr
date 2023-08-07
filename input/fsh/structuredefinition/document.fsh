@@ -29,7 +29,7 @@ RuleSet: document-ruleset
 
 
 // =====================================================================================
-// Composition MTP
+// Document MTP
 // =====================================================================================
 Profile: CHEMEDEPRDocumentMedicationTreatmentPlan
 Parent: CHEMEDDocumentMedicationTreatmentPlan
@@ -45,7 +45,7 @@ Description: "Definition of the bundle for the medication treatment plan documen
 
 
 // =====================================================================================
-// Composition PRE
+// Document PRE
 // =====================================================================================
 Profile: CHEMEDEPRDocumentMedicationPrescription
 Parent: CHEMEDDocumentMedicationPrescription
@@ -55,10 +55,11 @@ Description: "Definition of the bundle for the medication prescription document"
 * insert document-ruleset
 * entry[Composition].resource only CHEMEDEPRCompositionMedicationPrescription
 * entry[MedicationRequest].resource only CHEMEDEPRMedicationRequest
+* entry[Binary] 1..
 
 
 // =====================================================================================
-// Composition DIS
+// Document DIS
 // =====================================================================================
 Profile: CHEMEDEPRDocumentMedicationDispense
 Parent: CHEMEDDocumentMedicationDispense
@@ -71,7 +72,7 @@ Description: "Definition of the bundle for the medication dispense document"
 
 
 // =====================================================================================
-// Composition PADV
+// Document PADV
 // =====================================================================================
 Profile: CHEMEDEPRDocumentPharmaceuticalAdvice
 Parent: CHEMEDDocumentPharmaceuticalAdvice
@@ -85,7 +86,7 @@ Description: "Definition of the bundle for the pharmaceutical advice document"
 
 
 // =====================================================================================
-// Composition PML
+// Document PML
 // =====================================================================================
 Profile: CHEMEDEPRDocumentMedicationList
 Parent: CHEMEDDocumentMedicationList
@@ -102,7 +103,7 @@ Description: "Definition of the bundle for the medication list document"
 
 
 // =====================================================================================
-// Composition PMLC
+// Document PMLC
 // =====================================================================================
 Profile: CHEMEDEPRDocumentMedicationCard
 Parent: CHEMEDDocumentMedicationCard
