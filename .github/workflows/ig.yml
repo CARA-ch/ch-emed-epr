@@ -1,0 +1,26 @@
+name: 'Build the IG'
+
+on:
+  workflow_dispatch: # On manual trigger
+  push:
+    branches: [ master, validation ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    name: 'Run the validator on resource samples'
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+
+    steps:
+      - name: 'Checkout the repository'
+        uses: actions/checkout@v3
+
+      - name: 'Build the IG'
+        uses: qligier/fhir-ig-action@main
+        with:
+          ig-publisher: 'latest'
+          sushi: 'latest'
