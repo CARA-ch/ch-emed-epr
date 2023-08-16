@@ -41,7 +41,7 @@ jobs:
         run: |
           npm install -g fsh-sushi
           chmod +x ./_updatePublisher.sh
-          ./_updatePublisher.sh --yes
+          sh ./_updatePublisher.sh --yes
           java -jar ./input-cache/publisher.jar -ig ig.ini
 
       - name: 'Clone the validator'
