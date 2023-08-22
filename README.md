@@ -32,6 +32,15 @@ and GitHub triggers the HTTP endpoint of the [FHIR autobuild server](https://git
 The build status is posted in [chat.fhir.org](https://chat.fhir.org/#narrow/stream/179297-committers.2Fnotification/topic/ig-build),
 the [build logs](http://build.fhir.org/ig/CARA-ch/ch-emed-epr/branches/master/build.log) are also available if needed.
 
+## Create a release
+
+1. Change the dependency versions (in sushi-config.yaml) that are currently set to 'current' or 'dev', use a published version instead.
+2. Change the type of release from 'ci-build' to 'release'.
+3. Change links pointing to 'build.fhir.org' to published releases (usually on 'fhir.ch').
+4. Others?
+
+These changes can be committed to create a release on GitHub but should be reverted to a CI-build state.
+
 ## Activity
 
 ![Alt](https://repobeats.axiom.co/api/embed/7f614368b6620a9c1c0419fc8664defae0ba315f.svg "Repobeats analytics image")
