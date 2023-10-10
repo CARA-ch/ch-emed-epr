@@ -13,11 +13,11 @@ If the medication is in reserve, the structured dosage instructions represent th
 
 #### Codes
 
-Implementers SHALL use the GTIN code if available. If it is not (e.g. Colchicine that was not authorized by Swissmedic but still recommended by the
+Implementers SHOULD specify a code. Use the GTIN code if available. If it is not (e.g. Colchicine that was not authorized by Swissmedic but still recommended by the
 [Schweizerische Gesellschaft für Rheumatologie](https://www.rheuma-net.ch/de/dok/sgr-dokumente/behandlung/therapie/other-therapies/519-colchicin/file)),
 then the relevant ATC code SHOULD be used.
 The ATC code may be used even if the GTIN is specified.
-Implementers MAY use other codes (e.g. pharmacode) if available.
+The absence of a code must be exceptional and restricted to borderline cases.
 
 The `text` may be either:
 
@@ -26,6 +26,9 @@ The `text` may be either:
 - a descriptor of a magistral preparation/compound medicine
 
 #### Ingredients
+
+Implementers SHOULD specify the ingredients of the medication. Active principles SHOULD be flagged with `isActive = true`.
+The absence of ingredients must be exceptional and restricted to borderline cases.
 
 #### Others
 
