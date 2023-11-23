@@ -19,8 +19,8 @@ For more information about aggregation, please read [the dedicated page](aggrega
 
 #### Authors
 
-1. Last intervening author: represents the author of the last entry (of any kind) in the treatment.
-2. Last medical author: represents the author of the last section (of type _MTP_, _PRE_, or any type of _PADV_ except _COMMENT_ that apply to an _MTP_ or _PRE_) in this treatment.
+1. Last intervening author: represents the document author of the last entry (of any kind) in the treatment.
+2. Last medical author: represents the author of the last entry (of type _MTP_, _PRE_, or any type of _PADV_ except _COMMENT_ that applies to an _MTP_ or _PRE_) in this treatment.
 
 #### Generation rules
 
