@@ -38,7 +38,7 @@ For instance, in the following resource :
     }
 ```
 
-The ```id``` of the practitionner is ```FamilienHausarzt```. This value is used in the ```fullUrl``` for internal references within the FIHR document (see also [compositions guidance](guidance_composition.html)).
+The ```id``` of the practitionner is ```FamilienHausarzt```. This value is used in the ```fullUrl``` for internal references within the FIHR document (see also [compositions guidance](guidance_compositions.html)).
 
 The ```identifier```, composed of a ```system``` and a ```value``` is absolute : it's the practitionner's GLN, that is valid outside the FHIR document.
 
