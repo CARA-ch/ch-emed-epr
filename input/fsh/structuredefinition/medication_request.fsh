@@ -58,7 +58,6 @@ RuleSet: medication-request-ruleset
 // =====================================================================================
 RuleSet: medication-request-pre-ruleset
 * insert medication-request-ruleset
-* insert overridden(requester)
 * status = #active
 
 
