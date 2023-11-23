@@ -8,7 +8,7 @@ Usage: #example
 * form.text = "Tablet"
 * form.coding[+] = $edqm#10219000 "Tablet"
 * amount.numerator = 20 $sct#732936001 "Tablet (unit of presentation)"
-* amount.denominator = 1 $ucum#{Package} "Package"
+* amount.denominator = 1 $sct#1681000175101 "Package"
 * ingredient[+].itemCodeableConcept[+].text = "Ramipril"
 * ingredient[=].itemCodeableConcept[=].coding[+] = $sct#386872004 "Ramipril (substance)"
 * ingredient[=].isActive = true
@@ -30,7 +30,7 @@ Usage: #example
 * form = urn:oid:0.4.0.127.0.16.1.1.2.1#10219000 "Tablet"
 * form.text = "Tablet"
 * amount.numerator = 28 '{Piece}' "Piece"
-* amount.denominator = 1 '{Package}' "Package"
+* amount.denominator = 1 $sct#1681000175101 "Package"
 * ingredient[0].itemCodeableConcept = $sct#386864001 "Amlodipine (substance)"
 * ingredient[=].itemCodeableConcept.text = "Amlodipine (substance)"
 * ingredient[=].strength.numerator = 10 'mg' "milligram"
@@ -50,7 +50,7 @@ Usage: #example
 * form = urn:oid:0.4.0.127.0.16.1.1.2.1#10221000 "Film-coated tablet"
 * form.text = "Film-coated tablet"
 * amount.numerator = 2 $sct#732936001 "Tablet (unit of presentation)"
-* amount.denominator = 1 '{Package}' "Package"
+* amount.denominator = 1 $sct#1681000175101 "Package"
 * ingredient.itemCodeableConcept = $sct#363571003 "Naratriptan"
 * ingredient.itemCodeableConcept.text = "Naratriptan"
 * ingredient.strength.numerator = 2.5 'mg' "milligram"
@@ -69,5 +69,5 @@ Usage: #example
 * form.text = "Tablet"
 * form = urn:oid:0.4.0.127.0.16.1.1.2.1#10219000 "Tablet"
 * amount.numerator = 30 $sct#732936001 "Tablet (unit of presentation)"
-* amount.denominator = 1 '{Package}' "Package"
+* amount.denominator = 1 $sct#1681000175101 "Package"
 
