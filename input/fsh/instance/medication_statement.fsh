@@ -15,3 +15,5 @@ Usage: #example
 * dosage[baseEntry].route.text = "À avaler"
 * dosage[baseEntry].doseAndRate.doseQuantity = 0.5 http://snomed.info/sct#732936001 "Tablet (unit of presentation)"
 * dosage[baseEntry].timing.repeat.boundsPeriod.start = "2023-04-11"
+* dateAsserted = "2023-04-11"
+* informationSource = Reference(PractitionerRoleCoxAtHug)

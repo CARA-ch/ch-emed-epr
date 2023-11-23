@@ -159,6 +159,7 @@ Usage: #inline
 * informationSource.reference = "#practitioner-role-1"
 * dosage[baseEntry].id = "#dosage-1"
 * dosage[baseEntry].patientInstruction = "À prendre avec de l'eau"
+* dateAsserted = "2023-04-11"
 
 Instance: Inline-Instance-for-pmlc1-6
 InstanceOf: Binary

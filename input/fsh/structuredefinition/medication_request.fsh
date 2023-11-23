@@ -53,14 +53,12 @@ RuleSet: medication-request-ruleset
 * substitution.allowedCodeableConcept from ActSubstanceAdminSubstitutionCode (required)
 * insert no-support(substitution.reason) // TODO we may want this
 
-
 // =====================================================================================
 // Medication Request PRE
 // =====================================================================================
 RuleSet: medication-request-pre-ruleset
 * insert medication-request-ruleset
 * insert overridden(requester)
-* requester ^short = "✕ The requester is given in Composition.section.author or Composition.author (see guidance)"
 * status = #active
 
 
@@ -92,7 +90,6 @@ Id: ch-emed-epr-medicationrequest-list
 Title: "PML MedicationRequest"
 Description: "Definition of the medication request for the medication list document"
 * insert medication-request-ruleset
-* requester only Reference(CHEMEDEPRPractitionerRole)
 * extension[parentDocument] 1..1
 * extension[authorDocument].valueReference only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
 // TODO: describe status

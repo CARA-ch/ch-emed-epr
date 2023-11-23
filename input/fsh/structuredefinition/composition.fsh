@@ -18,13 +18,14 @@ RuleSet: composition-ruleset
 * section[vitalSigns].entry 1..1
 * section[vitalSigns].entry only Reference(CHEMEDEPRObservationBodyWeight)
 * section.author only Reference(CHEMEDEPRPractitioner or CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPROrganization or CHEMEDEPRRelatedPerson or CHEMEDEPRDevice)
+//* insert no-support(section.author)
 * date obeys datetime-only-instant-invariant
 * insert no-support(encounter)
 * insert no-support(attester[legalAuthenticator])
 * insert no-support(attester)
 * insert no-support(event)
 * insert no-support(relatesTo)
-* insert no-support(author.id)
+//* insert no-support(author.id)
 //* author.identifier 0..0 // The literal reference is required
 * insert no-support(custodian.id)
 //* custodian.identifier 0..0 // The literal reference is required
@@ -88,7 +89,8 @@ Description: "Definition of the composition for the medication treatment plan do
 * author only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson or CHEMEDEPRDevice) // Only the types authorized in the slices
 * author[person] only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
 * author[device] only Reference(CHEMEDEPRDevice)
-* section[treatmentPlan].author only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
+//* section[treatmentPlan].author only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
+* insert no-support(section[treatmentPlan].author)
 
 
 // =====================================================================================
@@ -107,7 +109,8 @@ Description: "Definition of the composition for the medication prescription docu
 * author only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson or CHEMEDEPRDevice) // Only the types authorized in the slices
 * author[person] only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
 * author[device] only Reference(CHEMEDEPRDevice)
-* section[prescription].author only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
+//* section[prescription].author only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
+* insert no-support(section[prescription].author)
 
 
 // =====================================================================================
@@ -126,7 +129,8 @@ Description: "Definition of the composition for the medication dispense document
 * author only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson or CHEMEDEPRDevice) // Only the types authorized in the slices
 * author[person] only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
 * author[device] only Reference(CHEMEDEPRDevice)
-* section[dispense].author only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
+//* section[dispense].author only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
+* insert no-support(section[dispense].author)
 
 
 // =====================================================================================
@@ -144,7 +148,8 @@ Description: "Definition of the composition for the pharmaceutical advice docume
 * author only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson or CHEMEDEPRDevice) // Only the types authorized in the slices
 * author[person] only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
 * author[device] only Reference(CHEMEDEPRDevice)
-* section[pharmaceuticalAdvice].author only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
+//* section[pharmaceuticalAdvice].author only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
+* insert no-support(section[pharmaceuticalAdvice].author)
 
 
 // =====================================================================================

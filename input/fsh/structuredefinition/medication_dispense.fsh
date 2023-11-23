@@ -5,7 +5,6 @@ RuleSet: medication-dispense-ruleset
 * medicationReference only Reference(CHEMEDEPRMedicationMedicationDispense)
 * medicationReference ^type.aggregation[+] = #contained
 * insert no-support(authorizingPrescription)
-* whenHandedOver 1..1
 * insert no-support(partOf)
 * insert no-support(category)
 * insert no-support(context)
@@ -48,8 +47,6 @@ Id: ch-emed-epr-medicationdispense
 Title: "DIS MedicationDispense"
 Description: "Definition of the medication dispense for the medication dispense document"
 * insert medication-dispense-ruleset
-* insert overridden(performer)
-* performer ^short = "✕ The performer is given in Composition.section.author or Composition.author (see guidance)"
 
 
 // =====================================================================================
@@ -61,6 +58,5 @@ Id: ch-emed-epr-medicationdispense-list
 Title: "PML MedicationDispense"
 Description: "Definition of the medication dispense for the medication list document"
 * insert medication-dispense-ruleset
-* performer.actor only Reference(CHEMEDEPRPractitionerRole)
 * extension[parentDocument] 1..1
 * extension[authorDocument].valueReference only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)

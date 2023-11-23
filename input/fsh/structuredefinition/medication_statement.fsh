@@ -8,7 +8,6 @@ RuleSet: medication-statement-ruleset
 * insert no-support(statusReason) // TODO: we may want this
 * insert no-support(category) // TODO: we may want this
 * insert no-support(context)
-* insert no-support(dateAsserted)
 * insert no-support(derivedFrom)
 * insert no-support(reasonReference)
 * identifier insert identifier-ruleset
@@ -45,8 +44,8 @@ RuleSet: medication-statement-mtp-ruleset
 * extension[substitution] ^short = "Whether the dispenser can substitute the prescribed medicine/package by another that is deemed equivalent, for medical or logistical reasons. By default, substitution is authorized."
 * status = #active
 // TODO TEST flags
-* insert overridden(informationSource)
-* informationSource ^short = "✕ The information source is given in Composition.section.author or Composition.author (see guidance)"
+//* insert overridden(informationSource)
+//* informationSource ^short = "✕ The information source is given in Composition.section.author or Composition.author (see guidance)"
 
 
 Profile: CHEMEDEPRMedicationStatement
@@ -84,7 +83,6 @@ Description: "Definition of the medication statement for the medication list doc
 * extension[authorDocument].valueReference only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
 * insert no-support(extension[substitution].id)
 * extension[substitution] ^short = "Whether the dispenser can substitute the prescribed medicine/package by another that is deemed equivalent, for medical or logistical reasons. By default, substitution is authorized."
-* informationSource only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
 * extension[parentDocument] 1..1
 * status = #active
 
@@ -100,9 +98,7 @@ Description: "Definition of the aggregated medication statement for the Medicati
 * insert medication-statement-ruleset
 * extension[treatmentPlan] 1..1
 * extension[treatmentPlan] ^short = "Reference to the MTP that introduced this medication in the treatment plan"
-* informationSource 1..1
 * informationSource ^short = "The last medical author, (see 'Document PMLC' and 'Guidance - Different Authors')"
-* informationSource only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
 * informationSource ^comment = "...It represents the author of the last section (of type _MTP_, _PRE_, or any type of _PADV_ except _COMMENT_ that apply to an _MTP_ or _PRE_) in this treatment."
 * extension[authorDocument].valueReference only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
 * extension[authorDocument] ^short = "The last intervening author, only if different that the last medical author (see 'Document PMLC' and 'Guidance - Different Authors')"

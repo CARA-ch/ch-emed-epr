@@ -7,7 +7,6 @@ RuleSet: observation-ruleset
 * obeys pre-ref-conformant
 * obeys mtp-same-id
 * obeys pre-same-id
-//* issued 1..1 TODO entry time?
 * insert no-support(basedOn)
 * insert no-support(partOf)
 * insert no-support(category)
@@ -46,8 +45,6 @@ Id: ch-emed-epr-observation
 Title: "PADV Observation"
 Description: "Definition of the observation for the pharmaceutical advice document"
 * insert observation-ruleset
-* insert overridden(performer)
-* performer ^short = "✕ The performer is given in Composition.section.author or Composition.author (see guidance)"
 * insert no-support(effective[x])
 
 
@@ -60,7 +57,6 @@ Id: ch-emed-epr-observation-list
 Title: "PML Observation"
 Description: "Definition of the observation for the medication list document"
 * insert observation-ruleset
-* performer only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
 * extension[parentDocument] 1..1
 * extension[authorDocument].valueReference only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
 
