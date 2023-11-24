@@ -50,7 +50,7 @@ RuleSet: medication-request-ruleset
 * dispenseRequest.validityPeriod.start 1..1
 * substitution insert backbone-ruleset
 * substitution.allowed[x] only CodeableConcept
-* substitution.allowedCodeableConcept from ActSubstanceAdminSubstitutionCode (required)
+* substitution.allowedCodeableConcept from CHEMEDEprActSubstanceAdminSubstitutionCode (required)
 * insert no-support(substitution.reason) // TODO we may want this
 
 // =====================================================================================

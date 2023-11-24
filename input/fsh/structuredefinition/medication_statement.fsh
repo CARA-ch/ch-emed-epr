@@ -37,7 +37,7 @@ RuleSet: medication-statement-ruleset
 RuleSet: medication-statement-mtp-ruleset
 * insert medication-statement-ruleset
 * extension[substitution].value[x] only CodeableConcept
-* extension[substitution].valueCodeableConcept from substance-admin-substitution-code (required)
+* extension[substitution].valueCodeableConcept from ch-emed-epr-substance-admin-substitution-code (required)
 * extension[substitution].valueCodeableConcept.coding 1..
 * extension[substitution].valueCodeableConcept insert codeableconcept-ruleset
 * insert no-support(extension[substitution].id)
@@ -77,7 +77,7 @@ Id: ch-emed-epr-medicationstatement-list
 Title: "PML MedicationStatement"
 Description: "Definition of the medication statement for the medication list document"
 * insert medication-statement-ruleset
-* extension[substitution].valueCodeableConcept.coding from substance-admin-substitution-code (required)
+* extension[substitution].valueCodeableConcept.coding from ch-emed-epr-substance-admin-substitution-code (required)
 * extension[substitution].valueCodeableConcept.coding 1..
 * extension[substitution].valueCodeableConcept insert codeableconcept-ruleset
 * extension[authorDocument].valueReference only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
