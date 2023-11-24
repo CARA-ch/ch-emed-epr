@@ -73,7 +73,7 @@ parameters:
   bundle-references-resolve: true
   excludettl: true
   generate: [genExamples]
-  no-narrative: '*/*'
+#  no-narrative: '*/*'
 
 
 #
