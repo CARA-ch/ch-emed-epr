@@ -69,6 +69,9 @@ Description: "Definition of the bundle for the medication dispense document"
 * insert document-ruleset
 * entry[Composition].resource only CHEMEDEPRCompositionMedicationDispense
 * entry[MedicationDispense].resource only CHEMEDEPRMedicationDispense
+* entry[MedicationAdministration] 0..0
+* insert no-support(entry[MedicationAdministration])
+* entry[MedicationDispense] 1..
 
 
 // =====================================================================================
@@ -100,6 +103,8 @@ Description: "Definition of the bundle for the medication list document"
 * entry[MedicationRequest].resource only CHEMEDEPRMedicationRequestList
 * entry[MedicationDispense].resource only CHEMEDEPRMedicationDispenseList
 * entry[Observation].resource only CHEMEDEPRObservationList
+* entry[MedicationAdministration] 0..0
+* insert no-support(entry[MedicationAdministration])
 
 
 // =====================================================================================
