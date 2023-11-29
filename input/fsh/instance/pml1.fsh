@@ -2,6 +2,7 @@ Instance: BundlePml1
 InstanceOf: CHEMEDEPRDocumentMedicationList
 Title: "Bundle: PML #1"
 Usage: #example
+Description: "PML bundle example"
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:7042ee91-a485-47cb-94fa-a1c2f0ef2dbc"
 * type = #document

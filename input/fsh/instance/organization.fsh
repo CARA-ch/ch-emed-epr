@@ -15,6 +15,7 @@ Usage: #example
 Instance: OrganizationCara
 InstanceOf: CHEMEDEPROrganization
 Title: "Organization: CARA"
+Description: "Organization example (CARA)"
 Usage: #example
 * identifier.system = "urn:oid:2.51.1.3"
 * identifier.value = "7601001407428"

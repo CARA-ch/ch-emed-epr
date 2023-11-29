@@ -2,6 +2,7 @@ Instance: BundlePmlc1
 InstanceOf: CHEMEDEPRDocumentMedicationCard
 Title: "Bundle: PMLC #1"
 Usage: #example
+Description: "PMLC bundle example"
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:cdce5856-7ef7-4f0c-a456-45531110aeb5"
 * type = #document

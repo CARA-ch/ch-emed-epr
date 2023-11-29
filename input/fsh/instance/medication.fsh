@@ -24,6 +24,7 @@ Usage: #example
 
 Instance: MedicationWithTwoIngredients
 InstanceOf: CHEMEDEPRMedication
+Description: "Example for a medication with two ingredients (Exforge)"
 Usage: #example
 * code = urn:oid:2.51.1.1#7680577710149 "Exforge 10/160mg"
 * code.text = "Exforge 10/160mg"
@@ -44,6 +45,7 @@ Usage: #example
 Instance: MedicationWithATC
 InstanceOf: CHEMEDEPRMedication
 Usage: #example
+Description: "Example for a medication with ATC code (NaraDex)"
 * meta.profile = "http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-medication"
 * code = $atc#N02CC02 "naratriptan"
 * code.text = "NaraDex 2,5 mg Filmtabletten"
@@ -60,6 +62,7 @@ Usage: #example
 Instance: MedicationNorvasc
 InstanceOf: CHEMEDEPRMedication
 Usage: #example
+Description: "Example for a medication (Norvasc)"
 * code.text = "NORVASC Tabl 10 mg"
 * code = urn:oid:2.51.1.1#7680500440334 "NORVASC Tabl 10 mg"
 * ingredient.itemCodeableConcept.text = "Amlodipine"
