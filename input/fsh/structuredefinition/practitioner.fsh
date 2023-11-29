@@ -12,6 +12,7 @@ Description: "Definition of the practitioner for the eMedication context"
 * insert no-support(contained)
 * insert no-support(extension)
 * identifier insert identifier-ruleset
+* identifier[GLN] insert enforce-valid-gln
 * insert problematic-reference(identifier.assigner)
 * insert problematic-reference(qualification.issuer)
 // TODO ZSR is mandatory on paper prescription

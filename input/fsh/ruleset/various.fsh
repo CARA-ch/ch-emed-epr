@@ -78,3 +78,15 @@ RuleSet: no-support(path)
 This element is only kept as optional to allow submission of documents that would contain a value, 
 since those documents are still readable by others.
 The meaning of this element is undefined in this profile."""
+
+RuleSet: enforce-valid-gln
+* value obeys gln-length-error and gln-modulus-10-error and gln-startswith76-error
+
+RuleSet: enforce-valid-ahvn13
+* value obeys ahvn13-digit-check-error and ahvn13-length-error and ahvn13-startswith756-error
+
+RuleSet: enforce-valid-epr-spid
+* value obeys epr-spid-length-error and epr-spid-modulus-10-error and epr-spid-startswith76133761-error
+
+RuleSet: enforce-valid-veka
+* value obeys veka-length-error and veka-startswith807560-error
