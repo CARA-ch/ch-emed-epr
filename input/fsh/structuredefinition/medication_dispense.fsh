@@ -18,8 +18,8 @@ RuleSet: medication-dispense-ruleset
 * insert no-support(substitution.reason)
 //* substitution BackboneElement
 * insert no-support(extension[pharmaceuticalAdvice])
-* insert no-support(extension[prescription]) // Use authorizingPrescription?
-* insert no-support(extension[pharmaceuticalAdvice])
+//* insert no-support(extension[prescription]) // Use authorizingPrescription?
+* extension[prescription] ^short = "Reference to te medication prescription. This item is mandantory if the treatment has already been prescribed."
 * quantity only CHEMEDEPRAmountQuantity
 * daysSupply only CHEMEDEPRTimeQuantity
 * dosageInstruction[baseEntry] only CHEMEDEPRDosage
