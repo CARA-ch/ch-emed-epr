@@ -72,12 +72,12 @@ Severity: #error
 
 Invariant: mtp-entry-only-with-ref
 Description: "A changed MedicationStatement SHALL only be present with a medication treatment plan reference, in a PADV CHANGE"
-Expression: "(extension.where(url='http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-treatmentplan').exists() and extension.where(url='http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-medicationstatement-changed').exists() and code.coding.code = 'CHANGE') or extension.where(url='http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-medicationstatement-changed').exists().not()"
+Expression: "(extension.where(url='http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-treatmentplan').exists() and extension.where(url='http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-medicationstatement-changed').exists() and code.coding.single().code = 'CHANGE') or extension.where(url='http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-medicationstatement-changed').exists().not()"
 Severity: #error
 
 Invariant: pre-entry-only-with-ref
 Description: "A changed MedicationRequest SHALL only be present with a medication request reference, in a PADV CHANGE"
-Expression: "(extension.where(url='http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-prescription').exists() and extension.where(url='http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-medicationrequest-changed').exists() and code.coding.code = 'CHANGE') or extension.where(url='http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-medicationrequest-changed').exists().not()"
+Expression: "(extension.where(url='http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-prescription').exists() and extension.where(url='http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-medicationrequest-changed').exists() and code.coding.single().code = 'CHANGE') or extension.where(url='http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-medicationrequest-changed').exists().not()"
 Severity: #error
 
 Invariant: mtp-ref-conformant
