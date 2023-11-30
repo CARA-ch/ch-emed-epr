@@ -24,6 +24,8 @@ RuleSet: observation-ruleset
 * insert no-support(derivedFrom)
 * insert no-support(component)
 * insert note-ruleset
+* extension[medicationStatementChanged].valueReference only Reference(CHEMEDEPRChangedMedicationStatement)
+* extension[medicationRequestChanged].valueReference only Reference(CHEMEDEPRChangedMedicationRequest)
 * subject only Reference(CHEMEDEPRPatient)
 * subject ^type.aggregation[+] = #referenced
 * subject ^type.aggregation[+] = #bundled
