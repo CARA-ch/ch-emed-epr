@@ -79,6 +79,17 @@ This element is only kept as optional to allow submission of documents that woul
 since those documents are still readable by others.
 The meaning of this element is undefined in this profile."""
 
+RuleSet: base-note-ruleset
+* note.text ^short = "The annotation text content (as raw text, no markdown allowed)."
+* insert no-support(note.id)
+* insert no-support(note.extension)
+
+RuleSet: note-ruleset
+* insert base-note-ruleset
+* insert no-support(note.author[x])
+* note.author[x] ^short = "✕ The note author is ignored, as it cannot be different than the document and/or entry's author"
+* insert no-support(note.time)
+
 RuleSet: enforce-valid-gln
 * value obeys gln-length-error and gln-modulus-10-error and gln-startswith76-error
 

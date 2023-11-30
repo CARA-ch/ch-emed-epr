@@ -1,5 +1,6 @@
 RuleSet: medication-dispense-ruleset
 * insert domain-resource-ruleset
+* insert note-ruleset
 * extension[treatmentPlan] 1..1
 * medication[x] only Reference
 * medicationReference only Reference(CHEMEDEPRMedicationMedicationDispense)
@@ -24,7 +25,6 @@ RuleSet: medication-dispense-ruleset
 * daysSupply only CHEMEDEPRTimeQuantity
 * dosageInstruction[baseEntry] only CHEMEDEPRDosage
 * dosageInstruction[additionalEntry] only CHEMEDEPRDosageSplit
-* note.text ^short = "The annotation text content"
 * subject only Reference(CHEMEDEPRPatient)
 * subject ^type.aggregation[+] = #referenced
 * subject ^type.aggregation[+] = #bundled

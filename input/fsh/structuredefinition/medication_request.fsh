@@ -1,5 +1,6 @@
 RuleSet: medication-request-ruleset
 * insert domain-resource-ruleset
+* insert note-ruleset
 * extension[treatmentplan] 1..1
 * medication[x] only Reference
 * medicationReference only Reference(CHEMEDEPRMedication)
@@ -40,7 +41,6 @@ RuleSet: medication-request-ruleset
 * priorPrescription ^comment = "Use the XDS mechanism to replace a prescription"
 * extension[treatmentplan] ^short = "A reference to the MedicationStatement that introduced this medication"
 // TODO How to code provisional state?
-* note.text ^short = "The annotation text content"
 * dosageInstruction[baseEntry] only CHEMEDEPRDosageMedicationRequest
 * dosageInstruction[additionalEntry] only CHEMEDEPRDosageSplit
 * dispenseRequest 1..1

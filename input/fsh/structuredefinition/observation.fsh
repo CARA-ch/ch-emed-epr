@@ -23,13 +23,7 @@ RuleSet: observation-ruleset
 * insert no-support(hasMember)
 * insert no-support(derivedFrom)
 * insert no-support(component)
-* insert no-support(note.id)
-* insert no-support(note.extension)
-* note.text ^short = "The annotation text content (as raw text, no markdown allowed)."
-* insert no-support(note.author[x])
-* insert problematic-reference(note.authorReference)
-* note.author[x] ^short = "✕ The note author is ignored, as it cannot be different than the observation author"
-* insert no-support(note.time)
+* insert note-ruleset
 * subject only Reference(CHEMEDEPRPatient)
 * subject ^type.aggregation[+] = #referenced
 * subject ^type.aggregation[+] = #bundled

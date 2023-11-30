@@ -26,16 +26,15 @@ RuleSet: medication-statement-ruleset
 * reasonCode insert reason-code-ruleset
 * reasonCode ^short = "The treatment reason(s) as text, and optionally coded"
 * reasonCode ^definition = "...Content creators should keep it as simple and short as possible (e.g. 'blood clog', 'hypertension')."
-* note.text ^short = "The annotation text content"
 * insert no-support(effective[x])
 * effective[x] ^short = "✕ Do not use. The effective period is contained in the main dosage"
-
 
 // =====================================================================================
 // Medication Statement MTP
 // =====================================================================================
 RuleSet: medication-statement-mtp-ruleset
 * insert medication-statement-ruleset
+* insert note-ruleset
 * extension[substitution].value[x] only CodeableConcept
 * extension[substitution].valueCodeableConcept from ch-emed-epr-substance-admin-substitution-code (required)
 * extension[substitution].valueCodeableConcept.coding 1..
@@ -77,6 +76,7 @@ Id: ch-emed-epr-medicationstatement-list
 Title: "PML MedicationStatement"
 Description: "Definition of the medication statement for the medication list document"
 * insert medication-statement-ruleset
+* insert note-ruleset
 * extension[substitution].valueCodeableConcept.coding from ch-emed-epr-substance-admin-substitution-code (required)
 * extension[substitution].valueCodeableConcept.coding 1..
 * extension[substitution].valueCodeableConcept insert codeableconcept-ruleset
@@ -103,10 +103,13 @@ Description: "Definition of the aggregated medication statement for the Medicati
 * extension[authorDocument].valueReference only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
 * extension[authorDocument] ^short = "The last intervening author, only if different that the last medical author (see 'Document PMLC' and 'Guidance - Different Authors')"
 * extension[authorDocument] ^comment = "...It represents the author of the last entry (of any kind) in the treatment. If it's the same author as the last medical author, it's not provided."
+* insert base-note-ruleset
 * note.author[x] 1..1
 * note.author[x] only Reference
 * note.authorReference 1..1
+* note.author[x] ^comment = "...It represents the medical author of the entry that added the comment."
 * note.time 1..1
+* note.time ^comment = "...It represents the medical author of the entry that added the comment."
 // TODO: describe status
 * extension contains http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-prescription named prescription 0..1 // Declare the new extension before defining it
 * extension[prescription] ^short = "Reference to the PRE that introduced this medication in the treatment plan, if any"
