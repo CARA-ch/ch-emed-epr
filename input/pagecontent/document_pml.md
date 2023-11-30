@@ -1,4 +1,4 @@
-The **Medication List document** aims to fully comprise the current medication of a patient. It consists of Medication Treatment Plan, Medication Prescription, Medication Dispense and Pharmaceutical Advice entries. Please see [its description in the CH-EMED IG](http://fhir.ch/ig/ch-emed/medication-list-document.html).
+The **Medication List document** aims to fully comprise the current medication of a patient. It consists of Medication Treatment Plan, Medication Prescription, Medication Dispense and Pharmaceutical Advice entries. Please see [its description in the CH EMED IG](http://fhir.ch/ig/ch-emed/medication-list-document.html).
 
 It can only be generated from the eMedication service and retrieved, not published there.
 
@@ -14,9 +14,3 @@ It can only be generated from the eMedication service and retrieved, not publish
 * [Medication (DIS)](StructureDefinition-ch-emed-epr-medication-medicationdispense.html)
 
 ### Example instances
-
-### Specifications
-
-#### Generation rules
-
-<!-- TODO draft elements that are references to other resources -->

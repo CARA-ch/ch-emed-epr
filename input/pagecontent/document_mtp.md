@@ -1,5 +1,5 @@
 The **Medication Treatment Plan document** describes ONE medication of a patient, a medication that has been, is or will be taken by the patient.
-Please see [its description in the CH-EMED IG](http://fhir.ch/ig/ch-emed/medication-treatment-plan-document.html).
+Please see [its description in the CH EMED IG](http://fhir.ch/ig/ch-emed/medication-treatment-plan-document.html).
 
 A medication treatment plan (MTP) is an entry that describes the introduction of a medication into the patient's treatment plan.
 It contains information about the medication and dosage instructions, and may contain start and end dates.
@@ -12,8 +12,6 @@ It contains information about the medication and dosage instructions, and may co
 * [Medication](StructureDefinition-ch-emed-epr-medication.html)
 
 ### Example instances
-
-### Specifications
 
 #### States
 

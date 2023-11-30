@@ -20,9 +20,9 @@
             <li><a href="guidance_compositions.html">Compositions</a></li>
             <li><a href="guidance_amount_quantity.html">Amount Quantity</a></li>
             <li><a href="guidance_others.html">Others</a></li>
-            <li><a href="http://build.fhir.org/ig/hl7ch/ch-emed/dosage.html" target="_blank">CH-EMED: Dosage</a></li>
-            <li><a href="http://build.fhir.org/ig/hl7ch/ch-emed/different-authors.html" target="_blank">CH-EMED: Different Authors</a></li>
-            <li><a href="http://build.fhir.org/ig/hl7ch/ch-emed/repeated-dispense.html" target="_blank">CH-EMED: Repeated Dispense</a></li>
+            <li><a href="http://build.fhir.org/ig/hl7ch/ch-emed/dosage.html" target="_blank">CH EMED: Dosage</a></li>
+            <li><a href="http://build.fhir.org/ig/hl7ch/ch-emed/different-authors.html" target="_blank">CH EMED: Different Authors</a></li>
+            <li><a href="http://build.fhir.org/ig/hl7ch/ch-emed/repeated-dispense.html" target="_blank">CH EMED: Repeated Dispense</a></li>
         </ul>
     </li>
     <li><a href="artifacts.html">Artifacts</a></li>

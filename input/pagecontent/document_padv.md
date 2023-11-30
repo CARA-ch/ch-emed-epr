@@ -1,10 +1,12 @@
-The **Pharmaceutical Advice document** is a document in which health professionals track important observations (with the explicit consent of the patient), in regards to medication use (ONE). Please see [its description in the CH-EMED IG](http://fhir.ch/ig/ch-emed/pharmaceutical-advice-document.html).
+The **Pharmaceutical Advice document** is a document in which health professionals track important observations (with the explicit consent of the patient), in regards to medication use (ONE). Please see [its description in the CH EMED IG](http://fhir.ch/ig/ch-emed/pharmaceutical-advice-document.html).
 
 ### Profiles
 
 * [Document PADV](StructureDefinition-ch-emed-epr-document-pharmaceuticaladvice.html)
 * [Composition PADV](StructureDefinition-ch-emed-epr-composition-pharmaceuticaladvice.html)
 * [Observation (PADV)](StructureDefinition-ch-emed-epr-observation.html)
+* [Changed MedicationStatement (PADV)](StructureDefinition-ch-emed-epr-medicationstatement-changed.html)
+* [Changed MedicationRequest (PADV)](StructureDefinition-ch-emed-epr-medicationrequest-changed.html)
 * [Medication](StructureDefinition-ch-emed-epr-medication.html)
 
 ### Example instances
@@ -35,11 +37,9 @@ If it targets a **PRE** entry: the prescription is definitively refused, because
 
 #### PADV COMMENT
 
-If it targets an **MTP** entry: .
+If it targets an **MTP** entry: adds a comment to the treatment.
 
-If it targets a **PRE** entry: .
-
-If it targets a **DIS** entry: .
+If it targets a **PRE** or **DIS** entry: adds a comment to the specific treatment instance.
 
 #### PADV CHANGE
 

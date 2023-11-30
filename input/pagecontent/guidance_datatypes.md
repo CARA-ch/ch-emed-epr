@@ -26,7 +26,6 @@ It represents a code in a code system.
 
 
 The `system` SHOULD be a public code system, not a private one (e.g. internal to a specific organization, or undocumented); it would not have any interoperability value.
-
 The `display` MAY be used but is not mandatory; it should be one of the display names defined by the value set.
 The `version` is not used, code system versioning is hard.
 
