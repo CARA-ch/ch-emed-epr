@@ -1,4 +1,4 @@
-# IG CH-EMED-EPR
+# IG CH EMED EPR
 
 ![Validation workflow](https://github.com/CARA-ch/ch-emed-epr/actions/workflows/validation.yml/badge.svg)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/CARA-ch/ch-emed-epr)
