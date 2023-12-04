@@ -43,11 +43,8 @@ RuleSet: medication-request-ruleset
 // TODO How to code provisional state?
 * dosageInstruction[baseEntry] only CHEMEDEPRDosageMedicationRequest
 * dosageInstruction[additionalEntry] only CHEMEDEPRDosageSplit
-* dispenseRequest 1..1
 * dispenseRequest insert backbone-ruleset
 * dispenseRequest.initialFill insert backbone-ruleset
-* dispenseRequest.validityPeriod 1..1
-* dispenseRequest.validityPeriod.start 1..1
 * substitution insert backbone-ruleset
 * substitution.allowed[x] only CodeableConcept
 * substitution.allowedCodeableConcept from CHEMEDEprActSubstanceAdminSubstitutionCode (required)
