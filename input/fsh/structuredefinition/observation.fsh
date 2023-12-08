@@ -3,10 +3,7 @@ RuleSet: observation-ruleset
 * obeys only-one-obs-ref
 * obeys mtp-entry-only-with-ref
 * obeys pre-entry-only-with-ref
-* obeys mtp-ref-conformant
-* obeys pre-ref-conformant
-* obeys mtp-same-id
-* obeys pre-same-id
+* obeys treatment-plan-id-reference-matches-statement-changed-reference
 * insert no-support(basedOn)
 * insert no-support(partOf)
 * insert no-support(category)
@@ -76,22 +73,7 @@ Description: "A changed MedicationRequest SHALL only be present with a medicatio
 Expression: "(extension.where(url='http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-prescription').exists() and extension.where(url='http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-medicationrequest-changed').exists() and code.coding.single().code = 'CHANGE') or extension.where(url='http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-medicationrequest-changed').exists().not()"
 Severity: #error
 
-Invariant: mtp-ref-conformant
-Description: "A changed MedicationStatement SHALL conform to CHEMEDEPRChangedMedicationStatement"
-Expression: "extension.where(url='http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-medicationstatement-changed').exists() implies extension.where(url='http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-medicationstatement-changed').extension.where(url='id').value.resolve().conformsTo('https://fhir.cara.ch/StructureDefinition/ch-emed-epr-medicationstatement-changed')"
-Severity: #error
-
-Invariant: pre-ref-conformant
-Description: "A changed MedicationRequest SHALL conform to CHEMEDEPRChangedMedicationRequest"
-Expression: "extension.where(url='http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-medicationrequest-changed').exists() implies extension.where(url='http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-medicationrequest-changed').extension.where(url='id').value.resolve().conformsTo('https://fhir.cara.ch/StructureDefinition/ch-emed-epr-medicationrequest-changed')"
-Severity: #error
-
-Invariant: mtp-same-id
-Description: "A changed MedicationStatement SHALL keep the same identifier"
-Expression: "extension.where(url='http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-medicationstatement-changed').exists() implies extension.where(url='http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-medicationstatement-changed').extension.where(url='id').value.resolve().identifier.where(system='urn:ietf:rfc:3986').value = extension.where(url='http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-treatmentplan').extension.where(url='id').value"
-Severity: #error
-
-Invariant: pre-same-id
-Description: "A changed MedicationRequest SHALL keep the same identifier"
-Expression: "extension.where(url='http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-medicationrequest-changed').exists() implies extension.where(url='http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-medicationrequest-changed').extension.where(url='id').value.resolve().identifier.where(system='urn:ietf:rfc:3986').value = extension.where(url='http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-prescription').extension.where(url='id').value"
+Invariant: treatment-plan-id-reference-matches-statement-changed-reference
+Description: "If the observation includes a medication statement changed reference, it SHALL match the treatment plan id reference"
+Expression: "extension('http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-medicationstatement-changed').exists() implies (extension('http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-medicationstatement-changed').single().value as Reference).reference = (extension('http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-treatmentplan').extension('id').single().value as Identifier).value"
 Severity: #error

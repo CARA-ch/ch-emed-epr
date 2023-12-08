@@ -83,6 +83,7 @@ Id: ch-emed-epr-document-pharmaceuticaladvice
 Title: "PADV Document"
 Description: "Definition of the bundle for the pharmaceutical advice document"
 * insert document-ruleset
+* insert document-with-observations-ruleset
 * entry[Composition].resource only CHEMEDEPRCompositionPharmaceuticalAdvice
 * entry[Observation].resource only CHEMEDEPRObservation
 * entry[Observation] 1..
@@ -97,6 +98,7 @@ Id: ch-emed-epr-document-medicationlist
 Title: "PML Document"
 Description: "Definition of the bundle for the medication list document"
 * insert document-ruleset
+* insert document-with-observations-ruleset
 * entry.fullUrl obeys urn-uuid-invariant
 * entry[Composition].resource only CHEMEDEPRCompositionMedicationList
 * entry[MedicationStatement].resource only CHEMEDEPRMedicationStatementList
@@ -119,3 +121,21 @@ Description: "Definition of the bundle for the medication card document"
 * entry.fullUrl obeys urn-uuid-invariant
 * entry[Composition].resource only CHEMEDEPRCompositionMedicationCard
 * entry[MedicationStatement].resource only CHEMEDEPRMedicationStatementCard
+
+
+// =====================================================================================
+// Other RuleSet and invariants
+// =====================================================================================
+RuleSet: document-with-observations-ruleset
+* obeys padv-mtp-same-id
+* obeys padv-pre-same-id
+
+Invariant: padv-mtp-same-id
+Description: "A changed MedicationStatement SHALL keep the same identifier"
+Expression: "(entry.resource.ofType(Observation).extension('http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-medicationstatement-changed').select(value as Reference)).all(reference = (resolve() as MedicationStatement).identifier.single().value)"
+Severity: #error
+
+Invariant: padv-pre-same-id
+Description: "A changed MedicationRequest SHALL keep the same identifier"
+Expression: "(entry.resource.ofType(Observation).extension('http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-medicationrequest-changed').select(value as Reference)).all(reference = (resolve() as MedicationRequest).identifier.single().value)"
+Severity: #error
