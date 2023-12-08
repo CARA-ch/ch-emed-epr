@@ -36,6 +36,7 @@ RuleSet: medication-dispense-ruleset
 * insert no-support(substitution.responsibleParty) // It's the performer
 * insert no-support(detectedIssue)
 * insert no-support(eventHistory)
+* performer insert backbone-ruleset
 
 
 // =====================================================================================

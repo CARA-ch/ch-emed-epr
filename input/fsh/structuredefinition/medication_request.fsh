@@ -47,7 +47,7 @@ RuleSet: medication-request-ruleset
 * dispenseRequest.initialFill insert backbone-ruleset
 * substitution insert backbone-ruleset
 * substitution.allowed[x] only CodeableConcept
-* substitution.allowedCodeableConcept from CHEMEDEprActSubstanceAdminSubstitutionCode (required)
+* substitution.allowedCodeableConcept from ActSubstanceAdminSubstitutionCode  (required)
 * insert no-support(substitution.reason) // TODO we may want this
 
 // =====================================================================================
