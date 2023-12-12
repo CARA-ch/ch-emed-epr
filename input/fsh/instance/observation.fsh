@@ -38,7 +38,7 @@ Usage: #example
 * identifier.value = "urn:uuid:b34ff5b8-8da2-4a6f-8e68-852b84bad0b7"
 * status = #final
 * code = urn:oid:1.3.6.1.4.1.19376.1.9.2.1#CANCEL
-* subject.reference = "urn:uuid:2dbfe659-07d0-45c7-b8df-4a48372049a3"
+* subject.reference = "urn:uuid:9b00e81e-1165-4039-9d60-698ef838ae1a"
 * issued = "2023-10-04T00:00:00+02:00"
 * performer = Reference(urn:uuid:213d609a-1164-459a-bb10-727516ae3d0c)
 * note.text = "Difficulté à perndre le comprimé pelliculé, substitution par un comprimé effervescent."
