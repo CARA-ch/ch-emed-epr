@@ -84,6 +84,7 @@ Title: "PADV Document"
 Description: "Definition of the bundle for the pharmaceutical advice document"
 * insert document-ruleset
 * insert document-with-observations-ruleset
+* obeys padv-part-of-same-id
 * entry[Composition].resource only CHEMEDEPRCompositionPharmaceuticalAdvice
 * entry[Observation].resource only CHEMEDEPRObservation
 * entry[Observation] 1..
@@ -138,4 +139,9 @@ Severity: #error
 Invariant: padv-pre-same-id
 Description: "A changed MedicationRequest SHALL keep the same identifier"
 Expression: "(entry.resource.ofType(Observation).extension('http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-medicationrequest-changed').select(value as Reference)).all(reference = (resolve() as MedicationRequest).identifier.single().value)"
+Severity: #error
+
+Invariant: padv-part-of-same-id
+Description: "A changed MedicationRequest or MedicationStatement SHALL have the observation's identifier as partOf reference"
+Expression: "entry.resource.where($this is MedicationStatement or MedicationRequest).all(partOf.single().resolve().exists() and partOf.single().resolve() is Observation)"
 Severity: #error
