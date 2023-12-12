@@ -65,8 +65,8 @@ Usage: #example
 Description: "Example for a medication (Norvasc)"
 * code.text = "NORVASC Tabl 10 mg"
 * code = urn:oid:2.51.1.1#7680500440334 "NORVASC Tabl 10 mg"
-* ingredient.itemCodeableConcept.text = "Amlodipine"
 * ingredient.itemCodeableConcept = $sct#386864001 "Amlodipine (substance)"
+* ingredient.itemCodeableConcept.text = "Amlodipine"
 * ingredient.strength.numerator = 10 'mg' "milligram"
 * ingredient.strength.denominator = 1 $sct#732936001 "Tablet (unit of presentation)"
 * form.text = "Tablet"
@@ -74,3 +74,38 @@ Description: "Example for a medication (Norvasc)"
 * amount.numerator = 30 $sct#732936001 "Tablet (unit of presentation)"
 * amount.denominator = 1 $sct#1681000175101 "Package"
 
+Instance: MedicationParacetamolAxapharm
+InstanceOf: CHEMEDEPRMedication
+Usage: #example
+Description: "Example for Axapharm paracetamol tablets 1g"
+* language = #fr-CH
+* code.coding[+] = $gtin#7680669830045 "PARACETAMOL Axapharm cpr pell 1g blister 20pce"
+* code.coding[+] = $atc#N02BE01 "paracetamol"
+* code.text = "PARACETAMOL Axapharm cpr pell 1g"
+* form = $edqm#10221000 "Comprimé pelliculé"
+* form.text = "Comprimé pelliculé"
+* amount.numerator = 20 $sct#732936001 "comprimé"
+* amount.denominator = 1 $sct#732984005 "plaquette"
+* ingredient[+].itemCodeableConcept = $sct#387517004 "Paracetamol (substance)"
+* ingredient[=].itemCodeableConcept.text = "Paracétamol"
+* ingredient[=].isActive = true
+* ingredient[=].strength.numerator = 1 $ucum#g "g"
+* ingredient[=].strength.denominator = 1 $sct#732936001 "comprimé"
+
+Instance: MedicationParacetamolDafalganEff
+InstanceOf: CHEMEDEPRMedication
+Usage: #example
+Description: "Example for Dafalgan paracetamol effervescent tablets 500mg"
+* language = #fr-CH
+* code.coding[+] = $gtin#7680475030011 "DAFALGAN cpr eff 500mg"
+* code.coding[+] = $atc#N02BE01 "paracetamol"
+* code.text = "DAFALGAN cpr eff 500mg"
+* form = $edqm#10222000 "Comprimé effervescent"
+* form.text = "Comprimé effervescent"
+* amount.numerator = 40 $sct#732936001 "comprimé"
+* amount.denominator = 1 $sct#732984005 "plaquette"
+* ingredient[+].itemCodeableConcept = $sct#387517004 "Paracetamol (substance)"
+* ingredient[=].itemCodeableConcept.text = "Paracétamol"
+* ingredient[=].isActive = true
+* ingredient[=].strength.numerator = 500 $ucum#mg "mg"
+* ingredient[=].strength.denominator = 1 $sct#732936001 "comprimé"

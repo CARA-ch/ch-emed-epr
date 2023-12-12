@@ -1,40 +1,40 @@
-Instance: DocumentPre1
+Instance: DocumentPreParacetamolAxapharmCARAPMP004
 InstanceOf: CHEMEDEPRDocumentMedicationPrescription
-Title: "Bundle: PRE 1"
-Description: "An example of a prescription document bundle."
+Title: "Bundle: PRE Paracetamol Axapharm 1g"
+Description: "Initial PRE for paracetamol treatment for patient CARAPMP004."
 Usage: #example
 * identifier.system = "urn:ietf:rfc:3986"
-* identifier.value = "urn:uuid:7b36979f-5b18-4c11-9b4a-773b975e46fa"
+* identifier.value = "urn:uuid:e0c06f3c-1b63-468a-9c46-e800d39b6a15"
 * type = #document
-* timestamp = "2023-04-11T12:00:00+02:00"
-* entry[Composition].resource = CompositionPre1
-* entry[Composition].fullUrl = "urn:uuid:6f9d43df-fdc2-4ec2-a6d4-88b27dadb291"
-* entry[Patient].resource = PatientDupont
-* entry[Patient].fullUrl = "urn:uuid:2dbfe659-07d0-45c7-b8df-4a48372049a3"
+* timestamp = "2023-10-01T00:00:00+02:00"
+* entry[Composition].resource = CompositionPreParacetamolAxapharmCARAPMP004
+* entry[Composition].fullUrl = "urn:uuid:31b60b8f-e15d-42ce-9558-57fde055da7a"
+* entry[Patient].resource = PatientCARAPMP004
+* entry[Patient].fullUrl = "urn:uuid:9b00e81e-1165-4039-9d60-698ef838ae1a"
 * entry[Practitioner].resource = PractitionerCox
 * entry[Practitioner].fullUrl = "urn:uuid:9fc8530b-b77d-4b53-8a21-fc786b697edf"
 * entry[PractitionerRole].resource = PractitionerRoleCoxAtHug
 * entry[PractitionerRole].fullUrl = "urn:uuid:213d609a-1164-459a-bb10-727516ae3d0c"
 * entry[Organization].resource = OrganizationHug
 * entry[Organization].fullUrl = "urn:uuid:580fbe82-8734-4edf-ad4b-48124cdd03c6"
-* entry[MedicationRequest].resource = MedicationRequestTriatecPre
-* entry[MedicationRequest].fullUrl = "urn:uuid:cc74c310-3e16-45ff-b03d-4e0787e552d3"
-* entry[Binary].resource = OriginalRepresentationPre1
-* entry[Binary].fullUrl = "urn:uuid:dd4331ae-28da-476c-b59c-75b9cdf4f1b3"
+* entry[MedicationRequest].resource = MedicationRequestParacetamolAxapharmPre
+* entry[MedicationRequest].fullUrl = "urn:uuid:ac8ad5cd-aa46-49d6-a5ec-fbc48a9287b4"
+* entry[Binary].resource = OriginalRepresentationPreParacetamolAxapharmCARAPMP004
+* entry[Binary].fullUrl = "urn:uuid:a4f624e3-fa5a-4889-9bd1-821c8fefff60"
 
-Instance: CompositionPre1
+Instance: CompositionPreParacetamolAxapharmCARAPMP004
 InstanceOf: CHEMEDEPRCompositionMedicationPrescription
 Title: "PRE Composition"
 Description: "Example for a prescription document composition."
 Usage: #inline
 * language = #fr-CH
 * identifier.system = "urn:ietf:rfc:3986"
-* identifier.value = "urn:uuid:6f9d43df-fdc2-4ec2-a6d4-88b27dadb291"
+* identifier.value = "urn:uuid:31b60b8f-e15d-42ce-9558-57fde055da7a"
 * status = #final
 * type.coding[+] = $sct#761938008 "Medicinal prescription record (record artifact)"
 * type.coding[+] = $lnc#57833-6 "Prescription for medication"
-* subject.reference = "urn:uuid:2dbfe659-07d0-45c7-b8df-4a48372049a3"
-* date = "2023-04-11T12:00:00+02:00"
+* subject.reference = "urn:uuid:9b00e81e-1165-4039-9d60-698ef838ae1a"
+* date = "2023-10-01T00:00:00+02:00"
 * author[person].reference = "urn:uuid:213d609a-1164-459a-bb10-727516ae3d0c"
 * title = "Ordonnance"
 * confidentiality.extension[confidentialityCode].url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-confidentialitycode"
@@ -42,19 +42,19 @@ Usage: #inline
 * confidentiality = #N
 * section[prescription].title = "Prescription médicamenteuse"
 * section[prescription].code = $lnc#57828-6 "Prescription list"
-* section[prescription].entry.reference = "urn:uuid:cc74c310-3e16-45ff-b03d-4e0787e552d3"
+* section[prescription].entry.reference = "urn:uuid:ac8ad5cd-aa46-49d6-a5ec-fbc48a9287b4"
 * section[prescription].text.status = #generated
-* section[prescription].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">L'ordonnance #1</div>"
+* section[prescription].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">L'ordonnance #1 pour paracétamol Axapharm comprimé 1g - 1 comprimé MATIN MIDI SOIR - à prendre avec des repas</div>"
 * section[originalRepresentation].title = "Représentation originale"
 * section[originalRepresentation].code = $lnc#55108-5 "Clinical presentation Document"
 * section[originalRepresentation].text.status = #generated
 * section[originalRepresentation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Placeholder original representation of a prescription: not a valid binary</div>"
-* section[originalRepresentation].entry = Reference(urn:uuid:dd4331ae-28da-476c-b59c-75b9cdf4f1b3)
+* section[originalRepresentation].entry = Reference(urn:uuid:a4f624e3-fa5a-4889-9bd1-821c8fefff60)
 
-Instance: OriginalRepresentationPre1
+Instance: OriginalRepresentationPreParacetamolAxapharmCARAPMP004
 InstanceOf: Binary
 Title: "PRE Original Representation"
-Description: "Placeholfer for a prescription's original representation. It contains a non-valid empty binary."
+Description: "Placeholder for a prescription's original representation. It contains a non-valid empty binary."
 Usage: #inline
 * id = "original-representation-pdf"
 * contentType = #application/pdf
