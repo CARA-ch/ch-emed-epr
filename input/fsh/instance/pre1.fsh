@@ -4,7 +4,7 @@ Title: "Bundle: PRE 1"
 Description: "An example of a prescription document bundle."
 Usage: #example
 * identifier.system = "urn:ietf:rfc:3986"
-* identifier.value = "urn:uuid:7b36979f-5b18-4c11-9b4a-773b975e46fa"
+* identifier.value = "urn:uuid:6f9d43df-fdc2-4ec2-a6d4-88b27dadb291"
 * type = #document
 * timestamp = "2023-04-11T12:00:00+02:00"
 * entry[Composition].resource = CompositionPre1

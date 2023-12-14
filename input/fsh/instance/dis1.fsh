@@ -4,7 +4,7 @@ Title: "Bundle: DIS 1"
 Description: "An example of a dispense document bundle."
 Usage: #example
 * identifier.system = "urn:ietf:rfc:3986"
-* identifier.value = "urn:uuid:6c74e975-e283-4ca7-a1c9-cb4452b569de"
+* identifier.value = "urn:uuid:49ed45e9-f7b6-4854-a234-56bf744e9026"
 * type = #document
 * timestamp = "2023-04-15T09:00:00+02:00"
 * entry[Composition].resource = CompositionDis1

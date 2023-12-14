@@ -4,7 +4,7 @@ Title: "Bundle: PADV 1"
 Description: "The example of a Bundle for a PADV CHANGE document"
 Usage: #example
 * identifier.system = "urn:ietf:rfc:3986"
-* identifier.value = "urn:uuid:836b65e4-a588-414e-9633-da0bba5981d0"
+* identifier.value = "urn:uuid:293bf5b1-f663-4914-8080-4e33aa54b909"
 * type = #document
 * timestamp = "2023-04-11T12:00:00+02:00"
 * entry[Composition].resource = CompositionPadv1

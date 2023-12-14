@@ -1,5 +1,6 @@
 RuleSet: document-ruleset
 * insert resource-ruleset
+* obeys bundle-composition-same-id
 * identifier.use = http://hl7.org/fhir/identifier-use#official "Official"
 * identifier.value obeys urn-uuid-invariant
 * entry[Patient] 1..
@@ -144,4 +145,9 @@ Severity: #error
 Invariant: padv-part-of-same-id
 Description: "A changed MedicationRequest or MedicationStatement SHALL have the observation's identifier as partOf reference"
 Expression: "entry.resource.where($this is MedicationStatement or MedicationRequest).all(partOf.single().resolve().exists() and partOf.single().resolve() is Observation)"
+Severity: #error
+
+Invariant: bundle-composition-same-id
+Description: "The bundle and the composition resources must have the same identifier."
+Expression: "identifier.single() = entry[0].resource.identifier.single()"
 Severity: #error
