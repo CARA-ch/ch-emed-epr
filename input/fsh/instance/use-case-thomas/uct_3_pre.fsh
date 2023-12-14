@@ -8,7 +8,7 @@ Usage: #example
 * type = #document
 * timestamp = "2023-10-01T00:00:00+02:00"
 * entry[Composition].resource = CompositionPreParacetamolAxapharmCARAPMP004
-* entry[Composition].fullUrl = "urn:uuid:31b60b8f-e15d-42ce-9558-57fde055da7a"
+* entry[Composition].fullUrl = "urn:uuid:e0c06f3c-1b63-468a-9c46-e800d39b6a15"
 * entry[Patient].resource = PatientCARAPMP004
 * entry[Patient].fullUrl = "urn:uuid:9b00e81e-1165-4039-9d60-698ef838ae1a"
 * entry[Practitioner].resource = PractitionerCox
@@ -29,7 +29,7 @@ Description: "Example for a prescription document composition."
 Usage: #inline
 * language = #fr-CH
 * identifier.system = "urn:ietf:rfc:3986"
-* identifier.value = "urn:uuid:31b60b8f-e15d-42ce-9558-57fde055da7a"
+* identifier.value = "urn:uuid:e0c06f3c-1b63-468a-9c46-e800d39b6a15"
 * status = #final
 * type.coding[+] = $sct#761938008 "Medicinal prescription record (record artifact)"
 * type.coding[+] = $lnc#57833-6 "Prescription for medication"
@@ -58,3 +58,4 @@ Description: "Placeholder for a prescription's original representation. It conta
 Usage: #inline
 * id = "original-representation-pdf"
 * contentType = #application/pdf
+* data = "..."

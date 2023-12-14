@@ -7,4 +7,4 @@ Description: "Example device resource for the aggregator"
 * deviceName.type = #model-name
 * type = $sct#701612004 "Pharmaceutical information system application software (physical object)"
 * version.value = "8153cba"
-* owner = Reference(OrganizationCara)
+* owner = Reference(urn:uuid:dd9fd2e4-92d4-4a56-bda2-cf921e432eea)

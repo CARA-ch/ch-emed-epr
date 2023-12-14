@@ -4,7 +4,7 @@ Title: "Bundle: PRE Dafalgan eff 500mg"
 Description: "New PRE for paracetamol treatment for patient CARAPMP004 with Dafalgan effervescent tablets 500mg."
 Usage: #example
 * identifier.system = "urn:ietf:rfc:3986"
-* identifier.value = "urn:uuid:fa9d7bd8-963f-4eaf-9792-0b4e5c02a132"
+* identifier.value = "urn:uuid:31b60b8f-e15d-42ce-9558-57fde055da7a"
 * type = #document
 * timestamp = "2023-10-04T00:00:00+02:00"
 * entry[Composition].resource = CompositionPreParacetamolDafalganCARAPMP004

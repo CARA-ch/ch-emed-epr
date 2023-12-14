@@ -8,7 +8,7 @@ Usage: #example
 * type = #document
 * timestamp = "2023-10-01T00:00:00+02:00"
 * entry[Composition].resource = CompositionMtpParacetamolCARAPMP004
-* entry[Composition].fullUrl = "urn:uuid:7099dc5d-471a-42df-b260-e9d0875568fe"
+* entry[Composition].fullUrl = "urn:uuid:0399ef84-c71b-413b-8a66-b5a835f4f4c5"
 * entry[Patient].resource = PatientCARAPMP004
 * entry[Patient].fullUrl = "urn:uuid:9b00e81e-1165-4039-9d60-698ef838ae1a"
 * entry[Practitioner].resource = PractitionerCox
@@ -28,7 +28,7 @@ Description: "Composition for the initial MPT for paracetamol treatment for pati
 Usage: #inline
 * language = #fr-CH
 * identifier.system = "urn:ietf:rfc:3986"
-* identifier.value = "urn:uuid:7099dc5d-471a-42df-b260-e9d0875568fe"
+* identifier.value = "urn:uuid:0399ef84-c71b-413b-8a66-b5a835f4f4c5"
 * status = #final
 * type.coding[+] = $sct#761931002 "Medication treatment plan report (record artifact)"
 * type.coding[+] = $lnc#77603-9 "Medication treatment plan.extended Document"

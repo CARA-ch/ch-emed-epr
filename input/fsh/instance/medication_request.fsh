@@ -53,7 +53,7 @@ Usage: #example
 * dosageInstruction[baseEntry].additionalInstruction.text = "À prendre pendant les repas"
 * dosageInstruction[baseEntry].patientInstruction = "À prendre pendant les repas avec de l'eau"
 * dosageInstruction[baseEntry].timing.repeat.boundsPeriod.start = "2023-10-01"
-* dosageInstruction[baseEntry].timing.repeat.boundsPeriod.end = "2023-10-05"
+* dosageInstruction[baseEntry].timing.repeat.boundsPeriod.end = "2024-01-05"
 * dosageInstruction[baseEntry].timing.repeat.when[+] = #MORN
 * dosageInstruction[baseEntry].timing.repeat.when[+] = #NOON
 * dosageInstruction[baseEntry].timing.repeat.when[+] = #EVE
@@ -87,7 +87,7 @@ Usage: #example
 * dosageInstruction[baseEntry].additionalInstruction.text = "À prendre pendant les repas"
 * dosageInstruction[baseEntry].patientInstruction = "À prendre pendant les repas"
 * dosageInstruction[baseEntry].timing.repeat.boundsPeriod.start = "2023-10-01"
-* dosageInstruction[baseEntry].timing.repeat.boundsPeriod.end = "2023-10-10"
+* dosageInstruction[baseEntry].timing.repeat.boundsPeriod.end = "2024-01-10"
 * dosageInstruction[baseEntry].timing.repeat.when[+] = #MORN
 * dosageInstruction[baseEntry].timing.repeat.when[+] = #EVE
 * dosageInstruction[baseEntry].route = $edqm#20053000 "Oral use"

@@ -4,7 +4,7 @@ Title: "Bundle: PADV CANCEL paracetamol Axapharm"
 Description: "The example of a Bundle for a PADV CANCEL document for paracetamol Axapharm 1g for patient CARAPMP004"
 Usage: #example
 * identifier.system = "urn:ietf:rfc:3986"
-* identifier.value = "urn:uuid:e34a4f1b-3684-40f0-8d8b-25f0375ab0e4"
+* identifier.value = "urn:uuid:8796440c-604a-411f-a1d9-8277735eec05"
 * type = #document
 * timestamp = "2023-04-11T12:00:00+02:00"
 * entry[Composition].resource = CompositionPadvCancelParacetamolCARAPMP004
