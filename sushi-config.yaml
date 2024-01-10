@@ -26,8 +26,8 @@ publisher:
 # use cases, the value can be an object with keys for id, uri, and version.
 #
 dependencies:
-  ch.fhir.ig.ch-core: current
-  ch.fhir.ig.ch-emed: current
+  ch.fhir.ig.ch-core: 4.0.1
+  ch.fhir.ig.ch-emed: 4.0.1
 # dependencies:
 #   hl7.fhir.us.core: 3.1.0
 #   hl7.fhir.us.mcode:
