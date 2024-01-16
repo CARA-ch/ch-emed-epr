@@ -58,4 +58,4 @@ Description: "Placeholder for a prescription's original representation. It conta
 Usage: #inline
 * id = "original-representation-pdf"
 * contentType = #application/pdf
-* data = "..."
+//* data = "..."

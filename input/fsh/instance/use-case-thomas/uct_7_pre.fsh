@@ -6,7 +6,7 @@ Usage: #example
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:31b60b8f-e15d-42ce-9558-57fde055da7a"
 * type = #document
-* timestamp = "2023-10-04T00:00:00+02:00"
+* timestamp = "2023-11-04T12:00:00+02:00"
 * entry[Composition].resource = CompositionPreParacetamolDafalganCARAPMP004
 * entry[Composition].fullUrl = "urn:uuid:31b60b8f-e15d-42ce-9558-57fde055da7a"
 * entry[Patient].resource = PatientCARAPMP004
@@ -24,8 +24,8 @@ Usage: #example
 
 Instance: CompositionPreParacetamolDafalganCARAPMP004
 InstanceOf: CHEMEDEPRCompositionMedicationPrescription
-Title: "PRE Composition"
-Description: "Example for a prescription document composition."
+Title: "PRE Composition: Dafalgan Eff"
+Description: "Example for a prescription document composition for dafalgan effervescent."
 Usage: #inline
 * language = #fr-CH
 * identifier.system = "urn:ietf:rfc:3986"
@@ -34,7 +34,7 @@ Usage: #inline
 * type.coding[+] = $sct#761938008 "Medicinal prescription record (record artifact)"
 * type.coding[+] = $lnc#57833-6 "Prescription for medication"
 * subject.reference = "urn:uuid:9b00e81e-1165-4039-9d60-698ef838ae1a"
-* date = "2023-10-04T00:00:00+02:00"
+* date = "2023-11-04T12:00:00+02:00"
 * author[person].reference = "urn:uuid:213d609a-1164-459a-bb10-727516ae3d0c"
 * title = "Ordonnance"
 * confidentiality.extension[confidentialityCode].url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-confidentialitycode"

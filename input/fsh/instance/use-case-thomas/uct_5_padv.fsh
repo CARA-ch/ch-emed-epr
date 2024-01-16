@@ -6,7 +6,7 @@ Usage: #example
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:8796440c-604a-411f-a1d9-8277735eec05"
 * type = #document
-* timestamp = "2023-04-11T12:00:00+02:00"
+* timestamp = "2023-11-04T12:00:00+02:00"
 * entry[Composition].resource = CompositionPadvCancelParacetamolCARAPMP004
 * entry[Composition].fullUrl = "urn:uuid:8796440c-604a-411f-a1d9-8277735eec05"
 * entry[Patient].resource = PatientCARAPMP004
@@ -32,7 +32,7 @@ Usage: #inline
 * type.coding[+] = $sct#419891008 "Record artifact (record artifact)"
 * type.coding[+] = $lnc#61356-2 "Medication pharmaceutical advice.extended Document"
 * subject.reference = "urn:uuid:9b00e81e-1165-4039-9d60-698ef838ae1a"
-* date = "2023-04-11T12:00:00+02:00"
+* date = "2023-11-04T12:00:00+02:00"
 * author[person].reference = "urn:uuid:213d609a-1164-459a-bb10-727516ae3d0c"
 * title = "Commentaire relatif à la médication"
 * confidentiality.extension[confidentialityCode].url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-confidentialitycode"

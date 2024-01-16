@@ -1,4 +1,4 @@
-RuleSet: medication-request-ruleset
+RuleSet: medication-request-base-ruleset
 * insert domain-resource-ruleset
 * insert note-ruleset
 * extension[treatmentplan] 1..1
@@ -19,7 +19,6 @@ RuleSet: medication-request-ruleset
 * insert no-support(priority)
 * insert no-support(reported[x])
 * insert no-support(encounter)
-* insert no-support(supportingInformation)
 * insert no-support(performer)
 * insert no-support(performerType)
 * insert no-support(reasonReference)
@@ -48,13 +47,22 @@ RuleSet: medication-request-ruleset
 * substitution insert backbone-ruleset
 * substitution.allowed[x] only CodeableConcept
 * substitution.allowedCodeableConcept from ActSubstanceAdminSubstitutionCode  (required)
+* requester only Reference(CHEMEDEPRPractitionerRole)
 * insert no-support(substitution.reason) // TODO we may want this
+
+RuleSet: medication-request-ruleset
+* insert medication-request-base-ruleset
+* insert no-support(supportingInformation)
 
 // =====================================================================================
 // Medication Request PRE
 // =====================================================================================
 RuleSet: medication-request-pre-ruleset
 * insert medication-request-ruleset
+* status = #active
+
+RuleSet: medication-request-padv-ruleset
+* insert medication-request-base-ruleset
 * status = #active
 
 
@@ -74,7 +82,8 @@ Parent: CHEMEDMedicationRequestChanged
 Id: ch-emed-epr-medicationrequest-changed
 Title: "PADV Changed MedicationRequest"
 Description: "Definition of the changed medication request for the pharmaceutical advice document"
-* insert medication-request-pre-ruleset
+* insert medication-request-padv-ruleset
+* supportingInformation[partOf] only Reference(CHEMEDEPRObservation)
 
 
 // =====================================================================================

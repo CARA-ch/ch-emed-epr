@@ -109,3 +109,40 @@ Description: "Example for Dafalgan paracetamol effervescent tablets 500mg"
 * ingredient[=].isActive = true
 * ingredient[=].strength.numerator = 500 $ucum#mg "mg"
 * ingredient[=].strength.denominator = 1 $sct#732936001 "comprimé"
+
+Instance: MedicationRamipril
+InstanceOf: CHEMEDEPRMedication
+Usage: #example
+Description: "Medication example for Ramipril Mepha cpr 2.5mg"
+* language = #fr-CH
+* code.coding[+] = $gtin#7680658950037 "RAMIPRIL Mepha cpr 2.5 mg"
+* code.coding[+] = $atc#C09AA05 "Ramipril"
+* code.text = "RAMIPRIL Mepha cpr 2.5 mg"
+* form = $edqm#10221000 "Comprimé pelliculé"
+* form.text = "Comprimé pelliculé"
+* amount.numerator = 20 $sct#732936001 "comprimé"
+* amount.denominator = 1 $sct#732984005 "plaquette"
+* ingredient[+].itemCodeableConcept = $sct#386872004 "Ramipril (substance)"
+* ingredient[=].itemCodeableConcept.text = "Ramipril"
+* ingredient[=].isActive = true
+* ingredient[=].strength.numerator = 2.5 $ucum#mg "mg"
+* ingredient[=].strength.denominator = 1 $sct#732936001 "comprimé"
+* ingredient[+].itemCodeableConcept = $sct#47703008 "Lactose (substance)"
+* ingredient[=].itemCodeableConcept.text = "Lactose monohydraté"
+* ingredient[=].isActive = false
+* ingredient[=].strength.numerator = 158.8 $ucum#mg "mg"
+* ingredient[=].strength.denominator = 1 $sct#732936001 "comprimé"
+* ingredient[+].itemCodeableConcept.text = "Amidon prégélatinisé"
+* ingredient[=].isActive = false
+* ingredient[+].itemCodeableConcept.text = "Oxyde de fer jaune (E 172)"
+* ingredient[=].isActive = false
+* ingredient[+].itemCodeableConcept.text = "Croscarmellose sodique"
+* ingredient[=].isActive = false
+* ingredient[+].itemCodeableConcept = $sct#387319002 "Sodium bicarbonate (substance)"
+* ingredient[=].itemCodeableConcept.text = "Bicarbonate de sodium"
+* ingredient[=].strength.numerator = 1.16 $ucum#mg "mg"
+* ingredient[=].strength.denominator = 1 $sct#732936001 "comprimé"
+* ingredient[=].isActive = false
+* ingredient[+].itemCodeableConcept.text = "Fumarate de stéaryle sodique"
+* ingredient[=].isActive = false
+

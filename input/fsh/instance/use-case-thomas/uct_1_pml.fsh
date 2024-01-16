@@ -18,7 +18,9 @@ Description: "PML pre-examination for patient CARAPMP004. No previous treatments
 
 Instance: Inline-composition-for-utc-1-pml
 InstanceOf: CHEMEDEPRCompositionMedicationList
-Usage: #inline
+Title: "Composition: use case PML #1"
+Description: "Composition for PML document for pre-examination for patient CARAPMP004. No previous treatments, empty medication list."
+Usage: #example
 * language = #fr-CH
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:87f151e3-9e67-48aa-8cfe-f816ae5fc084"

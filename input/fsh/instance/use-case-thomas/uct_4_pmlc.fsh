@@ -1,8 +1,8 @@
 Instance: DocumentPmlcCARAPMP004AxapharmParacetamol
 InstanceOf: CHEMEDEPRDocumentMedicationCard
-Title: "Bundle: PMLC  document with a prescriber axapharm paracetamol treatment"
+Title: "Bundle: PMLC  document with a prescribed axapharm paracetamol treatment"
 Usage: #example
-Description: "Example of PMLC  document with a prescriber axapharm paracetamol treatment"
+Description: "Example of PMLC  document with a prescribed axapharm paracetamol treatment"
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:46141281-6d89-4f57-950b-45bf7ba3171c"
 * type = #document
@@ -15,8 +15,6 @@ Description: "Example of PMLC  document with a prescriber axapharm paracetamol t
 * entry[Device].resource = DevicePmp
 * entry[Organization].resource = OrganizationCara
 * entry[Organization].fullUrl = "urn:uuid:dd9fd2e4-92d4-4a56-bda2-cf921e432eea"
-* entry[+].resource = OrganizationHug
-* entry[=].fullUrl = "urn:uuid:580fbe82-8734-4edf-ad4b-48124cdd03c6"
 * entry[MedicationStatement].fullUrl = "urn:uuid:6d18b9e4-df5d-4932-b996-c0c2ada40b0e"
 * entry[MedicationStatement].resource = MedicationStatementParacetamolAxapharmPmlc
 * entry[Binary].fullUrl = "urn:uuid:ddfaa7af-f4c6-4928-9eb8-c3ceb3b37143"
@@ -24,7 +22,9 @@ Description: "Example of PMLC  document with a prescriber axapharm paracetamol t
 
 Instance: CompositionPmlcParacetamolAxapharmCARAPMP004
 InstanceOf: CHEMEDEPRCompositionMedicationCard
-Usage: #inline
+Title: "Composition: PMLC  document with a prescribed axapharm paracetamol treatment"
+Description: "Example of PMLC  document composition with a prescribed axapharm paracetamol treatment"
+Usage: #example
 * language = #fr-CH
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:46141281-6d89-4f57-950b-45bf7ba3171c"
