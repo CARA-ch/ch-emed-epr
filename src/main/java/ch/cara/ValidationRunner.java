@@ -66,16 +66,15 @@ class ValidationRunner {
         this.engine = new MatchboxEngine.MatchboxEngineBuilder().getEngineR4();
         this.engine.getIgLoader().loadIg(this.engine.getIgs(),
                                          this.engine.getBinaries(),
-                                         "http://fhir.ch/ig/ch-epr-term/package.tgz",
-                                         // TODO: change URL for build.fhir.org version
+                                         "http://fhir.ch/ig/ch-epr-term/2.0.10/package.tgz",
                                          true);
         this.engine.getIgLoader().loadIg(this.engine.getIgs(),
                                          this.engine.getBinaries(),
-                                         "http://build.fhir.org/ig/hl7ch/ch-core/package.tgz",
+                                         "http://fhir.ch/ig/ch-core/4.0.1/package.tgz",
                                          true);
         this.engine.getIgLoader().loadIg(this.engine.getIgs(),
                                          this.engine.getBinaries(),
-                                         "http://build.fhir.org/ig/hl7ch/ch-emed/package.tgz",
+                                         "http://fhir.ch/ig/ch-emed/4.0.1/package.tgz",
                                          true);
         this.engine.getIgLoader().loadIg(this.engine.getIgs(),
                                          this.engine.getBinaries(),
@@ -104,7 +103,7 @@ class ValidationRunner {
         log.info("Running validation of " + this.resources.size() + " resources");
         for (final var entry : this.resources.entrySet()) {
             final String filePath = entry.getKey();
-            final String profileUrl = "https://fhir.cara.ch/StructureDefinition/" + entry.getValue();
+            final String profileUrl = "https://fhir.ch/ig/ch-emed-epr/StructureDefinition/" + entry.getValue();
             if (!this.validateFile(filePath, profileUrl)) {
                 ++failures;
             } else {
