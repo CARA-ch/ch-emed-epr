@@ -25,6 +25,7 @@
             <li><a href="http://build.fhir.org/ig/hl7ch/ch-emed/repeated-dispense.html" target="_blank">CH EMED: Repeated Dispense</a></li>
         </ul>
     </li>
+    <li><a href="use_case.html">Use Case</a></li>
     <li><a href="artifacts.html">Artifacts</a></li>
     <li><a href="workflow.html">Workflows</a></li>
     <li><a href="changelog.html">Changelog</a></li>
