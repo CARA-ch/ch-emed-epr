@@ -1,7 +1,7 @@
 ### Introduction
 
 The CH EMED EPR implementation guide describes the FHIR representation of the defined **documents for the exchange of medication information** in the context of [CARA's eMedication service](https://cara-ch.github.io/emed-service-guide/).
-This implementation guide is dependent on [CH EMED](https://build.fhir.org/ig/hl7ch/ch-emed/index.html) (CI version), [CH Core](http://fhir.ch/ig/ch-core/index.html) and [CH EPR Term](http://fhir.ch/ig/ch-epr-term/index.html), which describe the Swiss specific context, especially related to the Swiss EPR.
+This implementation guide is dependent on [CH EMED](https://fhir.ch/ig/ch-emed/index.html), [CH Core](http://fhir.ch/ig/ch-core/index.html) and [CH EPR Term](http://fhir.ch/ig/ch-epr-term/index.html), which describe the Swiss specific context, especially related to the Swiss EPR.
 
 Initially this implementation guide was based on the CDA-CH-EMED eMedication ART-DECOR® specification which has been published by [eHealth Suisse](https://www.e-health-suisse.ch/en/home.html).
 CDA-CH-EMED defined the eMedication documents for the information exchange in the context of the EPR in Switzerland.
