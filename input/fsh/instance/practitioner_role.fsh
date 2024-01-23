@@ -12,7 +12,7 @@ InstanceOf: CHEMEDEPRPractitioner
 Title: "Practitioner: Perry Cox"
 Description: "The example of a practitioner"
 Usage: #example
-* identifier[+].system = "urn:oid:2.51.1.3"
-* identifier[=].value = "7601000234438"
+* identifier[GLN].system = "urn:oid:2.51.1.3"
+* identifier[GLN].value = "7601000234438"
 * name.family = "Cox"
 * name.given = "Perry"
