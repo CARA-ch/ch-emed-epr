@@ -87,7 +87,7 @@ Usage: #example
 * extension[prescription].extension[externalDocumentId].valueIdentifier.system = "urn:ietf:rfc:3986"
 * extension[prescription].extension[externalDocumentId].valueIdentifier.value = "urn:uuid:6f9d43df-fdc2-4ec2-a6d4-88b27dadb291"
 * extension[medicationRequestChanged].url = "http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-medicationrequest-changed"
-* extension[medicationRequestChanged].valueReference.reference = "urn:uuid:ecdad2f3-15b9-40af-a965-b590de794ccb"
+* extension[medicationRequestChanged].valueReference.reference = "urn:uuid:41b97645-e263-47c2-8d96-79da451a33f2"
 * identifier[+].system = "urn:ietf:rfc:3986"
 * identifier[=].value = "urn:uuid:e0a7065f-61c3-4b17-ba6d-9446cd2d6473"
 * status = #final
