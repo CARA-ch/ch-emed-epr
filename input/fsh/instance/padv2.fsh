@@ -20,7 +20,7 @@ Usage: #example
 * entry[Observation].resource = ObservationRamiprilPadv
 * entry[Observation].fullUrl = "urn:uuid:e0a7065f-61c3-4b17-ba6d-9446cd2d6473"
 * entry[MedicationRequestChanged].resource = MedicationRequestRamiprilPadv
-* entry[MedicationRequestChanged].fullUrl = "urn:uuid:41b97645-e263-47c2-8d96-79da451a33f2"
+* entry[MedicationRequestChanged].fullUrl = "urn:uuid:cc74c310-3e16-45ff-b03d-4e0787e552d3"
 
 Instance: CompositionPadv2
 InstanceOf: CHEMEDEPRCompositionPharmaceuticalAdvice
@@ -61,7 +61,7 @@ Usage: #inline
 * extension[treatmentplan].extension[externalDocumentId].valueIdentifier.system = "urn:ietf:rfc:3986"
 * extension[treatmentplan].extension[externalDocumentId].valueIdentifier.value = "urn:uuid:0399ef84-c71b-413b-8a66-b5a835f4f4c5"
 * identifier[+].system = "urn:ietf:rfc:3986"
-* identifier[=].value = "urn:uuid:41b97645-e263-47c2-8d96-79da451a33f2"
+* identifier[=].value = "urn:uuid:cc74c310-3e16-45ff-b03d-4e0787e552d3"
 * status = #active
 * intent = #order
 * medicationReference = Reference(MedicationRamipril)
