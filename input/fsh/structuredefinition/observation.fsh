@@ -1,9 +1,8 @@
-RuleSet: observation-ruleset
+RuleSet: observation-base-ruleset
 * insert domain-resource-ruleset
 * obeys only-one-obs-ref
 * obeys mtp-entry-only-with-ref
 * obeys pre-entry-only-with-ref
-* obeys treatment-plan-id-reference-matches-statement-changed-reference
 * insert no-support(basedOn)
 * insert no-support(partOf)
 * insert no-support(category)
@@ -28,6 +27,9 @@ RuleSet: observation-ruleset
 * subject ^type.aggregation[+] = #bundled
 //* subject 1..1  // TODO #16
 
+RuleSet: observation-ruleset
+* insert observation-base-ruleset
+* obeys treatment-plan-id-reference-matches-statement-changed-reference
 
 // =====================================================================================
 // Observation PADV
@@ -49,7 +51,7 @@ Parent: CHEMEDObservationList
 Id: ch-emed-epr-observation-list
 Title: "PML Observation"
 Description: "Definition of the observation for the medication list document"
-* insert observation-ruleset
+* insert observation-base-ruleset
 * extension[parentDocument] 1..1
 * extension[authorDocument].valueReference only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
 

@@ -101,7 +101,6 @@ Id: ch-emed-epr-document-medicationlist
 Title: "PML Document"
 Description: "Definition of the bundle for the medication list document"
 * insert document-ruleset
-* insert document-with-observations-ruleset
 * entry.fullUrl obeys urn-uuid-invariant
 * entry[Composition].resource only CHEMEDEPRCompositionMedicationList
 * entry[MedicationStatement].resource only CHEMEDEPRMedicationStatementList
