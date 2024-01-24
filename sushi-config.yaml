@@ -28,7 +28,7 @@ publisher:
 dependencies:
   ch.fhir.ig.ch-core: 4.0.1
   ch.fhir.ig.ch-emed: 4.0.1
-  hl7.terminology.r4: 5.4.0
+  hl7.terminology: 5.4.0
 # dependencies:
 #   hl7.fhir.us.core: 3.1.0
 #   hl7.fhir.us.mcode:
