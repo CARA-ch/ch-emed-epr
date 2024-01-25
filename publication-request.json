@@ -1,0 +1,16 @@
+{
+  "package-id" : "ch.fhir.ig.ch-emed-epr",
+  "version" : "1.0.0",
+  "path" : "http://fhir.ch/ig/ch-emed-epr/1.0.0",
+  "mode" : "milestone",
+  "status" : "trial-use",
+  "sequence" : "STU1",
+  "desc" : "CARA",
+  "descmd": "FHIR eMedication exchange formats for the implementation effort of CARA within its EPR community",
+  "changes" : "changelog.html",
+  "first": true,
+  "category" : "clinical",
+  "title": "FHIR eMedication exchange formats for the implementation effort of CARA within its EPR community",
+  "introduction": "FHIR eMedication exchange formats for the implementation effort of CARA within its EPR community",
+  "ci-build" : "https://build.fhir.org/ig/CARA-ch/ch-emed-epr/"
+}
