@@ -103,7 +103,7 @@ class ValidationRunner {
         log.info("Running validation of " + this.resources.size() + " resources");
         for (final var entry : this.resources.entrySet()) {
             final String filePath = entry.getKey();
-            final String profileUrl = "https://fhir.ch/ig/ch-emed-epr/StructureDefinition/" + entry.getValue();
+            final String profileUrl = "http://fhir.ch/ig/ch-emed-epr/StructureDefinition/" + entry.getValue();
             if (!this.validateFile(filePath, profileUrl)) {
                 ++failures;
             } else {
