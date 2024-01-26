@@ -9,10 +9,10 @@ name: ChEmedEpr
 title: "CH EMED EPR"
 description: FHIR Implementation Guide which defines the documents for the exchange of medication information in the context of the Swiss eMedication service
 status: draft # draft | active | retired | unknown
-version: 1.0.0
+version: 1.0.1-ci-build
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2022+
-releaseLabel: trial-use # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
+releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 license: CC0-1.0
 copyright: CC0-1.0
 jurisdiction: urn:iso:std:iso:3166#CH "Switzerland" # https://www.hl7.org/fhir/valueset-jurisdiction.html
