@@ -5,6 +5,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### [Unreleased]
 
+- Updated dates on DocumentPadv2 so that it can be published after the sequence DocumentMtp1, DocumentPadv1, DocumentPre1, DocumentDis1 when testing.
+
 ### [1.0.0] - 2024-01-24
 
 #### Added

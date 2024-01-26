@@ -6,7 +6,7 @@ Usage: #example
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:26717ead-d8ef-44cd-b5e9-d0bd3479e0fc"
 * type = #document
-* timestamp = "2023-04-12T12:00:00+02:00"
+* timestamp = "2023-04-20T12:00:00+02:00"
 * entry[Composition].resource = CompositionPadv2
 * entry[Composition].fullUrl = "urn:uuid:26717ead-d8ef-44cd-b5e9-d0bd3479e0fc"
 * entry[Patient].resource = PatientDupont
@@ -34,7 +34,7 @@ Usage: #inline
 * type.coding[+] = $sct#419891008 "Record artifact (record artifact)"
 * type.coding[+] = $lnc#61356-2 "Medication pharmaceutical advice.extended Document"
 * subject.reference = "urn:uuid:2dbfe659-07d0-45c7-b8df-4a48372049a3"
-* date = "2023-04-12T12:00:00+02:00"
+* date = "2023-04-20T12:00:00+02:00"
 * author[person].reference = "urn:uuid:213d609a-1164-459a-bb10-727516ae3d0c"
 * title = "Commentaire relatif à la médication"
 * confidentiality.extension[confidentialityCode].url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-confidentialitycode"
@@ -67,7 +67,7 @@ Usage: #inline
 * medicationReference = Reference(MedicationRamipril)
 * subject = Reference(urn:uuid:2dbfe659-07d0-45c7-b8df-4a48372049a3)
 * supportingInformation[partOf] = Reference(urn:uuid:e0a7065f-61c3-4b17-ba6d-9446cd2d6473)
-* authoredOn = "2023-04-12"
+* authoredOn = "2023-04-20"
 * requester = Reference(urn:uuid:213d609a-1164-459a-bb10-727516ae3d0c)
 * dosageInstruction[baseEntry].patientInstruction = "À prendre avec de l'eau"
 * dosageInstruction[baseEntry].timing.repeat.when = #NOON
@@ -75,4 +75,4 @@ Usage: #inline
 * dosageInstruction[baseEntry].route.text = "À avaler"
 * dosageInstruction[baseEntry].doseAndRate.doseRange.low = 0.5 http://snomed.info/sct#732936001 "Tablet (unit of presentation)"
 * dosageInstruction[baseEntry].doseAndRate.doseRange.high = 1 http://snomed.info/sct#732936001 "Tablet (unit of presentation)"
-* dosageInstruction[baseEntry].timing.repeat.boundsPeriod.start = "2023-04-11"
+* dosageInstruction[baseEntry].timing.repeat.boundsPeriod.start = "2023-04-20"
