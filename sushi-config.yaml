@@ -4,7 +4,7 @@
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: ch.fhir.ig.ch-emed-epr
-canonical: https://fhir.ch/ig/ch-emed-epr
+canonical: http://fhir.ch/ig/ch-emed-epr
 name: ChEmedEpr
 title: "CH EMED EPR"
 description: FHIR Implementation Guide which defines the documents for the exchange of medication information in the context of the Swiss eMedication service
