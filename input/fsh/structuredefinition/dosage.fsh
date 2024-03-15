@@ -31,6 +31,8 @@ RuleSet: main-dosage-ruleset
 * route insert codeableconcept-with-text-ruleset
 * route ^definition = "...Implementers SHOULD focus on supporting values from the value set [Route of Administration](ValueSet-ch-emed-epr-route-of-administration.html)."
 * method insert codeableconcept-with-text-ruleset
+* route.text 1..1 // TODO #16
+* site.text 1..1 // TODO #16
 
 
 RuleSet: split-dosage-ruleset
@@ -51,8 +53,6 @@ RuleSet: common-dosage-ruleset
 * doseAndRate.doseRange only CHEMEDEPRAmountRange
 * doseAndRate.rate[x] only Ratio // Range and quantity not compatible with our units (it would require a UCUM unit of amount per time)
 * doseAndRate.rateRatio only CHEMEDEPRRatioAmountPerTime
-* route.text 1..1 // TODO #16
-* site.text 1..1 // TODO #16
 * timing.repeat.bounds[x] only Period
 
 

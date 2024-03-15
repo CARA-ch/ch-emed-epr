@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Updated dates on DocumentPadv2 so that it can be published after the sequence DocumentMtp1, DocumentPadv1, DocumentPre1, DocumentDis1 when testing.
 - Added Bq, kBq, MBq and GBq units to the CHEMEDEPRAmountQuantityUnitCode value set, added in CH EMED 4.0.1 to the parent UnitCode value set.
+- Moved cardinality 1..1 on route.text and route.id from common-dosage-ruleset to main-dosage-ruleset (since split dosage cardinality in CH EMED is forced to 0).
 
 ### [1.0.0] - 2024-01-24
 
