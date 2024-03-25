@@ -12,7 +12,7 @@ RuleSet: quantity-ruleset
 // Amount Quantity
 // =====================================================================================
 Profile: CHEMEDEPRAmountQuantity
-Parent: CHEMEDQuantityWithEmedUnits
+Parent: CHCoreQuantityWithEmedUnits
 Id: ch-emed-epr-amount-quantity
 Title: "Amount Quantity"
 Description: "A quantity with an amount unit (no time unit)"
@@ -30,7 +30,7 @@ Severity: #warning
 // Time Quantity
 // =====================================================================================
 Profile: CHEMEDEPRTimeQuantity
-Parent: CHEMEDQuantityWithEmedUnits
+Parent: CHCoreQuantityWithEmedUnits
 Id: ch-emed-epr-time-quantity
 Title: "Time Quantity"
 Description: "A quantity with a time unit (a duration)"

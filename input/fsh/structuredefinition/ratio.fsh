@@ -7,7 +7,7 @@ RuleSet: ratio-ruleset
 // Quantity Ratio (Amount / Amount)
 // =====================================================================================
 Profile: CHEMEDEPRRatioAmountPerAmount
-Parent: CHEMEDRatioWithEmedUnits
+Parent: CHCoreRatioWithEmedUnits
 Id: ch-emed-epr-ratio-amount-per-amount
 Title: "Ratio (Amount / Amount)"
 Description: "A ratio of amount per amount"
@@ -21,7 +21,7 @@ Description: "A ratio of amount per amount"
 // Quantity Ratio (Amount / Time)
 // =====================================================================================
 Profile: CHEMEDEPRRatioAmountPerTime
-Parent: CHEMEDRatioWithEmedUnits
+Parent: CHCoreRatioWithEmedUnits
 Id: ch-emed-epr-ratio-amount-per-time
 Title: "Ratio (Amount / Time)"
 Description: "A ratio of amount per time"

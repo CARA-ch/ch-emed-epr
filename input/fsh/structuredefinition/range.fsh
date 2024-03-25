@@ -7,7 +7,7 @@ RuleSet: range-ruleset
 // Amount Quantity Range
 // =====================================================================================
 Profile: CHEMEDEPRAmountRange
-Parent: CHEMEDRangeWithEmedUnits
+Parent: CHCoreRangeWithEmedUnits
 Id: ch-emed-epr-amount-range
 Title: "Amount Range"
 Description: "A range of amount quantities"
