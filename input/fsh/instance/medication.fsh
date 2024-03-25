@@ -30,7 +30,7 @@ Usage: #example
 * code.text = "Exforge 10/160mg"
 * form = urn:oid:0.4.0.127.0.16.1.1.2.1#10219000 "Tablet"
 * form.text = "Tablet"
-* amount.numerator = 28 '{Piece}' "Piece"
+* amount.numerator = 28 $sct#246205007 "Quantity"
 * amount.denominator = 1 $sct#1681000175101 "Package"
 * ingredient[0].itemCodeableConcept = $sct#386864001 "Amlodipine (substance)"
 * ingredient[=].itemCodeableConcept.text = "Amlodipine (substance)"

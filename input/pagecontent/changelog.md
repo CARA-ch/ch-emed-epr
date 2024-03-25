@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Moved cardinality `1..1` on `route.text` and `route.id` from `common-dosage-ruleset` to `main-dosage-ruleset` (since split dosage cardinality in CH EMED is forced to 0).
 - Fixed profile for examples `MedicationStatementParacetamolAxapharmPmlc` and `MedicationStatementParacetamolDafalganEffPmlc` to be `CHEMEDEPRMedicationStatementCard` instead of `CHEMEMedicationStatementCard`.
 - Added an example for a medication statement with split dosage: `MedicationStatementDafalganEffSplitDose`.
+- Replace `{Piece}` unit code with SCT `246205007` (`Quantity`) in `CHEMEDEPRAmountQuantityUnitCode` and in the `MedicationWithTwoIngredients` example.
 - Updated dependencies to:
   - CH EMED 5.0.0
   - CH Core 5.0.0
