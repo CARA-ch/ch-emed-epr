@@ -45,7 +45,7 @@ Usage: #example
 * dosage[baseEntry].doseAndRate.doseQuantity = 1 $sct#732936001 "comprimé"
 
 Instance: MedicationStatementParacetamolAxapharmPmlc
-InstanceOf: CHEMEDMedicationStatementCard
+InstanceOf: CHEMEDEPRMedicationStatementCard
 Title: "MedicationStatement: Paracetamol Axapharm (PMLC)"
 Description: "The example of a medication statement for a medication card with a single Axapharm paracetamol treatment"
 Usage: #example
@@ -107,7 +107,7 @@ Usage: #example
 * dosage[baseEntry].doseAndRate.doseQuantity = 2 $sct#732936001 "comprimé"
 
 Instance: MedicationStatementParacetamolDafalganEffPmlc
-InstanceOf: CHEMEDMedicationStatementCard
+InstanceOf: CHEMEDEPRMedicationStatementCard
 Title: "MedicationStatement: Paracetamol Dafalgan Effervescent (PMLC)"
 Description: "The example of a medication statement for a medication card with a single Dafalgan effervescent paracetamol treatment."
 Usage: #example
@@ -141,3 +141,36 @@ Usage: #example
 * dosage[baseEntry].route = $edqm#20053000 "Oral use"
 * dosage[baseEntry].route.text = "À avaler"
 * dosage[baseEntry].doseAndRate.doseQuantity = 2 $sct#732936001 "comprimé"
+
+Instance: MedicationStatementDafalganEffSplitDose
+// this entry is not part of any document / use case
+InstanceOf: CHEMEDEPRMedicationStatement
+Title: "MedicationStatement: Paracetamol Dafalgan Effervescent (MTP) with split dose"
+Description: "The example for a medication statement with split dose."
+Usage: #example
+* contained[+] = MedicationParacetamolDafalganEff
+* contained[+] = OrganizationHug
+* contained[+] = PractitionerCox
+* contained[+] = PractitionerRoleCoxAtHug
+* contained[=].practitioner = Reference(PractitionerCox)
+* contained[=].organization = Reference(OrganizationHug)
+* language = #fr-CH
+* identifier.system = "urn:ietf:rfc:3986"
+* identifier.value = "urn:uuid:0564998f-b3b2-4e70-8daf-52d7c5d50eb3"
+* status = #active
+* medicationReference = Reference(MedicationParacetamolDafalganEff)
+* subject = Reference(urn:uuid:9b00e81e-1165-4039-9d60-698ef838ae1a)
+* dateAsserted = "2023-11-05T12:00:00+02:00"
+* informationSource = Reference(PractitionerRoleCoxAtHug)
+* reasonCode.text = "Dafalgan pour des douleurs regulières."
+* dosage[baseEntry].timing.repeat.boundsPeriod.start = "2023-11-05"
+* dosage[baseEntry].timing.repeat.boundsPeriod.end = "2024-02-10"
+* dosage[baseEntry].timing.repeat.when[+] = #MORN
+* dosage[baseEntry].route = $edqm#20053000 "Oral use"
+* dosage[baseEntry].route.text = "À avaler"
+* dosage[baseEntry].doseAndRate.doseQuantity = 2 $sct#732936001 "comprimé"
+* dosage[baseEntry].text = "Dafalgan: 2 comprimés à avaler le matin et 1 comprimé à avaler le soir."
+* dosage[baseEntry].sequence = 1
+* dosage[additionalEntry].sequence = 2
+* dosage[additionalEntry].timing.repeat.when[+] = #EVE
+* dosage[additionalEntry].doseAndRate.doseQuantity = 1 $sct#732936001 "comprimé"
