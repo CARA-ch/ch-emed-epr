@@ -63,6 +63,9 @@ Usage: #example
 * extension[treatmentPlan].extension[externalDocumentId].url = "externalDocumentId"
 * extension[treatmentPlan].extension[externalDocumentId].valueIdentifier.system = "urn:ietf:rfc:3986"
 * extension[treatmentPlan].extension[externalDocumentId].valueIdentifier.value = "urn:uuid:0399ef84-c71b-413b-8a66-b5a835f4f4c5"
+* extension[lastConsideredDocument].url = "http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-last-considered-document"
+* extension[lastConsideredDocument].valueIdentifier.system = "urn:ietf:rfc:3986"
+* extension[lastConsideredDocument].valueIdentifier.value = "urn:uuid:e0c06f3c-1b63-468a-9c46-e800d39b6a15"
 // #51 TODO add prescription extension??? it is not in the profile but it is at the moment added by the aggregator upon generation
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:64ac7c70-3edb-4b39-84e6-4045e196884f"
@@ -125,6 +128,9 @@ Usage: #example
 * extension[treatmentPlan].extension[externalDocumentId].url = "externalDocumentId"
 * extension[treatmentPlan].extension[externalDocumentId].valueIdentifier.system = "urn:ietf:rfc:3986"
 * extension[treatmentPlan].extension[externalDocumentId].valueIdentifier.value = "urn:uuid:7062399b-61f2-4fb1-b6ba-415c7b6939bc"
+* extension[lastConsideredDocument].url = "http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-last-considered-document"
+* extension[lastConsideredDocument].valueIdentifier.system = "urn:ietf:rfc:3986"
+* extension[lastConsideredDocument].valueIdentifier.value = "urn:uuid:31b60b8f-e15d-42ce-9558-57fde055da7a"
 // #51 TODO add prescription extension??? it is not in the profile but it is at the moment added by the aggregator upon generation
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:a98cc3c1-c079-471c-b053-93b01b70f8c4"

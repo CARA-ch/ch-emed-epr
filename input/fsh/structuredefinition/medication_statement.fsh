@@ -103,6 +103,7 @@ Description: "Definition of the aggregated medication statement for the Medicati
 * extension[authorDocument].valueReference only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
 * extension[authorDocument] ^short = "The last intervening author, only if different that the last medical author (see 'Document PMLC' and 'Guidance - Different Authors')"
 * extension[authorDocument] ^comment = "...It represents the author of the last entry (of any kind) in the treatment. If it's the same author as the last medical author, it's not provided."
+* extension[lastConsideredDocument] 1..1
 * insert base-note-ruleset
 * note.author[x] 1..1
 * note.author[x] only Reference
