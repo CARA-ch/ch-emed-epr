@@ -33,6 +33,14 @@ RuleSet: main-dosage-ruleset
 * method insert codeableconcept-with-text-ruleset
 * route.text 1..1 // TODO #16
 * site.text 1..1 // TODO #16
+* text MS
+* text ^short = "Narrative representation of the full dosage (including split dosage elements if they exist) information. SHOULD be provided."
+* text ^definition = "Narrative representation of the full dosage information, including any split dosage elements if they exist. The aim is to provide the whole content of the dosage (whether structured or not) in a human readable fashion."
+* text ^comment = "This field is expected to be always populated."
+* obeys base-dosage-text
+* patientInstruction ^definition = "Dosage information as free text in terms that are understood by the patient or consumer. Any information that cannot be provided in a structured way, other than in Dosage.additionalInstruction, SHALL be provided here and, OPTIONALLY, coded in additionalInstruction."
+* patientInstruction ^comment = "Any information provided in patientInstruction SHALL be present in Dosage.text and, optionally, in Dosage.additionalInstruction."
+* additionalInstruction ^comment = "Any information provided in additionalInstruction SHALL be present in both Dosage.text and Dosage.patientInstruction."
 
 
 RuleSet: split-dosage-ruleset
@@ -54,6 +62,11 @@ RuleSet: common-dosage-ruleset
 * doseAndRate.rate[x] only Ratio // Range and quantity not compatible with our units (it would require a UCUM unit of amount per time)
 * doseAndRate.rateRatio only CHEMEDEPRRatioAmountPerTime
 * timing.repeat.bounds[x] only Period
+
+Invariant: base-dosage-text
+Description: "It is a strong recommendation that the base dosage should contain the whole dosage information as narrative, including the information from split dosage elements."
+Expression: "text.exists() and text.trim().length() > 0"
+Severity: #warning
 
 
 Invariant: only-standard-event-timings

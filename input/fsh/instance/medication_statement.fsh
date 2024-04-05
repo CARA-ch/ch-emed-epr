@@ -15,6 +15,7 @@ Usage: #example
 * dosage[baseEntry].route.text = "À avaler"
 * dosage[baseEntry].doseAndRate.doseQuantity = 0.5 http://snomed.info/sct#732936001 "Tablet (unit of presentation)"
 * dosage[baseEntry].timing.repeat.boundsPeriod.start = "2023-04-11"
+* dosage[baseEntry].text = "Un demi comprimé à avaler et prendre avec de l'eau tous les midis dès le 2023-04-11."
 * dateAsserted = "2023-04-11"
 * informationSource = Reference(urn:uuid:213d609a-1164-459a-bb10-727516ae3d0c)
 
@@ -43,6 +44,7 @@ Usage: #example
 * dosage[baseEntry].route = $edqm#20053000 "Oral use"
 * dosage[baseEntry].route.text = "À avaler"
 * dosage[baseEntry].doseAndRate.doseQuantity = 1 $sct#732936001 "comprimé"
+* dosage[baseEntry].text = "Un comprimé à avaler pendant les repas avec de l'eau le matin, le midi et le soir du 2023-10-01 au 2024-01-05."
 
 Instance: MedicationStatementParacetamolAxapharmPmlc
 InstanceOf: CHEMEDEPRMedicationStatementCard
@@ -85,6 +87,7 @@ Usage: #example
 * dosage[baseEntry].route = $edqm#20053000 "Oral use"
 * dosage[baseEntry].route.text = "À avaler"
 * dosage[baseEntry].doseAndRate.doseQuantity = 1 $sct#732936001 "comprimé"
+* dosage[baseEntry].text = "Un comprimé à avaler pendant les repas avec de l'eau le matin, le midi et le soir du 2023-10-01 au 2024-01-05."
 
 Instance: MedicationStatementParacetamolDafalganEffMtp
 InstanceOf: CHEMEDEPRMedicationStatement
@@ -108,6 +111,7 @@ Usage: #example
 * dosage[baseEntry].route = $edqm#20053000 "Oral use"
 * dosage[baseEntry].route.text = "À avaler"
 * dosage[baseEntry].doseAndRate.doseQuantity = 2 $sct#732936001 "comprimé"
+* dosage[baseEntry].text = "2 comprimés à avaler le matin et 2 comprimés le soir, du 2023-10-04 au 2024-02-10."
 
 Instance: MedicationStatementParacetamolDafalganEffPmlc
 InstanceOf: CHEMEDEPRMedicationStatementCard
@@ -147,6 +151,7 @@ Usage: #example
 * dosage[baseEntry].route = $edqm#20053000 "Oral use"
 * dosage[baseEntry].route.text = "À avaler"
 * dosage[baseEntry].doseAndRate.doseQuantity = 2 $sct#732936001 "comprimé"
+* dosage[baseEntry].text = "2 comprimés à avaler le matin et 2 comprimés le soir, du 2023-10-04 au 2024-02-10."
 
 Instance: MedicationStatementDafalganEffSplitDose
 // this entry is not part of any document / use case
@@ -175,7 +180,7 @@ Usage: #example
 * dosage[baseEntry].route = $edqm#20053000 "Oral use"
 * dosage[baseEntry].route.text = "À avaler"
 * dosage[baseEntry].doseAndRate.doseQuantity = 2 $sct#732936001 "comprimé"
-* dosage[baseEntry].text = "Dafalgan: 2 comprimés à avaler le matin et 1 comprimé à avaler le soir."
+* dosage[baseEntry].text = "2 comprimés à avaler le matin et 1 comprimé à avaler le soir."
 * dosage[baseEntry].sequence = 1
 * dosage[additionalEntry].sequence = 2
 * dosage[additionalEntry].timing.repeat.when[+] = #EVE

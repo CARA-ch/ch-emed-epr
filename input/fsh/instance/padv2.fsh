@@ -76,3 +76,4 @@ Usage: #inline
 * dosageInstruction[baseEntry].doseAndRate.doseRange.low = 0.5 http://snomed.info/sct#732936001 "Tablet (unit of presentation)"
 * dosageInstruction[baseEntry].doseAndRate.doseRange.high = 1 http://snomed.info/sct#732936001 "Tablet (unit of presentation)"
 * dosageInstruction[baseEntry].timing.repeat.boundsPeriod.start = "2023-04-20"
+* dosageInstruction[baseEntry].text = "Un demi comprimé ou un comprimé entier à avaler avec de l'eau le midi dès le 2023-04-20."

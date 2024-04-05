@@ -26,6 +26,7 @@ Usage: #example
 * dosageInstruction[baseEntry].doseAndRate.doseRange.low = 0.5 http://snomed.info/sct#732936001 "Tablet (unit of presentation)"
 * dosageInstruction[baseEntry].doseAndRate.doseRange.high = 1 http://snomed.info/sct#732936001 "Tablet (unit of presentation)"
 * dosageInstruction[baseEntry].timing.repeat.boundsPeriod.start = "2023-04-11"
+* dosageInstruction[baseEntry].text = "Un demi comprimé ou un comprimé entier à avaler avec de l'eau le soir dès le 2023-04-11."
 
 Instance: MedicationRequestTriatecPml
 InstanceOf: CHEMEDEPRMedicationRequestList
@@ -62,6 +63,7 @@ Usage: #example
 * dosageInstruction[baseEntry].doseAndRate.doseRange.low = 0.5 http://snomed.info/sct#732936001 "Tablet (unit of presentation)"
 * dosageInstruction[baseEntry].doseAndRate.doseRange.high = 1 http://snomed.info/sct#732936001 "Tablet (unit of presentation)"
 * dosageInstruction[baseEntry].timing.repeat.boundsPeriod.start = "2023-04-11"
+* dosageInstruction[baseEntry].text = "Un demi comprimé ou un comprimé entier à avaler avec de l'eau le soir dès le 2023-04-11."
 
 Instance: MedicationRequestParacetamolAxapharmPre
 InstanceOf: CHEMEDEPRMedicationRequest
@@ -96,6 +98,7 @@ Usage: #example
 * dosageInstruction[baseEntry].route = $edqm#20053000 "Oral use"
 * dosageInstruction[baseEntry].route.text = "À avaler"
 * dosageInstruction[baseEntry].doseAndRate.doseQuantity = 1 $sct#732936001 "comprimé"
+* dosageInstruction[baseEntry].text = "Un comprimé à avaler et prendre pendant les repas avec de l'eau le matin, le midi et le soir du 2023-10-01 au 2024-01-05."
 
 Instance: MedicationRequestDafalganEffPre
 InstanceOf: CHEMEDEPRMedicationRequest
@@ -126,4 +129,5 @@ Usage: #example
 * dosageInstruction[baseEntry].route = $edqm#20053000 "Oral use"
 * dosageInstruction[baseEntry].route.text = "À avaler"
 * dosageInstruction[baseEntry].doseAndRate.doseQuantity = 2 $sct#732936001 "comprimé"
+* dosageInstruction[baseEntry].text = "À avaler: 2 comprimés le matin et 2 comprimés le soir du 2024-10-04 au 2024-02-10."
 * note.text = "Difficulté à prendre le comprimé pelliculé, substitution par un comprimé effervescent."
