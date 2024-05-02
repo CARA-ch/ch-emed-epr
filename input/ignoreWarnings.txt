@@ -4,18 +4,17 @@
 # (And include comments like this justifying why)
 # See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
 
-# The value set is not updated yet
-None of the codings provided are in the value set 'DocumentEntry.typeCode' (http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.typeCode|2.0.8), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = http://snomed.info/sct#736378000)
-None of the codings provided are in the value set 'DocumentEntry.typeCode' (http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.typeCode|2.0.8), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = http://snomed.info/sct#761931002, http://loinc.org#77603-9)
-None of the codings provided are in the value set 'DocumentEntry.typeCode'
-
-# GTIN codes cannot be validated
-Code System URI 'urn:oid:2.51.1.1' is unknown so the code cannot be validated
+# External code system
+A definition for CodeSystem 'urn:oid:0.4.0.127.0.16.1.1.2.1' could not be found, so the code cannot be validated
 A definition for CodeSystem 'urn:oid:2.51.1.1' could not be found, so the code cannot be validated
+
+# The value set is not updated yet
+None of the codings provided are in the value set 'DocumentEntry.typeCode' (http://fhir.ch/ig/ch-term/ValueSet/DocumentEntry.typeCode|3.0.0-ci-build), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = http://snomed.info/sct#736378000)
+None of the codings provided are in the value set 'DocumentEntry.typeCode' (http://fhir.ch/ig/ch-term/ValueSet/DocumentEntry.typeCode|3.0.0-ci-build), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = http://snomed.info/sct#82291000195104, http://loinc.org#60593-1)
+None of the codings provided are in the value set 'DocumentEntry.typeCode' (http://fhir.ch/ig/ch-term/ValueSet/DocumentEntry.typeCode|3.0.0-ci-build), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = http://snomed.info/sct#761931002, http://loinc.org#77603-9)
 
 # https://jira.hl7.org/browse/FHIR-25429
 Elements included in the differential should declare mustSupport
 
-#  We use issued field
-Best Practice Recommendation: In general, all observations should have an effective[x]
-
+# We use issued field
+Best Practice Recommendation: In general, all observations should have an effective[x] ()
