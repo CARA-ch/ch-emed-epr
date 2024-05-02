@@ -32,6 +32,7 @@ RuleSet: medication-request-base-ruleset
 * insert no-support(detectedIssue)
 * insert no-support(eventHistory)
 * insert no-support(dispenseRequest.initialFill)
+* insert no-support(dispenseRequest.dispenseInterval)
 * insert no-support(dispenseRequest.expectedSupplyDuration)
 * insert no-support(dispenseRequest.performer)
 * dispenseRequest.initialFill.quantity only CHEMEDEPRAmountQuantity
