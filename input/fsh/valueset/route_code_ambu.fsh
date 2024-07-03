@@ -3,7 +3,7 @@ Id: ch-emed-epr-route-of-administration
 Title: "Route of Administration"
 Description: """Valueset RouteOfAdministration filtered for ambulatory care use.
 
-This value set is a subset of the mandatory value set ([EDQM - RouteOfAdministration](http://fhir.ch/ig/ch-emed/ValueSet-edqm-routeofadministration.html)) that contains only values compatible with ambulatory care.
+This value set is a subset of the mandatory value set ([EDQM - RouteOfAdministration](http://fhir.ch/ig/ch-term/ValueSet/edqm-routeofadministration)) that contains only values compatible with ambulatory care.
 We recommend implementers to focus on supporting this value set instead of the complete one."""
 
 * ^experimental = true
