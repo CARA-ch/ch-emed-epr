@@ -90,6 +90,8 @@ Description: "Definition of the bundle for the pharmaceutical advice document"
 * entry[Composition].resource only CHEMEDEPRCompositionPharmaceuticalAdvice
 * entry[Observation].resource only CHEMEDEPRObservation
 * entry[Observation] 1..
+* entry[MedicationStatementChanged].resource only CHEMEDEPRChangedMedicationStatement
+* entry[MedicationRequestChanged].resource only CHEMEDEPRChangedMedicationRequest
 
 
 // =====================================================================================

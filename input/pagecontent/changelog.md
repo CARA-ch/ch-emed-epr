@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added `base-dosage-text` invariant to base `main-dosage-ruleset`, hence to `CHEMEDEPRDosage` and `CHEMEDEPRDosageMedicationRequest` profiles. This invariant produces a warning if the `Dosage.text` is missing or blank. Updated all affected dosage examples to include `.text`.
 - Updated the descriptions of `CHEMEDEPRDosage` and `CHEMEDEPRDosageMedicationRequest` `.text`, `.additionalInstruction`, and `.patientInstruction` fields to reflect the changes proposed in https://github.com/CARA-ch/ch-emed-epr/issues/61.
 - Flagged `CHEMEDEPRMedicationRequest`, `CHEMEDEPRChangedMedicationRequest` and `CHEMEDEPRMedicationRequestList` `.dispenseRequest.dispenseInterval` as not supported.
+- Fixed PADV document profile `CHEMEDEPRDocumentPharmaceuticalAdvice` for entry slices `MedicationStatementChanged` and `MedicationRequestChanged` to use the CH EMED EPR resources `CHEMEDEPRChangedMedicationStatement` and `CHEMEDEPRChangedMedicationRequest` respectively instead of the CH EMED ones.
 - Updated dependencies to:
   - CH EMED 5.0.0
   - CH Core 5.0.0
