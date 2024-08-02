@@ -54,10 +54,8 @@ RuleSet: medication-request-base-ruleset
 RuleSet: medication-request-ruleset
 * insert medication-request-base-ruleset
 * insert no-support(supportingInformation)
+* supportingInformation 0..0
 
-// =====================================================================================
-// Medication Request PRE
-// =====================================================================================
 RuleSet: medication-request-pre-ruleset
 * insert medication-request-ruleset
 * status = #active
@@ -65,8 +63,16 @@ RuleSet: medication-request-pre-ruleset
 RuleSet: medication-request-padv-ruleset
 * insert medication-request-base-ruleset
 * status = #active
+* supportingInformation[partOf] only Reference(CHEMEDEPRObservation)
+* supportingInformation[partOf] 1..1
 
+RuleSet: medication-request-pml-ruleset
+* extension[parentDocument] 1..1
+* extension[authorDocument].valueReference only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
 
+// =====================================================================================
+// Medication Request PRE
+// =====================================================================================
 Profile: CHEMEDEPRMedicationRequest
 Parent: CHEMEDMedicationRequest
 Id: ch-emed-epr-medicationrequest
@@ -84,8 +90,6 @@ Id: ch-emed-epr-medicationrequest-changed
 Title: "PADV Changed MedicationRequest"
 Description: "Definition of the changed medication request for the pharmaceutical advice document"
 * insert medication-request-padv-ruleset
-* supportingInformation[partOf] only Reference(CHEMEDEPRObservation)
-
 
 // =====================================================================================
 // Medication Request PML
@@ -96,6 +100,15 @@ Id: ch-emed-epr-medicationrequest-list
 Title: "PML MedicationRequest"
 Description: "Definition of the medication request for the medication list document"
 * insert medication-request-ruleset
-* extension[parentDocument] 1..1
-* extension[authorDocument].valueReference only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
-// TODO: describe status
+* insert medication-request-pml-ruleset
+
+// =====================================================================================
+// Changed Medication Request PML
+// =====================================================================================
+Profile: CHEMEDEPRMedicationRequestChangedList
+Parent: CHEMEDMedicationRequestChangedList
+Id: ch-emed-epr-medication-request-changed-list
+Title: "PML Changed Medication Request"
+Description: "Definition of the changed medication request for the medication list document"
+* insert medication-request-padv-ruleset
+* insert medication-request-pml-ruleset

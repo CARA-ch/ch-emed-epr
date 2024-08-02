@@ -106,7 +106,9 @@ Description: "Definition of the bundle for the medication list document"
 * entry.fullUrl obeys urn-uuid-invariant
 * entry[Composition].resource only CHEMEDEPRCompositionMedicationList
 * entry[MedicationStatement].resource only CHEMEDEPRMedicationStatementList
+* entry[MedicationStatementChanged].resource only CHEMEDEPRMedicationStatementChangedList
 * entry[MedicationRequest].resource only CHEMEDEPRMedicationRequestList
+* entry[MedicationRequestChanged] only CHEMEDEPRMedicationRequestChangedList
 * entry[MedicationDispense].resource only CHEMEDEPRMedicationDispenseList
 * entry[Observation].resource only CHEMEDEPRObservationList
 * entry[MedicationAdministration] 0..0
