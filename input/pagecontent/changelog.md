@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed profile for examples `MedicationStatementParacetamolAxapharmPmlc` and `MedicationStatementParacetamolDafalganEffPmlc` to be `CHEMEDEPRMedicationStatementCard` instead of `CHEMEMedicationStatementCard`.
 - Added `base-dosage-text` invariant to base `main-dosage-ruleset`, hence to `CHEMEDEPRDosage` and `CHEMEDEPRDosageMedicationRequest` profiles. This invariant produces a warning if the `Dosage.text` is missing or blank. Updated all affected dosage examples to include `.text`.
 - Fixed PADV document profile `CHEMEDEPRDocumentPharmaceuticalAdvice` for entry slices `MedicationStatementChanged` and `MedicationRequestChanged` to use the CH EMED EPR resources `CHEMEDEPRChangedMedicationStatement` and `CHEMEDEPRChangedMedicationRequest` respectively instead of the CH EMED ones.
+- Fixed the `time-quantity-only-integer` constraint on the `CHEMEDEPRTimeQuantity` profile, that was badly express and would not work at all. See [#71](https://github.com/CARA-ch/ch-emed-epr/issues/71).
 
 #### Changed
 
