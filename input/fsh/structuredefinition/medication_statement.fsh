@@ -33,7 +33,7 @@ RuleSet: medication-statement-mtp-ruleset
 * insert medication-statement-ruleset
 * insert note-ruleset
 * extension[substitution].value[x] only CodeableConcept
-* extension[substitution].valueCodeableConcept from ActSubstanceAdminSubstitutionCode (required)
+* extension[substitution].valueCodeableConcept from CHEMEDEprActSubstanceAdminSubstitutionCode (required)
 * extension[substitution].valueCodeableConcept.coding 1..
 * extension[substitution].valueCodeableConcept insert codeableconcept-ruleset
 * insert no-support(extension[substitution].id)
