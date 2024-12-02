@@ -32,10 +32,8 @@ RuleSet: medication-statement-ruleset
 RuleSet: medication-statement-mtp-ruleset
 * insert medication-statement-ruleset
 * insert note-ruleset
-* extension[substitution].value[x] only CodeableConcept
 * extension[substitution].valueCodeableConcept from CHEMEDEprActSubstanceAdminSubstitutionCode (required)
 * extension[substitution].valueCodeableConcept.coding 1..
-* extension[substitution].valueCodeableConcept insert codeableconcept-ruleset
 * insert no-support(extension[substitution].id)
 * extension[substitution] ^short = "Whether the dispenser can substitute the prescribed medicine/package by another that is deemed equivalent, for medical or logistical reasons. By default, substitution is authorized."
 * status = #active
