@@ -108,7 +108,7 @@ Description: "Definition of the bundle for the medication list document"
 * entry[MedicationStatement].resource only CHEMEDEPRMedicationStatement
 * entry[MedicationRequest].resource only CHEMEDEPRMedicationRequest
 * entry[MedicationDispense].resource only CHEMEDEPRMedicationDispense
-* entry[Observation].resource only CHEMEDEPRObservationList
+* entry[Observation].resource only CHEMEDEPRObservation
 * entry[MedicationAdministration] 0..0
 * insert no-support(entry[MedicationAdministration])
 
