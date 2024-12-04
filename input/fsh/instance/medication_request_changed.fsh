@@ -13,7 +13,7 @@ Usage: #example
 * extension.extension[=].valueIdentifier.system = "urn:ietf:rfc:3986"
 * extension.extension[=].valueIdentifier.value = "urn:uuid:7062399b-61f2-4fb1-b6ba-415c7b6939bc"
 * identifier.system = "urn:ietf:rfc:3986"
-* identifier.value = "urn:uuid:e0c06f3c-1b63-468a-9c46-e800d39b6a15"
+* identifier.value = "urn:uuid:ac8ad5cd-aa46-49d6-a5ec-fbc48a9287b4"
 * status = #active
 * intent = #order
 * medicationReference = Reference(MedicationParacetamolDafalganEff)
@@ -48,7 +48,7 @@ Usage: #example
 * extension[parentDocument].url = "http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-pharmaceuticaladvice"
 * extension[parentDocument].extension[id].url = "id"
 * extension[parentDocument].extension[id].valueIdentifier.system = "urn:ietf:rfc:3986"
-* extension[parentDocument].extension[id].valueIdentifier.value = "urn:uuid:819febad-dc65-4548-a739-00d1b305c265"
+* extension[parentDocument].extension[id].valueIdentifier.value = "urn:uuid:7e64e4bf-65d9-40d4-a2b5-e7ddc254f08d"
 * extension[parentDocument].extension[externalDocumentId].url = "externalDocumentId"
 * extension[parentDocument].extension[externalDocumentId].valueIdentifier.system = "urn:ietf:rfc:3986"
 * extension[parentDocument].extension[externalDocumentId].valueIdentifier.value = "urn:uuid:6c5a6e38-3782-499c-986f-086e7121828d"
