@@ -3,7 +3,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-### [Unreleased]
+### [2.0.0] - Unreleased
 
 #### Added
 
@@ -11,7 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added _nanomole_ and _Application_ units to the `CHEMEDEPRAmountQuantityUnitCode` value set.
 - Added an example for a medication statement with split dosage: `MedicationStatementDafalganEffSplitDose`.
 - Set cardinality of PMLC medication statement (`CHEMEDEPRMedicationStatementCard`) extension `lastConsideredDocument`, added with CH EMED 5.0.0, to `1..1` and added it to the IG examples.
-- Added profiles `CHEMEDEPRMedicationRequestChangedList` and `CHEMEDEPRMedicationStatementChangedList` as entries in `CHEMEDEPRDocumentMedicationList` and `CHEMEDEPRCompositionMedicationList` for the _changed_ resources.
+- Added profiles `CHEMEDEPRMedicationRequestChangedList` and `CHEMEDEPRMedicationStatementChangedList` as entries in `CHEMEDEPRDocumentMedicationList` and `CHEMEDEPRCompositionMedicationList` for the _changed_ resources. Added examples for this two new profiles.
+- Added an alternative scenario to the [Use Case](use_case.html) to showcase a PADV CHANGE and a PML including changed resources.
 - Added `CHEMEDEPRPaperFormatCS` coding system and `CHEMEDEPRPaperFormat` value set for paper formats to be used in PMLC queries.
 
 #### Fixed
@@ -33,7 +34,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `CHEMEDEPRMedicationStatement`
   - `CHEMEDEPRMedicationStatementList`
   - `CHEMEDEPRMedicationStatementCard`
-- Changed caridnality of `supportingInformation` to `0..0` for profiles `CHEMEDEPRMedicationRequest` and `CHEMEDEPRMedicationRequestList`.
+- Changed cardinality of `supportingInformation` to `0..0` for profiles `CHEMEDEPRMedicationRequest` and `CHEMEDEPRMedicationRequestList`.
 - Updated dependencies to:
   - CH EMED 5.0.0
   - CH Core 5.0.0
