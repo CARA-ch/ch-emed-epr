@@ -13,7 +13,7 @@ Usage: #example
 * extension.extension[=].valueIdentifier.system = "urn:ietf:rfc:3986"
 * extension.extension[=].valueIdentifier.value = "urn:uuid:7062399b-61f2-4fb1-b6ba-415c7b6939bc"
 * identifier.system = "urn:ietf:rfc:3986"
-* identifier.value = "urn:uuid:10bb1f25-f4f1-49cf-9123-9f235cf34c3f"
+* identifier.value = "urn:uuid:e0c06f3c-1b63-468a-9c46-e800d39b6a15"
 * status = #active
 * intent = #order
 * medicationReference = Reference(MedicationParacetamolDafalganEff)

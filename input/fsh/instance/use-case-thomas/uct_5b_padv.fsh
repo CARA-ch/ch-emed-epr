@@ -20,7 +20,7 @@ Usage: #example
 * entry[Observation].resource = ObservationParacetamolAxapharmPrePadvChange
 * entry[Observation].fullUrl = "urn:uuid:7e64e4bf-65d9-40d4-a2b5-e7ddc254f08d"
 * entry[MedicationRequestChanged].resource = MedicationRequestChangedDafalganEffPre
-* entry[MedicationRequestChanged].fullUrl = "urn:uuid:10bb1f25-f4f1-49cf-9123-9f235cf34c3f"
+* entry[MedicationRequestChanged].fullUrl = "urn:uuid:e0c06f3c-1b63-468a-9c46-e800d39b6a15"
 
 Instance: CompositionPadvChangeParacetamolCARAPMP004
 InstanceOf: CHEMEDEPRCompositionPharmaceuticalAdvice
