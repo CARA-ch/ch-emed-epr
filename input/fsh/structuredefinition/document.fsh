@@ -105,10 +105,10 @@ Description: "Definition of the bundle for the medication list document"
 * insert document-ruleset
 * entry.fullUrl obeys urn-uuid-invariant
 * entry[Composition].resource only CHEMEDEPRCompositionMedicationList
-* entry[MedicationStatement].resource only CHEMEDEPRMedicationStatementList
-* entry[MedicationRequest].resource only CHEMEDEPRMedicationRequestList
-* entry[MedicationDispense].resource only CHEMEDEPRMedicationDispenseList
-* entry[Observation].resource only CHEMEDEPRObservationList
+* entry[MedicationStatement].resource only CHEMEDEPRMedicationStatement
+* entry[MedicationRequest].resource only CHEMEDEPRMedicationRequest
+* entry[MedicationDispense].resource only CHEMEDEPRMedicationDispense
+* entry[Observation].resource only CHEMEDEPRObservation
 * entry[MedicationAdministration] 0..0
 * insert no-support(entry[MedicationAdministration])
 

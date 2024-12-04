@@ -131,3 +131,41 @@ Usage: #example
 * dosageInstruction[baseEntry].doseAndRate.doseQuantity = 2 $sct#732936001 "comprimé"
 * dosageInstruction[baseEntry].text = "À avaler: 2 comprimés le matin et 2 comprimés le soir du 2024-10-04 au 2024-02-10."
 * note.text = "Difficulté à prendre le comprimé pelliculé, substitution par un comprimé effervescent."
+
+Instance: MedicationRequestParacetamolAxapharmPml
+InstanceOf: CHEMEDEPRMedicationRequestList
+Title: "MedicationRequest: Paracetamol Axapharm 1g (PML)"
+Description: "Example of a medication request from a PRE document for paracetamol Axapharm tablet 1g, conveyed within a PML document."
+Usage: #example
+* contained[0] = MedicationParacetamolAxapharm
+* language = #fr-CH
+* extension[treatmentplan].url = "http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-treatmentplan"
+* extension[treatmentplan].extension[id].url = "id"
+* extension[treatmentplan].extension[id].valueIdentifier.system = "urn:ietf:rfc:3986"
+* extension[treatmentplan].extension[id].valueIdentifier.value = "urn:uuid:17837392-0340-414d-a3bf-fa9f237b91ff"
+* extension[treatmentplan].extension[externalDocumentId].url = "externalDocumentId"
+* extension[treatmentplan].extension[externalDocumentId].valueIdentifier.system = "urn:ietf:rfc:3986"
+* extension[treatmentplan].extension[externalDocumentId].valueIdentifier.value = "urn:uuid:0399ef84-c71b-413b-8a66-b5a835f4f4c5"
+* extension[parentDocument].extension[id].valueIdentifier.value = "urn:uuid:ac8ad5cd-aa46-49d6-a5ec-fbc48a9287b4"
+* extension[parentDocument].extension[externalDocumentId].valueIdentifier.value = "urn:uuid:e0c06f3c-1b63-468a-9c46-e800d39b6a15"
+* identifier.system = "urn:ietf:rfc:3986"
+* identifier.value = "urn:uuid:ad120583-d601-4f6c-b16c-bc90079b909e"
+* status = #active
+* intent = #order
+* medicationReference = Reference(MedicationParacetamolAxapharm)
+* subject = Reference(urn:uuid:9b00e81e-1165-4039-9d60-698ef838ae1a)
+* authoredOn = "2023-10-01T00:00:00+02:00"
+* requester = Reference(urn:uuid:213d609a-1164-459a-bb10-727516ae3d0c)
+* dosageInstruction[baseEntry].additionalInstruction = $sct#311504000 "With or after food"
+* dosageInstruction[baseEntry].additionalInstruction.text = "À prendre pendant les repas"
+* dosageInstruction[baseEntry].patientInstruction = "À prendre pendant les repas avec de l'eau"
+* dosageInstruction[baseEntry].timing.repeat.boundsPeriod.start = "2023-10-01"
+* dosageInstruction[baseEntry].timing.repeat.boundsPeriod.end = "2024-01-05"
+* dosageInstruction[baseEntry].timing.repeat.when[+] = #MORN
+* dosageInstruction[baseEntry].timing.repeat.when[+] = #NOON
+* dosageInstruction[baseEntry].timing.repeat.when[+] = #EVE
+* dosageInstruction[baseEntry].route = $edqm#20053000 "Oral use"
+* dosageInstruction[baseEntry].route.text = "À avaler"
+* dosageInstruction[baseEntry].doseAndRate.doseQuantity = 1 $sct#732936001 "comprimé"
+* dosageInstruction[baseEntry].text = "Un comprimé à avaler et prendre pendant les repas avec de l'eau le matin, le midi et le soir du 2023-10-01 au 2024-01-05."
+

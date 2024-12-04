@@ -47,5 +47,5 @@ Severity: #error
 
 Invariant: time-quantity-only-integer
 Description: "A time quantity shall only have an integer value"
-Expression: "$this.convertsToInteger()"
+Expression: "$this.toString().convertsToInteger()"
 Severity: #error 

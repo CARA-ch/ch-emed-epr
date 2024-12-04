@@ -29,24 +29,24 @@ RuleSet: medication-statement-ruleset
 * insert no-support(effective[x])
 * effective[x] ^short = "✕ Do not use. The effective period is contained in the main dosage"
 
-// =====================================================================================
-// Medication Statement MTP
-// =====================================================================================
 RuleSet: medication-statement-mtp-ruleset
 * insert medication-statement-ruleset
 * insert note-ruleset
-* extension[substitution].value[x] only CodeableConcept
-* extension[substitution].valueCodeableConcept from ActSubstanceAdminSubstitutionCode (required)
+* extension[substitution].valueCodeableConcept from CHEMEDEprActSubstanceAdminSubstitutionCode (required)
 * extension[substitution].valueCodeableConcept.coding 1..
-* extension[substitution].valueCodeableConcept insert codeableconcept-ruleset
 * insert no-support(extension[substitution].id)
 * extension[substitution] ^short = "Whether the dispenser can substitute the prescribed medicine/package by another that is deemed equivalent, for medical or logistical reasons. By default, substitution is authorized."
 * status = #active
-// TODO TEST flags
-//* insert overridden(informationSource)
-//* informationSource ^short = "✕ The information source is given in Composition.section.author or Composition.author (see guidance)"
+
+RuleSet: medication-statement-pml-ruleset
+* insert medication-statement-mtp-ruleset
+* extension[authorDocument].valueReference only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
+* extension[parentDocument] 1..1
 
 
+// =====================================================================================
+// Medication Statement MTP
+// =====================================================================================
 Profile: CHEMEDEPRMedicationStatement
 Parent: CHEMEDMedicationStatement
 Id: ch-emed-epr-medicationstatement-treatmentplan
@@ -54,7 +54,7 @@ Title: "MTP MedicationStatement"
 Description: "Definition of the medication statement for the Medication Treatment Plan document"
 * insert medication-statement-mtp-ruleset
 * insert no-support(partOf)
-
+* partOf 0..0
 
 // =====================================================================================
 // Changed Medication Statement in a PADV Observation
@@ -75,17 +75,19 @@ Parent: CHEMEDMedicationStatementList
 Id: ch-emed-epr-medicationstatement-list
 Title: "PML MedicationStatement"
 Description: "Definition of the medication statement for the medication list document"
-* insert medication-statement-ruleset
-* insert note-ruleset
-* extension[substitution].valueCodeableConcept from ActSubstanceAdminSubstitutionCode (required)
-* extension[substitution].valueCodeableConcept.coding 1..
-* extension[substitution].valueCodeableConcept insert codeableconcept-ruleset
-* extension[authorDocument].valueReference only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
-* insert no-support(extension[substitution].id)
-* extension[substitution] ^short = "Whether the dispenser can substitute the prescribed medicine/package by another that is deemed equivalent, for medical or logistical reasons. By default, substitution is authorized."
-* extension[parentDocument] 1..1
-* status = #active
+* insert medication-statement-pml-ruleset
+* partOf 0..0
 
+// =====================================================================================
+// Medication Statement Changed PML
+// =====================================================================================
+Profile: CHEMEDEPRMedicationStatementChangedList
+Parent: CHEMEDMedicationStatementChangedList
+Id: ch-emed-epr-medicationstatement-changed-list
+Title: "PML Changed MedicationStatement"
+Description: "Definition of the changed medication statement for the medication list document"
+* insert medication-statement-pml-ruleset
+* partOf 1..1
 
 // =====================================================================================
 // Medication Statement PMLC
@@ -111,7 +113,6 @@ Description: "Definition of the aggregated medication statement for the Medicati
 * note.author[x] ^comment = "...It represents the medical author of the entry that added the comment."
 * note.time 1..1
 * note.time ^comment = "...It represents the medical author of the entry that added the comment."
-// TODO: describe status
 * extension contains http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-prescription named prescription 0..1 // Declare the new extension before defining it
 * extension[prescription] ^short = "Reference to the PRE that introduced this medication in the treatment plan, if any"
-
+* partOf 0..0

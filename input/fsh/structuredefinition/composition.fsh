@@ -167,8 +167,8 @@ Description: "Definition of the composition for the medication list document"
 * section[list].author 0..0
 * section[list].text ^short = "Description of the parameters used to generate this medication list."
 * section[list]
-  * entry[medicationStatement] only Reference(CHEMEDEPRMedicationStatementList)
-  * entry[medicationRequest] only Reference(CHEMEDEPRMedicationRequestList)
+  * entry[medicationStatement] only Reference(CHEMEDEPRMedicationStatementList or CHEMEDEPRMedicationStatementChangedList)
+  * entry[medicationRequest] only Reference(CHEMEDEPRMedicationRequestList or CHEMEDEPRMedicationRequestChangedList)
   * entry[medicationDispense] only Reference(CHEMEDEPRMedicationDispenseList)
   * entry[observation] only Reference(CHEMEDEPRObservationList)
 
