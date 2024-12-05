@@ -55,5 +55,4 @@ Usage: #example
 * section[list].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Cette liste de médication a été générée automatiquement par le service eMedication CARA le 1 octore 2023 à 00:00:00 CEST. Les paramètres utilisés pour la génération du document sont : les éléments de type Medication Treatment Plan Item, Prescription Item, Dispense Item et PADV sont inclus ; tous les traitements sont considérés.</div>"
 * section[list].entry[+] = Reference(urn:uuid:ca449dfb-29d5-4e17-981b-3560ee22b25d)
 * section[list].entry[+] = Reference(urn:uuid:ad120583-d601-4f6c-b16c-bc90079b909e)
-* section[list].entry[+] = Reference(urn:uuid:a62e5440-c82c-4270-92fb-d50cd515198a)
 * section[list].entry[+] = Reference(urn:uuid:383ed95d-95d3-4599-b975-9db806359c0d)
