@@ -23,6 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed PADV document profile `CHEMEDEPRDocumentPharmaceuticalAdvice` for entry slices `MedicationStatementChanged` and `MedicationRequestChanged` to use the CH EMED EPR resources `CHEMEDEPRChangedMedicationStatement` and `CHEMEDEPRChangedMedicationRequest` respectively instead of the CH EMED ones.
 - Fixed the `time-quantity-only-integer` constraint on the `CHEMEDEPRTimeQuantity` profile, that was badly express and would not work at all. See [#71](https://github.com/CARA-ch/ch-emed-epr/issues/71).
 - Reintroduced the binding of substitution codes for medication statements and medication requests to `CHEMEDEprActSubstanceAdminSubstitutionCode`. See [#72](https://github.com/CARA-ch/ch-emed-epr/issues/72).
+- Fixed the `CHEMEDEprActSubstanceAdminSubstitutionCode` VS to have both `N` and `E` codes allowed. See [#82](https://github.com/CARA-ch/ch-emed-epr/issues/82)
 
 #### Changed
 
