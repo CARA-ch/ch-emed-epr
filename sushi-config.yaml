@@ -9,7 +9,7 @@ name: ChEmedEpr
 title: "CH EMED EPR"
 description: FHIR Implementation Guide which defines the documents for the exchange of medication information in the context of the Swiss eMedication service
 status: draft # draft | active | retired | unknown
-version: 1.0.1-ci-build
+version: 2.0.0-ci-build
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2022+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -26,8 +26,8 @@ publisher:
 # use cases, the value can be an object with keys for id, uri, and version.
 #
 dependencies:
-  ch.fhir.ig.ch-core: current
-  ch.fhir.ig.ch-emed: current
+  ch.fhir.ig.ch-core: 5.0.0
+  ch.fhir.ig.ch-emed: 5.0.0
   #hl7.terminology: 5.5.0
 # dependencies:
 #   hl7.fhir.us.core: 3.1.0
