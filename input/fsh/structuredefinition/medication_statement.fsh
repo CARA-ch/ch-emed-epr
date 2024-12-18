@@ -28,6 +28,7 @@ RuleSet: medication-statement-ruleset
 * reasonCode ^definition = "...Content creators should keep it as simple and short as possible (e.g. 'blood clog', 'hypertension')."
 * insert no-support(effective[x])
 * effective[x] ^short = "✕ Do not use. The effective period is contained in the main dosage"
+* informationSource only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
 
 RuleSet: medication-statement-mtp-ruleset
 * insert medication-statement-ruleset
