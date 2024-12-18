@@ -46,8 +46,10 @@ RuleSet: medication-request-base-ruleset
 * dispenseRequest insert backbone-ruleset
 * dispenseRequest.initialFill insert backbone-ruleset
 * substitution insert backbone-ruleset
+* substitution ^short = "If absent, substitution is assumed allowed. If present, the value is fixed to none (not allowed)."
 * substitution.allowed[x] only CodeableConcept
 * substitution.allowedCodeableConcept from CHEMEDEprActSubstanceAdminSubstitutionCode (required)
+* substitution.allowedCodeableConcept.coding = $substanceAdminSubstitution#N "none"
 * requester only Reference(CHEMEDEPRPractitionerRole)
 * insert no-support(substitution.reason) // TODO we may want this
 

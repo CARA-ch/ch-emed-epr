@@ -29,14 +29,14 @@ RuleSet: medication-statement-ruleset
 * insert no-support(effective[x])
 * effective[x] ^short = "✕ Do not use. The effective period is contained in the main dosage"
 * informationSource only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson)
+* extension[substitution].valueCodeableConcept from CHEMEDEprActSubstanceAdminSubstitutionCode (required)
+* extension[substitution].valueCodeableConcept.coding = $substanceAdminSubstitution#N "none"
+* insert no-support(extension[substitution].id)
+* extension[substitution] ^short = "Whether the dispenser can substitute the prescribed medicine/package by another that is deemed equivalent, for medical or logistical reasons. By default, substitution is authorized."
 
 RuleSet: medication-statement-mtp-ruleset
 * insert medication-statement-ruleset
 * insert note-ruleset
-* extension[substitution].valueCodeableConcept from CHEMEDEprActSubstanceAdminSubstitutionCode (required)
-* extension[substitution].valueCodeableConcept.coding 1..
-* insert no-support(extension[substitution].id)
-* extension[substitution] ^short = "Whether the dispenser can substitute the prescribed medicine/package by another that is deemed equivalent, for medical or logistical reasons. By default, substitution is authorized."
 * status = #active
 
 RuleSet: medication-statement-pml-ruleset

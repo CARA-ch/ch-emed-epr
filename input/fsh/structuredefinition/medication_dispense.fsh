@@ -33,6 +33,7 @@ RuleSet: medication-dispense-ruleset
 * insert no-support(statusReason[x])
 * statusReason[x] ^short = "✕ This is only meaningful when the dispense was not performed"
 * substitution insert backbone-ruleset
+* substitution.type.coding = $substanceAdminSubstitution#E "equivalent"
 * insert no-support(substitution.responsibleParty) // It's the performer
 * insert no-support(detectedIssue)
 * insert no-support(eventHistory)
