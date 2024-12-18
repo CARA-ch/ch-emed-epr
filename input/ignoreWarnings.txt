@@ -18,3 +18,8 @@ Elements included in the differential should declare mustSupport
 
 # We use issued field
 Best Practice Recommendation: In general, all observations should have an effective[x] ()
+
+# Concept maps
+Source Code System http://unitsofmeasure.org doesn't have all content (content = not-present), so the source codes cannot be checked
+Target Code System http://unitsofmeasure.org doesn't have all content (content = not-present), so the target codes cannot be checked
+No Target Code System, so the target codes cannot be checked
