@@ -41,10 +41,11 @@ RuleSet: main-dosage-ruleset
 * patientInstruction ^definition = "Dosage information as free text in terms that are understood by the patient or consumer. Any information that cannot be provided in a structured way, other than in Dosage.additionalInstruction, SHALL be provided here and, OPTIONALLY, coded in additionalInstruction."
 * patientInstruction ^comment = "Any information provided in patientInstruction SHALL be present in Dosage.text and, optionally, in Dosage.additionalInstruction."
 * additionalInstruction ^comment = "Any information provided in additionalInstruction SHALL be present in both Dosage.text and Dosage.patientInstruction."
-
+* timing.repeat.bounds[x] only Period
 
 RuleSet: split-dosage-ruleset
 * insert common-dosage-ruleset
+* timing.repeat.bounds[x] 0..0
 
 
 RuleSet: common-dosage-ruleset
@@ -61,7 +62,6 @@ RuleSet: common-dosage-ruleset
 * doseAndRate.doseRange only CHEMEDEPRAmountRange
 * doseAndRate.rate[x] only Ratio // Range and quantity not compatible with our units (it would require a UCUM unit of amount per time)
 * doseAndRate.rateRatio only CHEMEDEPRRatioAmountPerTime
-* timing.repeat.bounds[x] only Period
 
 Invariant: base-dosage-text
 Description: "It is a strong recommendation that the base dosage should contain the whole dosage information as narrative, including the information from split dosage elements."
