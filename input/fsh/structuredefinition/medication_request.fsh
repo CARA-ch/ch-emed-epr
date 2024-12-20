@@ -1,6 +1,7 @@
 RuleSet: medication-request-base-ruleset
 * insert domain-resource-ruleset
 * insert note-ruleset
+* obeys split-dosage-instruction-unit-must-match-base-dosage-instruction
 * extension[treatmentplan] 1..1
 * medication[x] only Reference
 * medicationReference only Reference(CHEMEDEPRMedication)

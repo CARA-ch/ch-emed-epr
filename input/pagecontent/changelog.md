@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added an alternative scenario to the [Use Case](use_case.html) to showcase a PADV CHANGE and a PML including changed resources.
 - Added `CHEMEDEPRPaperFormatCS` coding system and `CHEMEDEPRPaperFormat` value set for paper formats to be used in PMLC queries.
 - Added the following concept maps to provide guidance on translation between HCI's CdTyp9 codes and the quantity and time unit value sets in this IG: `CdTyp9ToCHEMEDEPRAmountQuantityUnitCode`, `CHEMEDEPRAmountQuantityUnitCodeToCdTyp9`, `CdTyp9ToCHEMEDEPRTimeQuantityUnitCode` and `CHEMEDEPRTimeQuantityUnitCodeToCdTyp9`.
+- Added a new invariant to all medication statement, medication request and medication dispense profiles to enforce that all dosage elements (when having split dosage) use the same unit.
 
 #### Fixed
 

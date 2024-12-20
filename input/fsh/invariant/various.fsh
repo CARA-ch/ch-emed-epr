@@ -9,6 +9,15 @@ Expression: "$this.toString().matches('^([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)
 Severity: #error
 // Regex is from http://hl7.org/fhir/R4/datatypes.html#instant
 
+Invariant: split-dosage-unit-must-match-base-dosage
+Description: "The unit for doseAndRate of different dosages (split dosage) belonging to the same statement/request/dispense must match."
+Expression: "(dosage.count() > 1) implies dosage.doseAndRate.dose.ofType(Quantity).code.union(dosage.doseAndRate.dose.ofType(Range).low.code).union(dosage.doseAndRate.dose.ofType(Range).high.code).count() = 1"
+Severity: #error
+
+Invariant: split-dosage-instruction-unit-must-match-base-dosage-instruction
+Description: "The unit for doseAndRate of different dosages (split dosage) belonging to the same statement/request/dispense must match."
+Expression: "(dosageInstruction.count() > 1) implies dosageInstruction.doseAndRate.dose.ofType(Quantity).code.union(dosageInstruction.doseAndRate.dose.ofType(Range).low.code).union(dosageInstruction.doseAndRate.dose.ofType(Range).high.code).count() = 1"
+Severity: #error
 
 /*
  * BEGIN "Overridden" invariants from CH Core: since we cannot extend/inherit from invariants to change their severity, we must define the same invariants again.

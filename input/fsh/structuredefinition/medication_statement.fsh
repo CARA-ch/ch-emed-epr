@@ -1,5 +1,6 @@
 RuleSet: medication-statement-ruleset
 * insert domain-resource-ruleset
+* obeys split-dosage-unit-must-match-base-dosage
 * reasonCode insert reason-code-ruleset
 * subject only Reference(CHEMEDEPRPatient)
 * subject ^type.aggregation[+] = #referenced
