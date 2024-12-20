@@ -33,3 +33,4 @@ Usage: #example
 * identifier[=].system = "urn:oid:2.16.756.5.30.1.196.3.2.1"
 * identifier[=].value = "CARAPMP004"
 * active = true
+* maritalStatus = http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus#9 "unbekannt"
