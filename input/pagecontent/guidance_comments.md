@@ -18,7 +18,7 @@ Note that neither the `note.author` nor the `note.time` elements are expected to
 
 ### Aggregation Rules
 
-Comments added with a PRE document's medication request are added to the treament instance created by the new medication request.
+Comments added with a PRE document's medication request are added to the treatment instance created by the new medication request.
 
 Note that the first medication request to be added to a treatment will effectively replace the first/base treatment instance that was created with the original MTP document.
 
@@ -32,7 +32,7 @@ Note that neither the `note.author` nor the `note.time` elements are expected to
 
 All comments (attached to the observation or to the changed medication statement or request) are added to the target of the medication dispense:
 - If the dispense targets a prescription: all comments are attached to the treatment instance of the targetted prescription.
-- Otherwise: all comments are attached to the initial/base treatment instance of the targetted treatment plan.
+- Otherwise: all comments are attached to the initial/base treatment instance of the targeted treatment plan.
 
 ## PADV
 
@@ -48,7 +48,7 @@ PADV CHANGE documents are allowed to provide more comments by filling them withi
 
 All comments (attached to the observation or to the changed medication statement or request) are added to the target of the PADV:
 - If the PADV targets a treatment plan: all comments are attached to the treatment (globally).
-- If the PADV targets a prescription or dispense: all comments are attached to the treatment instance of the targetted prescription or dispense.
+- If the PADV targets a prescription or dispense: all comments are attached to the treatment instance of the targeted prescription or dispense.
 
 ## PMLC Result
 
@@ -61,30 +61,30 @@ All medication statements within a PMLC correspond to a treatment instance and c
 ### Example
 
 Given the following sequence:
-1. A patient goes to a doctor, which adds a new treatment for the patient. The practitioner attaches the following comment to the MTP's medication statement: "Follow-up needed given possible interations with other treatments.". The practitioner creates also a prescription to which it adds also the following comment attached to the medication request: "Initial prescription to cover a brief period after which a consultation should be done to follow up the treatment."
+1. A patient goes to a doctor, which adds a new treatment for the patient. The practitioner attaches the following comment to the MTP's medication statement: "Follow-up needed given possible interactions with other treatments.". The practitioner creates also a prescription to which it adds also the following comment attached to the medication request: "Initial prescription to cover a brief period after which a consultation should be done to follow up the treatment."
 2. The patient goes to the pharmacy and gets a dispense for the prescription received on the previous step. The dispenser adds the following comment to the medication dispense: "Initial dispense done following the practitioner indications after verifying that the patient understands the risks."
 3. The patient goes back to the doctor, and the doctor decides to keep the same medication but to create a new prescription with a change of dosage. A new prescription is created by the practitioner, with the following comment "new dispense needed to continue the treatment after medical follow-up with revised dosage".
 
 Assuming that both prescriptions are still valid, a PMLC produced after the previous steps would contain two medication statements (for said treatment), one for each existing treatment instance/line:
-- One medication statement associated to the first prescription's treatment intsance, containing the following comments in no particular order:
-    - "Follow-up needed given possible interations with other treatments."
+- One medication statement associated to the first prescription's treatment instance, containing the following comments in no particular order:
+    - "Follow-up needed given possible interactions with other treatments."
     - "Initial prescription to cover a brief period after which a consultation should be done to follow up the treatment."
     - "Initial dispense done following the practitioner indications after verifying that the patient understands the risks."
 - One medication statement associated to the second prescription's treatment instance, containing the following comments in no particular order:
-    - "Follow-up needed given possible interations with other treatments."
+    - "Follow-up needed given possible interactions with other treatments."
     - "new dispense needed to continue the treatment after medical follow-up with revised dosage"
 
 Let's assume that the following extra step happens:
 
-4. For some reason not relevant to this example, the practitioner decides to change once again the dosage, this time by issuing a PADV CHANGE targetting the second prescription. The observation comment (the reason for the change) states the following: "further adjustment of the dosage has been done", and the following comment attached to the changed medication request: "next dispense should be enough until next medical follow-up"
+4. For some reason not relevant to this example, the practitioner decides to change once again the dosage, this time by issuing a PADV CHANGE targeting the second prescription. The observation comment (the reason for the change) states the following: "further adjustment of the dosage has been done", and the following comment attached to the changed medication request: "next dispense should be enough until next medical follow-up"
 
 After this extra step, and assuming that both prescriptions would still be valid, the PMLC would see again two medication statements (for said treatment):
-- One medication statement associated to the first prescription's treatment intsance, containing the following comments in no particular order:
-    - "Follow-up needed given possible interations with other treatments."
+- One medication statement associated to the first prescription's treatment instance, containing the following comments in no particular order:
+    - "Follow-up needed given possible interactions with other treatments."
     - "Initial prescription to cover a brief period after which a consultation should be done to follow up the treatment."
     - "Initial dispense done following the practitioner indications after verifying that the patient understands the risks."
 - One medication statement associated to the second prescription's treatment instance, containing the following comments in no particular order:
-    - "Follow-up needed given possible interations with other treatments."
+    - "Follow-up needed given possible interactions with other treatments."
     - "new dispense needed to continue the treatment after medical follow-up with revised dosage"
     - "further adjustment of the dosage has been done"
     - "next dispense should be enough until next medical follow-up"
