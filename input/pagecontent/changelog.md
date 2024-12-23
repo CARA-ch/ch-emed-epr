@@ -31,6 +31,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed the `CHEMEDEprActSubstanceAdminSubstitutionCode` VS to have both `N` and `E` codes allowed. See [#82](https://github.com/CARA-ch/ch-emed-epr/issues/82)
 - `informationSource` on medication statements now accepts only references to `CHEMEDEPRPractitionerRole`, `CHEMEDEPRPatient` or `CHEMEDEPRRelatedPerson`, as for other similar references, instead of upstream profiles.
 - Fixed (overridden from CH EMED) invariants with error severity for GLN, AHVN13, EPR-SPID and VEKA values, which were not being applied. Note: CH EMED checks with warning severity were always applied.
+- The description of the `asNeeded` field of dosage resources now properly states that the default value if omitted is `false`.
 
 #### Changed
 

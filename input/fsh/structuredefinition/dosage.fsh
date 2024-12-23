@@ -7,7 +7,7 @@ RuleSet: main-dosage-ruleset
 * insert no-support(method)
 * insert no-support(site) // TODO We may want that
 * asNeeded[x] only boolean
-* asNeededBoolean ^definition = "...'true' if the medication is 'in reserve'. By default 'true'."
+* asNeededBoolean ^definition = "...'true' if the medication is 'in reserve'. By default 'false'."
 // todo: additionalInstruction -> http://hl7.org/fhir/R4/valueset-additional-instruction-codes.html
 * insert no-support(timing.repeat.id)
 * insert no-support(timing.repeat.extension)
