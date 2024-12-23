@@ -11,12 +11,12 @@ Severity: #error
 
 Invariant: split-dosage-unit-must-match-base-dosage
 Description: "The unit for doseAndRate of different dosages (split dosage) belonging to the same statement/request/dispense must match."
-Expression: "(dosage.count() > 1) implies dosage.doseAndRate.dose.ofType(Quantity).code.union(dosage.doseAndRate.dose.ofType(Range).low.code).union(dosage.doseAndRate.dose.ofType(Range).high.code).count() = 1"
+Expression: "(dosage.count() > 1) implies dosage.doseAndRate.dose.ofType(Quantity).code.union(dosage.doseAndRate.dose.ofType(Range).low.code).union(dosage.doseAndRate.dose.ofType(Range).high.code).union(dosage.doseAndRate.rate.numerator.code).count() = 1"
 Severity: #error
 
 Invariant: split-dosage-instruction-unit-must-match-base-dosage-instruction
 Description: "The unit for doseAndRate of different dosages (split dosage) belonging to the same statement/request/dispense must match."
-Expression: "(dosageInstruction.count() > 1) implies dosageInstruction.doseAndRate.dose.ofType(Quantity).code.union(dosageInstruction.doseAndRate.dose.ofType(Range).low.code).union(dosageInstruction.doseAndRate.dose.ofType(Range).high.code).count() = 1"
+Expression: "(dosageInstruction.count() > 1) implies dosageInstruction.doseAndRate.dose.ofType(Quantity).code.union(dosageInstruction.doseAndRate.dose.ofType(Range).low.code).union(dosageInstruction.doseAndRate.dose.ofType(Range).high.code).union(dosageInstruction.doseAndRate.rate.numerator.code).count() = 1"
 Severity: #error
 
 /*
