@@ -82,6 +82,7 @@ Description: "Definition of the composition for the medication treatment plan do
 * insert composition-ruleset
 * insert composition-with-annotation-ruleset
 * insert composition-with-original-representation-ruleset
+* obeys mtp-composition-title
 * subject only Reference(CHEMEDEPRPatient)
 * section[treatmentPlan].entry only Reference(CHEMEDEPRMedicationStatement)
 * section[treatmentPlan].code insert codeableconcept-ruleset
@@ -104,6 +105,7 @@ Description: "Definition of the composition for the medication prescription docu
 * insert composition-ruleset
 * insert composition-with-annotation-ruleset
 * insert composition-with-original-representation-ruleset
+* obeys pre-composition-title
 // TODO prevent other sections (keep only slices)?
 * section[prescription].entry only Reference(CHEMEDEPRMedicationRequest)
 * author only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson or CHEMEDEPRDevice) // Only the types authorized in the slices
@@ -124,6 +126,7 @@ Description: "Definition of the composition for the medication dispense document
 * insert composition-ruleset
 * insert composition-with-annotation-ruleset
 * insert composition-with-original-representation-ruleset
+* obeys dis-composition-title
 // TODO prevent other sections (keep only slices)?
 * section[dispense].entry only Reference(CHEMEDEPRMedicationDispense)
 * author only Reference(CHEMEDEPRPractitionerRole or CHEMEDEPRPatient or CHEMEDEPRRelatedPerson or CHEMEDEPRDevice) // Only the types authorized in the slices
@@ -161,6 +164,7 @@ Id: ch-emed-epr-composition-medicationlist
 Title: "PML Composition"
 Description: "Definition of the composition for the medication list document"
 * insert composition-ruleset
+* obeys pml-composition-title
 * author only Reference(CHEMEDEPRDevice)
 * author 1..1
 // TODO prevent other sections (keep only slices)?
@@ -184,9 +188,42 @@ Description: "Definition of the composition for the medication card document"
 * insert composition-ruleset
 * insert composition-with-annotation-ruleset
 * insert composition-with-original-representation-ruleset
+* obeys pmlc-composition-title
 * author only Reference(CHEMEDEPRDevice)
 * author 1..1
 // TODO prevent other sections (keep only slices)?
 * section[card].author 0..0
 * section[card].text ^short = "Description of the parameters used to generate this medication card."
 * author ^definition = "...Medication cards are automatically created by software, their author is a device."
+
+
+// INVARIANTS:
+Invariant: mtp-composition-title
+Description: "The MTP composition title must be: 'Therapieentscheid Medikation' in German or 'Décision thérapeutique relative à la médication' in French or 'Decisione terapeutica di trattamento farmacologico' in Italian or 'Medication Treatment Plan' in English or titles in other languages are also allowed."
+Expression: "(language.startsWith('en') implies title = 'Medication Treatment Plan') and (language.startsWith('fr') implies title = 'Décision thérapeutique relative à la médication') and (language.startsWith('de') implies title = 'Therapieentscheid Medikation') and (language.startsWith('it') implies title = 'Decisione terapeutica di trattamento farmacologico')"
+Severity: #warning
+
+Invariant: pre-composition-title
+Description: "The PRE composition title must be: 'Rezept' in German or 'Ordonnance' in French or 'Ricetta' in Italian or 'Prescription' in English or titles in other languages are also allowed."
+Expression: "(language.startsWith('en') implies title = 'Prescription') and (language.startsWith('fr') implies title = 'Ordonnance') and (language.startsWith('de') implies title = 'Rezept') and (language.startsWith('it') implies title = 'Ricetta')"
+Severity: #warning
+
+Invariant: dis-composition-title
+Description: "The DIS composition title must be: 'Abgabe' in German or 'Remise' in French or 'Dispensazione' in Italian or 'Dispense' in English or titles in other languages are also allowed."
+Expression: "(language.startsWith('en') implies title = 'Dispense') and (language.startsWith('fr') implies title = 'Remise') and (language.startsWith('de') implies title = 'Abgabe') and (language.startsWith('it') implies title = 'Dispensazione')"
+Severity: #warning
+
+Invariant: padv-composition-title
+Description: "The PADV composition title must be: 'Kommentar zur Medikation' in German or 'Commentaire relatif à la médication' in French or 'Commento sulla terapia farmacologica' in Italian or 'Pharmaceutical Advice' in English or titles in other languages are also allowed."
+Expression: "(language.startsWith('en') implies title = 'Pharmaceutical Advice') and (language.startsWith('fr') implies title = 'Commentaire relatif à la médication') and (language.startsWith('de') implies title = 'Kommentar zur Medikation') and (language.startsWith('it') implies title = 'Commento sulla terapia farmacologica')"
+Severity: #warning
+
+Invariant: pml-composition-title
+Description: "The PML composition title must be: 'Medikationsliste' in German or 'Liste de médication' in French or 'Elenco delle terapie farmacologiche' in Italian or 'Medication List' in English or titles in other languages are also allowed."
+Expression: "(language.startsWith('en') implies title = 'Medication List') and (language.startsWith('fr') implies title = 'Liste de médication') and (language.startsWith('de') implies title = 'Medikationsliste') and (language.startsWith('it') implies title = 'Elenco delle terapie farmacologiche')"
+Severity: #warning
+
+Invariant: pmlc-composition-title
+Description: "The PMLC composition title must be: 'Medikationsplan' in German or 'Plan de médication' in French or 'Piano farmacologico'' in Italian or 'Medication Card' in English or titles in other languages are also allowed."
+Expression: "(language.startsWith('en') implies title = 'Medication Card') and (language.startsWith('fr') implies title = 'Plan de médication') and (language.startsWith('de') implies title = 'Medikationsplan') and (language.startsWith('it') implies title = 'Piano farmacologico')"
+Severity: #warning
