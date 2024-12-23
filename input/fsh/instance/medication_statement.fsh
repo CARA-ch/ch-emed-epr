@@ -214,3 +214,31 @@ Usage: #example
 * dosage[additionalEntry].sequence = 2
 * dosage[additionalEntry].timing.repeat.when[+] = #EVE
 * dosage[additionalEntry].doseAndRate.doseQuantity = 1 $sct#732936001 "comprimé"
+
+Instance: MedicationStatementDafalganEffMaxDosePerPeriod
+// this entry is not part of any document / use case
+InstanceOf: CHEMEDEPRMedicationStatement
+Title: "MedicationStatement: Paracetamol Dafalgan Effervescent (MTP) with max dose per period"
+Description: "The example for a medication statement with a max. dose per period."
+Usage: #example
+* contained[+] = MedicationParacetamolDafalganEff
+* contained[+] = OrganizationHug
+* contained[+] = PractitionerCox
+* contained[+] = PractitionerRoleCoxAtHug
+* contained[=].practitioner = Reference(PractitionerCox)
+* contained[=].organization = Reference(OrganizationHug)
+* language = #fr-CH
+* identifier.system = "urn:ietf:rfc:3986"
+* identifier.value = "urn:uuid:63ccda67-4b0c-4a4b-96b9-3f4a03baa245"
+* status = #active
+* medicationReference = Reference(MedicationParacetamolDafalganEff)
+* subject = Reference(urn:uuid:9b00e81e-1165-4039-9d60-698ef838ae1a)
+* dateAsserted = "2023-11-05T12:00:00+02:00"
+* informationSource = Reference(PractitionerRoleCoxAtHug)
+* reasonCode.text = "Dafalgan pour des douleurs regulières."
+* dosage[baseEntry].timing.repeat.boundsPeriod.start = "2023-11-05"
+* dosage[baseEntry].route = $edqm#20053000 "Oral use"
+* dosage[baseEntry].route.text = "À avaler"
+* dosage[baseEntry].text = "Max. 2 comprimés à avaler par jour."
+* dosage[baseEntry].maxDosePerPeriod.numerator = 2 $sct#732936001 "comprimé"
+* dosage[baseEntry].maxDosePerPeriod.denominator = 1 $ucum#d "jour"

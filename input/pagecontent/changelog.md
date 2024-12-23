@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added `Bq`, `kBq`, `MBq` and `GBq` units to the `CHEMEDEPRAmountQuantityUnitCode`  value set, added in CH EMED 4.0.1 to the parent `UnitCode` value set.
 - Added _nanomole_ and _Application_ units to the `CHEMEDEPRAmountQuantityUnitCode` value set.
 - Added an example for a medication statement with split dosage: `MedicationStatementDafalganEffSplitDose`.
+- Added a new example for a medication statement with max dose per period: `MedicationStatementDafalganEffMaxDosePerPeriod`.
 - Set cardinality of PMLC medication statement (`CHEMEDEPRMedicationStatementCard`) extension `lastConsideredDocument`, added with CH EMED 5.0.0, to `1..1` and added it to the IG examples.
 - Added profiles `CHEMEDEPRMedicationRequestChangedList` and `CHEMEDEPRMedicationStatementChangedList` as entries in `CHEMEDEPRDocumentMedicationList` and `CHEMEDEPRCompositionMedicationList` for the _changed_ resources. Added examples for this two new profiles.
 - Added an alternative scenario to the [Use Case](use_case.html) to showcase a PADV CHANGE and a PML including changed resources.
