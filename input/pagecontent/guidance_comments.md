@@ -36,7 +36,7 @@ All comments (attached to the observation or to the changed medication statement
 
 ## PADV
 
-All PADV documents must contain an [Observation](StructureDefinition-ch-emed-epr-observation), which accepts only one comment to be attached by filling the `note.text` element.
+All PADV documents must contain an [Observation](StructureDefinition-ch-emed-epr-observation.html), which accepts only one comment to be attached by filling the `note.text` element.
 
 Note that neither the `note.author` nor the `note.time` elements are expected to be present. If present, they will be __ignored__ by the aggregator. The author is always assumed to be the `performer` and the time is assumed to be the `issued`.
 
