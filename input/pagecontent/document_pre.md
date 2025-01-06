@@ -32,7 +32,9 @@ A single document SHALL NOT prescribe multiple times the same treatment (i.e. SH
 #### Prescription validity period
 
 The prescription validity period (`MedicationRequest.dispenseRequest.validityPeriod.(start|end)`) indicates the period over which the prescription can be dispensed (NOT the period over which the medication is to be taken by the patient).
-The start time is mandatory and SHOULD reflect the time the prescription was created.
-The end time is optional but SHOULD be set; if it's not set, the prescription will stay as 'ready for validation' until the time is manually set (in a PADV CHANGE) or the prescription is manually cancelled or refused.
+The validity period in a medication request resource of a prescription document is now optional, as well as its start and end time elements if the validity period is specified:
+
+- The start time SHOULD reflect the time the prescription was created, unless a different validity start date/time for the dispense to be allowed has to be specified. Should the start of a validity period not be specified within the medication request, the `MedicationRequest.authoredOn` time is assumed to be the start of the validity period.
+- The end time is optional but SHOULD be set; if it's not set, the prescription will stay as 'ready for validation' until the time is manually set (in a PADV CHANGE) or the prescription is manually cancelled or refused.
 
 The eMedication service doesn't enforce validity period max duration, as set by cantonal laws.

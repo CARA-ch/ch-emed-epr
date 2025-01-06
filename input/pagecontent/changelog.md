@@ -48,6 +48,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - CH EMED 5.0.0
   - CH Core 5.0.0
 - Minor improvements to the Document PMLC page text content.
+- Updated the description of the validity period within the Document PRE content.
 
 #### Removed
 
