@@ -47,6 +47,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated dependencies to:
   - CH EMED 5.0.0
   - CH Core 5.0.0
+- Minor improvements to the Document PMLC page text content.
 
 #### Removed
 
