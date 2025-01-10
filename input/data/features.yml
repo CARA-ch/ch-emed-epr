@@ -1,9 +1,9 @@
 feedback:
     active: true
     formUrl: https://docs.google.com/forms/d/e/1FAIpQLSf2h69aPkVsCC7rQ3rEGPofycO4ylPd0urxp0tmjQkzlZRbHg/viewform?usp=sf_link
-analytics:
-    active: true
-    tagId: G-ED8VLFMEVY
+#analytics:
+#    active: true
+#    tagId: G-ED8VLFMEVY
 css:
     navbar: 0086CB
     title: EB6B08
