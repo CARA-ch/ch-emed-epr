@@ -555,7 +555,7 @@ Usage: #definition
 * group[=].element[=].display = "cubic centimeter"
 * group[=].element[=].target[+].code = #ml
 * group[=].element[=].target[=].equivalence = #equivalent
-* group[=].element[=].target[=].comment = "Although CdTyp9 has no code for cubic centimeter, 1 cubic centimeter is equivalent to 1 millimeter, which is present."
+* group[=].element[=].target[=].comment = "Although CdTyp9 has no code for cubic centimeter, 1 cubic centimeter is equivalent to 1 milliliter, which is present."
 * group[=].element[+].code = #[tbs_m]
 * group[=].element[=].display = "tablespoon - metric"
 * group[=].element[=].target[+].code = #EL
