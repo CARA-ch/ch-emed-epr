@@ -8,11 +8,6 @@
 A definition for CodeSystem 'urn:oid:0.4.0.127.0.16.1.1.2.1' could not be found, so the code cannot be validated
 A definition for CodeSystem 'urn:oid:2.51.1.1' could not be found, so the code cannot be validated
 
-# The value set is not updated yet
-None of the codings provided are in the value set 'DocumentEntry.typeCode' (http://fhir.ch/ig/ch-term/ValueSet/DocumentEntry.typeCode|3.0.0), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = http://snomed.info/sct#736378000)
-None of the codings provided are in the value set 'DocumentEntry.typeCode' (http://fhir.ch/ig/ch-term/ValueSet/DocumentEntry.typeCode|3.0.0), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = http://snomed.info/sct#82291000195104, http://loinc.org#60593-1)
-None of the codings provided are in the value set 'DocumentEntry.typeCode' (http://fhir.ch/ig/ch-term/ValueSet/DocumentEntry.typeCode|3.0.0), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = http://snomed.info/sct#761931002, http://loinc.org#77603-9)
-
 # https://jira.hl7.org/browse/FHIR-25429
 Elements included in the differential should declare mustSupport
 
@@ -33,3 +28,9 @@ None of the codings provided are in the value set 'MaritalStatus' (http://hl7.or
 None of the codings provided are in the value set 'MaritalStatus' (http://hl7.org/fhir/ValueSet/marital-status|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus#6)
 None of the codings provided are in the value set 'MaritalStatus' (http://hl7.org/fhir/ValueSet/marital-status|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus#7)
 None of the codings provided are in the value set 'MaritalStatus' (http://hl7.org/fhir/ValueSet/marital-status|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus#9)
+
+# experimental value sets
+The definition for the element 'Quantity.code' binds to the value set 'http://fhir.ch/ig/ch-emed-epr/ValueSet/ch-emed-epr-amount-quantity-unit-code' which is experimental, but this structure is not labeled as experimental
+The definition for the element 'Quantity.code' binds to the value set 'http://fhir.ch/ig/ch-emed-epr/ValueSet/ch-emed-epr-time-quantity-unit-code' which is experimental, but this structure is not labeled as experimental
+The definition for the element 'MedicationRequest.substitution.allowed[x]' binds to the value set 'http://fhir.ch/ig/ch-emed-epr/ValueSet/ch-emed-epr-substance-admin-substitution-code' which is experimental, but this structure is not labeled as experimental
+The definition for the element 'MedicationStatement.extension.value[x]' binds to the value set 'http://fhir.ch/ig/ch-emed-epr/ValueSet/ch-emed-epr-substance-admin-substitution-code' which is experimental, but this structure is not labeled as experimental
