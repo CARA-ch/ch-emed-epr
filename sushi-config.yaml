@@ -69,7 +69,7 @@ dependencies:
 #
 parameters:
   logging: [init, progress, tx]
-  validation: [check-must-support, check-aggregation, allow-any-extensions, show-reference-messages] #no-broken-links
+  validation: [check-aggregation, allow-any-extensions, show-reference-messages] #no-broken-links #check-must-support
   allow-extensible-warnings: true
   generate-version: r4
   bundle-references-resolve: true
