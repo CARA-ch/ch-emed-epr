@@ -6,7 +6,7 @@ Description: "Definition of the practitioner role for the eMedication context"
 
 * insert domain-resource-ruleset
 
-* code from http://fhir.ch/ig/ch-epr-term/ValueSet/HCProfessional.hcProfession (required)
+* code from http://fhir.ch/ig/ch-term/ValueSet/HCProfessional.hcProfession (required)
 * practitioner only Reference(CHEMEDEPRPractitioner)
 * organization only Reference(CHEMEDEPROrganization)
 * insert no-support(active)
