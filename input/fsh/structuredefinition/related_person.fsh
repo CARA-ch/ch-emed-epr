@@ -1,5 +1,5 @@
 Profile: CHEMEDEPRRelatedPerson
-Parent: RelatedPerson
+Parent: CHCoreRelatedPerson
 Id: ch-emed-epr-related-person
 Title: "CH EMED EPR RelatedPerson"
 Description: "Definition of the related person for the eMedication context"
