@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 #### Added
 
+- Added a concept map for translating from the RouteOfAdministrationEDQM value set to HCI's CdTyp26.
+- Added a concept map for translating from HCI's CdTyp26 to the RouteOfAdministrationEDQM value set.
+
 #### Fixed
 
 - Replaced the link to CH EPR Term on the index page with link to CH Term.
