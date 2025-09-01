@@ -32,7 +32,7 @@ Usage: #inline
 * identifier.value = "urn:uuid:6c5a6e38-3782-499c-986f-086e7121828d"
 * status = #final
 * type.coding[+] = $sct#419891008 "Record artifact (record artifact)"
-* type.coding[+] = $lnc#61356-2 "Medication pharmaceutical advice.extended Document"
+* type.coding[+] = $lnc#61356-2 "Prestation de conseils [Recherche] Patient ; Document"
 * subject.reference = "urn:uuid:9b00e81e-1165-4039-9d60-698ef838ae1a"
 * date = "2023-11-04T12:00:00+02:00"
 * author[person].reference = "urn:uuid:213d609a-1164-459a-bb10-727516ae3d0c"
