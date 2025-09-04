@@ -63,10 +63,10 @@ Usage: #inline
 * extension[treatmentplan].url = "http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-treatmentplan"
 * extension[treatmentplan].extension[id].url = "id"
 * extension[treatmentplan].extension[id].valueIdentifier.system = "urn:ietf:rfc:3986"
-* extension[treatmentplan].extension[id].valueIdentifier.value = "urn:uuid:819febad-dc65-4548-a739-00d1b305c265"
+* extension[treatmentplan].extension[id].valueIdentifier.value = "urn:uuid:17837392-0340-414d-a3bf-fa9f237b91ff"
 * extension[treatmentplan].extension[externalDocumentId].url = "externalDocumentId"
 * extension[treatmentplan].extension[externalDocumentId].valueIdentifier.system = "urn:ietf:rfc:3986"
-* extension[treatmentplan].extension[externalDocumentId].valueIdentifier.value = "urn:uuid:7062399b-61f2-4fb1-b6ba-415c7b6939bc"
+* extension[treatmentplan].extension[externalDocumentId].valueIdentifier.value = "urn:uuid:0399ef84-c71b-413b-8a66-b5a835f4f4c5"
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:ac8ad5cd-aa46-49d6-a5ec-fbc48a9287b4"
 * status = #active

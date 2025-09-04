@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Replaced the link to CH EPR Term on the index page with link to CH Term.
 - PADV examples' compositions using LOINC code `61356-2` now use its French display.
+- Fixed treatmentplan extension ids for the medication request changed resource in the `DocumentPadvChangeParacetamolCARAPMP004` and `BundleUtc6bPml` examples.
 
 #### Changed
 

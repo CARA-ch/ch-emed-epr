@@ -22,7 +22,7 @@ Description: "Post PADV-CHANGE PML for patient CARAPMP004."
 * entry[Device].fullUrl = "urn:uuid:f5090ee8-b8b1-4b1e-b529-b6d55fad08d4"
 * entry[Device].resource = DevicePmp
 * entry[MedicationStatement].resource = MedicationStatementParacetamolAxapharmPml
-* entry[MedicationStatement].fullUrl = "urn:uuid:ca449dfb-29d5-4e17-981b-3560ee22b25d"
+//* entry[MedicationStatement].fullUrl = "urn:uuid:ca449dfb-29d5-4e17-981b-3560ee22b25d"
 * entry[MedicationRequest][+].resource = MedicationRequestParacetamolAxapharmPml
 * entry[MedicationRequest][=].fullUrl = "urn:uuid:ad120583-d601-4f6c-b16c-bc90079b909e"
 * entry[MedicationRequest][+].resource = MedicationRequestChangedDafalganEffPml
@@ -73,10 +73,10 @@ Usage: #inline
 * extension[treatmentplan].url = "http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-treatmentplan"
 * extension[treatmentplan].extension[id].url = "id"
 * extension[treatmentplan].extension[id].valueIdentifier.system = "urn:ietf:rfc:3986"
-* extension[treatmentplan].extension[id].valueIdentifier.value = "urn:uuid:819febad-dc65-4548-a739-00d1b305c265"
+* extension[treatmentplan].extension[id].valueIdentifier.value = "urn:uuid:17837392-0340-414d-a3bf-fa9f237b91ff"
 * extension[treatmentplan].extension[externalDocumentId].url = "externalDocumentId"
 * extension[treatmentplan].extension[externalDocumentId].valueIdentifier.system = "urn:ietf:rfc:3986"
-* extension[treatmentplan].extension[externalDocumentId].valueIdentifier.value = "urn:uuid:7062399b-61f2-4fb1-b6ba-415c7b6939bc"
+* extension[treatmentplan].extension[externalDocumentId].valueIdentifier.value = "urn:uuid:0399ef84-c71b-413b-8a66-b5a835f4f4c5"
 * extension[parentDocument].url = "http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-pharmaceuticaladvice"
 * extension[parentDocument].extension[id].url = "id"
 * extension[parentDocument].extension[id].valueIdentifier.system = "urn:ietf:rfc:3986"
