@@ -22,7 +22,7 @@ Description: "Post PADV-CHANGE PML for patient CARAPMP004."
 * entry[Device].fullUrl = "urn:uuid:f5090ee8-b8b1-4b1e-b529-b6d55fad08d4"
 * entry[Device].resource = DevicePmp
 * entry[MedicationStatement].resource = MedicationStatementParacetamolAxapharmPml
-//* entry[MedicationStatement].fullUrl = "urn:uuid:ca449dfb-29d5-4e17-981b-3560ee22b25d"
+* entry[MedicationStatement].fullUrl = "urn:uuid:ca449dfb-29d5-4e17-981b-3560ee22b25d"
 * entry[MedicationRequest][+].resource = MedicationRequestParacetamolAxapharmPml
 * entry[MedicationRequest][=].fullUrl = "urn:uuid:ad120583-d601-4f6c-b16c-bc90079b909e"
 * entry[MedicationRequest][+].resource = MedicationRequestChangedDafalganEffPml
