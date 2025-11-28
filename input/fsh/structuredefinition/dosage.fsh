@@ -41,12 +41,9 @@ RuleSet: main-dosage-ruleset
 * patientInstruction ^definition = "Dosage information as free text in terms that are understood by the patient or consumer. Any information that cannot be provided in a structured way, other than in Dosage.additionalInstruction, SHALL be provided here and, OPTIONALLY, coded in additionalInstruction."
 * patientInstruction ^comment = "Any information provided in patientInstruction SHALL be present in Dosage.text and, optionally, in Dosage.additionalInstruction."
 * additionalInstruction ^comment = "Any information provided in additionalInstruction SHALL be present in both Dosage.text and Dosage.patientInstruction."
-* timing.repeat.bounds[x] only Period
 
 RuleSet: split-dosage-ruleset
 * insert common-dosage-ruleset
-* timing.repeat.bounds[x] 0..0
-
 
 RuleSet: common-dosage-ruleset
 * insert modifier(modifierExtension)
@@ -56,6 +53,7 @@ RuleSet: common-dosage-ruleset
 * insert no-support(extension)
 * insert no-support(timing.code) // TODO We may want that
 * insert no-support(timing.event)
+* timing.repeat.bounds[x] only Period
 * timing.repeat.when obeys only-standard-event-timings
 * timing.repeat.when ^short = "... It shall only contain values from Event Timings"
 * doseAndRate.doseQuantity only CHEMEDEPRAmountQuantity
