@@ -8,9 +8,6 @@
 A definition for CodeSystem 'urn:oid:0.4.0.127.0.16.1.1.2.1' could not be found, so the code cannot be validated
 A definition for CodeSystem 'urn:oid:2.51.1.1' could not be found, so the code cannot be validated
 
-# https://jira.hl7.org/browse/FHIR-25429
-Elements included in the differential should declare mustSupport
-
 # We use issued field
 Best Practice Recommendation: In general, all observations should have an effective[x] ()
 
@@ -18,6 +15,18 @@ Best Practice Recommendation: In general, all observations should have an effect
 Source Code System http://unitsofmeasure.org doesn't have all content (content = not-present), so the source codes cannot be checked
 Target Code System http://unitsofmeasure.org doesn't have all content (content = not-present), so the target codes cannot be checked
 No Target Code System, so the target codes cannot be checked
+Source Code System http://snomed.info/sct is only supported on the terminology server, so the source codes are not validated for performance reasons
+No definition could be found for URL value 'https://index.hcisolutions.ch/index/current/get.aspx?schema=CODE&keytype=CDTYP&key=26'
+Target Code System urn:oid:0.4.0.127.0.16.1.1.2.1 doesn't have all content (content = fragment), so the target codes cannot be checked
+A definition could not be found for Canonical URL 'https://index.hcisolutions.ch/index/current/get.aspx?schema=CODE&keytype=CDTYP&key=26'
+Source Code System urn:oid:0.4.0.127.0.16.1.1.2.1 doesn't have all content (content = fragment), so the source codes cannot be checked 
+
+# Display values (and LOINC additional to SCT codes)
+Wrong Display Name%
+There are no valid display names found for the code%
+%has no Display Names for the language de-CH
+%has no Display Names for the language fr-CH
+The provided code%
 
 # Marital Status - a warning is produced because the binding on the base FHIR Patient resource is extensible and hence the validator will complain about the Swiss codes that are not part of the base FHIR value set.
 None of the codings provided are in the value set 'MaritalStatus' (http://hl7.org/fhir/ValueSet/marital-status|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus#1)
@@ -34,3 +43,20 @@ The definition for the element 'Quantity.code' binds to the value set 'http://fh
 The definition for the element 'Quantity.code' binds to the value set 'http://fhir.ch/ig/ch-emed-epr/ValueSet/ch-emed-epr-time-quantity-unit-code' which is experimental, but this structure is not labeled as experimental
 The definition for the element 'MedicationRequest.substitution.allowed[x]' binds to the value set 'http://fhir.ch/ig/ch-emed-epr/ValueSet/ch-emed-epr-substance-admin-substitution-code' which is experimental, but this structure is not labeled as experimental
 The definition for the element 'MedicationStatement.extension.value[x]' binds to the value set 'http://fhir.ch/ig/ch-emed-epr/ValueSet/ch-emed-epr-substance-admin-substitution-code' which is experimental, but this structure is not labeled as experimental
+
+# Known IG Publisher issue (https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Publisher.20v2.2E0.2E24.20-.20error.20in.20local.20build/with/547712458)
+The HTML fragment 'expansion-params.xhtml' is not included anywhere in the produced implementation guide
+No definition could be found for URL value 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters'
+
+# code systems
+No definition could be found for URL value 'http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-cdtyp9'
+
+# value sets
+This SNOMED-CT based include has some concepts with semantic tags (FSN terms) and some without (preferred terms) %
+
+# deprecated inherited Elements
+The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated 
+
+# other
+The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
+The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
