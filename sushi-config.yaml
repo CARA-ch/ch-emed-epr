@@ -28,12 +28,6 @@ publisher:
 dependencies:
   ch.fhir.ig.ch-core: 6.0.0-ballot
   ch.fhir.ig.ch-emed: 6.0.0-ballot
-  hl7.terminology.r4: 
-    uri: http://terminology.hl7.org/ImplementationGuide/hl7.terminology
-    version: 7.0.0  
-  hl7.fhir.uv.extensions.r4:  
-    uri: http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions
-    version: 5.3.0-ballot-tc1 
   #hl7.terminology: 5.5.0
 # dependencies:
 #   hl7.fhir.us.core: 3.1.0
