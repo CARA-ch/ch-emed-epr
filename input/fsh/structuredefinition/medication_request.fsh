@@ -113,5 +113,8 @@ Parent: CHEMEDMedicationRequestChangedList
 Id: ch-emed-epr-medication-request-changed-list
 Title: "PML Changed Medication Request"
 Description: "Definition of the changed medication request for the medication list document"
-* insert medication-request-padv-ruleset
+* insert medication-request-base-ruleset
 * insert medication-request-pml-ruleset
+* status = #active
+* supportingInformation[partOf] 1..1
+* supportingInformation[partOf] only Reference(CHEMEDEPRObservationList)

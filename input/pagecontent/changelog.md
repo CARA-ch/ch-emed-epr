@@ -3,12 +3,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-### [???] - TBD
+### [3.0.0] - TBD
 
 #### Added
 
 - Added a concept map for translating from the RouteOfAdministrationEDQM value set to HCI's CdTyp26.
 - Added a concept map for translating from HCI's CdTyp26 to the RouteOfAdministrationEDQM value set.
+- Added a constraint `prescription-id-reference-matches-request-changed-reference` on PADV observations to ensure that, if there is a medication request changed extension, then the identifier has to match that of the prescription extension. Along with the addition came the fixing of several references that were to changed resources and should be to list resources.
 
 #### Fixed
 
