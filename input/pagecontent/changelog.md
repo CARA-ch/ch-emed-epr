@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 #### Changed
 
 - `CHEMEDEPRRelatedPerson` now inherits from `CHCoreRelatedPerson` instead of `RelatedPerson`, due to profiling changes in CH EMED.
+- Aligned our CH Core overridden constraints (from warning to error) with changes to [CH Core](https://github.com/hl7ch/ch-core/issues/372). The actual result from the constraints remains the same, but there was regex consolidation.
 
 #### Removed
 

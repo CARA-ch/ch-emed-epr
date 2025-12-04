@@ -45,39 +45,25 @@ Severity: #error
 Expression: "true and (((10-(28+(substring(3,1).toInteger()*3)+(substring(4,1).toInteger()*1)+(substring(5,1).toInteger()*3)+(substring(6,1).toInteger()*1)+(substring(7,1).toInteger()*3)+(substring(8,1).toInteger()*1)+(substring(9,1).toInteger()*3)+(substring(10,1).toInteger()*1)+(substring(11,1).toInteger()*3))mod(10))mod(10))=substring(12,1).toInteger())"
 
 Invariant: ahvn13-length-error
-Description: "AHVN13 / NAVS13 must be exactly 13 characters long"
+Description: "AHVN13 / NAVS13 must start with 756 followed by 10 digits"
 Severity: #error
-Expression: "true and matches('^[0-9]{13}$')"
-
-Invariant: ahvn13-startswith756-error
-Description: "AHVN13 / NAVS13 must start with 756"
-Severity: #error
-Expression: "true and startsWith('756')"
+Expression: "matches('^756[0-9]{10}$')"
 
 Invariant: epr-spid-length-error
-Description: "EPR-SPID must be exactly 18 characters long"
+Description: "EPR-SPID must start with 76133761 followed by 10 digits"
 Severity: #error
-Expression: "true and matches('^[0-9]{18}$')"
+Expression: "matches('^76133761[0-9]{10}$')"
 
 Invariant: epr-spid-modulus-10-error
 Description: "EPR-SPID must pass the modulus 10 check - https://www.gs1.org/services/how-calculate-check-digit-manually"
 Severity: #error
 Expression: "true and (((10-((68+(substring(8,1).toInteger()*3)+(substring(9,1).toInteger()*1)+(substring(10,1).toInteger()*3)+(substring(11,1).toInteger()*1)+(substring(12,1).toInteger()*3)+(substring(13,1).toInteger()*1)+(substring(14,1).toInteger()*3)+(substring(15,1).toInteger()*1)+(substring(16,1).toInteger()*3))mod(10)))mod(10))=substring(17,1).toInteger())"
 
-Invariant: epr-spid-startswith76133761-error
-Description: "EPR-SPID must start with 76133761"
-Severity: #error
-Expression: "true and startsWith('76133761')"
-
 Invariant: veka-length-error
-Description: "Insurance card number must be exactly 20 characters long"
+Description: "Insurance card number must start with 807560 followed by 14 digits"
 Severity: #error
-Expression: "true and matches('^[0-9]{20}$')"
+Expression: "matches('^807560[0-9]{14}$')"
 
-Invariant: veka-startswith807560-error
-Description: "Insurance card number must start with 807560"
-Severity: #error
-Expression: "true and startsWith('807560')"
 /*
  * END "overridden" invariants.
 */
