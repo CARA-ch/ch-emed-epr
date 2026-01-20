@@ -21,7 +21,6 @@ RuleSet: composition-ruleset
 //* insert no-support(section.author)
 * date obeys datetime-only-instant-invariant
 * insert no-support(encounter)
-* insert no-support(attester[legalAuthenticator])
 * insert no-support(attester)
 * insert no-support(event)
 * insert no-support(relatesTo)
