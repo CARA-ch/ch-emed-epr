@@ -26,8 +26,8 @@ publisher:
 # use cases, the value can be an object with keys for id, uri, and version.
 #
 dependencies:
-  ch.fhir.ig.ch-core: 6.0.0-ballot
-  ch.fhir.ig.ch-emed: 6.0.0-ballot
+  ch.fhir.ig.ch-core: 6.0.0
+  ch.fhir.ig.ch-emed: 6.0.0
   #hl7.terminology: 5.5.0
 # dependencies:
 #   hl7.fhir.us.core: 3.1.0
