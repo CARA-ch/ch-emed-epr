@@ -24,7 +24,7 @@ Instance: CompositionPmlcParacetamolAxapharmCARAPMP004
 InstanceOf: CHEMEDEPRCompositionMedicationCard
 Title: "Composition: PMLC  document with a prescribed axapharm paracetamol treatment"
 Description: "Example of PMLC  document composition with a prescribed axapharm paracetamol treatment"
-Usage: #example
+Usage: #inline
 * language = #fr-CH
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:46141281-6d89-4f57-950b-45bf7ba3171c"
@@ -46,7 +46,12 @@ Usage: #example
 * section[originalRepresentation].title = "Original representation"
 * section[originalRepresentation].code = $lnc#55108-5 "Clinical presentation Document"
 * section[originalRepresentation].text.status = #generated
-* section[originalRepresentation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">The original representation as a PDF file</div>"
+* section[originalRepresentation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">The original representation as a <span id=\"pmlc-pdf\">PDF</span> file</div>"
+* section[originalRepresentation].text.extension[+].url = "http://hl7.org/fhir/StructureDefinition/textLink"
+* section[originalRepresentation].text.extension[=].extension[+].url = "htmlid"
+* section[originalRepresentation].text.extension[=].extension[=].valueString = "pmlc-pdf"
+* section[originalRepresentation].text.extension[=].extension[+].url = "data"
+* section[originalRepresentation].text.extension[=].extension[=].valueUri = "urn:uuid:ddfaa7af-f4c6-4928-9eb8-c3ceb3b37143"
 * section[originalRepresentation].entry = Reference(urn:uuid:ddfaa7af-f4c6-4928-9eb8-c3ceb3b37143)
 
 Instance: OriginalRepresentationPmlcParacetamolAxapharmCARAPMP004

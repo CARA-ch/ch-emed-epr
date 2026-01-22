@@ -44,7 +44,12 @@ Usage: #inline
 * section[originalRepresentation].title = "Original representation"
 * section[originalRepresentation].code = $lnc#55108-5 "Clinical presentation Document"
 * section[originalRepresentation].text.status = #generated
-* section[originalRepresentation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">The original representation as a PDF file</div>"
+* section[originalRepresentation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">The original representation as a <span id=\"pmlc-original-representation\">PDF file</span></div>"
+* section[originalRepresentation].text.extension[+].url = "http://hl7.org/fhir/StructureDefinition/textLink"
+* section[originalRepresentation].text.extension[=].extension[+].url = "htmlid"
+* section[originalRepresentation].text.extension[=].extension[=].valueString = "pmlc-original-representation"
+* section[originalRepresentation].text.extension[=].extension[+].url = "data"
+* section[originalRepresentation].text.extension[=].extension[=].valueUri = "urn:uuid:8139d696-e83c-49ea-a94a-651edfaecd7b"
 * section[originalRepresentation].entry = Reference(urn:uuid:8139d696-e83c-49ea-a94a-651edfaecd7b)
 
 Instance: Inline-Instance-for-pmlc1-2

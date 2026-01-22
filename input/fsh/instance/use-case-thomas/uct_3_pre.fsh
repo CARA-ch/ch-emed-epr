@@ -48,7 +48,12 @@ Usage: #inline
 * section[originalRepresentation].title = "Représentation originale"
 * section[originalRepresentation].code = $lnc#55108-5 "Clinical presentation Document"
 * section[originalRepresentation].text.status = #generated
-* section[originalRepresentation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Placeholder original representation of a prescription: not a valid binary</div>"
+* section[originalRepresentation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Placeholder original representation of a prescription: <span id=\"uuid-a4f624e3-fa5a-4889-9bd1-821c8fefff60\">not a valid binary</span></div>"
+* section[originalRepresentation].text.extension[+].url = "http://hl7.org/fhir/StructureDefinition/textLink"
+* section[originalRepresentation].text.extension[=].extension[+].url = "htmlid"
+* section[originalRepresentation].text.extension[=].extension[=].valueString = "uuid-a4f624e3-fa5a-4889-9bd1-821c8fefff60"
+* section[originalRepresentation].text.extension[=].extension[+].url = "data"
+* section[originalRepresentation].text.extension[=].extension[=].valueUri = "urn:uuid:a4f624e3-fa5a-4889-9bd1-821c8fefff60"
 * section[originalRepresentation].entry = Reference(urn:uuid:a4f624e3-fa5a-4889-9bd1-821c8fefff60)
 
 Instance: OriginalRepresentationPreParacetamolAxapharmCARAPMP004

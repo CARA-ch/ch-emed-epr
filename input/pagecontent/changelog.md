@@ -22,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `CHEMEDEPRHUGPIDProdNamingSystem`
   - `CHEMEDEPRHCIIndexCDTyp9NamingSystem`
   - `CHEMEDEPRHCIIndexCdTyp26NamingSystem`
+- Added the `textLink` extension to all examples with an original representation section, following [CH Core guidance](https://fhir.ch/ig/ch-core/readable-representation-epr-docs.html).
 
 #### Fixed
 
