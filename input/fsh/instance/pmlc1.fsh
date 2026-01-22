@@ -52,12 +52,8 @@ InstanceOf: CHEMEDEPRPatient
 Usage: #inline
 * identifier[0].use = #official
 * identifier[=].type = $v2-0203#MR
-* identifier[=].system = "urn:oid:2.16.756.5.30.1.191.1.0.2.1"
-* identifier[=].value = "7a4ec59f-a024-4cfb-bc04-3339c53cb9ac"
-* identifier[+].use = #secondary
-* identifier[=].type = $v2-0203#MR
-* identifier[=].system = "urn:oid:2.16.756.5.30.1.191.4.1.10.1.3"
-* identifier[=].value = "L53672539"
+* identifier[=].system = $emedoMpiIntUrn
+* identifier[=].value = "100001298"
 * identifier[+].use = #secondary
 * identifier[=].type = $v2-0203#MR
 * identifier[=].system = "urn:oid:2.16.756.5.30.1.196.3.2.1"
@@ -82,10 +78,6 @@ Usage: #inline
 * identifier[=].type = $v2-0203#MR
 * identifier[=].system = "urn:oid:2.16.756.5.30.1.196.3.2.1"
 * identifier[=].value = "3475203"
-* identifier[+].use = #secondary
-* identifier[=].type = $v2-0203#MR
-* identifier[=].system = "urn:oid:2.16.756.5.30.1.191.1.0.12.3.101"
-* identifier[=].value = "02fc1dd1-fc13-4ca0-874c-b8372b7e6cfc"
 * identifier[+].use = #secondary
 * identifier[=].type = $v2-0203#MR
 * identifier[=].system = "urn:oid:2.999.1"

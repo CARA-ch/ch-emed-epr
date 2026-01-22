@@ -5,7 +5,6 @@
 # See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
 
 # External code system
-A definition for CodeSystem 'urn:oid:0.4.0.127.0.16.1.1.2.1' could not be found, so the code cannot be validated
 A definition for CodeSystem 'urn:oid:2.51.1.1' could not be found, so the code cannot be validated
 
 # We use issued field
@@ -16,9 +15,7 @@ Source Code System http://unitsofmeasure.org doesn't have all content (content =
 Target Code System http://unitsofmeasure.org doesn't have all content (content = not-present), so the target codes cannot be checked
 No Target Code System, so the target codes cannot be checked
 Source Code System http://snomed.info/sct is only supported on the terminology server, so the source codes are not validated for performance reasons
-No definition could be found for URL value 'https://index.hcisolutions.ch/index/current/get.aspx?schema=CODE&keytype=CDTYP&key=26'
 Target Code System urn:oid:0.4.0.127.0.16.1.1.2.1 doesn't have all content (content = fragment), so the target codes cannot be checked
-A definition could not be found for Canonical URL 'https://index.hcisolutions.ch/index/current/get.aspx?schema=CODE&keytype=CDTYP&key=26'
 Source Code System urn:oid:0.4.0.127.0.16.1.1.2.1 doesn't have all content (content = fragment), so the source codes cannot be checked 
 
 # Display values (and LOINC additional to SCT codes)
@@ -48,14 +45,13 @@ The definition for the element 'MedicationStatement.extension.value[x]' binds to
 The HTML fragment 'expansion-params.xhtml' is not included anywhere in the produced implementation guide
 No definition could be found for URL value 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters'
 
-# code systems
-No definition could be found for URL value 'http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-cdtyp9'
-
 # value sets
 This SNOMED-CT based include has some concepts with semantic tags (FSN terms) and some without (preferred terms) %
 
-# deprecated inherited Elements
-The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated 
+# Known OIDs for examples
+# CHUV PID assigning authorities:
+No definition could be found for URL value 'urn:oid:2.16.756.5.30.1.196.3.2.1'
+No definition could be found for URL value 'urn:oid:2.16.756.5.30.1.196.2.2.1'
 
 # other
 The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)

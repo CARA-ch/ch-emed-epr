@@ -10,6 +10,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added a concept map for translating from the RouteOfAdministrationEDQM value set to HCI's CdTyp26.
 - Added a concept map for translating from HCI's CdTyp26 to the RouteOfAdministrationEDQM value set.
 - Added a constraint `prescription-id-reference-matches-request-changed-reference` on PADV observations to ensure that, if there is a medication request changed extension, then the identifier has to match that of the prescription extension. Along with the addition came the fixing of several references that were to changed resources and should be to list resources.
+- Added naming systems to improve QA results:
+  - `CHEMEDEPReMedoMPIIntAssigningAuthorityNamingSystem`
+  - `CHEMEDEPRCHUVRootOidNamingSystem`
+  - `CHEMEDEPRHUGRootOidNamingSystem`
+  - `CHEMEDEPRHUGeHealthOidNamingSystem`
+  - `CHEMEDEPRHUGDTNIAOidNamingSystem`
+  - `CHEMEDEPRHUGPIDDevNamingSystem`
+  - `CHEMEDEPRHUGPIDCertNamingSystem`
+  - `CHEMEDEPRHUGPIDFormNamingSystem`
+  - `CHEMEDEPRHUGPIDProdNamingSystem`
+  - `CHEMEDEPRHCIIndexCDTyp9NamingSystem`
+  - `CHEMEDEPRHCIIndexCdTyp26NamingSystem`
 
 #### Fixed
 
@@ -21,8 +33,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - `CHEMEDEPRRelatedPerson` now inherits from `CHCoreRelatedPerson` instead of `RelatedPerson`, due to profiling changes in CH EMED.
 - Aligned our CH Core overridden constraints (from warning to error) with changes to [CH Core](https://github.com/hl7ch/ch-core/issues/372). The actual result from the constraints remains the same, but there was regex consolidation.
+- Changed the URL for CdTyp9 codes with the addition of a naming system for it, affecting the mappings `CdTyp9ToCHEMEDEPRAmountQuantityUnitCode`, `CHEMEDEPRAmountQuantityUnitCodeToCdTyp9`, `CdTyp9ToCHEMEDEPRTimeQuantityUnitCode` and `CHEMEDEPRTimeQuantityUnitCodeToCdTyp9`.
 
 #### Removed
+
+- Removed the `attester[legalAuthenticator]` slice from composition ruleset that is no longer needed (slice removed upstream).
+- Removed some local PID identifiers from patient examples: further local PIDs were not needed and they would just either pollute the QA report or force the IG to have a naming system for them.
 
 ### [2.0.0] - 2025-01-21
 

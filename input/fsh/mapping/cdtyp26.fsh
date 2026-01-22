@@ -10,10 +10,10 @@ Usage: #definition
 
 This concept map does not - and could not possibly - provide a one to one match for every source code. Whenever possible, comments in this concept map provide further guidance on how to approach the translation of problematic items.            
 """
-* sourceUri = "https://index.hcisolutions.ch/index/current/get.aspx?schema=CODE&keytype=CDTYP&key=26"
+* sourceUri = $hciIndexRouteOfAdministrationTableUrl
 * targetCanonical = "http://fhir.ch/ig/ch-term/ValueSet/edqm-routeofadministration"
-* group[+].source = "https://index.hcisolutions.ch/index/current/get.aspx?schema=CODE&keytype=CDTYP&key=26"
-* group[=].target = "urn:oid:0.4.0.127.0.16.1.1.2.1" //EDQM Standard Terms system
+* group[+].source = $hciIndexRouteOfAdministrationTableUrl
+* group[=].target = $edqm //EDQM Standard Terms system
 * group[=].element[+].code = #BLADINJ
 * group[=].element[=].target[+].code = #20046000
 * group[=].element[=].target[=].display = "Intravesical use"
@@ -486,9 +486,9 @@ Usage: #definition
 This concept map does not - and could not possibly - provide a one to one match for every source code. Whenever possible, comments in this concept map provide further guidance on how to approach the translation of problematic items.            
 """
 * sourceUri = "http://fhir.ch/ig/ch-term/ValueSet/edqm-routeofadministration"
-* targetCanonical = "https://index.hcisolutions.ch/index/current/get.aspx?schema=CODE&keytype=CDTYP&key=26"
-* group[+].source = "urn:oid:0.4.0.127.0.16.1.1.2.1" //EDQM Standard Terms system
-* group[=].target = "https://index.hcisolutions.ch/index/current/get.aspx?schema=CODE&keytype=CDTYP&key=26"
+* targetCanonical = $hciIndexRouteOfAdministrationTableUrl
+* group[+].source = $edqm //EDQM Standard Terms system
+* group[=].target = $hciIndexRouteOfAdministrationTableUrl
 * group[=].element[+].code = #20001000
 * group[=].element[=].target[+].code = #OT
 * group[=].element[=].target[=].display = "Auricular (instillation)"

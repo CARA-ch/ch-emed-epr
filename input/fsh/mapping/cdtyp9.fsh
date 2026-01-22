@@ -10,11 +10,11 @@ Usage: #definition
 
 This concept map does not - and could not possibly - provide a one to one match for every source code. Whenever possible, comments in this concept map provide further guidance on how to approach the translation of problematic items.            
 """
-* sourceUri = "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-cdtyp9"
+* sourceUri = $hciIndexUnitCodesUrl
 * targetCanonical = "http://fhir.ch/ig/ch-emed-epr/ValueSet/ch-emed-epr-amount-quantity-unit-code"
 // to SNOMED codes:
-* group[+].source = "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-cdtyp9"
-* group[=].target = "http://snomed.info/sct"
+* group[+].source = $hciIndexUnitCodesUrl
+* group[=].target = $sct
 * group[=].element[+].code = #Appl
 * group[=].element[=].target[+].code = #413568008
 * group[=].element[=].target[=].display = "Application - unit of product usage (qualifier value)"
@@ -125,8 +125,8 @@ This concept map does not - and could not possibly - provide a one to one match 
 * group[=].element[=].target[=].display = "Unit"
 * group[=].element[=].target[=].equivalence = #equal
 // to UCUM codes:
-* group[+].source = "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-cdtyp9"
-* group[=].target = "http://unitsofmeasure.org"
+* group[+].source = $hciIndexUnitCodesUrl
+* group[=].target = $ucum
 * group[=].element[+].code = #%
 * group[=].element[=].target[+].code = #%
 * group[=].element[=].target[=].display = "percent"
@@ -221,7 +221,7 @@ This concept map does not - and could not possibly - provide a one to one match 
 * group[=].element[=].target[=].display = "international unit"
 * group[=].element[=].target[=].equivalence = #equal
 // unmatched:
-* group[+].source = "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-cdtyp9"
+* group[+].source = $hciIndexUnitCodesUrl
 * group[=].element[+].code = #h
 * group[=].element[=].target[+].equivalence = #unmatched
 * group[=].element[+].code = #Jahr
@@ -243,10 +243,10 @@ Usage: #definition
 * status = #draft
 * experimental = true
 * sourceCanonical = "http://fhir.ch/ig/ch-emed-epr/ValueSet/ch-emed-epr-amount-quantity-unit-code"
-* targetUri = "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-cdtyp9"
+* targetUri = $hciIndexUnitCodesUrl
 // SNOMED codes:
-* group[+].source = "http://snomed.info/sct"
-* group[=].target = "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-cdtyp9"
+* group[+].source = $sct
+* group[=].target = $hciIndexUnitCodesUrl
 * group[=].element[+].code = #732981002
 * group[=].element[=].display = "Actuation (unit of presentation)"
 * group[=].element[=].target[+].code = #Hub
@@ -457,8 +457,8 @@ Usage: #definition
 * group[=].element[=].target[=].equivalence = #inexact
 * group[=].element[=].target[=].comment = "Stk stands for Stück which could be translated as piece. CH EMED 5.0.0 removed the unit piece and replaced it with the SNOMED code for quantity. See https://github.com/hl7ch/ch-emed/issues/252 for reasoning."
 // UCUM codes:
-* group[+].source = "http://unitsofmeasure.org"
-* group[=].target = "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-cdtyp9"
+* group[+].source = $ucum
+* group[=].target = $hciIndexUnitCodesUrl
 * group[=].element[+].code = #Bq
 * group[=].element[=].display = "Becquerel"
 * group[=].element[=].target[+].code = #Bq
@@ -593,10 +593,10 @@ Usage: #definition
 * name = "CdTyp9ToCHEMEDEPRTimeQuantityUnitCode"
 * status = #draft
 * experimental = true
-* sourceUri = "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-cdtyp9"
+* sourceUri = $hciIndexUnitCodesUrl
 * targetCanonical = "http://fhir.ch/ig/ch-emed-epr/ValueSet/ch-emed-epr-time-quantity-unit-code"
-* group[+].source = "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-cdtyp9"
-* group[=].target = "http://unitsofmeasure.org"
+* group[+].source = $hciIndexUnitCodesUrl
+* group[=].target = $ucum
 * group[=].element[+].code = #h
 * group[=].element[=].target[+].code = #h
 * group[=].element[=].target[=].display = "Hour"
@@ -624,9 +624,9 @@ Usage: #definition
 * status = #draft
 * experimental = true
 * sourceCanonical = "http://fhir.ch/ig/ch-emed-epr/ValueSet/ch-emed-epr-time-quantity-unit-code"
-* targetUri = "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-cdtyp9"
-* group[+].source = "http://unitsofmeasure.org"
-* group[=].target = "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-cdtyp9"
+* targetUri = $hciIndexUnitCodesUrl
+* group[+].source = $ucum
+* group[=].target = $hciIndexUnitCodesUrl
 * group[=].element[+].code = #s
 * group[=].element[=].display = "Second"
 * group[=].element[=].target[+].equivalence = #unmatched
