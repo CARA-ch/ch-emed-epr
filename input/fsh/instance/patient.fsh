@@ -26,6 +26,10 @@ Usage: #example
 * gender = #male
 * identifier[+].use = #official
 * identifier[=].type = $v2-0203#MR
+* identifier[=].system = "urn:oid:2.16.756.5.30.1.1625.3.1.3.1"
+* identifier[=].value = "7857bf60-93a1-409d-a647-ee260cec9c0e"
+* identifier[+].use = #secondary
+* identifier[=].type = $v2-0203#MR
 * identifier[=].system = $emedoMpiIntUrn
 * identifier[=].value = "100001368"
 * identifier[+].use = #secondary

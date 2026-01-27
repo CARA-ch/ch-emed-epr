@@ -169,3 +169,33 @@ Usage: #example
 * dosageInstruction[baseEntry].doseAndRate.doseQuantity = 1 $sct#732936001 "comprimé"
 * dosageInstruction[baseEntry].text = "Un comprimé à avaler et prendre pendant les repas avec de l'eau le matin, le midi et le soir du 2023-10-01 au 2024-01-05."
 
+Instance: MedicationRequestDafalganEffSelfMedicationPre
+InstanceOf: CHEMEDEPRMedicationRequest
+Title: "MedicationRequest: Dafalgan effervescent 500mg (PRE)"
+Description: "Example of a medication request in a PRE document for paracetamol Dafalgan effervescent tablets 500mg for a treatment added by a patient."
+Usage: #example
+* contained[0] = MedicationParacetamolDafalganEff
+* language = #fr-CH
+* extension[treatmentplan].url = "http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-treatmentplan"
+* extension[treatmentplan].extension[id].url = "id"
+* extension[treatmentplan].extension[id].valueIdentifier.system = "urn:ietf:rfc:3986"
+* extension[treatmentplan].extension[id].valueIdentifier.value = "urn:uuid:cb13d6de-051f-4a3e-ab85-c05650fa254e"
+* extension[treatmentplan].extension[externalDocumentId].url = "externalDocumentId"
+* extension[treatmentplan].extension[externalDocumentId].valueIdentifier.system = "urn:ietf:rfc:3986"
+* extension[treatmentplan].extension[externalDocumentId].valueIdentifier.value = "urn:uuid:a6deb711-dc0e-4a87-9ca9-f72bb9ecc858"
+* identifier.system = "urn:ietf:rfc:3986"
+* identifier.value = "urn:uuid:fd712f74-9f63-4c6a-89df-4bc254ee80b3"
+* status = #active
+* intent = #order
+* medicationReference = Reference(MedicationParacetamolDafalganEff)
+* subject = Reference(urn:uuid:9b00e81e-1165-4039-9d60-698ef838ae1a)
+* authoredOn = "2026-02-12T14:55:55.602+01:00"
+* requester = Reference(urn:uuid:213d609a-1164-459a-bb10-727516ae3d0c)
+* dosageInstruction[baseEntry].text = "1 comprimé en réserve, à avaler si besoin en cas de mal à la tête, max. 1 comprimé chaque 6 heures, à partir du 12 fevrier 2026."
+* dosageInstruction[baseEntry].patientInstruction = "1 comprimé en cas de mal à la tête."
+* dosageInstruction[baseEntry].timing.repeat.boundsPeriod.start = "2026-02-12"
+* dosageInstruction[baseEntry].asNeededBoolean = true
+* dosageInstruction[baseEntry].route = $edqm#20053000 "Oral use"
+* dosageInstruction[baseEntry].route.text = "À avaler"
+* dosageInstruction[baseEntry].maxDosePerPeriod.numerator = 1 $sct#732936001 "comprimé"
+* dosageInstruction[baseEntry].maxDosePerPeriod.denominator = 6 $ucum#h "Heure"

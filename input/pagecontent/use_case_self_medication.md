@@ -1,0 +1,14 @@
+### Introduction
+This use case presents an example of a [patient](Patient-PatientCARAPMP004.html) that introduces to his shared medication plan a self-medication treatment. Furthermore, this use case also exemplifies how this treatment is at a later stage reviewed and modified by a medical doctor subsequently.
+
+<!-- link patient? -->
+This use case assumes that the patient had no current treatments at the time of the first step of the use case.
+
+### Self-Medication
+The use case starts with the patient, suffering from frequent headaches, documenting that he is taking paracetamol to tackle them. The patient uses CARA's portal for patients for adding the treatment. For displaying the patient's current medication overview at login, the portal fetches first a [PMLC](Bundle-DocumentUCSF1CARAPMP004PMLCEmpty.html) from the eMedication service, which is empty (no treatments). When the patient enters the data for his self-medication treatment, the portal proceeds to submit an [MTP document](Bundle-DocumentUCSF2CARAPMP004MTPParacetamol.html) to the eMedication service to record it.
+
+### Dispense at the pharmacy
+The patient goes to a pharmacy to get a box of paracetamol, without prescription, for his headaches. The pharmacist's system presents the pharmacist with the patient's medication overview, for which it fetches a [PMLC document](Bundle-DocumentUCSF3CARAPMP004PMLCDafalganSelfMedication.html) from the eMedication service. After checking the patient's medication overview, the pharmacist proceeds to perform the dispensation of a paracetamol box, which gets recorded in the system. The pharmacist's system sends a [DIS document](Bundle-DocumentUCSF4CARAPMP004DISDafalganWithoutPrescription.html) to the eMedication service to this effect.
+
+### Medical Consultation
+After a while without much improvement, the patient goes to see his general practitioner and discuss his ailment. The practitioner's system fetches a [PMLC document](Bundle-DocumentUCSF5CARAPMP004PMLCDafalganSelfMedication.html) from the eMedication service to present the patient's medication overview to the doctor. This PMLC document contains the paracetamol self-medication treatment. At the end of the consultation, and after discussing it with the patient, the practitioner determines the paracetamol treatment is not sufficient since it does not treat the root cause, which will be addressed later after a series of tests, and that the paracetamol treatment should properly be registered with a max daily dose the practitioner deems the patient should not surpass. The practitioner records this as a paracetamol prescription for the patient with the new dosage details. The practitioner's system sends a [PRE document](Bundle-DocumentUCSF6CARAPMP004PREDafalgan.html) to the eMedication service with these details.

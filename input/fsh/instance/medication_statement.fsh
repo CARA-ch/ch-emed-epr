@@ -242,3 +242,89 @@ Usage: #example
 * dosage[baseEntry].text = "Max. 2 comprimés à avaler par jour."
 * dosage[baseEntry].maxDosePerPeriod.numerator = 2 $sct#732936001 "comprimé"
 * dosage[baseEntry].maxDosePerPeriod.denominator = 1 $ucum#d "jour"
+
+Instance: MedicationStatementParacetamolSelfMedication
+InstanceOf: CHEMEDEPRMedicationStatement
+Title: "MedicationStatement: self-medication paracetamol treatment"
+Description: "The example for a self-medication treatment plan for paracetamol."
+Usage: #example
+* contained[+] = MedicationParacetamolDafalganEff
+* language = #fr-CH
+* identifier.system = "urn:ietf:rfc:3986"
+* identifier.value = "urn:uuid:cb13d6de-051f-4a3e-ab85-c05650fa254e"
+* status = #active
+* medicationReference = Reference(MedicationParacetamolDafalganEff)
+* subject = Reference(urn:uuid:9b00e81e-1165-4039-9d60-698ef838ae1a)
+* dateAsserted = "2026-01-22T14:50:55.602+01:00"
+* informationSource = Reference(urn:uuid:9b00e81e-1165-4039-9d60-698ef838ae1a)
+* reasonCode.text = "J'ai souvent mal à la tête."
+* dosage[baseEntry].text = "1 comprimé en réserve, à avaler si besoin, à partir du 22 janvier 2026."
+* dosage[baseEntry].timing.repeat.boundsPeriod.start = "2026-01-22"
+* dosage[baseEntry].asNeededBoolean = true
+* dosage[baseEntry].route = $edqm#20053000 "Oral use"
+* dosage[baseEntry].route.text = "À avaler"
+* dosage[baseEntry].doseAndRate.doseQuantity = 1 $sct#732936001 "comprimé"
+
+Instance: MedicationStatementCardParacetamolSelfMedication
+InstanceOf: CHEMEDEPRMedicationStatementCard
+Title: "MedicationStatementCard: self-medication paracetamol treatment"
+Description: "The example for a self-medication treatment plan for paracetamol, conveyed within a PMLC document."
+Usage: #example
+* contained[+] = MedicationParacetamolDafalganEff
+* language = #fr-CH
+* identifier.system = "urn:ietf:rfc:3986"
+* identifier.value = "urn:uuid:0972e4a0-b4ce-4d1d-bffa-1172a58f499d"
+* extension[treatmentPlan].url = "http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-treatmentplan"
+* extension[treatmentPlan].extension[id].url = "id"
+* extension[treatmentPlan].extension[id].valueIdentifier.system = "urn:ietf:rfc:3986"
+* extension[treatmentPlan].extension[id].valueIdentifier.value = "urn:uuid:cb13d6de-051f-4a3e-ab85-c05650fa254e"
+* extension[treatmentPlan].extension[externalDocumentId].url = "externalDocumentId"
+* extension[treatmentPlan].extension[externalDocumentId].valueIdentifier.system = "urn:ietf:rfc:3986"
+* extension[treatmentPlan].extension[externalDocumentId].valueIdentifier.value = "urn:uuid:a6deb711-dc0e-4a87-9ca9-f72bb9ecc858"
+* extension[lastConsideredDocument].url = "http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-last-considered-document"
+* extension[lastConsideredDocument].valueIdentifier.system = "urn:ietf:rfc:3986"
+* extension[lastConsideredDocument].valueIdentifier.value = "urn:uuid:a6deb711-dc0e-4a87-9ca9-f72bb9ecc858"
+* status = #active
+* medicationReference = Reference(MedicationParacetamolDafalganEff)
+* subject = Reference(urn:uuid:9b00e81e-1165-4039-9d60-698ef838ae1a)
+* dateAsserted = "2026-01-22T14:50:55.602+01:00"
+* informationSource = Reference(urn:uuid:9b00e81e-1165-4039-9d60-698ef838ae1a)
+* reasonCode.text = "J'ai souvent mal à la tête."
+* dosage[baseEntry].text = "1 comprimé en réserve, à avaler si besoin, à partir du 22 janvier 2026."
+* dosage[baseEntry].timing.repeat.boundsPeriod.start = "2026-01-22"
+* dosage[baseEntry].asNeededBoolean = true
+* dosage[baseEntry].route = $edqm#20053000 "Oral use"
+* dosage[baseEntry].route.text = "À avaler"
+* dosage[baseEntry].doseAndRate.doseQuantity = 1 $sct#732936001 "comprimé"
+
+Instance: MedicationStatementCardParacetamolSelfMedicationAfterDispense
+InstanceOf: CHEMEDEPRMedicationStatementCard
+Title: "MedicationStatementCard: self-medication paracetamol treatment after dispense."
+Description: "The example for a self-medication treatment plan for paracetamol after a dispense, conveyed within a PMLC document."
+Usage: #example
+* contained[+] = MedicationParacetamolDafalganEff
+* language = #fr-CH
+* identifier.system = "urn:ietf:rfc:3986"
+* identifier.value = "urn:uuid:8ba8cb30-2be0-4d67-9ad4-435666a79412"
+* extension[treatmentPlan].url = "http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-treatmentplan"
+* extension[treatmentPlan].extension[id].url = "id"
+* extension[treatmentPlan].extension[id].valueIdentifier.system = "urn:ietf:rfc:3986"
+* extension[treatmentPlan].extension[id].valueIdentifier.value = "urn:uuid:cb13d6de-051f-4a3e-ab85-c05650fa254e"
+* extension[treatmentPlan].extension[externalDocumentId].url = "externalDocumentId"
+* extension[treatmentPlan].extension[externalDocumentId].valueIdentifier.system = "urn:ietf:rfc:3986"
+* extension[treatmentPlan].extension[externalDocumentId].valueIdentifier.value = "urn:uuid:a6deb711-dc0e-4a87-9ca9-f72bb9ecc858"
+* extension[lastConsideredDocument].url = "http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-last-considered-document"
+* extension[lastConsideredDocument].valueIdentifier.system = "urn:ietf:rfc:3986"
+* extension[lastConsideredDocument].valueIdentifier.value = "urn:uuid:a6deb711-dc0e-4a87-9ca9-f72bb9ecc858"
+* status = #active
+* medicationReference = Reference(MedicationParacetamolDafalganEff)
+* subject = Reference(urn:uuid:9b00e81e-1165-4039-9d60-698ef838ae1a)
+* dateAsserted = "2026-02-12T14:50:55.602+01:00"
+* informationSource = Reference(urn:uuid:e901b242-7f96-434e-acee-685dd24aad17)
+* reasonCode.text = "J'ai souvent mal à la tête."
+* dosage[baseEntry].text = "1 comprimé en réserve, à avaler si besoin, à partir du 22 janvier 2026."
+* dosage[baseEntry].timing.repeat.boundsPeriod.start = "2026-01-22"
+* dosage[baseEntry].asNeededBoolean = true
+* dosage[baseEntry].route = $edqm#20053000 "Oral use"
+* dosage[baseEntry].route.text = "À avaler"
+* dosage[baseEntry].doseAndRate.doseQuantity = 1 $sct#732936001 "comprimé"

@@ -142,3 +142,15 @@ Usage: #definition
 * uniqueId[+].type = #uri
 * uniqueId[=].value = $hciIndexRouteOfAdministrationTableUrl
 
+Instance: ch-emed-epr-pmp-pid-oid-dev-naming-system
+InstanceOf: NamingSystem
+Title: "CH EMED EPR - PMP-PID Assigning Authority OID dev"
+Description: "Naming System of the PMP-PID's Assigning Authority OID on development environment."
+Usage: #definition
+* name = "CHEMEDEPRPMPPIDOIDDevNamingSystem"
+* status = #draft
+* kind = #identifier
+* date = "2026-01-22"
+* publisher = "HUG"
+* uniqueId[+].type = #oid
+* uniqueId[=].value = "2.16.756.5.30.1.1625.3.1.3.1"

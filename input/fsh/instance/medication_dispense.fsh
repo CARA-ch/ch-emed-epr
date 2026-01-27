@@ -69,3 +69,31 @@ Usage: #example
 * dosageInstruction[baseEntry].doseAndRate.doseRange.high = 1 http://snomed.info/sct#732936001 "Tablet (unit of presentation)"
 * dosageInstruction[baseEntry].timing.repeat.boundsPeriod.start = "2023-04-11"
 * dosageInstruction[baseEntry].text = "Un demi comprimé ou un comprimé entier à avaler et prendre avec de l'eau tous les midis dès le 2023-04-11."
+
+Instance: MedicationDispenseUSCF4DafalganDis
+InstanceOf: CHEMEDEPRMedicationDispense
+Title: "MedicationDispense: Dafalgan self-medication"
+Description: "Example of a medication dispense in a DIS document for a dafalgan self-medication MTP."
+Usage: #example
+* contained[+] = MedicationParacetamolDafalganEff
+* medicationReference = Reference(MedicationParacetamolDafalganEff)
+* extension[treatmentPlan].url = "http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-treatmentplan"
+* extension[treatmentPlan].extension[id].url = "id"
+* extension[treatmentPlan].extension[id].valueIdentifier.system = "urn:ietf:rfc:3986"
+* extension[treatmentPlan].extension[id].valueIdentifier.value = "urn:uuid:cb13d6de-051f-4a3e-ab85-c05650fa254e"
+* extension[treatmentPlan].extension[externalDocumentId].url = "externalDocumentId"
+* extension[treatmentPlan].extension[externalDocumentId].valueIdentifier.system = "urn:ietf:rfc:3986"
+* extension[treatmentPlan].extension[externalDocumentId].valueIdentifier.value = "urn:uuid:a6deb711-dc0e-4a87-9ca9-f72bb9ecc858"
+* identifier.system = "urn:ietf:rfc:3986"
+* identifier.value = "urn:uuid:9efd2f67-b7a6-4682-840e-e6b532938391"
+* status = #completed
+* performer.actor = Reference(urn:uuid:e901b242-7f96-434e-acee-685dd24aad17)
+* whenHandedOver = "2026-01-24T14:50:55.602+01:00"
+* quantity = 1 http://snomed.info/sct#1681000175101 "Package"
+* dosageInstruction[baseEntry].text = "1 comprimé en réserve, à avaler si besoin, à partir du 22 janvier 2026."
+* dosageInstruction[baseEntry].timing.repeat.boundsPeriod.start = "2026-01-22"
+* dosageInstruction[baseEntry].asNeededBoolean = true
+* dosageInstruction[baseEntry].route = $edqm#20053000 "Oral use"
+* dosageInstruction[baseEntry].route.text = "À avaler"
+* dosageInstruction[baseEntry].doseAndRate.doseQuantity = 1 $sct#732936001 "comprimé"
+* subject = Reference(urn:uuid:9b00e81e-1165-4039-9d60-698ef838ae1a)

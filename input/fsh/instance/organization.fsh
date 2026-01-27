@@ -25,3 +25,15 @@ Usage: #example
 * address.state = "Vaud"
 * address.postalCode = "1066"
 * address.country = "CH"
+
+Instance: OrganizationPharmaSI
+InstanceOf: CHEMEDEPROrganization
+Title: "Organization: Pharma SI"
+Description: "The example of pharmacy organization."
+Usage: #example
+* identifier.system = "urn:oid:2.51.1.3"
+* identifier.value = "7601234567890"
+* name = "Pharma SI"
+* address.line = "Rue de la Vie s/n"
+* address.city = "Ville la Ville"
+* address.country = "CH"
