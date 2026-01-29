@@ -24,6 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `CHEMEDEPRHCIIndexCdTyp26NamingSystem`
 - Added the `textLink` extension to all examples with an original representation section, following [CH Core guidance](https://fhir.ch/ig/ch-core/readable-representation-epr-docs.html).
 - Added a use case to guidance with a scenario of self-medication treatment _modified_ at a later stage by a professional.
+- Added more examples.
 
 #### Fixed
 
