@@ -146,3 +146,51 @@ Description: "Medication example for Ramipril Mepha cpr 2.5mg"
 * ingredient[+].itemCodeableConcept.text = "Fumarate de stéaryle sodique"
 * ingredient[=].isActive = false
 
+Instance: MedicationIbuprofen
+InstanceOf: CHEMEDEPRMedication
+Description: "Medication example for ibuprofen medication without any specific commercial product details."
+Usage: #example
+* language = #fr-CH
+* code.coding[ATC] = $atc#M01AE01 "Ibuprofen"
+* code.text = "Ibuprofen"
+* ingredient[+].itemCodeableConcept = $sct#387207008 "Ibuprofen (substance)"
+* ingredient[=].itemCodeableConcept.text = "Ibuprofen"
+* ingredient[=].isActive = true
+
+RuleSet: MedicationMarcoumarBaseRuleset
+* language = #fr-CH
+* code.coding[ATC] = $atc#B01AA04 "Phenprocoumon"
+* code.text = "Marcoumar cpr 3mg"
+* form = $edqm#10219000 "Comprimé"
+* form.text = "Comprimé"
+* ingredient[+].itemCodeableConcept = $sct#59488002 "Phenprocoumon (substance)"
+* ingredient[=].itemCodeableConcept.text = "Phenprocoumon"
+* ingredient[=].strength.numerator = 3 $ucum#mg "mg"
+* ingredient[=].strength.denominator = 1 $sct#732936001 "comprimé"
+* ingredient[=].isActive = true
+* ingredient[+].itemCodeableConcept.text = "Lactosum"
+* ingredient[=].strength.numerator = 80 $ucum#mg "mg"
+* ingredient[=].strength.denominator = 1 $sct#732936001 "comprimé"
+* ingredient[=].isActive = false
+* ingredient[+].itemCodeableConcept.text = "Maydis amylum"
+* ingredient[=].isActive = false
+* ingredient[+].itemCodeableConcept.text = "Talcum"
+* ingredient[=].isActive = false
+* ingredient[+].itemCodeableConcept.text = "Magnesii stearas"
+* ingredient[=].isActive = false
+
+Instance: MedicationMarcoumar
+InstanceOf: CHEMEDEPRMedication
+Description: "Medication example for Marcoumar tablets 3mg - no article details"
+Usage: #example
+* insert MedicationMarcoumarBaseRuleset
+
+Instance: MedicationMarcoumar25TabsPackage
+InstanceOf: CHEMEDEPRMedication
+Description: "Medication example for Marcoumar tablets 3mg, package of 25 tablets"
+Usage: #example
+* insert MedicationMarcoumarBaseRuleset
+* code.coding[GTIN] = $gtin#7680193950011 "MARCOUMAR cpr 3 mg fl plast 25 pce"
+* code.text = "MARCOUMAR cpr 3 mg fl plast 25 pce"
+* amount.numerator = 25 $sct#732936001 "comprimé"
+* amount.denominator = 1 $sct#732984005 "plaquette"

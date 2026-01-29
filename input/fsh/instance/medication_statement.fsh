@@ -328,3 +328,47 @@ Usage: #example
 * dosage[baseEntry].route = $edqm#20053000 "Oral use"
 * dosage[baseEntry].route.text = "À avaler"
 * dosage[baseEntry].doseAndRate.doseQuantity = 1 $sct#732936001 "comprimé"
+
+Instance: MedicationStatementIbuprofenNoBrand
+InstanceOf: CHEMEDEPRMedicationStatement
+Title: "MedicationStatement: ibuprofen, no brand"
+Description: "The example of a medication statement for an ibuprofen treatment plan, without specifying commercial brand details."
+Usage: #example
+* contained[+] = MedicationIbuprofen
+* language = #fr-CH
+* identifier.system = "urn:ietf:rfc:3986"
+* identifier.value = "urn:uuid:f9b3a1ae-d5ac-40b9-990a-6e4e0f16a5dc"
+* status = #active
+* medicationReference = Reference(MedicationIbuprofen)
+* subject = Reference(urn:uuid:9b00e81e-1165-4039-9d60-698ef838ae1a)
+* dateAsserted = "2026-02-12T14:55:55.602+01:00"
+* informationSource = Reference(urn:uuid:213d609a-1164-459a-bb10-727516ae3d0c)
+* reasonCode.text = "Le patient a souvent mal à la tête."
+* dosage[baseEntry].text = "1 comprimé en réserve, à avaler si besoin en cas de mal à la tête, max. Max. 400mg chaque 6 heures, à partir du 12 fevrier 2026."
+* dosage[baseEntry].patientInstruction = "1 comprimé en cas de mal à la tête."
+* dosage[baseEntry].timing.repeat.boundsPeriod.start = "2026-02-12"
+* dosage[baseEntry].asNeededBoolean = true
+* dosage[baseEntry].route = $edqm#20053000 "Oral use"
+* dosage[baseEntry].route.text = "À avaler"
+* dosage[baseEntry].maxDosePerPeriod.numerator = 400 $ucum#mg "Gramme"
+* dosage[baseEntry].maxDosePerPeriod.denominator = 6 $ucum#h "Heure"
+
+Instance: MedicationStatementMarcoumarFreeTextDosage
+InstanceOf: CHEMEDEPRMedicationStatement
+Title: "MedicationStatement: Marcoumar cpr 3mg"
+Description: "Example of a medication statement for a branded product (no packaging specified) Marcoumar tabs 3mg with free text dosage"
+Usage: #example
+* contained[+] = MedicationMarcoumar
+* language = #fr-CH
+* identifier.system = "urn:ietf:rfc:3986"
+* identifier.value = "urn:uuid:a8a06c30-a535-4a15-be77-6f13b6ac42f1"
+* status = #active
+* medicationReference = Reference(MedicationMarcoumar)
+* subject = Reference(urn:uuid:9b00e81e-1165-4039-9d60-698ef838ae1a)
+* dateAsserted = "2026-01-12T14:50:55+01:00"
+* informationSource = Reference(urn:uuid:213d609a-1164-459a-bb10-727516ae3d0c)
+* reasonCode.text = "Prévention des thromboses, embolies et infarctus."
+* dosage[baseEntry].text = "Lundi: 1 comprimé le matin. Mardi: 0,5 comprimé le matin. Mercredi: 1 comprimé le matin. Jeudi: 0,5 comprimé le matin. Vendredi: 1 comprimé. Samedi: pas de prise. Dimanche: 0,5 comprimé. Voie orale."
+* dosage[baseEntry].patientInstruction = "Lundi: 1 comprimé le matin. Mardi: 0,5 comprimé le matin. Mercredi: 1 comprimé le matin. Jeudi: 0,5 comprimé le matin. Vendredi: 1 comprimé. Samedi: pas de prise. Dimanche: 0,5 comprimé."
+* dosage[baseEntry].route = $edqm#20053000 "Oral use"
+* dosage[baseEntry].route.text = "À avaler"

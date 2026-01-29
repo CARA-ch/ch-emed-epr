@@ -191,11 +191,69 @@ Usage: #example
 * subject = Reference(urn:uuid:9b00e81e-1165-4039-9d60-698ef838ae1a)
 * authoredOn = "2026-02-12T14:55:55.602+01:00"
 * requester = Reference(urn:uuid:213d609a-1164-459a-bb10-727516ae3d0c)
-* dosageInstruction[baseEntry].text = "1 comprimé en réserve, à avaler si besoin en cas de mal à la tête, max. 1 comprimé chaque 6 heures, à partir du 12 fevrier 2026."
-* dosageInstruction[baseEntry].patientInstruction = "1 comprimé en cas de mal à la tête."
+* dosageInstruction[baseEntry].text = "1 comprimé en réserve, à avaler si besoin en cas de mal à la tête et le traitement d'ibuprofen est insuffissant, max. 1 comprimé chaque 6 heures, à partir du 12 fevrier 2026."
+* dosageInstruction[baseEntry].patientInstruction = "1 comprimé en cas de mal à la tête. À prendre si l'ibuprofen ne suffit pas et au minimum une heure après la dernière prise d'ibuprofen."
 * dosageInstruction[baseEntry].timing.repeat.boundsPeriod.start = "2026-02-12"
 * dosageInstruction[baseEntry].asNeededBoolean = true
 * dosageInstruction[baseEntry].route = $edqm#20053000 "Oral use"
 * dosageInstruction[baseEntry].route.text = "À avaler"
 * dosageInstruction[baseEntry].maxDosePerPeriod.numerator = 1 $sct#732936001 "comprimé"
 * dosageInstruction[baseEntry].maxDosePerPeriod.denominator = 6 $ucum#h "Heure"
+
+Instance: MedicationRequestIbuprofenPre
+InstanceOf: CHEMEDEPRMedicationRequest
+Title: "MedicationRequest: Ibuprofen no branded details (PRE)"
+Description: "Example of a medication request in a PRE document for ibuprofen without any specific commercial product details."
+Usage: #example
+* contained[0] = MedicationIbuprofen
+* language = #fr-CH
+* extension[treatmentplan].url = "http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-treatmentplan"
+* extension[treatmentplan].extension[id].url = "id"
+* extension[treatmentplan].extension[id].valueIdentifier.system = "urn:ietf:rfc:3986"
+* extension[treatmentplan].extension[id].valueIdentifier.value = "urn:uuid:f9b3a1ae-d5ac-40b9-990a-6e4e0f16a5dc"
+* extension[treatmentplan].extension[externalDocumentId].url = "externalDocumentId"
+* extension[treatmentplan].extension[externalDocumentId].valueIdentifier.system = "urn:ietf:rfc:3986"
+* extension[treatmentplan].extension[externalDocumentId].valueIdentifier.value = "urn:uuid:9f70c537-29b3-4f62-8e74-063f21141bca"
+* identifier.system = "urn:ietf:rfc:3986"
+* identifier.value = "urn:uuid:c1da921d-1687-49dc-9360-e1d1748bbe1a"
+* status = #active
+* intent = #order
+* medicationReference = Reference(MedicationIbuprofen)
+* subject = Reference(urn:uuid:9b00e81e-1165-4039-9d60-698ef838ae1a)
+* authoredOn = "2026-02-12T14:55:55.602+01:00"
+* requester = Reference(urn:uuid:213d609a-1164-459a-bb10-727516ae3d0c)
+* dosageInstruction[baseEntry].text = "1 comprimé en réserve, à avaler si besoin en cas de mal à la tête, max. Max. 400mg chaque 6 heures, à partir du 12 fevrier 2026."
+* dosageInstruction[baseEntry].patientInstruction = "1 comprimé en cas de mal à la tête."
+* dosageInstruction[baseEntry].timing.repeat.boundsPeriod.start = "2026-02-12"
+* dosageInstruction[baseEntry].asNeededBoolean = true
+* dosageInstruction[baseEntry].route = $edqm#20053000 "Oral use"
+* dosageInstruction[baseEntry].route.text = "À avaler"
+* dosageInstruction[baseEntry].maxDosePerPeriod.numerator = 400 $ucum#mg "Gramme"
+* dosageInstruction[baseEntry].maxDosePerPeriod.denominator = 6 $ucum#h "Heure"
+
+Instance: MedicationRequestMarcoumarPre
+InstanceOf: CHEMEDEPRMedicationRequest
+Title: "MedicationRequest: Marcoumar 3mg tabs free text dosage"
+Description: "Example of a medication request for Marcoumar 3mg tabs with free text dosage."
+Usage: #example
+* contained[+] = MedicationMarcoumar25TabsPackage
+* language = #fr-CH
+* extension[treatmentplan].url = "http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-treatmentplan"
+* extension[treatmentplan].extension[id].url = "id"
+* extension[treatmentplan].extension[id].valueIdentifier.system = "urn:ietf:rfc:3986"
+* extension[treatmentplan].extension[id].valueIdentifier.value = "urn:uuid:a8a06c30-a535-4a15-be77-6f13b6ac42f1"
+* extension[treatmentplan].extension[externalDocumentId].url = "externalDocumentId"
+* extension[treatmentplan].extension[externalDocumentId].valueIdentifier.system = "urn:ietf:rfc:3986"
+* extension[treatmentplan].extension[externalDocumentId].valueIdentifier.value = "urn:uuid:04d4cf18-1b83-48cb-a483-e441db73c95d"
+* identifier.system = "urn:ietf:rfc:3986"
+* identifier.value = "urn:uuid:81783913-fb71-485a-890f-c5041da015a3"
+* status = #active
+* intent = #order
+* medicationReference = Reference(MedicationMarcoumar25TabsPackage)
+* subject = Reference(urn:uuid:9b00e81e-1165-4039-9d60-698ef838ae1a)
+* authoredOn = "2026-01-12T14:55:55+01:00"
+* requester = Reference(urn:uuid:213d609a-1164-459a-bb10-727516ae3d0c)
+* dosageInstruction[baseEntry].text = "Lundi: 1 comprimé le matin. Mardi: 0,5 comprimé le matin. Mercredi: 1 comprimé le matin. Jeudi: 0,5 comprimé le matin. Vendredi: 1 comprimé. Samedi: pas de prise. Dimanche: 0,5 comprimé. Voie orale."
+* dosageInstruction[baseEntry].patientInstruction = "Lundi: 1 comprimé le matin. Mardi: 0,5 comprimé le matin. Mercredi: 1 comprimé le matin. Jeudi: 0,5 comprimé le matin. Vendredi: 1 comprimé. Samedi: pas de prise. Dimanche: 0,5 comprimé."
+* dosageInstruction[baseEntry].route = $edqm#20053000 "Oral use"
+* dosageInstruction[baseEntry].route.text = "À avaler"
