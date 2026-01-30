@@ -3,7 +3,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-### [3.0.0] - TBD
+### [3.0.0] - 2026-01-30
 
 #### Added
 
@@ -37,6 +37,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `CHEMEDEPRRelatedPerson` now inherits from `CHCoreRelatedPerson` instead of `RelatedPerson`, due to profiling changes in CH EMED.
 - Aligned our CH Core overridden constraints (from warning to error) with changes to [CH Core](https://github.com/hl7ch/ch-core/issues/372). The actual result from the constraints remains the same, but there was regex consolidation.
 - Changed the URL for CdTyp9 codes with the addition of a naming system for it, affecting the mappings `CdTyp9ToCHEMEDEPRAmountQuantityUnitCode`, `CHEMEDEPRAmountQuantityUnitCodeToCdTyp9`, `CdTyp9ToCHEMEDEPRTimeQuantityUnitCode` and `CHEMEDEPRTimeQuantityUnitCodeToCdTyp9`.
+- Added `hierarchyMeaning` to `CHEMEDEPRPaperFormatCS` code system.
 
 #### Removed
 

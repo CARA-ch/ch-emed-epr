@@ -5,6 +5,7 @@ Description: "Possible paper formats that can be delivered by a CH EMED EPR serv
 
 * ^experimental = true
 * ^caseSensitive = true
+* ^hierarchyMeaning = #is-a
 
 * #cara-pmp "CARA PMP" "CARA platform own format for PMP (eMedication service) project."
 * #emediplan "eMediplan" "Paper format defined by eMediplan."

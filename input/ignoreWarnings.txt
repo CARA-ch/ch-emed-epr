@@ -57,3 +57,5 @@ No definition could be found for URL value 'urn:oid:2.16.756.5.30.1.196.2.2.1'
 The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
 The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 The Implementation Guide contains no examples for this data type profile
+Target Code System http://snomed.info/sct is only supported on the terminology server, so the target codes are not validated for performance reasons
+The value set references CodeSystem 'urn:oid:0.4.0.127.0.16.1.1.2.1' which has status 'fragment'
