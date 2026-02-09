@@ -66,15 +66,15 @@ class ValidationRunner {
         this.engine = new MatchboxEngine.MatchboxEngineBuilder().getEngineR4();
         this.engine.getIgLoader().loadIg(this.engine.getIgs(),
                                          this.engine.getBinaries(),
-                                         "http://fhir.ch/ig/ch-epr-term/2.0.10/package.tgz",
+                                         "http://fhir.ch/ig/ch-term/3.3.0/package.tgz",
                                          true);
         this.engine.getIgLoader().loadIg(this.engine.getIgs(),
                                          this.engine.getBinaries(),
-                                         "http://fhir.ch/ig/ch-core/4.0.1/package.tgz",
+                                         "http://fhir.ch/ig/ch-core/6.0.0/package.tgz",
                                          true);
         this.engine.getIgLoader().loadIg(this.engine.getIgs(),
                                          this.engine.getBinaries(),
-                                         "http://fhir.ch/ig/ch-emed/4.0.1/package.tgz",
+                                         "http://fhir.ch/ig/ch-emed/6.0.0/package.tgz",
                                          true);
         this.engine.getIgLoader().loadIg(this.engine.getIgs(),
                                          this.engine.getBinaries(),
