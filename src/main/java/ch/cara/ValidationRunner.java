@@ -63,8 +63,11 @@ class ValidationRunner {
         this.failureDetailsOutput = new StringBuilder();
 
         // Initializes the validation engine with the relevant IGs
-        this.engine = new MatchboxEngine.MatchboxEngineBuilder().getEngineR4();
-        this.engine.getIgLoader().loadIg(this.engine.getIgs(),
+        final var builder = new MatchboxEngine.MatchboxEngineBuilder();
+        builder.setTxServer("https://tx.fhir.org/");
+        this.engine = builder.getEngineR4();
+        //this.engine.setTerminologyServer("https://tx.fhir.org/");
+        /*this.engine.getIgLoader().loadIg(this.engine.getIgs(),
                                          this.engine.getBinaries(),
                                          "http://fhir.ch/ig/ch-term/3.3.0/package.tgz",
                                          true);
@@ -75,7 +78,7 @@ class ValidationRunner {
         this.engine.getIgLoader().loadIg(this.engine.getIgs(),
                                          this.engine.getBinaries(),
                                          "http://fhir.ch/ig/ch-emed/6.0.0/package.tgz",
-                                         true);
+                                         true);*/
         this.engine.getIgLoader().loadIg(this.engine.getIgs(),
                                          this.engine.getBinaries(),
                                          "./output/package.tgz",
@@ -145,19 +148,38 @@ class ValidationRunner {
     private void listIgResources() {
         this.add2Resources("output/Bundle-BundlePml1", "ch-emed-epr-document-medicationlist");
         this.add2Resources("output/Bundle-BundlePmlc1", "ch-emed-epr-document-medicationcard");
+        this.add2Resources("output/Bundle-BundleUtc1Pml", "ch-emed-epr-document-medicationlist");
+        this.add2Resources("output/Bundle-BundleUtc6bPml", "ch-emed-epr-document-medicationlist");
+        this.add2Resources("output/Bundle-DocumentDis1", "ch-emed-epr-document-medicationdispense");
         this.add2Resources("output/Bundle-DocumentMtp1", "ch-emed-epr-document-medicationtreatmentplan");
-        this.add2Resources("output/Device-DevicePmp", "ch-emed-epr-device");
+        this.add2Resources("output/Bundle-DocumentMtpCARAPMP004MarcoumarFreeTextDosage", "ch-emed-epr-document-medicationtreatmentplan");
+        this.add2Resources("output/Bundle-DocumentMtpParacetamolCARAPMP004", "ch-emed-epr-document-medicationtreatmentplan");
+        this.add2Resources("output/Bundle-DocumentMtpParacetamolDafalganCARAPMP004", "ch-emed-epr-document-medicationtreatmentplan");
+        this.add2Resources("output/Bundle-DocumentPadv1", "ch-emed-epr-document-pharmaceuticaladvice");
+        this.add2Resources("output/Bundle-DocumentPadv2", "ch-emed-epr-document-pharmaceuticaladvice");
+        this.add2Resources("output/Bundle-DocumentPadvCancelParacetamolCARAPMP004", "ch-emed-epr-document-pharmaceuticaladvice");
+        this.add2Resources("output/Bundle-DocumentPadvChangeParacetamolCARAPMP004", "ch-emed-epr-document-pharmaceuticaladvice");
+        this.add2Resources("output/Bundle-DocumentPmlcCARAPMP004AxapharmParacetamol", "ch-emed-epr-document-medicationcard");
+        this.add2Resources("output/Bundle-DocumentPmlcCARAPMP004DafalganEffParacetamol", "ch-emed-epr-document-medicationcard");
+        this.add2Resources("output/Bundle-DocumentPre1", "ch-emed-epr-document-medicationprescription");
+        this.add2Resources("output/Bundle-DocumentPreCARAPMP004MarcoumarFreeTextDosage", "ch-emed-epr-document-medicationprescription");
+        this.add2Resources("output/Bundle-DocumentPreParacetamolAxapharmCARAPMP004", "ch-emed-epr-document-medicationprescription");
+        this.add2Resources("output/Bundle-DocumentPreParacetamolDafalganCARAPMP004", "ch-emed-epr-document-medicationprescription");
+        this.add2Resources("output/Bundle-DocumentUCSF1CARAPMP004PMLCEmpty", "ch-emed-epr-document-medicationcard");
+        this.add2Resources("output/Bundle-DocumentUCSF2CARAPMP004MTPParacetamol", "ch-emed-epr-document-medicationtreatmentplan");
+        this.add2Resources("output/Bundle-DocumentUCSF3CARAPMP004PMLCDafalganSelfMedication", "ch-emed-epr-document-medicationcard");
+        this.add2Resources("output/Bundle-DocumentUCSF4CARAPMP004DISDafalganWithoutPrescription", "ch-emed-epr-document-medicationdispense");
+        this.add2Resources("output/Bundle-DocumentUCSF5CARAPMP004PMLCDafalganSelfMedication", "ch-emed-epr-document-medicationcard");
+        this.add2Resources("output/Bundle-DocumentUCSF6CARAPMP004MTPIbuprofen", "ch-emed-epr-document-medicationtreatmentplan");
+        this.add2Resources("output/Bundle-DocumentUCSF7CARAPMP004PREDafalgan", "ch-emed-epr-document-medicationprescription");
         this.add2Resources("output/Medication-MedicationNorvasc", "ch-emed-epr-medication");
         this.add2Resources("output/Medication-MedicationTriatec", "ch-emed-epr-medication");
         this.add2Resources("output/Medication-MedicationWithATC", "ch-emed-epr-medication");
         this.add2Resources("output/Medication-MedicationWithTwoIngredients", "ch-emed-epr-medication");
-        this.add2Resources("output/MedicationStatement-MedicationStatementTriatecMtp",
-                           "ch-emed-epr-medicationstatement-treatmentplan");
         this.add2Resources("output/Organization-OrganizationCara", "ch-emed-epr-organization");
         this.add2Resources("output/Organization-OrganizationHug", "ch-emed-epr-organization");
         this.add2Resources("output/Patient-PatientDupont", "ch-emed-epr-patient");
         this.add2Resources("output/Practitioner-PractitionerCox", "ch-emed-epr-practitioner");
-        this.add2Resources("output/PractitionerRole-PractitionerRoleCoxAtHug", "ch-emed-epr-practitionerrole");
     }
 
     private boolean validateFile(final String filePath,
